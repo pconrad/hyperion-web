@@ -10,7 +10,8 @@ const FULL_DATE_OPTIONS = {
 
 class FormattingService {
     formatDateFull(input) {
-        return new Date(input).toLocaleDateString('en-GB', FULL_DATE_OPTIONS);
+        const date = new Date(input).toLocaleDateString('en-GB', FULL_DATE_OPTIONS);
+        return `${date} (GMT)`;
     }
 
     formatNumberPower(input) {
