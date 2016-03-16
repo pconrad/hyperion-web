@@ -1,0 +1,4 @@
+test:
+  post:
+    - mkdir -p $CIRCLE_TEST_REPORTS/zip/
+    - pushd build && zip -9vr $CIRCLE_TEST_REPORTS/zip/hyperion-web.zip . && popd
