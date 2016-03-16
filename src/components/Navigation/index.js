@@ -13,7 +13,7 @@ class Navigation extends React.Component {
     renderNavItem(linkName) {
         const link = NAV_LINKS[linkName];
         return (
-            <LinkContainer to={{ pathname: link.link }} key={ linkName }>
+            <LinkContainer to={ { pathname: link.link } } key={ linkName }>
                 <NavItem className={ this.props.activePage === linkName ? 'active' : '' } >
                     { link.title }
                 </NavItem>

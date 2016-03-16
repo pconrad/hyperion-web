@@ -13,7 +13,6 @@ class CurrentReadingsPage extends React.Component {
     constructor() {
         super();
         this.state = {};
-
     }
 
     componentDidMount() {
@@ -29,6 +28,8 @@ class CurrentReadingsPage extends React.Component {
     }
 
     renderLastUpdated() {
+        const consumption = this.state.currentReading.consumption;
+        const production = this.state.currentReading.production;
         return (<Grid>
             <Row>
                 <Col><strong>Last updated:</strong></Col>
@@ -36,15 +37,15 @@ class CurrentReadingsPage extends React.Component {
             </Row>
             <Row>
                 <Col><strong>Current consumption:</strong></Col>
-                <Col>{ formattingService.formatNumberPower(this.state.currentReading.consumption) }</Col>
+                <Col>{ formattingService.formatNumberPower(consumption) }</Col>
             </Row>
             <Row>
                 <Col><strong>Current production:</strong></Col>
-                <Col>{ formattingService.formatNumberPower(this.state.currentReading.production) }</Col>
+                <Col>{ formattingService.formatNumberPower(production) }</Col>
             </Row>
             <Row>
                 <Col><strong>Current tariff:</strong></Col>
-                <Col>{ "0001" === this.state.currentReading.tariff ? "Low" : "Normal" }</Col>
+                <Col>{ this.state.currentReading.tariff === '0001' ? 'Low' : 'Normal' }</Col>
             </Row>
         </Grid>);
     }
