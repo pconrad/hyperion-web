@@ -7,7 +7,7 @@ class HomePage extends React.Component {
         return (
             <div>
                 <Navigation activePage="home" />
-                Nice little homepage
+                Welcome to Hyperion.
             </div>
         );
     }
