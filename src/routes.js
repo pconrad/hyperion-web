@@ -6,7 +6,7 @@ import { browserHistory } from 'react-router';
 
 // Import all pages
 //import BasePage from 'pages/BasePage/';
-import CurrentPage from 'pages/CurrentPage/';
+import CurrentPage from 'pages/CurrentReadingsPage/';
 import HomePage from 'pages/HomePage/';
 import Index from 'components/Home/';
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Navigation from 'components/Navigation';
 
-class CurrentPage extends React.Component {
+class CurrentReadingsPage extends React.Component {
     render() {
         return (
             <div>
@@ -13,4 +13,4 @@ class CurrentPage extends React.Component {
     }
 }
 
-export default CurrentPage;
+export default CurrentReadingsPage;
