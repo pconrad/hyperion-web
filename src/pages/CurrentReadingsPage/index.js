@@ -42,6 +42,10 @@ class CurrentReadingsPage extends React.Component {
                 <Col><strong>Current production:</strong></Col>
                 <Col>{ formattingService.formatNumberPower(this.state.currentReading.production) }</Col>
             </Row>
+            <Row>
+                <Col><strong>Current tariff:</strong></Col>
+                <Col>{ "0001" === this.state.currentReading.tariff ? "Low" : "Normal" }</Col>
+            </Row>
         </Grid>);
     }
 
