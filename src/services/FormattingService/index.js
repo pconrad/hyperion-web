@@ -18,6 +18,11 @@ class FormattingService {
         const value = input.toFixed(3);
         return `${value} kW`;
     }
+
+    formatNumberGas(input) {
+        const value = input.toFixed(3);
+        return `${value} m3`;
+    }
 }
 
 export default FormattingService;

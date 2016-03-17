@@ -30,6 +30,7 @@ class CurrentReadingsPage extends React.Component {
     renderLastUpdated() {
         const consumption = this.state.currentReading.consumption;
         const production = this.state.currentReading.production;
+        const gas = this.state.currentReading.gas;
         return (<Grid>
             <Row>
                 <Col lg={ 6 }><strong>Last updated:</strong></Col>
@@ -43,6 +44,10 @@ class CurrentReadingsPage extends React.Component {
                 <Col lg={ 6 }><strong>Electricity production:</strong></Col>
                 <Col lg={ 6 }>{ formattingService.formatNumberPower(production) }</Col>
             </Row>
+            { gas ? <Row>
+                <Col lg={ 6 }><strong>Gas meter:</strong></Col>
+                <Col lg={ 6 }>{ formattingService.formatNumberGas(gas) }</Col>
+            </Row> : null }
             <Row>
                 <Col lg={ 6 }><strong>Current tariff:</strong></Col>
                 <Col lg={ 6 }>{ this.state.currentReading.tariff === '0001' ? 'Low' : 'Normal' }</Col>
