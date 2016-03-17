@@ -32,20 +32,20 @@ class CurrentReadingsPage extends React.Component {
         const production = this.state.currentReading.production;
         return (<Grid>
             <Row>
-                <Col><strong>Last updated:</strong></Col>
-                <Col>{ formattingService.formatDateFull(this.state.currentReading.ts) }</Col>
+                <Col lg={ 6 }><strong>Last updated:</strong></Col>
+                <Col lg={ 6 }>{ formattingService.formatDateFull(this.state.currentReading.ts) }</Col>
             </Row>
             <Row>
-                <Col><strong>Current consumption:</strong></Col>
-                <Col>{ formattingService.formatNumberPower(consumption) }</Col>
+                <Col lg={ 6 }><strong>Electricity consumption:</strong></Col>
+                <Col lg={ 6 }>{ formattingService.formatNumberPower(consumption) }</Col>
             </Row>
             <Row>
-                <Col><strong>Current production:</strong></Col>
-                <Col>{ formattingService.formatNumberPower(production) }</Col>
+                <Col lg={ 6 }><strong>Electricity production:</strong></Col>
+                <Col lg={ 6 }>{ formattingService.formatNumberPower(production) }</Col>
             </Row>
             <Row>
-                <Col><strong>Current tariff:</strong></Col>
-                <Col>{ this.state.currentReading.tariff === '0001' ? 'Low' : 'Normal' }</Col>
+                <Col lg={ 6 }><strong>Current tariff:</strong></Col>
+                <Col lg={ 6 }>{ this.state.currentReading.tariff === '0001' ? 'Low' : 'Normal' }</Col>
             </Row>
         </Grid>);
     }
