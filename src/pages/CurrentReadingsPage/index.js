@@ -28,8 +28,8 @@ class CurrentReadingsPage extends React.Component {
     }
 
     renderLastUpdated() {
-        const consumption = this.state.currentReading.consumption;
-        const production = this.state.currentReading.production;
+        const consumption = this.state.currentReading.elecCon;
+        const production = this.state.currentReading.elecProd;
         const gas = this.state.currentReading.gas;
         return (<Grid>
             <Row>
