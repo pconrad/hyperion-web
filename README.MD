@@ -11,6 +11,7 @@ Just run
     npm run build-dev
 
 Or you could run `npm run dev-server` as the last command instead to have a full webserver with hot reloading.
+You can override the hostname where the API is expected to live by supplying an environment variable named `API_HOST`.
 
 ### For production
 Just run

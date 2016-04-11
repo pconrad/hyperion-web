@@ -1,6 +1,10 @@
+import Config from 'services/Config';
+
+const config = new Config();
+
 class CurrentReadingsService {
     constructor() {
-        const hostname = window.location.hostname;
+        const hostname = config.apiLocation();
         this.base_url = `wss://${hostname}/api/actual`;
     }
 
