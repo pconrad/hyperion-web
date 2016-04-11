@@ -8,6 +8,7 @@ import { browserHistory } from 'react-router';
 import CurrentPage from 'pages/CurrentReadingsPage/';
 import HomePage from 'pages/HomePage/';
 import Index from 'components/Home/';
+import RecentReadingsPage from 'pages/RecentReadingsPage';
 
 // Mind the order of routes: first match is served
 const routes = (
@@ -16,6 +17,7 @@ const routes = (
             <IndexRoute component={ HomePage } />
         </Route>
         <Route path="current" component={ CurrentPage } />
+        <Route path="recent" component={ RecentReadingsPage } />
     </Router>
 );
 

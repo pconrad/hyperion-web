@@ -7,6 +7,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 const NAV_LINKS = {
     home: { link: '/', title: 'Home' },
     current: { link: '/current', title: 'Current' },
+    recent: { link: '/recent', title: 'Recent' },
 };
 
 class Navigation extends React.Component {
