@@ -38,6 +38,10 @@ class RecentReadingsPage extends React.Component {
         });
     }
 
+    shouldShowLoading() {
+        return !this.state.history && !this.state.error;
+    }
+
     renderLoading() {
         return (<span>Loading data, please wait...</span>);
     }
@@ -74,16 +78,13 @@ class RecentReadingsPage extends React.Component {
                 <Navigation activePage="recent" />
 
                 <Grid>
-                <Row>
-                    <Col lg={ 12 }>We'll show the recent meter readings here.</Col>
-                </Row>
-                <Row>
-                    <Col lg={ 12 }>
-                        { this.state.history ? this.renderRecords() : null }
-                        { this.state.error ? this.renderError() : null }
-                        { !this.state.history && !this.state.error ? this.renderLoading() : null }
-                    </Col>
-                </Row>
+                    <Row>
+                        <Col lg={ 12 }>
+                            { this.state.history ? this.renderRecords() : null }
+                            { this.state.error ? this.renderError() : null }
+                            { this.shouldShowLoading() ? this.renderLoading() : null }
+                        </Col>
+                    </Row>
                 </Grid>
             </div>
         );
