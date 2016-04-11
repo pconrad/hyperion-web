@@ -8,7 +8,28 @@ const FULL_DATE_OPTIONS = {
     second: 'numeric',
 };
 
+const SHORT_DATE_OPTIONS = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+};
+
+const ONLY_TIME_DATE_OPTIONS = {
+    hour: 'numeric',
+    minute: 'numeric',
+};
+
 class FormattingService {
+    formatDateShort(input) {
+        return new Date(input).toLocaleDateString('en-GB', SHORT_DATE_OPTIONS);
+    }
+
+    formatDateOnlyTime(input) {
+        return new Date(input).toLocaleDateString('en-GB', ONLY_TIME_DATE_OPTIONS);
+    }
+
     formatDateFull(input) {
         const date = new Date(input).toLocaleDateString('en-GB', FULL_DATE_OPTIONS);
         return `${date} (GMT)`;
