@@ -27,7 +27,7 @@ class FormattingService {
     }
 
     formatDateOnlyTime(input) {
-        return new Date(input).toLocaleDateString('en-GB', ONLY_TIME_DATE_OPTIONS);
+        return new Date(input).toLocaleTimeString('en-GB', ONLY_TIME_DATE_OPTIONS);
     }
 
     formatDateFull(input) {
