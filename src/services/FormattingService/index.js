@@ -19,6 +19,7 @@ const SHORT_DATE_OPTIONS = {
 const ONLY_TIME_DATE_OPTIONS = {
     hour: 'numeric',
     minute: 'numeric',
+    timeZone: 'UTC',
 };
 
 class FormattingService {
