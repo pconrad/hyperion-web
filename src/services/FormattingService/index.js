@@ -6,6 +6,7 @@ const FULL_DATE_OPTIONS = {
     hour: 'numeric',
     minute: 'numeric',
     second: 'numeric',
+    timeZoneName: 'long',
 };
 
 const SHORT_DATE_OPTIONS = {
@@ -19,7 +20,7 @@ const SHORT_DATE_OPTIONS = {
 const ONLY_TIME_DATE_OPTIONS = {
     hour: 'numeric',
     minute: 'numeric',
-    timeZone: 'UTC',
+    timeZoneName: 'short',
 };
 
 class FormattingService {
@@ -32,8 +33,7 @@ class FormattingService {
     }
 
     formatDateFull(input) {
-        const date = new Date(input).toLocaleDateString('en-GB', FULL_DATE_OPTIONS);
-        return `${date} (GMT)`;
+        return new Date(input).toLocaleDateString('en-GB', FULL_DATE_OPTIONS);
     }
 
     formatNumberPower(input) {
