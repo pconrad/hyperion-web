@@ -28,27 +28,23 @@ class CurrentReadingsPage extends React.Component {
         const consumption = this.state.currentReading.elecCon;
         const production = this.state.currentReading.elecProd;
         const gas = this.state.currentReading.gas;
+        const tariff = this.state.currentReading.tariff === '0001' ? 'Low' : 'Normal';
+        const makeRow = (label, value) => (
+            <Row>
+              <Col lg={ 6 }><strong>{ label }</strong></Col>
+              <Col lg={ 6 }>{ value }</Col>
+            </Row>
+        );
         return (<Grid>
-            <Row>
-                <Col lg={ 6 }><strong>Last updated:</strong></Col>
-                <Col lg={ 6 }>{ formattingService.formatDateFull(this.state.currentReading.ts) }</Col>
-            </Row>
-            <Row>
-                <Col lg={ 6 }><strong>Electricity consumption:</strong></Col>
-                <Col lg={ 6 }>{ formattingService.formatNumberPower(consumption) }</Col>
-            </Row>
-            <Row>
-                <Col lg={ 6 }><strong>Electricity production:</strong></Col>
-                <Col lg={ 6 }>{ formattingService.formatNumberPower(production) }</Col>
-            </Row>
-            { gas ? <Row>
-                <Col lg={ 6 }><strong>Gas meter:</strong></Col>
-                <Col lg={ 6 }>{ formattingService.formatNumberGas(gas) }</Col>
-            </Row> : null }
-            <Row>
-                <Col lg={ 6 }><strong>Current tariff:</strong></Col>
-                <Col lg={ 6 }>{ this.state.currentReading.tariff === '0001' ? 'Low' : 'Normal' }</Col>
-            </Row>
+          { makeRow('Last updated',
+                     formattingService.formatDateFull(this.state.currentReading.ts)) }
+          { makeRow('Electricity consumption',
+                     formattingService.formatNumberPower(consumption)) }
+          { makeRow('Electricity production',
+                     formattingService.formatNumberPower(production)) }
+          { gas ? makeRow('Gas meter',
+                          formattingService.formatNumberGas(gas)) : null }
+          { makeRow('Current tariff', tariff) }
         </Grid>);
     }
 
