@@ -3,11 +3,8 @@ import React from 'react';
 import { Alert, Col, Grid, Row } from 'react-bootstrap';
 
 import Navigation from 'components/Navigation';
-import CurrentReadingsService from 'services/CurrentReadingsService';
-import FormattingService from 'services/FormattingService';
-
-const currentReadingsService = new CurrentReadingsService();
-const formattingService = new FormattingService();
+import currentReadingsService from 'services/CurrentReadingsService';
+import formattingService from 'services/FormattingService';
 
 class CurrentReadingsPage extends React.Component {
     constructor() {

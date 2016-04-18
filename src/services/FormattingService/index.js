@@ -47,4 +47,4 @@ class FormattingService {
     }
 }
 
-export default FormattingService;
+export default new FormattingService();

@@ -5,4 +5,4 @@ class Config {
     }
 }
 
-export default Config;
+export default new Config();

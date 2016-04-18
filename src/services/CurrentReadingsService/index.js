@@ -1,6 +1,4 @@
-import Config from 'services/Config';
-
-const config = new Config();
+import config from 'services/Config';
 
 class CurrentReadingsService {
     constructor() {
@@ -20,4 +18,4 @@ class CurrentReadingsService {
     }
 }
 
-export default CurrentReadingsService;
+export default new CurrentReadingsService();

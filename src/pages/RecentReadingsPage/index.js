@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Alert, Col, Grid, Row } from 'react-bootstrap';
 
-import FormattingService from 'services/FormattingService';
+import formattingService from 'services/FormattingService';
 import Navigation from 'components/Navigation';
-import RecentReadingsService from 'services/RecentReadingsService';
+import recentReadingsService from 'services/RecentReadingsService';
 
 import { Line as LineChart } from 'react-chartjs';
 
@@ -13,14 +13,7 @@ const chartOptions = {
     bezierCurve: false,
     pointDot: false,
     responsive: true,
-    title: {
-        display: true,
-        text: 'Recent meter readings',
-    },
-    width: '600px',
 };
-const formattingService = new FormattingService();
-const recentReadingsService = new RecentReadingsService();
 
 class RecentReadingsPage extends React.Component {
     constructor() {

@@ -1,6 +1,5 @@
-import Config from 'services/Config';
+import config from 'services/Config';
 
-const config = new Config();
 const request = require('superagent');
 
 class RecentReadingsService {
@@ -20,4 +19,4 @@ class RecentReadingsService {
     }
 }
 
-export default RecentReadingsService;
+export default new RecentReadingsService();
