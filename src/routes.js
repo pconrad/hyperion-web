@@ -7,7 +7,6 @@ import { browserHistory } from 'react-router';
 // Import all pages
 import CurrentPage from 'pages/CurrentReadingsPage/';
 import HomePage from 'pages/HomePage/';
-import Index from 'components/Home/';
 import RecentReadingsPage from 'pages/RecentReadingsPage';
 
 // Mind the order of routes: first match is served
