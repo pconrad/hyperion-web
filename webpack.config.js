@@ -1,36 +1,38 @@
-var path = require('path');
-var webpack = require('webpack');
-var excludedFolders = [/node_modules/];
-var devtools = 'source-map';
-var minimizeCss = 'minimize';
+/* eslint no-console: 0 */
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const excludedFolders = [/node_modules/];
+let devtools = 'source-map';
+let minimizeCss = 'minimize';
 
-var env = process.env.WEBPACK_ENV;
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var plugins = [
-    new ExtractTextPlugin('style.css')
+const env = process.env.WEBPACK_ENV;
+
+const plugins = [
+    new ExtractTextPlugin('style.css'),
 ];
 
-if ('production' == env) {
+if (env === 'production') {
     console.log('This is a production build');
     // Set NODE_ENV to "production" so the React production lib is used. (No warnings in the dev console.)
-    plugins.push(new webpack.DefinePlugin({'process.env': { NODE_ENV: JSON.stringify('production') }}));
+    plugins.push(new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify('production') } }));
     // If errors occur do not "emmit" the build to the build-folder.
     plugins.push(new webpack.NoErrorsPlugin());
     // Remove duplicate code.
     plugins.push(new webpack.optimize.DedupePlugin());
     // Minimize javascript
-    plugins.push(new webpack.optimize.UglifyJsPlugin({ minimize: true, compressor: { warnings: false}}));
+    plugins.push(new webpack.optimize.UglifyJsPlugin({ minimize: true, compressor: { warnings: false } }));
 
     // Do not create .map source files
     devtools = '';
 } else {
     console.log('This is a development build');
-    plugins.push(new webpack.DefinePlugin({'process.env': {
+    plugins.push(new webpack.DefinePlugin({ 'process.env': {
         NODE_ENV: JSON.stringify('development'),
-        API_HOST: JSON.stringify(process.env.API_HOST)
-    }}));
+        API_HOST: JSON.stringify(process.env.API_HOST),
+    } }));
     // Do not minimize CSS
     minimizeCss = '-minimize';
 }
@@ -38,19 +40,19 @@ if ('production' == env) {
 module.exports = {
     // Entry point for the application
     entry: {
-        javascript: "./src/entry.js",
-        html: "./src/index.html"
+        javascript: './src/entry.js',
+        html: './src/index.html',
     },
     // Output the result
     output: {
-        path: "./build/",
-        filename: "bundle.js"
+        path: './build/',
+        filename: 'bundle.js',
     },
     // Tell webpack where to find files
     resolve: {
         root: path.join(__dirname, 'src'),
         extensions: ['', '.js', '.css', '.svg', '.html'],
-        modulesDirectories: ['node_modules']
+        modulesDirectories: ['node_modules'],
     },
     // Create maps so we can see the source for our js files
     devtool: devtools,
@@ -58,46 +60,62 @@ module.exports = {
         preLoaders: [{
             test: /\.js$/,
             loader: 'eslint-loader',
-            exclude: excludedFolders
+            exclude: excludedFolders,
         }],
         // Define loaders
         loaders: [
             // CSS Loader
-            { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?module&importLoaders=1&localIdentName=[local]&' + minimizeCss + '&sourceMap!postcss-loader')},
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract('style-loader',
+                  `css-loader?module&importLoaders=1&localIdentName=[local]&${minimizeCss}&sourceMap!postcss-loader`),
+            },
             // JS / EcmaScript 6-7 loader.
-            { test: /\.js?$/, loader: 'babel-loader', exclude: excludedFolders, query: { presets:['es2015', 'react'] } },
+            {
+                test: /\.js?$/,
+                loader: 'babel-loader', exclude: excludedFolders, query: { presets: ['es2015', 'react'] },
+            },
             // JPG / PNG loader
-            { test: /\.(jpg|png)$/, loader: 'url-loader?name=[path][name].[ext]&context=src&limit=1' },
+            {
+                test: /\.(jpg|png)$/,
+                loader: 'url-loader?name=[path][name].[ext]&context=src&limit=1',
+            },
             // HTML loader
-            { test: /\.html$/, loader: "url-loader?name=[path][name].[ext]&context=src&limit=1"},
+            {
+                test: /\.html$/,
+                loader: 'url-loader?name=[path][name].[ext]&context=src&limit=1',
+            },
             // SVG Loader
-            { test: /\.svg$/, loader: 'url-loader?name=[path][name].[ext]&context=src&limit=1&mimetype=image/svg+xml!svgo-loader?useConfig=svgoConfig'}
-        ]
+            {
+                test: /\.svg$/,
+                loader: 'url-loader?name=[path][name].[ext]&context=src&limit=1&mimetype=image/svg+xml!svgo-loader?useConfig=svgoConfig',
+            },
+        ],
     },
     // Used plugins
     plugins: plugins,
     // CSS loader config
     postcss: function (webpack) {
         return [
-            require("postcss-import")({ addDependencyTo: webpack }),
-            require("postcss-url")(),
-            require("postcss-cssnext")(),
-            require("postcss-browser-reporter")(),
-            require("postcss-reporter")()
+            require('postcss-import')({ addDependencyTo: webpack }),
+            require('postcss-url')(),
+            require('postcss-cssnext')(),
+            require('postcss-browser-reporter')(),
+            require('postcss-reporter')(),
         ];
     },
     // eslint config
     eslint: {
         configFile: './.eslintrc',
         emitError: false,
-        emitWarning: true
+        emitWarning: true,
     },
     // svg-loader config
     svgoConfig: {
         plugins: [
             { removeTitle: true },
             { convertColors: { shorthex: false } },
-            { convertPathData: false }
-        ]
-    }
+            { convertPathData: false },
+        ],
+    },
 };

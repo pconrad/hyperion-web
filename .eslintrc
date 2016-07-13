@@ -13,6 +13,12 @@
       0,
       "unix"
     ],
+    "max-len": [
+      1,
+      140,
+      140,
+      {"ignoreComments":true,"ignoreUrls":true}
+    ],
     "semi": [
       2,
       "always"
