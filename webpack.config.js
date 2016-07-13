@@ -7,11 +7,36 @@ let devtools = 'source-map';
 let minimizeCss = 'minimize';
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const env = process.env.WEBPACK_ENV;
 
+const dependencies = Object.keys(require('./package.json').dependencies)
+  .filter(x => x !== 'bootstrap'); // Don't include it, it is added to the 'vendor' chunk
+
+console.log(`Merging dependencies ${dependencies} into 'vendor' chunk`);
+
 const plugins = [
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin('[name].[hash].css', {
+        allChunks: true,
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+        names: ['vendor'], // , 'manifest'
+    }),
+    new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+    }),
+    new HtmlWebpackPlugin({
+        appMountId: 'app',
+        favicon: './src/assets/images/favicon.png',
+        hash: true,
+        inject: false,
+        mobile: true,
+        template: require('html-webpack-template'),
+        title: 'Hyperion',
+        unsupportedBrowser: true,
+    }),
 ];
 
 if (env === 'production') {
@@ -40,19 +65,19 @@ if (env === 'production') {
 module.exports = {
     // Entry point for the application
     entry: {
-        javascript: './src/entry.js',
-        html: './src/index.html',
+        app: './src/entry.js',
+        vendor: [...dependencies, 'bootstrap/dist/css/bootstrap.min.css'],
     },
     // Output the result
     output: {
         path: './build/',
-        filename: 'bundle.js',
+        filename: '[name].[hash].js',
     },
     // Tell webpack where to find files
     resolve: {
         root: path.join(__dirname, 'src'),
         extensions: ['', '.js', '.css', '.svg', '.html'],
-        modulesDirectories: ['node_modules'],
+        modulesDirectories: ['node_modules/bootstrap/dist/', 'node_modules'],
     },
     // Create maps so we can see the source for our js files
     devtool: devtools,
@@ -73,12 +98,29 @@ module.exports = {
             // JS / EcmaScript 6-7 loader.
             {
                 test: /\.js?$/,
-                loader: 'babel-loader', exclude: excludedFolders, query: { presets: ['es2015', 'react'] },
+                loader: 'babel-loader',
+                exclude: excludedFolders,
+                query: { presets: ['es2015', 'react'] },
             },
             // JPG / PNG loader
             {
                 test: /\.(jpg|png)$/,
                 loader: 'url-loader?name=[path][name].[ext]&context=src&limit=1',
+            },
+            // TTF loader
+            {
+                test: /\.ttf$/,
+                loader: 'url?limit=10000&mimetype=application/octet-stream',
+            },
+            // EOT loader
+            {
+                test: /\.eot$/,
+                loader: 'file',
+            },
+            // WOFF / WOFF2 Loader
+            {
+                test: /\.(woff|woff2)$/,
+                loader: 'url?prefix=font/&limit=5000',
             },
             // HTML loader
             {
@@ -88,7 +130,7 @@ module.exports = {
             // SVG Loader
             {
                 test: /\.svg$/,
-                loader: 'url-loader?name=[path][name].[ext]&context=src&limit=1&mimetype=image/svg+xml!svgo-loader?useConfig=svgoConfig',
+                loader: 'url?limit=10000&mimetype=image/svg+xml',
             },
         ],
     },
@@ -109,13 +151,5 @@ module.exports = {
         configFile: './.eslintrc',
         emitError: false,
         emitWarning: true,
-    },
-    // svg-loader config
-    svgoConfig: {
-        plugins: [
-            { removeTitle: true },
-            { convertColors: { shorthex: false } },
-            { convertPathData: false },
-        ],
     },
 };

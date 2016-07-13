@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Alert, Col, Grid, Row } from 'react-bootstrap';
 
-import Navigation from 'components/Navigation';
 import currentReadingsService from 'services/CurrentReadingsService';
 import formattingService from 'services/FormattingService';
 
@@ -56,8 +55,6 @@ class CurrentReadingsPage extends React.Component {
 
         return (
             <div>
-                <Navigation activePage="current" />
-
                 { this.state.currentReading ? this.renderLastUpdated() : noDataWarning }
             </div>
         );

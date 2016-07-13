@@ -5,7 +5,7 @@ import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 const NAV_LINKS = {
-    home: { link: '/', title: 'Home' },
+    home: { link: '/home', title: 'Home' },
     current: { link: '/current', title: 'Current' },
     recent: { link: '/recent', title: 'Recent' },
 };
@@ -39,6 +39,8 @@ class Navigation extends React.Component {
     }
 }
 
-Navigation.propTypes = { activePage: React.PropTypes.string.isRequired };
+Navigation.propTypes = {
+    activePage: React.PropTypes.string.isRequired,
+};
 
 export default Navigation;

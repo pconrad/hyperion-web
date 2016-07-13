@@ -3,7 +3,6 @@ import React from 'react';
 import { Alert, Col, Grid, Row } from 'react-bootstrap';
 
 import formattingService from 'services/FormattingService';
-import Navigation from 'components/Navigation';
 import recentReadingsService from 'services/RecentReadingsService';
 
 import { Line as LineChart } from 'react-chartjs';
@@ -68,8 +67,6 @@ class RecentReadingsPage extends React.Component {
     render() {
         return (
             <div>
-                <Navigation activePage="recent" />
-
                 <Grid>
                     <Row>
                         <Col lg={ 12 }>

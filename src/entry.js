@@ -11,7 +11,6 @@ require.context(
 );
 
 require('./style.css');
-require('./assets/images/favicon.png');
 
 // 'touch' outside a focused input or textarea should hide the keyboard on iOS
 document.addEventListener('touchstart', (e) => {
