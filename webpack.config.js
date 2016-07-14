@@ -29,6 +29,7 @@ const plugins = [
     }),
     new HtmlWebpackPlugin({
         appMountId: 'app',
+        devServer: env === 'production' ? undefined : 'http://localhost:4000',
         favicon: './src/assets/images/favicon.png',
         hash: true,
         inject: false,
@@ -38,6 +39,11 @@ const plugins = [
         unsupportedBrowser: true,
     }),
 ];
+
+const entries = {
+    app: './src/entry.js',
+    vendor: [...dependencies, 'bootstrap/dist/css/bootstrap.min.css'],
+};
 
 if (env === 'production') {
     console.log('This is a production build');
@@ -58,16 +64,16 @@ if (env === 'production') {
         NODE_ENV: JSON.stringify('development'),
         API_HOST: JSON.stringify(process.env.API_HOST),
     } }));
+    plugins.push(new webpack.HotModuleReplacementPlugin());
     // Do not minimize CSS
     minimizeCss = '-minimize';
+    entries.webpack = 'webpack-dev-server/client?http://localhost:4000';
+    entries.webpackHot = 'webpack/hot/only-dev-server';
 }
 
 module.exports = {
     // Entry point for the application
-    entry: {
-        app: './src/entry.js',
-        vendor: [...dependencies, 'bootstrap/dist/css/bootstrap.min.css'],
-    },
+    entry: entries,
     // Output the result
     output: {
         path: './build/',

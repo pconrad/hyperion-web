@@ -46,7 +46,7 @@
   },
   "scripts": {
     "build-dev": "rm -rf ./build/* && webpack --progress --watch",
-    "dev-server": "rm -rf ./build/* && webpack-dev-server --host 0.0.0.0 --port 4000 --colors --hot --progress --content-base build/",
+    "dev-server": "rm -rf ./build/* && webpack-dev-server --host 0.0.0.0 --port 4000 --colors --hot --inline --history-api-fallback --progress --content-base build/",
     "build-prod": "rm -rf ./build/* && WEBPACK_ENV=production webpack",
     "test": "echo No tests as of yet"
   }
