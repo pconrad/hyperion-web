@@ -7,4 +7,4 @@ test:
     - npm run build-prod
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/zip/
-    - cd build && zip -9vr $CIRCLE_TEST_REPORTS/zip/hyperion-web.zip . && cd ..
+    - pushd build && zip -9vr $CIRCLE_TEST_REPORTS/zip/hyperion-web.zip . && popd
