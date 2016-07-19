@@ -17,7 +17,8 @@ const chartOptions = {
 class RecentReadingsPage extends React.Component {
     constructor() {
         super();
-        this.state = {};
+        this.state = { alertVisible: true };
+        this.dismissAlert = this.dismissAlert.bind(this);
     }
 
     componentDidMount() {
@@ -30,6 +31,10 @@ class RecentReadingsPage extends React.Component {
         });
     }
 
+    dismissAlert() {
+        this.setState({ alertVisible: false });
+    }
+
     shouldShowLoading() {
         return !this.state.history && !this.state.error;
     }
@@ -40,7 +45,7 @@ class RecentReadingsPage extends React.Component {
 
     renderError() {
         const errorCode = this.state.error ? this.state.error.code : 'unknown';
-        return (<Alert bsStyle="danger">
+        return (<Alert bsStyle="danger" onDismiss={ this.dismissAlert }>
             <strong>An error occured</strong>
             <span>&nbsp;The server replied with error code { errorCode }.</span>
         </Alert>);
@@ -71,7 +76,7 @@ class RecentReadingsPage extends React.Component {
                     <Row>
                         <Col lg={ 12 }>
                             { this.state.history ? this.renderRecords() : null }
-                            { this.state.error ? this.renderError() : null }
+                            { this.state.error && this.state.alertVisible ? this.renderError() : null }
                             { this.shouldShowLoading() ? this.renderLoading() : null }
                         </Col>
                     </Row>
