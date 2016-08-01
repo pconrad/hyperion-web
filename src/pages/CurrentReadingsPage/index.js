@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Alert, Col, Grid, Row } from 'react-bootstrap';
+import { Alert } from 'react-bootstrap';
 
+import KeyValueList from 'components/KeyValueList';
 import currentReadingsService from 'services/CurrentReadingsService';
 import formattingService from 'services/FormattingService';
 
@@ -28,23 +29,25 @@ class CurrentReadingsPage extends React.Component {
         const production = this.state.currentReading.elecProd;
         const gas = this.state.currentReading.gas;
         const tariff = this.state.currentReading.tariff === '0001' ? 'Low' : 'Normal';
-        const makeRow = (label, value) => (
-            <Row>
-              <Col lg={ 6 }><strong>{ label }</strong></Col>
-              <Col lg={ 6 }>{ value }</Col>
-            </Row>
-        );
-        return (<Grid>
-          { makeRow('Last updated',
-                     formattingService.formatDateFull(this.state.currentReading.ts)) }
-          { makeRow('Electricity consumption',
-                     formattingService.formatNumberPower(consumption)) }
-          { makeRow('Electricity production',
-                     formattingService.formatNumberPower(production)) }
-          { gas ? makeRow('Gas meter',
-                          formattingService.formatNumberGas(gas)) : null }
-          { makeRow('Current tariff', tariff) }
-        </Grid>);
+
+        const rows = [
+            { label: 'Last updated',
+              value: formattingService.formatDateFull(this.state.currentReading.ts) },
+            { label: 'Current tariff',
+              value: tariff },
+            { label: 'Electricity consumption',
+              value: formattingService.formatNumberPower(consumption) },
+            { label: 'Electricity production',
+              value: formattingService.formatNumberPower(production) },
+        ];
+        if (gas) {
+            rows.push(
+                { label: 'Gas meter',
+                  value: formattingService.formatNumberGas(gas) }
+            );
+        }
+
+        return (<KeyValueList rows = { rows } />);
     }
 
     render() {
