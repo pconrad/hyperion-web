@@ -16,6 +16,9 @@ const dependencies = Object.keys(require('./package.json').dependencies)
 
 console.log(`Merging dependencies ${dependencies} into 'vendor' chunk`);
 
+const version = process.env.CIRCLE_SHA ? process.env.CIRCLE_SHA.substr(0, 8) : 'dev';
+console.log(`Building version ${version}`);
+
 const plugins = [
     new ExtractTextPlugin('[name].[hash].css', {
         allChunks: true,
@@ -48,7 +51,10 @@ const entries = {
 if (env === 'production') {
     console.log('This is a production build');
     // Set NODE_ENV to "production" so the React production lib is used. (No warnings in the dev console.)
-    plugins.push(new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify('production') } }));
+    plugins.push(new webpack.DefinePlugin({ 'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+        VERSION: JSON.stringify(version),
+    } }));
     // If errors occur do not "emmit" the build to the build-folder.
     plugins.push(new webpack.NoErrorsPlugin());
     // Remove duplicate code.
@@ -61,8 +67,9 @@ if (env === 'production') {
 } else {
     console.log('This is a development build');
     plugins.push(new webpack.DefinePlugin({ 'process.env': {
-        NODE_ENV: JSON.stringify('development'),
         API_HOST: JSON.stringify(process.env.API_HOST),
+        NODE_ENV: JSON.stringify('development'),
+        VERSION: JSON.stringify(version),
     } }));
     plugins.push(new webpack.HotModuleReplacementPlugin());
     // Do not minimize CSS
