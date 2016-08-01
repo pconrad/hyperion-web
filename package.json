@@ -3,6 +3,7 @@
     "bootstrap": "3.3.6",
     "chart.js": "1.1.1",
     "history": "2.0.1",
+    "moment": "^2.14.1",
     "react": "0.14.7",
     "react-bootstrap": "0.29.5",
     "react-chartjs": "0.7.3",
@@ -41,8 +42,8 @@
   },
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/mthmulders/hyperion-web.git"
+    "type": "git",
+    "url": "https://github.com/mthmulders/hyperion-web.git"
   },
   "scripts": {
     "build-dev": "rm -rf ./build/* && webpack --progress --watch",
