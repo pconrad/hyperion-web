@@ -10,6 +10,7 @@ import CurrentPage from 'pages/CurrentReadingsPage/';
 import HomePage from 'pages/HomePage/';
 import RecentReadingsPage from 'pages/RecentReadingsPage';
 import HistoryPage from 'pages/HistoryPage';
+import InfoPage from 'pages/InfoPage';
 
 // Mind the order of routes: first match is served
 const routes = (
@@ -20,6 +21,7 @@ const routes = (
             <Route path="/current" component={ CurrentPage } />
             <Route path="/recent" component={ RecentReadingsPage } />
             <Route path="/history" component={ HistoryPage } />
+            <Route path="/info" component={ InfoPage } />
         </Route>
     </Router>
 );

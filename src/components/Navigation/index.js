@@ -9,6 +9,7 @@ const NAV_LINKS = {
     current: { link: '/current', title: 'Current' },
     recent: { link: '/recent', title: 'Recent' },
     history: { link: '/history', title: 'History' },
+    info: { link: '/info', title: 'Info' },
 };
 
 class Navigation extends React.Component {
