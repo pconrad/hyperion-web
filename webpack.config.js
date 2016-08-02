@@ -16,7 +16,7 @@ const dependencies = Object.keys(require('./package.json').dependencies)
 
 console.log(`Merging dependencies ${dependencies} into 'vendor' chunk`);
 
-const version = process.env.CIRCLE_SHA ? process.env.CIRCLE_SHA.substr(0, 8) : 'dev';
+const version = process.env.CIRCLE_SHA1 ? process.env.CIRCLE_SHA1.substr(0, 8) : 'dev';
 console.log(`Building version ${version}`);
 
 const plugins = [
