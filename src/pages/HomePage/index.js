@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HomePage = function (props) {
+const HomePage = function () {
     return (
         <div>
             Welcome to Hyperion.
