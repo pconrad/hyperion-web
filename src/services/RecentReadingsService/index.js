@@ -10,8 +10,13 @@ class RecentReadingsService {
 
     getRecentReadings(cb) {
         request.get(this.base_url).withCredentials().end((err, res) => {
-            if (err || !res.ok) {
-                cb({ error: { code: err.status } });
+            if (err) {
+                cb({
+                    error: {
+                        code: err.status ? err.status : 'unknown',
+                        text: res ? res.text : '',
+                    },
+                });
             } else {
                 cb(res.body);
             }

@@ -44,11 +44,17 @@ class RecentReadingsPage extends React.Component {
     }
 
     renderError() {
-        const errorCode = this.state.error ? this.state.error.code : 'unknown';
-        return (<Alert bsStyle="danger" onDismiss={ this.dismissAlert }>
-            <strong>An error occured</strong>
-            <span>&nbsp;The server replied with error code { errorCode }.</span>
-        </Alert>);
+        const text = `The server replied with error code ${this.state.error.code}`;
+        const additionalInfo = this.state.error.text ? `<br/> Message: ${this.state.error.text}` : '';
+
+        return (
+            <Alert bsStyle="danger" onDismiss={ this.dismissAlert }>
+                <strong>An error occured</strong>
+                <span>
+                    &nbsp;{ text }. { additionalInfo }
+                </span>
+            </Alert>
+        );
     }
 
     renderRecords() {

@@ -11,7 +11,12 @@ class AppInfoService {
     getAppInfo(cb) {
         request.get(this.base_url).withCredentials().end((err, res) => {
             if (err) {
-                cb({ error: { code: err.status } });
+                cb({
+                    error: {
+                        code: err.status ? err.status : 'unknown',
+                        text: res ? res.text : '',
+                    },
+                });
             } else {
                 cb(res.body);
             }
