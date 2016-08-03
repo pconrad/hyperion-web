@@ -61,7 +61,7 @@ class HistoryPage extends React.Component {
 
     renderError() {
         const text = `The server replied with error code ${this.state.error.code}`;
-        const additionalInfo = this.state.error.text ? `<br/> Message: ${this.state.error.text}` : '';
+        const additionalInfo = this.state.error.text ? `Message: ${this.state.error.text}` : '';
 
         return (
             <Alert bsStyle="danger" onDismiss={ this.dismissAlert }>
