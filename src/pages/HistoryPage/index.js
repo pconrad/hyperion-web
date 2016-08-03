@@ -39,7 +39,8 @@ class HistoryPage extends React.Component {
         this.setState({ alertVisible: false });
     }
 
-    search() {
+    search(event) {
+        event.preventDefault();
         this.setState({
             error: undefined,
             loading: true,
@@ -52,7 +53,10 @@ class HistoryPage extends React.Component {
             if (result.error) {
                 this.setState({ error: result.error });
             } else {
-                this.setState({ reading: result });
+                this.setState({
+                    reading: result,
+                    date: moment(result.recordDate).format('dddd, MMMM Do YYYY'),
+                });
             }
         };
         const searchDate = moment(this.state.searchDate, DATE_PATTERNS);
@@ -76,7 +80,7 @@ class HistoryPage extends React.Component {
     render() {
         return (
             <div>
-                <Form horizontal>
+                <Form horizontal onSubmit = { this.search }>
                     <FormGroup validationState={ this.getValidationState() } onChange={ this.handleChange }>
                         <Col componentClass={ ControlLabel } sm={ 2 }>Date</Col>
                         <Col sm={ 10 }>
@@ -100,7 +104,7 @@ class HistoryPage extends React.Component {
                 { this.state.error && this.state.alertVisible ? this.renderError() : null }
                 { this.state.reading && !this.state.loading ?
                     <span>
-                        <h3>Meter Reading for { this.state.reading.recordDate }</h3>
+                        <h3>Meter Reading for { this.state.date }</h3>
                         <MeterReading reading = { this.state.reading } />
                     </span> : null }
             </div>
