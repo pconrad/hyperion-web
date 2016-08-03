@@ -12,10 +12,13 @@ class HistoryService {
         const param = searchDate.format('YYYY-MM-DD');
         const url = `${this.base_url}?date=${param}`;
         request.get(url).withCredentials().end((err, res) => {
-            console.log('err' + JSON.stringify(err));
-            console.log('res' + JSON.stringify(res));
             if (err) {
-                cb({ error: { code: err.status } });
+                cb({
+                    error: {
+                        code: err.status ? err.status : 'unknown',
+                        text: res ? res.text : '',
+                    },
+                });
             } else {
                 cb(res.body);
             }

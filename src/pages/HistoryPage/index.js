@@ -46,7 +46,6 @@ class HistoryPage extends React.Component {
             reading: undefined,
         });
         const cb = (result) => {
-            console.log(JSON.stringify(result));
             this.setState({
                 loading: false,
             });
@@ -58,6 +57,20 @@ class HistoryPage extends React.Component {
         };
         const searchDate = moment(this.state.searchDate, DATE_PATTERNS);
         historyService.getMeterReadingByDate(searchDate, cb);
+    }
+
+    renderError() {
+        const text = `The server replied with error code ${this.state.error.code}`;
+        const additionalInfo = this.state.error.text ? `<br/> Message: ${this.state.error.text}` : '';
+
+        return (
+            <Alert bsStyle="danger" onDismiss={ this.dismissAlert }>
+                <strong>An error occured</strong>
+                <span>
+                    &nbsp;{ text }. { additionalInfo }
+                </span>
+            </Alert>
+        );
     }
 
     render() {
@@ -84,11 +97,7 @@ class HistoryPage extends React.Component {
                         <strong>Loading data...</strong>
                         <span>&nbsp;Please wait, it should not take too long.</span>
                     </Alert> : null }
-                { this.state.error && this.state.alertVisible ?
-                    <Alert bsStyle="danger" onDismiss={ this.dismissAlert }>
-                        <strong>An error occured</strong>
-                        <span>&nbsp;The server replied with error code { this.state.error.code }.</span>
-                    </Alert> : null }
+                { this.state.error && this.state.alertVisible ? this.renderError() : null }
                 { this.state.reading && !this.state.loading ?
                     <span>
                         <h3>Meter Reading for { this.state.reading.recordDate }</h3>
