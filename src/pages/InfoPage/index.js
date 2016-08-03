@@ -56,8 +56,12 @@ class InfoPage extends React.Component {
     }
 
     componentDidMount() {
-        appInfoService.getAppInfo((data) => {
-            this.setState({ info: data });
+        appInfoService.getAppInfo((result) => {
+            if (result.error) {
+                this.setState({ error: result.error });
+            } else {
+                this.setState({ info: result });
+            }
         });
     }
 

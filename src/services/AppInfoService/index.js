@@ -10,7 +10,7 @@ class AppInfoService {
 
     getAppInfo(cb) {
         request.get(this.base_url).withCredentials().end((err, res) => {
-            if (err || !res.ok) {
+            if (err) {
                 cb({ error: { code: err.status } });
             } else {
                 cb(res.body);

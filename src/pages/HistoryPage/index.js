@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Alert, Button, Col, ControlLabel, Form, FormControl, FormGroup } from 'react-bootstrap';
 
+import MeterReading from 'components/MeterReading';
 import historyService from 'services/HistoryService';
 import moment from 'moment';
 
@@ -42,13 +43,15 @@ class HistoryPage extends React.Component {
         this.setState({
             error: undefined,
             loading: true,
+            reading: undefined,
         });
         const cb = (result) => {
+            console.log(JSON.stringify(result));
             this.setState({
                 loading: false,
             });
             if (result.error) {
-                this.setState({ error: result });
+                this.setState({ error: result.error });
             } else {
                 this.setState({ reading: result });
             }
@@ -58,8 +61,6 @@ class HistoryPage extends React.Component {
     }
 
     render() {
-        const errorCode = this.state.error ? this.state.error.code : 'unknown';
-
         return (
             <div>
                 <Form horizontal>
@@ -78,7 +79,7 @@ class HistoryPage extends React.Component {
                         </Col>
                     </FormGroup>
                 </Form>
-                { this.state.loading === true ?
+                { this.state.loading ?
                     <Alert bsStyle="info">
                         <strong>Loading data...</strong>
                         <span>&nbsp;Please wait, it should not take too long.</span>
@@ -86,8 +87,13 @@ class HistoryPage extends React.Component {
                 { this.state.error && this.state.alertVisible ?
                     <Alert bsStyle="danger" onDismiss={ this.dismissAlert }>
                         <strong>An error occured</strong>
-                        <span>&nbsp;The server replied with error code { errorCode }.</span>
+                        <span>&nbsp;The server replied with error code { this.state.error.code }.</span>
                     </Alert> : null }
+                { this.state.reading && !this.state.loading ?
+                    <span>
+                        <h3>Meter Reading for { this.state.reading.recordDate }</h3>
+                        <MeterReading reading = { this.state.reading } />
+                    </span> : null }
             </div>
         );
     }

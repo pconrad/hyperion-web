@@ -1,7 +1,6 @@
 import config from 'services/Config';
 
 const request = require('superagent');
-// const moment = requre('moment');
 
 class HistoryService {
     constructor() {
@@ -11,8 +10,11 @@ class HistoryService {
 
     getMeterReadingByDate(searchDate, cb) {
         const param = searchDate.format('YYYY-MM-DD');
-        request.get(`${this.base_url}?date=${param}`).withCredentials().end((err, res) => {
-            if (err || !res.ok) {
+        const url = `${this.base_url}?date=${param}`;
+        request.get(url).withCredentials().end((err, res) => {
+            console.log('err' + JSON.stringify(err));
+            console.log('res' + JSON.stringify(res));
+            if (err) {
                 cb({ error: { code: err.status } });
             } else {
                 cb(res.body);
