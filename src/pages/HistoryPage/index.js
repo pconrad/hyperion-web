@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Alert, Button, Col, ControlLabel, Form, FormControl, FormGroup } from 'react-bootstrap';
 
-import MeterReading from 'components/MeterReading';
+import MeterReadings from 'components/MeterReading';
 import apiService from 'services/ApiService';
 import moment from 'moment';
 
@@ -44,18 +44,19 @@ class HistoryPage extends React.Component {
         this.setState({
             error: undefined,
             loading: true,
-            reading: undefined,
+            readings: undefined,
         });
         const cb = (result) => {
-            this.setState({
-                loading: false,
-            });
             if (result.error) {
-                this.setState({ error: result.error });
+                this.setState({
+                    error: result.error,
+                    loading: false,
+                });
             } else {
                 this.setState({
-                    reading: result,
                     date: moment(result.recordDate).format('dddd, MMMM Do YYYY'),
+                    loading: false,
+                    readings: [result],
                 });
             }
         };
@@ -102,10 +103,10 @@ class HistoryPage extends React.Component {
                         <span>&nbsp;Please wait, it should not take too long.</span>
                     </Alert> : null }
                 { this.state.error && this.state.alertVisible ? this.renderError() : null }
-                { this.state.reading && !this.state.loading ?
+                { this.state.readings && !this.state.loading ?
                     <span>
                         <h3>Meter Reading for { this.state.date }</h3>
-                        <MeterReading reading = { this.state.reading } />
+                        <MeterReadings readings={ this.state.readings } />
                     </span> : null }
             </div>
         );

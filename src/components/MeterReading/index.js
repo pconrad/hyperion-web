@@ -1,6 +1,26 @@
 import React from 'react';
 
+const readingType = React.PropTypes.shape({
+    recordDate: React.PropTypes.string.isRequired,
+    gas: React.PropTypes.number.isRequired,
+    electricityNormal: React.PropTypes.number.isRequired,
+    electricityLow: React.PropTypes.number.isRequired,
+});
+
 const MeterReading = function (props) {
+    return (
+        <tr>
+            <td>{ props.reading.electricityLow }</td>
+            <td>{ props.reading.electricityNormal }</td>
+            <td>{ props.reading.gas }</td>
+        </tr>
+    );
+};
+MeterReading.propTypes = {
+    reading: readingType,
+};
+
+const MeterReadings = function (props) {
     return (
         <table className="table">
             <thead>
@@ -11,23 +31,16 @@ const MeterReading = function (props) {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>{ props.reading.electricityLow }</td>
-                    <td>{ props.reading.electricityNormal }</td>
-                    <td>{ props.reading.gas }</td>
-                </tr>
+                { props.readings.map((r) => (
+                    <MeterReading reading={ r } key={ r.recordDate } />
+                )) }
             </tbody>
         </table>
     );
 };
 
-MeterReading.propTypes = {
-    reading: React.PropTypes.shape({
-        recordDate: React.PropTypes.string.isRequired,
-        gas: React.PropTypes.number.isRequired,
-        electricityNormal: React.PropTypes.number.isRequired,
-        electricityLow: React.PropTypes.number.isRequired,
-    }),
+MeterReadings.propTypes = {
+    readings: React.PropTypes.arrayOf(readingType).isRequired,
 };
 
-export default MeterReading;
+export default MeterReadings;
