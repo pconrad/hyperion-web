@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Alert, Col, Grid, Row } from 'react-bootstrap';
 
+import apiService from 'services/ApiService';
 import formattingService from 'services/FormattingService';
-import recentReadingsService from 'services/RecentReadingsService';
 
 import { Line as LineChart } from 'react-chartjs';
 
@@ -22,7 +22,7 @@ class RecentReadingsPage extends React.Component {
     }
 
     componentDidMount() {
-        recentReadingsService.getRecentReadings((result) => {
+        apiService.getRecentReadings((result) => {
             if (result.error) {
                 this.setState({ error: result });
             } else {

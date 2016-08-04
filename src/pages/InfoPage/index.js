@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Tabs, Tab } from 'react-bootstrap';
 
-import appInfoService from 'services/AppInfoService';
+import apiService from 'services/ApiService';
 import KeyValueList from 'components/KeyValueList';
 
 const FrontendInfoPanel = function () {
@@ -56,7 +56,7 @@ class InfoPage extends React.Component {
     }
 
     componentDidMount() {
-        appInfoService.getAppInfo((result) => {
+        apiService.getAppInfo((result) => {
             if (result.error) {
                 this.setState({ error: result.error });
             } else {

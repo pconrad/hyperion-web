@@ -3,7 +3,7 @@ import React from 'react';
 import { Alert, Button, Col, ControlLabel, Form, FormControl, FormGroup } from 'react-bootstrap';
 
 import MeterReading from 'components/MeterReading';
-import historyService from 'services/HistoryService';
+import apiService from 'services/ApiService';
 import moment from 'moment';
 
 const DATE_PATTERNS = ['DD-MM-YYYY', 'YYYY-MM-DD'];
@@ -60,7 +60,7 @@ class HistoryPage extends React.Component {
             }
         };
         const searchDate = moment(this.state.searchDate, DATE_PATTERNS);
-        historyService.getMeterReadingByDate(searchDate, cb);
+        apiService.getMeterReadingByDate(searchDate, cb);
     }
 
     renderError() {
