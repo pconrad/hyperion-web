@@ -4,42 +4,33 @@ import { Link } from 'react-router';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-const NAV_LINKS = {
-    home: { link: '/home', title: 'Home' },
-    current: { link: '/current', title: 'Current' },
-    recent: { link: '/recent', title: 'Recent' },
-    history: { link: '/history', title: 'History' },
-    info: { link: '/info', title: 'Info' },
+const MENU_ITEMS = [
+    { link: '/home', title: 'Home' },
+    { link: '/current', title: 'Current' },
+    { link: '/recent', title: 'Recent' },
+    { link: '/history', title: 'History' },
+    { link: '/info', title: 'Info' },
+];
+
+const Navigation = function (props) {
+    return (
+        <Navbar staticTop componentClass="header" role="banner">
+            <Navbar.Header>
+                <Navbar.Brand>
+                    <Link to="/" className="navbar-brand">Υπερίων</Link>
+                </Navbar.Brand>
+            </Navbar.Header>
+            <Nav>
+                { MENU_ITEMS.map((item) => (
+                    <LinkContainer to={ { pathname: item.link } } key={ item.title } >
+                        <NavItem className={ props.activePage === item.link ? 'active' : '' } >
+                            { item.title }
+                        </NavItem>
+                    </LinkContainer>)) }
+            </Nav>
+        </Navbar>
+    );
 };
-
-class Navigation extends React.Component {
-    renderNavItem(linkName) {
-        const link = NAV_LINKS[linkName];
-        return (
-            <LinkContainer to={ { pathname: link.link } } key={ linkName }>
-                <NavItem className={ this.props.activePage === linkName ? 'active' : '' } >
-                    { link.title }
-                </NavItem>
-            </LinkContainer>
-        );
-    }
-
-    render() {
-        const brand = <Link to="/" className="navbar-brand">Υπερίων</Link>;
-        const links = Object.keys(NAV_LINKS).map((i) => this.renderNavItem(i));
-
-        return (
-            <Navbar staticTop componentClass="header" role="banner">
-                <Navbar.Header>
-                    <Navbar.Brand>{ brand }</Navbar.Brand>
-                </Navbar.Header>
-                <Nav>
-                    { links }
-                </Nav>
-            </Navbar>
-        );
-    }
-}
 
 Navigation.propTypes = {
     activePage: React.PropTypes.string.isRequired,
