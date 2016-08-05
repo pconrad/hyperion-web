@@ -1,12 +1,21 @@
 import React from 'react';
 
+import { Col, Grid, Row } from 'react-bootstrap';
+
 import Navigation from 'components/Navigation';
 
+import './style.css';
+
 const App = function (props) {
+  // activePage={ props.location.pathname }
     return (
         <div className="container">
-            <Navigation activePage={ props.location.pathname } />
-            { props.children }
+            <Navigation />
+            <Grid>
+                <Row>
+                    <Col>{ props.children }</Col>
+                </Row>
+            </Grid>
         </div>
     );
 };
