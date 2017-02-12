@@ -1,0 +1,21 @@
+{
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+        "app/*.{ts,tsx}",
+        "app/**/*.{ts,tsx}",
+        "!app/*.d.ts",
+        "!app/**/*.d.ts",
+        "!app/__tests__/*.ts",
+        "!app/__tests__/**/*.ts"
+    ],
+    "coverageDirectory": "coverage/",
+    "moduleFileExtensions": [ "ts", "tsx", "js" ],
+    "rootDir": ".",
+    "testPathDirs": [ "app/" ],
+    "testRegex": "/__tests__/.*Spec\\.tsx?$",
+    "testResultsProcessor": "<rootDir>/node_modules/ts-jest/coverageprocessor.js",
+    "transform": {
+        ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "verbose": true
+}
