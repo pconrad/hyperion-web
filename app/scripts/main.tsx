@@ -23,16 +23,14 @@ export interface MainState {
     open: boolean
 }
 
-export class Main extends React.Component<void, MainState> {
+export default class Main extends React.Component<void, MainState> {
     constructor(props: void) {
         super(props);
         this.state = { open: false };
     }
 
     private handleToggle(e: any) {
-        console.debug(`Current state: ${JSON.stringify(this.state)}`);
         this.setState({ open: !this.state.open });
-        console.debug(`New state: ${JSON.stringify(this.state)}`);
     }
 
     render() {

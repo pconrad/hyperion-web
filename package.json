@@ -11,6 +11,7 @@
   },
   "description": "Hyperion Web frontend",
   "devDependencies": {
+    "@types/enzyme": "2.7.4",
     "@types/jest": "16.0.4",
     "@types/material-ui": "0.16.46",
     "@types/react": "15.0.0",
@@ -19,9 +20,11 @@
     "@types/react-router-redux": "4.0.38",
     "@types/react-redux": "4.4.35",
     "@types/react-tap-event-plugin": "0.0.30",
+    "@types/react-test-renderer": "15.4.2",
 
     "browserify": "13.3.0",
     "browser-sync": "2.18.7",
+    "enzyme": "2.7.1",
     "del": "2.2.2",
     "gulp": "3.9.1",
     "gulp-cache": "0.4.5",
@@ -35,6 +38,8 @@
     "gulp-util": "3.0.8",
     "jest": "18.1.0",
     "jest-cli": "18.1.0",
+    "react-addons-test-utils": "15.4.2",
+    "react-test-renderer": "15.4.2",
     "ts-jest": "18.0.3",
     "tsify": "3.0.0",
     "tslint": "4.0.2",
