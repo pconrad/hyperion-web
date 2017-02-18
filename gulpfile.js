@@ -8,6 +8,7 @@ var path = require('path');
 var browserify = require('browserify');
 var browserSync = require('browser-sync');
 var cache = require('gulp-cache');
+var historyApiFallback = require('connect-history-api-fallback');
 var imagemin = require('gulp-imagemin');
 var jest = require('gulp-jest').default;
 var less = require('gulp-less');
@@ -119,6 +120,7 @@ gulp.task('watch', ['clean', 'html', 'bundle'], function() {
         // Note: this uses an unsigned certificate which on first access
         //       will present a certificate warning in the browser.
         // https: true,
+        middleware: [ historyApiFallback() ],
         server: ['dist', 'app']
     });
 
