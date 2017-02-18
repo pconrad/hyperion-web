@@ -3,8 +3,7 @@ machine:
     version: 6.1.0
 test:
   override:
-    - npm test
-    - npm run build-prod
+    - JEST_JUNIT_OUTPUT="$CIRCLE_TEST_REPORTS/junit.xml" npm run build
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/zip/
-    - pushd build && zip -9vr $CIRCLE_TEST_REPORTS/zip/hyperion-web.zip . && popd
+    - pushd dist && zip -9vr $CIRCLE_TEST_REPORTS/zip/hyperion-web.zip . && popd

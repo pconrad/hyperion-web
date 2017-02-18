@@ -13,7 +13,7 @@
     "rootDir": ".",
     "testPathDirs": [ "app/" ],
     "testRegex": "/__tests__/.*Spec\\.tsx?$",
-    "testResultsProcessor": "<rootDir>/node_modules/ts-jest/coverageprocessor.js",
+    "testResultsProcessor": "<rootDir>/jestResultsProcessor.js",
     "transform": {
         ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
