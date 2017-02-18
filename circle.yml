@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 6.1.0
+    version: 7.5.0
 test:
   override:
     - JEST_JUNIT_OUTPUT="$CIRCLE_TEST_REPORTS/junit.xml" npm run build
