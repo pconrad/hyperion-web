@@ -56,7 +56,7 @@
     "url": "https://github.com/mthmulders/hyperion-web.git"
   },
   "scripts": {
-    "build": "gulp build",
+    "build": "gulp default",
     "jest": "jest --watch -c jest-config.json"
   },
   "version": "1.0.0"
