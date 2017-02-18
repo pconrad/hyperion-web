@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 
 import AppBar from 'material-ui/AppBar';
 
-import Main from '../main';
+import { Main } from '../main';
 
 describe('<Main />', () => {
     it('should render application components', () => {

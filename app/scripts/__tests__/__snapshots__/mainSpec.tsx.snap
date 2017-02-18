@@ -16,46 +16,39 @@ ShallowWrapper {
             Symbol(observable): [Function],
           }
     }>
-    <div>
-        <AppBar
-            onLeftIconButtonTouchTap={[Function]}
-            showMenuIconButton={true}
-            title="Υπερίων"
-            zDepth={1} />
-        <Drawer
-            disableSwipeToOpen={false}
-            docked={false}
-            onRequestChange={[Function]}
-            open={false}
-            openSecondary={false}
-            swipeAreaWidth={30}
-            width={null}
-            zDepth={2} />
-        <Router
-            history={
-                Object {
-                    "createHref": [Function],
-                    "createKey": [Function],
-                    "createLocation": [Function],
-                    "createPath": [Function],
-                    "getCurrentLocation": [Function],
-                    "go": [Function],
-                    "goBack": [Function],
-                    "goForward": [Function],
-                    "listen": [Function],
-                    "listenBefore": [Function],
-                    "push": [Function],
-                    "replace": [Function],
-                    "transitionTo": [Function],
-                    "unsubscribe": [Function],
-                  }
-            }
-            render={[Function]}>
+    <Router
+        history={
+            Object {
+                "createHref": [Function],
+                "createKey": [Function],
+                "createLocation": [Function],
+                "createPath": [Function],
+                "getCurrentLocation": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "listen": [Function],
+                "listenBefore": [Function],
+                "push": [Function],
+                "replace": [Function],
+                "transitionTo": [Function],
+                "unsubscribe": [Function],
+              }
+        }
+        render={[Function]}>
+        <Route
+            component={[Function]}>
             <Route
                 component={[Function]}
-                path="/" />
-        </Router>
-    </div>
+                path="/home" />
+            <Route
+                component={[Function]}
+                path="/about" />
+        </Route>
+        <Redirect
+            from="/"
+            to="/home" />
+    </Router>
 </Provider>,
   "nodes": Array [
     <Provider
@@ -68,66 +61,57 @@ ShallowWrapper {
                   Symbol(observable): [Function],
                 }
       }>
-      <div>
-            <AppBar
-                  onLeftIconButtonTouchTap={[Function]}
-                  showMenuIconButton={true}
-                  title="Υπερίων"
-                  zDepth={1} />
-            <Drawer
-                  disableSwipeToOpen={false}
-                  docked={false}
-                  onRequestChange={[Function]}
-                  open={false}
-                  openSecondary={false}
-                  swipeAreaWidth={30}
-                  width={null}
-                  zDepth={2} />
-            <Router
-                  history={
-                        Object {
-                              "createHref": [Function],
-                              "createKey": [Function],
-                              "createLocation": [Function],
-                              "createPath": [Function],
-                              "getCurrentLocation": [Function],
-                              "go": [Function],
-                              "goBack": [Function],
-                              "goForward": [Function],
-                              "listen": [Function],
-                              "listenBefore": [Function],
-                              "push": [Function],
-                              "replace": [Function],
-                              "transitionTo": [Function],
-                              "unsubscribe": [Function],
-                            }
-                  }
-                  render={[Function]}>
+      <Router
+            history={
+                  Object {
+                        "createHref": [Function],
+                        "createKey": [Function],
+                        "createLocation": [Function],
+                        "createPath": [Function],
+                        "getCurrentLocation": [Function],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "listen": [Function],
+                        "listenBefore": [Function],
+                        "push": [Function],
+                        "replace": [Function],
+                        "transitionTo": [Function],
+                        "unsubscribe": [Function],
+                      }
+            }
+            render={[Function]}>
+            <Route
+                  component={[Function]}>
                   <Route
                         component={[Function]}
-                        path="/" />
-            </Router>
-      </div>
+                        path="/home" />
+                  <Route
+                        component={[Function]}
+                        path="/about" />
+            </Route>
+            <Redirect
+                  from="/"
+                  to="/home" />
+      </Router>
 </Provider>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
     "_instance": ShallowComponentWrapper {
       "_calledComponentWillUnmount": false,
-      "_compositeType": 0,
+      "_compositeType": 2,
       "_context": Object {},
-      "_currentElement": <Main />,
+      "_currentElement": <Unknown />,
       "_debugID": 1,
       "_hostContainerInfo": null,
       "_hostParent": null,
-      "_instance": Main {
+      "_instance": StatelessComponent {
         "_reactInternalInstance": [Circular],
         "context": Object {},
         "props": Object {},
         "refs": Object {},
-        "state": Object {
-          "open": false,
-        },
+        "state": null,
         "updater": Object {
           "enqueueCallback": [Function],
           "enqueueCallbackInternal": [Function],
@@ -156,46 +140,39 @@ ShallowWrapper {
                               Symbol(observable): [Function],
                             }
           }>
-          <div>
-                    <AppBar
-                              onLeftIconButtonTouchTap={[Function]}
-                              showMenuIconButton={true}
-                              title="Υπερίων"
-                              zDepth={1} />
-                    <Drawer
-                              disableSwipeToOpen={false}
-                              docked={false}
-                              onRequestChange={[Function]}
-                              open={false}
-                              openSecondary={false}
-                              swipeAreaWidth={30}
-                              width={null}
-                              zDepth={2} />
-                    <Router
-                              history={
-                                        Object {
-                                                  "createHref": [Function],
-                                                  "createKey": [Function],
-                                                  "createLocation": [Function],
-                                                  "createPath": [Function],
-                                                  "getCurrentLocation": [Function],
-                                                  "go": [Function],
-                                                  "goBack": [Function],
-                                                  "goForward": [Function],
-                                                  "listen": [Function],
-                                                  "listenBefore": [Function],
-                                                  "push": [Function],
-                                                  "replace": [Function],
-                                                  "transitionTo": [Function],
-                                                  "unsubscribe": [Function],
-                                                }
-                              }
-                              render={[Function]}>
+          <Router
+                    history={
+                              Object {
+                                        "createHref": [Function],
+                                        "createKey": [Function],
+                                        "createLocation": [Function],
+                                        "createPath": [Function],
+                                        "getCurrentLocation": [Function],
+                                        "go": [Function],
+                                        "goBack": [Function],
+                                        "goForward": [Function],
+                                        "listen": [Function],
+                                        "listenBefore": [Function],
+                                        "push": [Function],
+                                        "replace": [Function],
+                                        "transitionTo": [Function],
+                                        "unsubscribe": [Function],
+                                      }
+                    }
+                    render={[Function]}>
+                    <Route
+                              component={[Function]}>
                               <Route
                                         component={[Function]}
-                                        path="/" />
-                    </Router>
-          </div>
+                                        path="/home" />
+                              <Route
+                                        component={[Function]}
+                                        path="/about" />
+                    </Route>
+                    <Redirect
+                              from="/"
+                              to="/home" />
+          </Router>
 </Provider>,
         "_debugID": 2,
         "_renderedOutput": <Provider
@@ -208,46 +185,39 @@ ShallowWrapper {
                               Symbol(observable): [Function],
                             }
           }>
-          <div>
-                    <AppBar
-                              onLeftIconButtonTouchTap={[Function]}
-                              showMenuIconButton={true}
-                              title="Υπερίων"
-                              zDepth={1} />
-                    <Drawer
-                              disableSwipeToOpen={false}
-                              docked={false}
-                              onRequestChange={[Function]}
-                              open={false}
-                              openSecondary={false}
-                              swipeAreaWidth={30}
-                              width={null}
-                              zDepth={2} />
-                    <Router
-                              history={
-                                        Object {
-                                                  "createHref": [Function],
-                                                  "createKey": [Function],
-                                                  "createLocation": [Function],
-                                                  "createPath": [Function],
-                                                  "getCurrentLocation": [Function],
-                                                  "go": [Function],
-                                                  "goBack": [Function],
-                                                  "goForward": [Function],
-                                                  "listen": [Function],
-                                                  "listenBefore": [Function],
-                                                  "push": [Function],
-                                                  "replace": [Function],
-                                                  "transitionTo": [Function],
-                                                  "unsubscribe": [Function],
-                                                }
-                              }
-                              render={[Function]}>
+          <Router
+                    history={
+                              Object {
+                                        "createHref": [Function],
+                                        "createKey": [Function],
+                                        "createLocation": [Function],
+                                        "createPath": [Function],
+                                        "getCurrentLocation": [Function],
+                                        "go": [Function],
+                                        "goBack": [Function],
+                                        "goForward": [Function],
+                                        "listen": [Function],
+                                        "listenBefore": [Function],
+                                        "push": [Function],
+                                        "replace": [Function],
+                                        "transitionTo": [Function],
+                                        "unsubscribe": [Function],
+                                      }
+                    }
+                    render={[Function]}>
+                    <Route
+                              component={[Function]}>
                               <Route
                                         component={[Function]}
-                                        path="/" />
-                    </Router>
-          </div>
+                                        path="/home" />
+                              <Route
+                                        component={[Function]}
+                                        path="/about" />
+                    </Route>
+                    <Redirect
+                              from="/"
+                              to="/home" />
+          </Router>
 </Provider>,
       },
       "_renderedNodeType": 1,
@@ -260,6 +230,6 @@ ShallowWrapper {
     "render": [Function],
   },
   "root": [Circular],
-  "unrendered": <Main />,
+  "unrendered": <Unknown />,
 }
 `;
