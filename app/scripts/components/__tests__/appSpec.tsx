@@ -5,37 +5,37 @@ import { MuiThemeProvider } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import MenuItem from 'material-ui/MenuItem';
 
-import { App } from '../app';
+import { App, AppState } from '../app';
 
 describe('<App />', () => {
     const root = ReactTestUtils.renderIntoDocument(<MuiThemeProvider><App /></MuiThemeProvider>);
-    const app = ReactTestUtils.findRenderedComponentWithType(root, App);
+    const app = ReactTestUtils.findRenderedComponentWithType(root as React.Component<any, any>, App as any);
 
     describe('when clicking the hamburger', () => {
         it('should show the drawer', () => {
             // Arrange
-            const appbar = ReactTestUtils.findRenderedComponentWithType(root, AppBar);
+            const appbar: React.Component<any, any> = ReactTestUtils.findRenderedComponentWithType(root as React.Component<any, any>, AppBar);
 
             // Act
             appbar.props.onLeftIconButtonTouchTap();
             
             // Assert
-            expect(app.state.drawerOpen).toBe(true);
+            expect((app.state as AppState).drawerOpen).toBe(true);
         });
     });
 
     describe('when clicking the menu', () => {
         it('should hide the drawer', () => {
             // Arrange
-            const appbar = ReactTestUtils.findRenderedComponentWithType(root, AppBar);
+            const appbar: React.Component<any, any> = ReactTestUtils.findRenderedComponentWithType(root as React.Component<any, any>, AppBar);
             appbar.props.onLeftIconButtonTouchTap();
-            const menuItems = ReactTestUtils.scryRenderedComponentsWithType(root, MenuItem);
+            const menuItems: React.Component<any, any>[] = ReactTestUtils.scryRenderedComponentsWithType(root as React.Component<any, any>, MenuItem);
 
             // Act
             menuItems[0].props.onTouchTap();
             
             // Assert
-            expect(app.state.drawerOpen).toBe(false);
+            expect((app.state as AppState).drawerOpen).toBe(false);
         });
     });
 });
