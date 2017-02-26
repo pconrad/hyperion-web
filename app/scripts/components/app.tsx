@@ -1,4 +1,5 @@
 import AppBar from 'material-ui/AppBar';
+import Divider from 'material-ui/Divider';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import Paper from 'material-ui/Paper';
@@ -42,6 +43,7 @@ export class App extends React.Component<void, AppState> {
                     <MenuItem>Live</MenuItem>
                     <MenuItem>Recent</MenuItem>
                     <MenuItem>History</MenuItem>
+                    <Divider />
                     <MenuItem
                         containerElement={ <Link to="/about" /> }
                         label="About"
