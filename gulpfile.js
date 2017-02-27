@@ -10,20 +10,24 @@ var browserSync = require('browser-sync');
 var cache = require('gulp-cache');
 var historyApiFallback = require('connect-history-api-fallback');
 var imagemin = require('gulp-imagemin');
+var injectVersion = require('gulp-inject-version');
 var jest = require('gulp-jest').default;
 var less = require('gulp-less');
+var proxy = require('proxy-middleware');
 var reload = browserSync.reload;
 var source = require('vinyl-source-stream');
 var size = require('gulp-size');
 var stripDebug = require('gulp-strip-debug');
 var tsify = require('tsify');
 var uglify = require('gulp-uglify');
+var url = require('url');
 var useref = require('gulp-useref');
 var util = require('gulp-util');
 var watchify = require('watchify');
 
 // Constants
 var sourceFile = './app/scripts/index.tsx';
+var defaultApiHost = 'http://example.com/';
 var destFolder = './dist/scripts';
 var destFileName = 'app.js';
 
@@ -112,7 +116,20 @@ gulp.task('extras', function() {
         .pipe(size());
 });
 
+function determineApiHost() {
+    var apiHost = process.env.API_HOST || defaultApiHost
+    if (apiHost === defaultApiHost) {
+        console.warn('Redirecting API calls to ' + apiHost + '; start with API_HOST=... to override');
+    } else {
+        console.info('Redirecting API calls to ' + apiHost);
+    }
+    return apiHost;
+}
+
 gulp.task('watch', ['clean', 'html', 'bundle'], function() {
+    var proxyOptions = url.parse(determineApiHost() + '/api');
+    proxyOptions.route = '/api';
+
     browserSync({
         notify: false,
         logPrefix: 'BS',
@@ -120,7 +137,7 @@ gulp.task('watch', ['clean', 'html', 'bundle'], function() {
         // Note: this uses an unsigned certificate which on first access
         //       will present a certificate warning in the browser.
         // https: true,
-        middleware: [ historyApiFallback() ],
+        middleware: [ proxy(proxyOptions), historyApiFallback() ],
         server: ['dist', 'app']
     });
 
