@@ -2,19 +2,15 @@ import * as React from 'react';
 import { Provider } from 'react-redux'
 import { browserHistory, Redirect, Router, Route } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
-import { createStore, combineReducers } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
+import thunk from 'redux-thunk';
 
-import { About } from './components/about'
+import AboutContainer from './containers/aboutContainer'
 import { App } from './components/app'
 import { Start } from './components/start'
 import reducers from './reducers'
 
-const store = createStore(
-  combineReducers({
-    ...reducers,
-    routing: routerReducer
-  })
-);
+const store = createStore(reducers, applyMiddleware(thunk));
 
 // Create an enhanced history that syncs navigation events with the store
 const history = syncHistoryWithStore(browserHistory, store);
@@ -24,7 +20,7 @@ export const Main = (props: void) => (
         <Router history={ history } >
             <Route component={ App }>
                 <Route path="/home" component={ Start } />
-                <Route path="/about" component={ About } />
+                <Route path="/about" component={ AboutContainer } />
             </Route>
             <Redirect from="/" to="/home" />
         </Router>
