@@ -10,7 +10,6 @@ var browserSync = require('browser-sync');
 var cache = require('gulp-cache');
 var historyApiFallback = require('connect-history-api-fallback');
 var imagemin = require('gulp-imagemin');
-var injectVersion = require('gulp-inject-version');
 var jest = require('gulp-jest').default;
 var less = require('gulp-less');
 var proxy = require('proxy-middleware');
