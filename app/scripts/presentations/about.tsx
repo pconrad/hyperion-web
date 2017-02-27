@@ -37,7 +37,7 @@ export const About = (props: AboutProps) => (
             </TableRow>
             <TableRow>
                 <TableRowColumn>Total memory</TableRowColumn>
-                <TableRowColumn>{ props.data.freeMem }</TableRowColumn>
+                <TableRowColumn>{ props.data.totalMem }</TableRowColumn>
             </TableRow>
         </TableBody>
     </Table>
