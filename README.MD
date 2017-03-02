@@ -8,16 +8,13 @@ There are two ways to build the Hyperion frontend.
 Just run
 
     npm install
-    npm run build-dev
-
-Or you could run `npm run dev-server` as the last command instead to have a full webserver with hot reloading.
-You can override the hostname where the API is expected to live by supplying an environment variable named `API_HOST`.
+    API_HOST=http://your-hyperion-instance npm run build-dev
 
 ### For production
 Just run
 
     npm install
-    npm run build-prod
+    npm run build
 
 ## About the code
 Hyperion Web is written in Ecmascript 6 using the ReactJS-framework.

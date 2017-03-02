@@ -67,6 +67,7 @@
   },
   "scripts": {
     "build": "JEST_JUNIT_CLASSNAME='{classname}' JEST_JUNIT_TITLE='{title}' gulp default",
+    "dev": "gulp watch",
     "jest": "jest --watch -c jest-config.json"
   },
   "version": "1.0.0"
