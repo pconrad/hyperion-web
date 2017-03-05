@@ -3,7 +3,7 @@ const mock = jest.fn();
 import ApplicationInfoService from '../services/applicationInfoService';
 ApplicationInfoService.prototype.retrieveApplicationInfo = mock;
 
-import createStore from './mockStore';
+import createStore from '../__mocks__/mockStore';
 
 import {
     FAILED_APPLICATION_INFO,
@@ -50,7 +50,6 @@ describe('retrieveApplicationInfo action', () => {
         // Arrange
         const error = new Error('Bark!');
         mock.mockImplementation(() => {
-            // console.error('I will bark out!');
             throw error;
         });
         const store = createStore();
