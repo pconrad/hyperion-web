@@ -6,6 +6,7 @@ import { applyMiddleware, createStore } from 'redux'
 import thunk from 'redux-thunk';
 
 import AboutContainer from './containers/aboutContainer'
+import HistoryContainer from './containers/historyContanier'
 import { App } from './components/app'
 import { Start } from './components/start'
 import reducers from './reducers'
@@ -20,6 +21,7 @@ export const Main = (props: void) => (
         <Router history={ history } >
             <Route component={ App }>
                 <Route path="/home" component={ Start } />
+                <Route path="/history" component={ HistoryContainer } />
                 <Route path="/about" component={ AboutContainer } />
             </Route>
             <Redirect from="/" to="/home" />

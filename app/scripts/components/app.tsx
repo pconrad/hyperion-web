@@ -42,7 +42,10 @@ export class App extends React.Component<void, AppState> {
                         onTouchTap={ (e) => this.handleMenuClick(e) }>Home</MenuItem>
                     <MenuItem>Live</MenuItem>
                     <MenuItem>Recent</MenuItem>
-                    <MenuItem>History</MenuItem>
+                    <MenuItem
+                        containerElement={ <Link to="/history" /> }
+                        label="History"
+                        onTouchTap={ (e) => this.handleMenuClick(e) }>History</MenuItem>
                     <Divider />
                     <MenuItem
                         containerElement={ <Link to="/about" /> }
