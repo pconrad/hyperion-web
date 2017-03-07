@@ -7,7 +7,7 @@ import LinearProgress from 'material-ui/LinearProgress';
 
 import { retrieveApplicationInfo } from '../actions'
 import { About } from '../presentations/about'
-import { ApplicationInfo } from '../model/applicationInfo';
+import { ApplicationInfo } from '../model';
 
 interface Props {
     applicationInfo?: ApplicationInfo,

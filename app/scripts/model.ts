@@ -7,3 +7,6 @@ export interface ApplicationInfo {
     scalaVersion: string,
     totalMem: string
 };
+
+export interface Reading {
+};

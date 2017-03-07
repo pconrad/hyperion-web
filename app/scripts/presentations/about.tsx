@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { Table, TableBody, TableRow, TableRowColumn } from 'material-ui/Table';
 
-import { ApplicationInfo } from '../model/applicationInfo';
+import { ApplicationInfo } from '../model';
 
 export interface AboutProps {
     data: ApplicationInfo

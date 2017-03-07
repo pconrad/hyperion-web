@@ -4,7 +4,7 @@ import {
     RETRIEVE_APPLICATION_INFO,
     RETRIEVED_APPLICATION_INFO
 } from '../actions'
-import { ApplicationInfo } from '../model/applicationInfo';
+import { ApplicationInfo } from '../model';
 
 const initial: State = {
     data: null,

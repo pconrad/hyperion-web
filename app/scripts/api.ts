@@ -1,7 +1,7 @@
 /// <reference types="whatwg-fetch" />
 
-import { ApplicationInfo } from './model/applicationInfo';
-import { Reading } from './model/reading';
+import { ApplicationInfo } from './model';
+import { Reading } from './model';
 import { formatDateBackend } from './dates';
 
 const checkStatus = (response: Response): Response => {

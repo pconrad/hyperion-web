@@ -6,7 +6,7 @@ import Snackbar from 'material-ui/Snackbar';
 import LinearProgress from 'material-ui/LinearProgress';
 import DatePicker from 'material-ui/DatePicker';
 
-import { formatDateShort } from '../services/dates';
+import { formatDateShort } from '../dates';
 
 interface Props {
     error?: Error,
