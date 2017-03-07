@@ -11,7 +11,6 @@
     "coverageDirectory": "coverage/",
     "moduleFileExtensions": [ "ts", "tsx", "js" ],
     "rootDir": ".",
-    "setupFiles": [ "./setupJest.js" ],
     "testPathDirs": [ "app/" ],
     "testRegex": "/__tests__/.*Spec\\.tsx?$",
     "testResultsProcessor": "<rootDir>/jestResultsProcessor.js",
