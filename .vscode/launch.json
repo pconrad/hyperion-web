@@ -12,7 +12,8 @@
             "program": "${workspaceRoot}/node_modules/.bin/jest",
             "args": [
                 "-c",
-                "jest-config.json"
+                "jest-config.json",
+                "--runInBand"
             ]
         },
         {
