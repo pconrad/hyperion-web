@@ -20,7 +20,7 @@ describe('Application Info reducers', () => {
         // Assert
         expect(state.applicationInfo.loading).toBe(false);
         expect(state.applicationInfo.data).toEqual(payload);
-        expect(state.applicationInfo.error).toEqual(null);
+        expect(state.applicationInfo.error).toBeUndefined();
     });
 
     it('should register failures', () => {
@@ -33,7 +33,7 @@ describe('Application Info reducers', () => {
 
         // Assert
         expect(state.applicationInfo.loading).toBe(false);
-        expect(state.applicationInfo.data).toEqual(null);
+        expect(state.applicationInfo.data).toBeUndefined();
         expect(state.applicationInfo.error).toEqual(error);
     });
 });

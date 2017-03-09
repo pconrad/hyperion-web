@@ -27,7 +27,7 @@ export class AboutContainer extends React.Component<Props, {}> {
             <h1>About Υπερίων</h1>
             { loading         && <LinearProgress /> }
             { error           && <Snackbar autoHideDuration={ 2000 } action="retry" message={ error.message } onActionTouchTap={ retrieveData } open={ !!error } /> }
-            { applicationInfo && <About data={ this.props.applicationInfo } /> }
+            { applicationInfo && <About data={ applicationInfo } /> }
         </div>);
     }
 }

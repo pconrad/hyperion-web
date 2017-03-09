@@ -1,5 +1,8 @@
-export interface Action<T>{
-  type: string;
+import { Action as ReduxAction, Dispatch } from 'redux';
+
+import { Action } from './actions';
+
+export interface Action<T> extends ReduxAction {
   payload?: T;
   error?: Error
 }
@@ -18,7 +21,7 @@ const log = (name: string, error: Error) => {
 }
 
 export const retrieveApplicationInfo = () => {
-    return async (dispatch, getState) => {
+    return async (dispatch: Dispatch<Action<any>>, getState) => {
         try {
             dispatch({ type: RETRIEVE_APPLICATION_INFO });
             const info = await api.retrieveApplicationInfo();
@@ -31,7 +34,7 @@ export const retrieveApplicationInfo = () => {
 };
 
 export const retrieveHistoricalReadings = (searchDate: Date) => {
-    return async (dispatch, getState) => {
+    return async (dispatch: Dispatch<Action<any>>, getState) => {
         try {
             dispatch({ type: RETRIEVE_HISTORICAL_READING });
             const reading = await api.retrieveHistoricalReadings(searchDate);

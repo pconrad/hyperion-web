@@ -17,7 +17,7 @@ const parseJSON = (response: Response): any => {
 }
 
 // Exported only so that it can be tested.
-export const get = (input, init?): Promise<any> => {
+export const get = (input: RequestInfo, init?: RequestInit): Promise<any> => {
     return fetch(input, init)
         .then(checkStatus)
         .then(parseJSON);

@@ -6,28 +6,28 @@ import {
 } from '../actions'
 import { ApplicationInfo } from '../model';
 
-const initial: State = {
-    data: null,
-    error: null,
-    loading: false
-}
-
 interface State {
     data?: ApplicationInfo
     error?: Error
     loading: boolean
 }
 
+const initial: State = {
+    data: undefined,
+    error: undefined,
+    loading: false
+}
+
 export default (state: State = initial, action: Action<ApplicationInfo>): State => {
     switch (action.type) {
         case RETRIEVE_APPLICATION_INFO: {
-            return { data: null, error: null, loading: true }
+            return { data: undefined, error: undefined, loading: true }
         }
         case RETRIEVED_APPLICATION_INFO: {
-            return { data: action.payload, error: null, loading: false };
+            return { data: action.payload, error: undefined, loading: false };
         }
         case FAILED_APPLICATION_INFO: {
-            return { data: null, error: action.error, loading: false }
+            return { data: undefined, error: action.error, loading: false }
         }
         default: {
             return state;
