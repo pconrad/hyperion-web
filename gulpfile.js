@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var path = require('path');
 
 // Gulp plugins
+var buffer = require('vinyl-buffer');
 var browserify = require('browserify');
 var browserSync = require('browser-sync');
 var cache = require('gulp-cache');
@@ -12,16 +13,19 @@ var historyApiFallback = require('connect-history-api-fallback');
 var imagemin = require('gulp-imagemin');
 var jest = require('gulp-jest').default;
 var less = require('gulp-less');
+var path = require('path');
 var proxy = require('proxy-middleware');
 var reload = browserSync.reload;
 var source = require('vinyl-source-stream');
 var size = require('gulp-size');
+var sourcemaps = require('gulp-sourcemaps');
 var stripDebug = require('gulp-strip-debug');
 var tsify = require('tsify');
 var uglify = require('gulp-uglify');
 var url = require('url');
 var useref = require('gulp-useref');
 var util = require('gulp-util');
+var transform = require('vinyl-transform');
 var watchify = require('watchify');
 
 // Constants
@@ -29,6 +33,7 @@ var sourceFile = './app/scripts/index.tsx';
 var defaultApiHost = 'http://example.com/';
 var destFolder = './dist/scripts';
 var destFileName = 'app.js';
+var mapfile = path.join(__dirname, destFolder, 'app.js.map')
 
 var bundler = watchify(browserify({
     cache: {},
@@ -45,6 +50,9 @@ function rebundle() {
         // log errors if they happen
         .on('error', util.log.bind(util, 'Browserify error'))
         .pipe(source(destFileName))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({ loadMaps: true }))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(destFolder))
         .on('end', function() {
             reload();
@@ -153,7 +161,8 @@ gulp.task('watch', ['clean', 'html', 'bundle'], function() {
 });
 
 gulp.task('build', ['html', 'buildBundle', 'images', 'extras'], function() {
-    gulp.src(destFileName)
+    var src = path.join(destFolder, destFileName);
+    gulp.src(src)
         .pipe(uglify())
         .pipe(stripDebug())
         .pipe(gulp.dest(destFolder));

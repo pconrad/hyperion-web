@@ -14,7 +14,8 @@
                 "-c",
                 "jest-config.json",
                 "--runInBand"
-            ]
+            ],
+            "sourceMaps": true
         },
         {
             "type": "node",
