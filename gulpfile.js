@@ -97,7 +97,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('jest', function () {
-    return gulp.src('app/**/__tests__').pipe(jest({
+    return gulp.src('.').pipe(jest({
         config: require('./jest-config.json')
     }));
 });
