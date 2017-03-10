@@ -6,7 +6,7 @@ import { applyMiddleware, createStore } from 'redux'
 import thunk from 'redux-thunk';
 
 import AboutContainer from './containers/aboutContainer'
-import HistoryContainer from './containers/historyContanier'
+import HistoryContainer from './containers/historyContainer'
 import { App } from './components/app'
 import { Start } from './components/start'
 import reducers from './reducers'
