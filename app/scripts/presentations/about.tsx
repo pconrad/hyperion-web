@@ -8,7 +8,7 @@ export interface AboutProps {
     data: ApplicationInfo
 }
 
-export const About = (props: AboutProps) => (
+export const AboutView = (props: AboutProps) => (
     <Table>
         <TableBody displayRowCheckbox={ false }>
             <TableRow>
