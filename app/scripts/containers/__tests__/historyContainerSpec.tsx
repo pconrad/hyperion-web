@@ -5,20 +5,9 @@ import LinearProgress from 'material-ui/LinearProgress';
 import Snackbar from 'material-ui/Snackbar';
 import { MuiThemeProvider } from 'material-ui/styles';
 
-import { AboutContainer } from '../aboutContainer'
+import { HistoryContainer } from '../historyContainer'
 
-describe('<AboutContainer />', () => {
-
-    it('should dispatch action to retrieve data', () => {
-        // Arrange
-        const mock = jest.fn();
-
-        // Act
-        ReactTestUtils.renderIntoDocument(<AboutContainer loading={ false } retrieveData={ mock } />);
-
-        // Assert
-        expect(mock).toHaveBeenCalled();
-    });
+describe('<HistoryContainer />', () => {
 
     it('should show loading indicator while loading', () => {
         // Arrange
@@ -26,7 +15,7 @@ describe('<AboutContainer />', () => {
 
         // Act
         const root = ReactTestUtils.renderIntoDocument(<MuiThemeProvider>
-            <AboutContainer loading={ true } retrieveData={ mock } />
+            <HistoryContainer loading={ true } retrieveData={ mock } />
         </MuiThemeProvider>);
 
         // Assert
@@ -44,7 +33,7 @@ describe('<AboutContainer />', () => {
 
         // Act
         const root = ReactTestUtils.renderIntoDocument(<MuiThemeProvider>
-            <AboutContainer error={ error } loading={ false } retrieveData={ mock } />
+            <HistoryContainer error={ error } loading={ false } retrieveData={ mock } />
         </MuiThemeProvider>);
         
         // Assert
@@ -54,21 +43,4 @@ describe('<AboutContainer />', () => {
         expect(snackbar).toBeDefined();
         expect(snackbar.props.message).toBe(error.message);
     });
-
-    it('should retry when tapping the snackbar', () => {
-        // Arrange
-        const error = new Error('Ahw, an error');
-        const mock = jest.fn();
-        const root = ReactTestUtils.renderIntoDocument(<MuiThemeProvider>
-            <AboutContainer error={ error } loading={ true } retrieveData={ mock } />
-        </MuiThemeProvider>);
-        const snackbar: React.Component<any, any> = ReactTestUtils.findRenderedComponentWithType(root as React.Component<any, any>, Snackbar);
-
-        // Act
-        snackbar.props.onActionTouchTap()
-        
-        // Assert
-        expect(mock).toHaveBeenCalled();
-    });
-
-});
+})

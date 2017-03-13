@@ -9,4 +9,8 @@ export interface ApplicationInfo {
 };
 
 export interface Reading {
+    electricityLow: number,
+    electricityNormal: number,
+    gas: number,
+    recordDate: Date,
 };
