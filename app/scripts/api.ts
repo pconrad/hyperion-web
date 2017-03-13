@@ -4,6 +4,10 @@ import { ApplicationInfo } from './model';
 import { Reading } from './model';
 import { formatDateBackend } from './dates';
 
+const defaultOptions: RequestInit = {
+    credentials: 'same-origin'
+}
+
 const checkStatus = (response: Response): Response => {
     if (response.status >= 200 && response.status < 300) {
         return response
@@ -18,7 +22,8 @@ const parseJSON = (response: Response): any => {
 
 // Exported only so that it can be tested.
 export const get = (input: RequestInfo, init?: RequestInit): Promise<any> => {
-    return fetch(input, init)
+    const options = { ...defaultOptions, init}
+    return fetch(input, options)
         .then(checkStatus)
         .then(parseJSON);
 }
