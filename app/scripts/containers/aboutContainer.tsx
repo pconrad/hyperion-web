@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import { Dispatch } from 'redux'
 
 import Snackbar from 'material-ui/Snackbar';
 import LinearProgress from 'material-ui/LinearProgress';
@@ -32,13 +32,13 @@ export class AboutContainer extends React.Component<Props, {}> {
     }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: any) => ({
     applicationInfo: state.applicationInfo.data as ApplicationInfo,
     error: state.applicationInfo.error as Error,
     loading: state.applicationInfo.loading as boolean
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
     retrieveData: () => dispatch(retrieveApplicationInfo())
 });
 

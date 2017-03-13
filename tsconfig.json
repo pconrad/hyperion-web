@@ -1,8 +1,14 @@
 {
   "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
     "inlineSourceMap": true,
     "jsx": "react",
-    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
     "sourceMap": true,
     "strictNullChecks": true
   }

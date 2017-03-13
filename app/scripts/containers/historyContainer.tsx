@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import { Dispatch } from 'redux'
 
 import Snackbar from 'material-ui/Snackbar';
 import LinearProgress from 'material-ui/LinearProgress';
@@ -26,11 +26,10 @@ export class HistoryContainer extends React.Component<Props, {}> {
     }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: any) => ({
 });
 
-const mapDispatchToProps = (dispatch) => ({
-    retrieveData: (searchDate: Date) => dispatch()
+const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
 });
 
 export default connect<any, any, {}>(mapStateToProps, mapDispatchToProps)(HistoryContainer);

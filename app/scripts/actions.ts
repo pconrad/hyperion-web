@@ -21,7 +21,7 @@ const log = (name: string, error: Error) => {
 }
 
 export const retrieveApplicationInfo = () => {
-    return async (dispatch: redux.Dispatch<Action<any>>, getState) => {
+    return async (dispatch: redux.Dispatch<Action<any>>, getState: () => any) => {
         try {
             dispatch({ type: RETRIEVE_APPLICATION_INFO });
             const info = await api.retrieveApplicationInfo();
@@ -34,7 +34,7 @@ export const retrieveApplicationInfo = () => {
 };
 
 export const retrieveHistoricalReadings = (searchDate: Date) => {
-    return async (dispatch: redux.Dispatch<Action<any>>, getState) => {
+    return async (dispatch: redux.Dispatch<Action<any>>, getState: () => any) => {
         try {
             dispatch({ type: RETRIEVE_HISTORICAL_READING });
             const reading = await api.retrieveHistoricalReadings(searchDate);
