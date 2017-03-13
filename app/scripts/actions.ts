@@ -1,7 +1,5 @@
 import * as redux from 'redux';
 
-import { Action } from './actions';
-
 export interface Action<T> extends redux.Action {
   payload?: T;
   error?: Error
