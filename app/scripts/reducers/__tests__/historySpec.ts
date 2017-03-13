@@ -1,6 +1,7 @@
 import reducer from '../index';
 
 import {
+    CLEAR_HISTORICAL_READING,
     FAILED_HISTORICAL_READING,
     RETRIEVE_HISTORICAL_READING,
     RETRIEVED_HISTORICAL_READING
@@ -8,6 +9,17 @@ import {
 
 describe('History reducers', () => {
     const initialState = { applicationInfo: {} };
+
+    it('should clear historical readings', () => {
+        // Arrange
+        const action = { type: CLEAR_HISTORICAL_READING };
+
+        // Act
+        const state = reducer({ history: { data: 'foo' }}, action);
+
+        // Assert
+        expect(state.history.data).toBeUndefined();
+    });
 
     it('should register the date that was entered', () => {
         // Arrange

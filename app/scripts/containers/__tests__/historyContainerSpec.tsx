@@ -9,19 +9,34 @@ import { HistoryContainer } from '../historyContainer'
 
 describe('<HistoryContainer />', () => {
 
+    it('should dispatch action to clear any previous data', () => {
+        // Arrange
+        const mockRetrieve = jest.fn();
+        const mockClear = jest.fn();
+
+        // Act
+        ReactTestUtils.renderIntoDocument(<MuiThemeProvider>
+            <HistoryContainer clearData={ mockClear } loading={ false } retrieveData={ mockRetrieve } />
+        </MuiThemeProvider>);
+
+        // Assert
+        expect(mockClear).toHaveBeenCalled();
+    });
+
     it('should show loading indicator while loading', () => {
         // Arrange
-        const mock = jest.fn();
+        const mockRetrieve = jest.fn();
+        const mockClear = jest.fn();
 
         // Act
         const root = ReactTestUtils.renderIntoDocument(<MuiThemeProvider>
-            <HistoryContainer loading={ true } retrieveData={ mock } />
+            <HistoryContainer clearData={ mockClear } loading={ true } retrieveData={ mockRetrieve } />
         </MuiThemeProvider>);
 
         // Assert
         const progress: React.Component<any, any> = ReactTestUtils.findRenderedComponentWithType(root as React.Component<any, any>, LinearProgress);
         expect(progress).toBeDefined();
-        expect(mock).not.toHaveBeenCalled();
+        expect(mockRetrieve).not.toHaveBeenCalled();
 
         expect(ReactTestUtils.scryRenderedComponentsWithType(root as React.Component<any, any>, Snackbar).length).toBe(0);
     });
@@ -29,11 +44,12 @@ describe('<HistoryContainer />', () => {
     it('should show error when one occurs', () => {
         // Arrange
         const error = new Error('Ahw, an error');
-        const mock = jest.fn();
+        const mockRetrieve = jest.fn();
+        const mockClear = jest.fn();
 
         // Act
         const root = ReactTestUtils.renderIntoDocument(<MuiThemeProvider>
-            <HistoryContainer error={ error } loading={ false } retrieveData={ mock } />
+            <HistoryContainer clearData={ mockClear } error={ error } loading={ false } retrieveData={ mockRetrieve } />
         </MuiThemeProvider>);
         
         // Assert

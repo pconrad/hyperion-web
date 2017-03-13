@@ -6,26 +6,30 @@ import Snackbar from 'material-ui/Snackbar';
 import LinearProgress from 'material-ui/LinearProgress';
 import DatePicker from 'material-ui/DatePicker';
 
-import { retrieveHistoricalReadings } from '../actions'
+import { CLEAR_HISTORICAL_READING, retrieveHistoricalReadings } from '../actions'
 import { formatDateFull } from '../dates';
 import { Reading } from '../model';
 import { ReadingView } from '../presentations/reading';
 
 interface Props {
+    clearData: () => void,
     error?: Error,
     loading: boolean,
     reading?: Reading,
-    retrieveData: (searchDate: Date) => void,
-    searchDate?: Date
+    retrieveData: (searchDate: Date) => void
 }
 
 export class HistoryContainer extends React.Component<Props, {}> {
+    componentWillMount() {
+        this.props.loading || this.props.clearData();
+    }
+
     render() {
-        const { error, loading, reading, retrieveData, searchDate } = this.props;
+        const { error, loading, reading, retrieveData } = this.props;
 
         return (<div>
             <h1>Retrieve history</h1>
-            { searchDate || <DatePicker hintText="Select a date..."
+            { !reading   && <DatePicker hintText="Select a date..."
                                         container="inline"
                                         autoOk={ true }
                                         formatDate={ formatDateFull }
@@ -34,7 +38,7 @@ export class HistoryContainer extends React.Component<Props, {}> {
             { error      && <Snackbar   autoHideDuration={ 2000 }
                                         message={ error.message }
                                         open={ !!error } /> }
-            { reading && <ReadingView data={ reading } /> }
+            { reading    && <ReadingView data={ reading } /> }
         </div>);
     }
 }
@@ -46,6 +50,7 @@ const mapStateToProps = (state: any) => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
+    clearData: () => dispatch({ type: CLEAR_HISTORICAL_READING }),
     retrieveData: (searchDate: Date) => dispatch(retrieveHistoricalReadings(searchDate))
 });
 

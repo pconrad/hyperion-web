@@ -1,5 +1,6 @@
 import {
     Action,
+    CLEAR_HISTORICAL_READING,
     FAILED_HISTORICAL_READING,
     RETRIEVE_HISTORICAL_READING,
     RETRIEVED_HISTORICAL_READING
@@ -23,13 +24,16 @@ const initial: State = {
 export default (state: State = initial, action: Action<any>): State => {
     switch (action.type) {
         case RETRIEVE_HISTORICAL_READING: {
-            return { data: undefined, error: undefined, loading: true, searchDate: action.payload }
+            return { data: undefined, error: undefined, loading: true, searchDate: action.payload };
         }
         case RETRIEVED_HISTORICAL_READING: {
             return { data: action.payload, error: undefined, loading: false };
         }
         case FAILED_HISTORICAL_READING: {
-            return { data: undefined, error: action.error, loading: false }
+            return { data: undefined, error: action.error, loading: false };
+        }
+        case CLEAR_HISTORICAL_READING: {
+            return { ...state, data: undefined };
         }
         default: {
             return state;
