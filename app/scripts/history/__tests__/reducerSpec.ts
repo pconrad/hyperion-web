@@ -1,4 +1,4 @@
-import reducer from '../index';
+import reducer from '../../reducers/index';
 
 import {
     CLEAR_HISTORICAL_READING,
@@ -8,7 +8,7 @@ import {
 } from '../../actions';
 
 describe('History reducers', () => {
-    const initialState = { applicationInfo: {} };
+    const initialState = { history: { } };
 
     it('should clear historical readings', () => {
         // Arrange

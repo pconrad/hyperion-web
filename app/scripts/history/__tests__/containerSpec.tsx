@@ -5,7 +5,7 @@ import LinearProgress from 'material-ui/LinearProgress';
 import Snackbar from 'material-ui/Snackbar';
 import { MuiThemeProvider } from 'material-ui/styles';
 
-import { HistoryContainer } from '../historyContainer'
+import { HistoryContainer } from '../container'
 
 describe('<HistoryContainer />', () => {
 

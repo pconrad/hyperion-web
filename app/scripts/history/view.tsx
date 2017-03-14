@@ -4,11 +4,11 @@ import { Table, TableBody, TableRow, TableRowColumn } from 'material-ui/Table';
 
 import { Reading } from '../model';
 
-export interface ReadingProps {
+export interface ViewProps {
     data: Reading
 }
 
-export const ReadingView = (props: ReadingProps) => (
+export const View = (props: ViewProps) => (
     <Table>
         <TableBody displayRowCheckbox={ false }>
             <TableRow>

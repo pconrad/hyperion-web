@@ -9,7 +9,7 @@ import DatePicker from 'material-ui/DatePicker';
 import { CLEAR_HISTORICAL_READING, retrieveHistoricalReadings } from '../actions'
 import { formatDateFull } from '../dates';
 import { Reading } from '../model';
-import { ReadingView } from '../presentations/reading';
+import { View } from './view';
 
 interface Props {
     clearData: () => void,
@@ -38,7 +38,7 @@ export class HistoryContainer extends React.Component<Props, {}> {
             { error      && <Snackbar   autoHideDuration={ 2000 }
                                         message={ error.message }
                                         open={ !!error } /> }
-            { reading    && <ReadingView data={ reading } /> }
+            { reading    && <View       data={ reading } /> }
         </div>);
     }
 }
