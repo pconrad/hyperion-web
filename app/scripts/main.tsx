@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 
 import AboutContainer from './about/container'
 import HistoryContainer from './history/container'
-import { App } from './components/app'
+import { App } from './app'
 import { Start } from './components/start'
 import reducers from './reducers'
 
