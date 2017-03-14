@@ -6,7 +6,7 @@ import Snackbar from 'material-ui/Snackbar';
 import LinearProgress from 'material-ui/LinearProgress';
 
 import { retrieveApplicationInfo } from '../actions'
-import { AboutView } from '../presentations/about'
+import { View } from './view'
 import { ApplicationInfo } from '../model';
 
 interface Props {
@@ -28,7 +28,7 @@ export class AboutContainer extends React.Component<Props, {}> {
             { loading         && <LinearProgress /> }
             { error           && <Snackbar autoHideDuration={ 2000 } action="retry"
                     message={ error.message } onActionTouchTap={ retrieveData } open={ !!error } /> }
-            { applicationInfo && <AboutView data={ applicationInfo } /> }
+            { applicationInfo && <View data={ applicationInfo } /> }
         </div>);
     }
 }

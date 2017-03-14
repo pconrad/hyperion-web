@@ -1,7 +1,7 @@
 import { combineReducers, Reducer } from 'redux';
 import { routerReducer } from 'react-router-redux'
 
-import applicationInfo from './applicationInfo';
+import applicationInfo from '../about/reducer';
 import history from './history';
 
 const reducer: Reducer<any> = combineReducers({

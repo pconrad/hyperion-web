@@ -5,7 +5,7 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import { applyMiddleware, createStore } from 'redux'
 import thunk from 'redux-thunk';
 
-import AboutContainer from './containers/aboutContainer'
+import AboutContainer from './about/container'
 import HistoryContainer from './containers/historyContainer'
 import { App } from './components/app'
 import { Start } from './components/start'

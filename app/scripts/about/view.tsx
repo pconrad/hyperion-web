@@ -4,11 +4,11 @@ import { Table, TableBody, TableRow, TableRowColumn } from 'material-ui/Table';
 
 import { ApplicationInfo } from '../model';
 
-export interface AboutProps {
+export interface ViewProps {
     data: ApplicationInfo
 }
 
-export const AboutView = (props: AboutProps) => (
+export const View = (props: ViewProps) => (
     <Table>
         <TableBody displayRowCheckbox={ false }>
             <TableRow>
