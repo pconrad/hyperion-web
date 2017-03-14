@@ -2,6 +2,7 @@ import * as React from 'react'
 
 import { Table, TableBody, TableRow, TableRowColumn } from 'material-ui/Table';
 
+import { formatDateFull } from '../dates'
 import { Reading } from '../model';
 
 export interface ViewProps {
@@ -11,6 +12,10 @@ export interface ViewProps {
 export const View = (props: ViewProps) => (
     <Table>
         <TableBody displayRowCheckbox={ false }>
+            <TableRow>
+                <TableRowColumn>Date recorded</TableRowColumn>
+                <TableRowColumn>{ formatDateFull(props.data.recordDate) }</TableRowColumn>
+            </TableRow>
             <TableRow>
                 <TableRowColumn>Electricity (low)</TableRowColumn>
                 <TableRowColumn>{ props.data.electricityLow } kWh</TableRowColumn>
