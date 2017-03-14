@@ -21,6 +21,29 @@ Hyperion Web is written in Ecmascript 6 using the ReactJS-framework.
 
 Build status: [![Circle CI](https://circleci.com/gh/mthmulders/hyperion-web/tree/master.svg?style=svg)](https://circleci.com/gh/mthmulders/hyperion-web/tree/master)
 
+## Design
+The code is structured according to the ["Presentational and Container Components"](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) pattern.
+
+In short, there are two main classes of React components:
+
+1. *Container components*.
+   * Are concerned with how things work.
+   * May contain both presentational and container components** inside but usually don’t have any DOM markup of their own except for some wrapping divs, and never have any styles.
+   * Provide the data and behavior to presentational or other container components.
+   * Call Flux actions and provide these as callbacks to the presentational components.
+   * Are often stateful, as they tend to serve as data sources.
+   * Are usually generated using higher order components such as `connect()` from React Redux, `createContainer()` from Relay, or `Container.create()` from Flux Utils, rather than written by hand.
+   * Examples: UserPage, FollowersSidebar, StoryContainer, FollowedUserList.
+1. *Presentational components*.
+   * Are concerned with how things look.
+   * May contain both presentational and container components** inside, and usually have some DOM markup and styles of their own.
+   * Often allow containment via this.props.children.
+   * Have no dependencies on the rest of the app, such as Flux actions or stores.
+   * Don’t specify how the data is loaded or mutated.
+   * Receive data and callbacks exclusively via props.
+   * Rarely have their own state (when they do, it’s UI state rather than data).
+   * Are written as functional components unless they need state, lifecycle hooks, or performance    optimizations.
+   * Examples: Page, Sidebar, Story, UserInfo, List.
 
 ## License
 Hyperion Web is licensed under the MIT License. See the `LICENSE` file for details.
