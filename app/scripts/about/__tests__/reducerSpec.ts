@@ -1,4 +1,4 @@
-import reducer from '../../reducers/index';
+import reducer from '../../reducers';
 
 import {
     FAILED_APPLICATION_INFO,
