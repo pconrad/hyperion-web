@@ -13,7 +13,6 @@ var historyApiFallback = require('connect-history-api-fallback');
 var imagemin = require('gulp-imagemin');
 var jest = require('gulp-jest').default;
 var less = require('gulp-less');
-var path = require('path');
 var proxy = require('proxy-middleware');
 var reload = browserSync.reload;
 var source = require('vinyl-source-stream');
@@ -33,7 +32,6 @@ var sourceFile = './app/scripts/index.tsx';
 var defaultApiHost = 'http://example.com/';
 var destFolder = './dist/scripts';
 var destFileName = 'app.js';
-var mapfile = path.join(__dirname, destFolder, 'app.js.map')
 
 var bundler = watchify(browserify({
     cache: {},
@@ -70,7 +68,7 @@ gulp.task('buildScripts', function() {
         .plugin(tsify)
         .bundle()
         .pipe(source('app.js'))
-        .pipe(gulp.dest('dist/scripts'));
+        .pipe(gulp.dest(destFolder));
 });
 
 gulp.task('html', function() {
