@@ -1,7 +1,7 @@
-import { formatDateBackend, formatDateFull, formatDateShort } from '../dates';
+import { formatDateBackend, formatDateFull, formatDateTimeFull, formatDateShort } from '../dates';
 
 describe('Date-related functions', () => {
-    const input = new Date(2012, 11, 20, 3, 0, 0);
+    const input = new Date(2012, 11, 20, 3, 15, 42);
 
     describe('formatDateShort()', () => {
         it('should properly format', () => {
@@ -30,6 +30,16 @@ describe('Date-related functions', () => {
 
             // Assert
             expect(result).toBe('Thursday, December 20th 2012')
+        });
+    });
+
+    describe('formatDateTimeFull()', () => {
+        it('should properly format', () => {
+            // Act
+            const result = formatDateTimeFull(input);
+
+            // Assert
+            expect(result).toBe('Thursday, December 20th 2012, 03:15:42')
         });
     });
 });
