@@ -7,6 +7,7 @@ import thunk from 'redux-thunk';
 
 import AboutContainer from './about/container'
 import HistoryContainer from './history/container'
+import LiveContainer from './live/container'
 import { App } from './app'
 import { Start } from './components/start'
 import reducers from './reducers'
@@ -21,6 +22,7 @@ export const Main = (props: void) => (
         <Router history={ history } >
             <Route component={ App }>
                 <Route path="/home" component={ Start } />
+                <Route path="/live" component={ LiveContainer } />
                 <Route path="/history" component={ HistoryContainer } />
                 <Route path="/about" component={ AboutContainer } />
             </Route>

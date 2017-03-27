@@ -8,6 +8,14 @@ export interface ApplicationInfo {
     totalMem: string
 };
 
+export interface LiveReading {
+    elecCon: number,
+    elecProd: number,
+    gas: number,
+    tariff: string,
+    ts: Date
+}
+
 export interface Reading {
     electricityLow: number,
     electricityNormal: number,

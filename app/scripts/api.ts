@@ -1,7 +1,6 @@
 /// <reference types="whatwg-fetch" />
 
-import { ApplicationInfo } from './model';
-import { Reading } from './model';
+import { ApplicationInfo, LiveReading, Reading } from './model';
 import { formatDateBackend } from './dates';
 
 interface ErrorMapping {
@@ -46,3 +45,26 @@ export const retrieveHistoricalReadings = (searchDate: Date): Promise<Reading> =
     const input = formatDateBackend(searchDate);
     return get(`/api/history?date=${input}`, undefined, errorMapping);
 };
+
+export class LiveDataService {
+    private ws: WebSocket;
+
+    constructor() {
+        const hostname = document.location.hostname;
+        const port = document.location.port;
+        const protocol = document.location.protocol === 'http:' ? 'ws' : 'wss';
+        const address = `${protocol}://${hostname}:${port}/api/actual`;
+        console.log(`Connecting to WS address: ${address}`);
+        this.ws = new WebSocket(address);
+    }
+
+    connect(callback: (reading: LiveReading) => void) {
+        this.ws.onmessage = (event: MessageEvent) => {
+            callback(JSON.parse(event.data))
+        };
+    }
+
+    disconnect() {
+        this.ws.close();
+    }
+}
