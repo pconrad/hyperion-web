@@ -33,7 +33,7 @@ export class HistoryContainer extends React.Component<Props, {}> {
                                         container="inline"
                                         autoOk={ true }
                                         formatDate={ formatDateFull }
-                                        onChange= { (evt, date) => retrieveData(date) } /> }
+                                        onChange={ (evt, date) => retrieveData(date) } /> }
             { loading    && <LinearProgress /> }
             { error      && <Snackbar   autoHideDuration={ 2000 }
                                         message={ error.message }
