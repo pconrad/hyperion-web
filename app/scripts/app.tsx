@@ -44,7 +44,10 @@ export class App extends React.Component<void, AppState> {
                         containerElement={ <Link to="/live" /> }
                         label="Live"
                         onTouchTap={ (e) => this.handleMenuClick(e) }>Live</MenuItem>
-                    <MenuItem>Recent</MenuItem>
+                    <MenuItem
+                        containerElement={ <Link to="/recent" /> }
+                        label="Recent"
+                        onTouchTap={ (e) => this.handleMenuClick(e) }>Recent</MenuItem>
                     <MenuItem
                         containerElement={ <Link to="/history" /> }
                         label="History"

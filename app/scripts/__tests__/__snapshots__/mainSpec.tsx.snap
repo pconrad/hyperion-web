@@ -49,6 +49,9 @@ ShallowWrapper {
                 path="/history" />
             <Route
                 component={[Function]}
+                path="/recent" />
+            <Route
+                component={[Function]}
                 path="/about" />
         </Route>
         <Redirect
@@ -98,6 +101,9 @@ ShallowWrapper {
                   <Route
                         component={[Function]}
                         path="/history" />
+                  <Route
+                        component={[Function]}
+                        path="/recent" />
                   <Route
                         component={[Function]}
                         path="/about" />
@@ -185,6 +191,9 @@ ShallowWrapper {
                                         path="/history" />
                               <Route
                                         component={[Function]}
+                                        path="/recent" />
+                              <Route
+                                        component={[Function]}
                                         path="/about" />
                     </Route>
                     <Redirect
@@ -234,6 +243,9 @@ ShallowWrapper {
                               <Route
                                         component={[Function]}
                                         path="/history" />
+                              <Route
+                                        component={[Function]}
+                                        path="/recent" />
                               <Route
                                         component={[Function]}
                                         path="/about" />
