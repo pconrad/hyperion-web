@@ -13,7 +13,7 @@ jest.mock('../../api', () => ({
     }
 }));
 
-import { LiveContainer } from '../container'
+import LiveContainer from '../container'
 
 describe('<LiveContainer />', () => {
     beforeEach(() => {
