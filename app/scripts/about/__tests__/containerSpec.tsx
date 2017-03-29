@@ -1,74 +1,80 @@
 import * as React from 'react';
-import * as ReactTestUtils from 'react-addons-test-utils'
+import { shallow } from 'enzyme';
 
 import LinearProgress from 'material-ui/LinearProgress';
 import Snackbar from 'material-ui/Snackbar';
-import { MuiThemeProvider } from 'material-ui/styles';
 
-import { AboutContainer } from '../container'
+const retrieveApplicationInfo = jest.fn(() => Promise.resolve());
+jest.mock('../../api', () => ({ retrieveApplicationInfo }));
+
+import AboutContainer from '../container'
+import View from '../view';
 
 describe('<AboutContainer />', () => {
-
-    it('should dispatch action to retrieve data', () => {
-        // Arrange
-        const mock = jest.fn();
-
-        // Act
-        ReactTestUtils.renderIntoDocument(<AboutContainer loading={ false } retrieveData={ mock } />);
-
-        // Assert
-        expect(mock).toHaveBeenCalled();
+    afterEach(() => {
+        retrieveApplicationInfo.mockReset();
     });
 
     it('should show loading indicator while loading', () => {
         // Arrange
-        const mock = jest.fn();
+        retrieveApplicationInfo.mockImplementation(() => Promise.resolve());
 
         // Act
-        const root = ReactTestUtils.renderIntoDocument(<MuiThemeProvider>
-            <AboutContainer loading={ true } retrieveData={ mock } />
-        </MuiThemeProvider>);
+        const container = shallow(<AboutContainer />);
 
         // Assert
-        const progress: React.Component<any, any> = ReactTestUtils.findRenderedComponentWithType(root as React.Component<any, any>, LinearProgress);
-        expect(progress).toBeDefined();
-        expect(mock).not.toHaveBeenCalled();
-
-        expect(ReactTestUtils.scryRenderedComponentsWithType(root as React.Component<any, any>, Snackbar).length).toBe(0);
+        expect(container.find(LinearProgress).exists()).toBe(true);
+        expect(retrieveApplicationInfo).toHaveBeenCalled();
     });
 
-    it('should show error when one occurs', () => {
+    it('should show error when one occurs', (done) => {
         // Arrange
         const error = new Error('Ahw, an error');
-        const mock = jest.fn();
+        retrieveApplicationInfo.mockImplementation(() => Promise.reject(error));
 
         // Act
-        const root = ReactTestUtils.renderIntoDocument(<MuiThemeProvider>
-            <AboutContainer error={ error } loading={ false } retrieveData={ mock } />
-        </MuiThemeProvider>);
+        const container = shallow(<AboutContainer />);
         
         // Assert
-        expect(ReactTestUtils.scryRenderedComponentsWithType(root as React.Component<any, any>, LinearProgress).length).toBe(0);
-
-        const snackbar: React.Component<any, any> = ReactTestUtils.findRenderedComponentWithType(root as React.Component<any, any>, Snackbar);
-        expect(snackbar).toBeDefined();
-        expect(snackbar.props.message).toBe(error.message);
+        setTimeout(() => {
+            expect(container.find(LinearProgress).exists()).toBe(false);
+            expect(container.find(Snackbar).exists()).toBe(true);
+            expect(container.find(Snackbar).props().message).toMatch(error.message);
+            done();
+        }, 250);
     });
 
     it('should retry when tapping the snackbar', () => {
         // Arrange
         const error = new Error('Ahw, an error');
-        const mock = jest.fn();
-        const root = ReactTestUtils.renderIntoDocument(<MuiThemeProvider>
-            <AboutContainer error={ error } loading={ true } retrieveData={ mock } />
-        </MuiThemeProvider>);
-        const snackbar: React.Component<any, any> = ReactTestUtils.findRenderedComponentWithType(root as React.Component<any, any>, Snackbar);
+        retrieveApplicationInfo.mockImplementation(() => Promise.reject(error));
 
         // Act
-        snackbar.props.onActionTouchTap()
+        const container = shallow(<AboutContainer />);
+        container.setState({ ...container.state(), error });
+        const snackbarProps = container.find(Snackbar).props();
+        snackbarProps.onActionTouchTap && snackbarProps.onActionTouchTap(undefined as any);
         
         // Assert
-        expect(mock).toHaveBeenCalled();
+        expect(retrieveApplicationInfo).toHaveBeenCalledTimes(2);
+    });
+
+    it('should show data when fetched', (done) => {
+        // Arrange
+        const result = {};
+        retrieveApplicationInfo.mockImplementation(() => Promise.resolve(result));
+
+        // Act
+        const container = shallow(<AboutContainer />);
+        
+        // Assert
+        setTimeout(() => {
+            expect(container.find(LinearProgress).exists()).toBe(false);
+            expect(container.find(Snackbar).exists()).toBe(false);
+            expect(container.find(View).exists()).toBe(true);
+            expect(container.find(View).props().data).toBe(result);
+            done();
+        }, 250);
     });
 
 });

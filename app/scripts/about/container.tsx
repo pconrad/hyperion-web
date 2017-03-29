@@ -1,46 +1,47 @@
 import * as React from 'react'
-import { connect } from 'react-redux'
-import { Dispatch } from 'redux'
 
 import Snackbar from 'material-ui/Snackbar';
 import LinearProgress from 'material-ui/LinearProgress';
 
-import { retrieveApplicationInfo } from '../actions'
-import { View } from './view'
+import View from './view'
 import { ApplicationInfo } from '../model';
+import { retrieveApplicationInfo } from '../api';
 
 interface Props {
-    applicationInfo?: ApplicationInfo,
-    error?: Error,
-    loading: boolean,
-    retrieveData: () => void
 }
 
-export class AboutContainer extends React.Component<Props, {}> {
+interface State {
+    applicationInfo?: ApplicationInfo,
+    error?: Error,
+    loading: boolean
+}
+
+export class AboutContainer extends React.Component<Props, State> {
+    constructor() {
+        super();
+        this.state = { loading: false };
+    }
+
     componentWillMount() {
-        this.props.loading || this.props.retrieveData();
+        this.setState({ ...this.state, loading: true });
+        retrieveApplicationInfo()
+            .then(applicationInfo => this.setState({ ...this.state, loading: false, applicationInfo }))
+            .catch(error => this.setState({ ...this.state, loading: false, error }));
     }
 
     render() {
-        const { applicationInfo, error, loading, retrieveData } = this.props;
+        const { applicationInfo, error, loading } = this.state;
         return (<div>
             <h1>About Υπερίων</h1>
             { loading         && <LinearProgress /> }
-            { error           && <Snackbar autoHideDuration={ 2000 } action="retry"
-                    message={ error.message } onActionTouchTap={ retrieveData } open={ !!error } /> }
+            { error           && <Snackbar autoHideDuration={ 2000 }
+                                           action="retry"
+                                           message={ error.message }
+                                           onActionTouchTap={ e => this.componentWillMount() }
+                                           open={ !!error } /> }
             { applicationInfo && <View data={ applicationInfo } /> }
         </div>);
     }
 }
 
-const mapStateToProps = (state: any) => ({
-    applicationInfo: state.applicationInfo.data as ApplicationInfo,
-    error: state.applicationInfo.error as Error,
-    loading: state.applicationInfo.loading as boolean
-});
-
-const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
-    retrieveData: () => dispatch(retrieveApplicationInfo())
-});
-
-export default connect<any, any, {}>(mapStateToProps, mapDispatchToProps)(AboutContainer);
+export default AboutContainer;
