@@ -5,13 +5,9 @@ export interface Action<T> extends redux.Action {
   error?: Error
 }
 
-export const CLEAR_HISTORICAL_READING = 'CLEAR_HISTORICAL_READING';
 export const FAILED_APPLICATION_INFO = 'FAILED_APPLICATION_INFO';
-export const FAILED_HISTORICAL_READING = 'FAILED_HISTORICAL_READING';
 export const RETRIEVE_APPLICATION_INFO = 'RETRIEVE_APPLICATION_INFO';
-export const RETRIEVE_HISTORICAL_READING = 'RETRIEVE_HISTORICAL_READING';
 export const RETRIEVED_APPLICATION_INFO = 'RETRIEVED_APPLICATION_INFO';
-export const RETRIEVED_HISTORICAL_READING = 'RETRIEVED_HISTORICAL_READING';
 
 import * as api from './api';
 
@@ -31,16 +27,3 @@ export const retrieveApplicationInfo = () => {
         }
     };
 };
-
-export const retrieveHistoricalReadings = (searchDate: Date) => {
-    return async (dispatch: redux.Dispatch<Action<any>>, getState: () => any) => {
-        try {
-            dispatch({ type: RETRIEVE_HISTORICAL_READING });
-            const reading = await api.retrieveHistoricalReadings(searchDate);
-            dispatch({ type: RETRIEVED_HISTORICAL_READING, payload: reading });
-        } catch (error) {
-            log('retrieving historical readings', error);
-            dispatch({ type: FAILED_HISTORICAL_READING, error });
-        }
-    };
-}

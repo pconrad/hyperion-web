@@ -1,62 +1,88 @@
 import * as React from 'react';
-import * as ReactTestUtils from 'react-addons-test-utils'
+import { shallow, ShallowWrapper } from 'enzyme';
+import * as moment from 'moment';
 
+import DatePicker from 'material-ui/DatePicker';
 import LinearProgress from 'material-ui/LinearProgress';
 import Snackbar from 'material-ui/Snackbar';
-import { MuiThemeProvider } from 'material-ui/styles';
 
-import { HistoryContainer } from '../container'
+const retrieveHistoricalReadings = jest.fn(() => Promise.resolve());
+jest.mock('../../api', () => ({ retrieveHistoricalReadings }));
+
+import HistoryContainer from '../container'
+import View from '../view';
 
 describe('<HistoryContainer />', () => {
+    afterEach(() => {
+        retrieveHistoricalReadings.mockReset();
+    });
 
-    it('should dispatch action to clear any previous data', () => {
+    function selectDate<P, S>(container: ShallowWrapper<P, S>, input: Date) {
+        const props = container.find(DatePicker).props();
+        props.onChange && props.onChange(undefined, input);
+    }
+
+    it('should show a date selector', () => {
         // Arrange
-        const mockRetrieve = jest.fn();
-        const mockClear = jest.fn();
 
         // Act
-        ReactTestUtils.renderIntoDocument(<MuiThemeProvider>
-            <HistoryContainer clearData={ mockClear } loading={ false } retrieveData={ mockRetrieve } />
-        </MuiThemeProvider>);
+        const container = shallow(<HistoryContainer />);
 
         // Assert
-        expect(mockClear).toHaveBeenCalled();
+        expect(container.find(DatePicker).exists()).toBe(true);
+        expect(retrieveHistoricalReadings).not.toHaveBeenCalled();
+        expect(container.find(LinearProgress).exists()).toBe(false);
     });
 
     it('should show loading indicator while loading', () => {
         // Arrange
-        const mockRetrieve = jest.fn();
-        const mockClear = jest.fn();
+        const selectedDate = moment().subtract(1, 'days').toDate();
+        retrieveHistoricalReadings.mockImplementation(() => Promise.resolve());
 
         // Act
-        const root = ReactTestUtils.renderIntoDocument(<MuiThemeProvider>
-            <HistoryContainer clearData={ mockClear } loading={ true } retrieveData={ mockRetrieve } />
-        </MuiThemeProvider>);
+        const container = shallow(<HistoryContainer />);
+        selectDate(container, selectedDate);
 
         // Assert
-        const progress: React.Component<any, any> = ReactTestUtils.findRenderedComponentWithType(root as React.Component<any, any>, LinearProgress);
-        expect(progress).toBeDefined();
-        expect(mockRetrieve).not.toHaveBeenCalled();
-
-        expect(ReactTestUtils.scryRenderedComponentsWithType(root as React.Component<any, any>, Snackbar).length).toBe(0);
+        expect(container.find(LinearProgress).exists()).toBe(true);
     });
 
-    it('should show error when one occurs', () => {
+    it('should show error when one occurs', (done) => {
         // Arrange
+        const selectedDate = moment().subtract(1, 'days').toDate();
         const error = new Error('Ahw, an error');
-        const mockRetrieve = jest.fn();
-        const mockClear = jest.fn();
+        retrieveHistoricalReadings.mockImplementation(() => Promise.reject(error));
 
         // Act
-        const root = ReactTestUtils.renderIntoDocument(<MuiThemeProvider>
-            <HistoryContainer clearData={ mockClear } error={ error } loading={ false } retrieveData={ mockRetrieve } />
-        </MuiThemeProvider>);
+        const container = shallow(<HistoryContainer />);
+        selectDate(container, selectedDate);
         
         // Assert
-        expect(ReactTestUtils.scryRenderedComponentsWithType(root as React.Component<any, any>, LinearProgress).length).toBe(0);
+        setTimeout(() => {
+            expect(container.find(LinearProgress).exists()).toBe(false);
+            expect(container.find(Snackbar).exists()).toBe(true);
+            expect(container.find(Snackbar).props().message).toMatch(error.message);
+            done();
+        }, 250);
+    });
 
-        const snackbar: React.Component<any, any> = ReactTestUtils.findRenderedComponentWithType(root as React.Component<any, any>, Snackbar);
-        expect(snackbar).toBeDefined();
-        expect(snackbar.props.message).toBe(error.message);
+    it('should show data when fetched', (done) => {
+        // Arrange
+        const selectedDate = moment().subtract(1, 'days').toDate();
+        const result = {};
+        retrieveHistoricalReadings.mockImplementation(() => Promise.resolve(result));
+
+        // Act
+        const container = shallow(<HistoryContainer />);
+        selectDate(container, selectedDate);
+        
+        // Assert
+        setTimeout(() => {
+            expect(container.find(LinearProgress).exists()).toBe(false);
+            expect(container.find(Snackbar).exists()).toBe(false);
+            expect(container.find(View).exists()).toBe(true);
+            expect(container.find(View).props().data).toBe(result);
+            done();
+        }, 250);
     });
 })

@@ -9,7 +9,7 @@ export interface ViewProps {
     data: Reading
 }
 
-export const View = (props: ViewProps) => (
+export default (props: ViewProps) => (
     <Table>
         <TableBody displayRowCheckbox={ false }>
             <TableRow>
