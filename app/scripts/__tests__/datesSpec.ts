@@ -1,4 +1,6 @@
-import { formatDateBackend, formatDateFull, formatDateTimeFull, formatDateShort } from '../dates';
+import * as moment from 'moment';
+
+import * as dates from '../dates';
 
 describe('Date-related functions', () => {
     const input = new Date(2012, 11, 20, 3, 15, 42);
@@ -6,7 +8,7 @@ describe('Date-related functions', () => {
     describe('formatDateShort()', () => {
         it('should properly format', () => {
             // Act
-            const result = formatDateShort(input);
+            const result = dates.formatDateShort(input);
 
             // Assert
             expect(result).toBe('20 Dec 2012');
@@ -16,7 +18,7 @@ describe('Date-related functions', () => {
     describe('formatDateBackend()', () => {
         it('should properly format', () => {
             // Act
-            const result = formatDateBackend(input);
+            const result = dates.formatDateBackend(input);
 
             // Assert
             expect(result).toBe('2012-12-20');
@@ -26,7 +28,7 @@ describe('Date-related functions', () => {
     describe('formatDateFull()', () => {
         it('should properly format', () => {
             // Act
-            const result = formatDateFull(input);
+            const result = dates.formatDateFull(input);
 
             // Assert
             expect(result).toBe('Thursday, December 20th 2012')
@@ -36,10 +38,33 @@ describe('Date-related functions', () => {
     describe('formatDateTimeFull()', () => {
         it('should properly format', () => {
             // Act
-            const result = formatDateTimeFull(input);
+            const result = dates.formatDateTimeFull(input);
 
             // Assert
             expect(result).toBe('Thursday, December 20th 2012, 03:15:42')
+        });
+    });
+
+    describe('isFutureDate()', () => {
+        describe('when value is in the past', () => {
+            it('should return false', () => {
+                const input: Date = moment().subtract(1, 'minute').toDate();
+                expect(dates.isFutureDate(input)).toBe(false);
+            });
+        });
+
+        describe('when value is in the future', () => {
+            it('should return false', () => {
+                const input: Date = moment().add(1, 'minute').toDate();
+                expect(dates.isFutureDate(input)).toBe(true);
+            });
+        });
+
+        describe('when value is equal to today', () => {
+            it('should return false', () => {
+                const input: Date = moment().toDate();
+                expect(dates.isFutureDate(input)).toBe(false);
+            });
         });
     });
 });
