@@ -4,21 +4,23 @@ import { ApplicationInfo, LiveReading, Reading } from './model';
 import { formatDateBackend } from './dates';
 
 interface ErrorMapping {
-    [key: number]: string
+    [key: number]: (response: Response) => Promise<string>
 }
 
 const defaultOptions: RequestInit = {
     credentials: 'same-origin'
 }
 
-const checkStatus = (response: Response, errorMapping: ErrorMapping): Response => {
+const checkStatus = (response: Response, errorMapping: ErrorMapping): Promise<Response> => {
     const status = response.status;
-    if (errorMapping[status]) {
-        throw new Error(errorMapping[status]);
-    } else if (status >= 200 && status < 300) {
-        return response
+    if (status >= 200 && status < 300) {
+        return Promise.resolve(response);
     } else {
-        throw new Error(`HTTP error ${response.status}: ${response.statusText}`);
+        const mapping = errorMapping[status];
+        const message = mapping ? mapping(response) : Promise.resolve(`HTTP error ${response.status}: ${response.statusText}`);
+        return new Promise((resolve, reject) => {
+            message.then(msg => reject(new Error(msg)));
+        });
     }
 }
 
@@ -28,7 +30,7 @@ const parseJSON = (response: Response): any => {
 
 // Exported only so that it can be tested.
 export const get = (input: RequestInfo, init?: RequestInit, errorMapping: ErrorMapping = {}): Promise<any> => {
-    const options = { ...defaultOptions, init}
+    const options = { ...defaultOptions, ...init}
     return fetch(input, options)
         .then(res => checkStatus(res, errorMapping))
         .then(parseJSON);
@@ -40,7 +42,7 @@ export const retrieveApplicationInfo = (): Promise<ApplicationInfo> => {
 
 export const retrieveHistoricalReadings = (searchDate: Date): Promise<Reading> => {
     const errorMapping: ErrorMapping = {
-        404: 'No record found for selected date'
+        404: (response) => Promise.resolve('No record found for selected date')
     };
     const input = formatDateBackend(searchDate);
     return get(`/api/history?date=${input}`, undefined, errorMapping);

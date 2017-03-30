@@ -25,10 +25,10 @@ describe('Generic helper functions', () => {
     });
 
     describe('with custom error handling', () => {
-        describe('when the error code is defined', () => {
+        describe('when the error code is defined as a string', () => {
             it('should throw the predefined error', () => {
                 // Arrange
-                const errorMapping = { 500: 'Something quite bizarre' };
+                const errorMapping = { 500: (response: Response) => Promise.resolve('Something quite bizarre') };
                 fetchMock.get('*', 500);
 
                 // Act
