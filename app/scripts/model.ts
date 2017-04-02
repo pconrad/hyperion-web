@@ -22,3 +22,15 @@ export interface Reading {
     gas: number,
     recordDate: Date,
 };
+
+export interface RecentReading {
+    elecCon: number,
+    elecConsNormal: number,
+    elecConsLow: number,
+    elecProd: number,
+    elecProdNormal: number,
+    elecProdLow: number,
+    gas: number,
+    ts: Date,
+
+};

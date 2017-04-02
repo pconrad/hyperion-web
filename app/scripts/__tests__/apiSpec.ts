@@ -2,7 +2,7 @@
 
 import * as fetchMock from 'fetch-mock';
 
-import { get, retrieveApplicationInfo, retrieveHistoricalReadings } from '../api'
+import * as api from '../api'
 
 describe('Generic helper functions', () => {
     afterEach(() => {
@@ -16,7 +16,7 @@ describe('Generic helper functions', () => {
                 fetchMock.get('*', 404);
 
                 // Act
-                return get('/').catch((error: Error) => {
+                return api.get('/').catch((error: Error) => {
                     // Assert
                     expect(error.message).toBe('HTTP error 404: Not Found');
                 });
@@ -32,7 +32,7 @@ describe('Generic helper functions', () => {
                 fetchMock.get('*', 500);
 
                 // Act
-                return get('/', undefined, errorMapping).catch((error: Error) => {
+                return api.get('/', undefined, errorMapping).catch((error: Error) => {
                     // Assert
                     expect(error.message).toBe('Something quite bizarre');
                 });
@@ -46,7 +46,7 @@ describe('Generic helper functions', () => {
                     fetchMock.get('*', 401);
 
                     // Act
-                    return get('/').catch((error: Error) => {
+                    return api.get('/').catch((error: Error) => {
                         // Assert
                         expect(error.message).toBe('HTTP error 401: Unauthorized');
                     });
@@ -62,7 +62,7 @@ describe('Generic helper functions', () => {
             fetchMock.get('*', { status: 200, body });
             
             // Act
-            return get('/').then(result => {
+            return api.get('/').then(result => {
                 // Assert
                 expect(result).toEqual({ hello: 'world' });
             });
@@ -77,7 +77,7 @@ describe('retrieveApplicationInfo()', () => {
         fetchMock.once('/api/info', { status: 200, body }, { method: 'GET' });
 
         // Act
-        retrieveApplicationInfo().then(result => {
+        api.retrieveApplicationInfo().then(result => {
             // Assert
             expect(result).toEqual({ appVersion: 1 });
         });
@@ -92,7 +92,7 @@ describe('retrieveHistoricalReadings()', () => {
 
         // Act
         const searchDate = new Date(2014, 10, 30);
-        retrieveHistoricalReadings(searchDate).then(result => {
+        return api.retrieveHistoricalReadings(searchDate).then(result => {
             // Assert
             expect(result).toEqual({ electricityLow: 15 });
         });
@@ -106,10 +106,24 @@ describe('retrieveHistoricalReadings()', () => {
 
             // Assert
             const searchDate = new Date(2014, 10, 30);
-            return retrieveHistoricalReadings(searchDate).catch((error: Error) => {
+            return api.retrieveHistoricalReadings(searchDate).catch((error: Error) => {
                 // Act
                 expect(error.message).toBe('No record found for selected date');
             });
+        });
+    });
+});
+
+describe('retrieveRecentReadings()', () => {
+    it('should invoke /api/recent', () => {
+        // Arrange
+        const body = '[{ "tariff": "0001" }, { "tariff": "0001" }]';
+        fetchMock.once('/api/recent', { status: 200, body }, { method: 'GET' });
+
+        // Act
+        return api.retrieveRecentReadings().then(result => {
+            // Assert
+            expect(result).toEqual([{ tariff: '0001' }, { tariff: '0001' }]);
         });
     });
 });
