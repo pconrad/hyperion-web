@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import Snackbar from 'material-ui/Snackbar';
-import LinearProgress from 'material-ui/LinearProgress';
 import DatePicker from 'material-ui/DatePicker';
+import LinearProgress from 'material-ui/LinearProgress';
+import Snackbar from 'material-ui/Snackbar';
 
 import { retrieveHistoricalReadings } from '../api'
 import { formatDateFull, isFutureDate } from '../dates';
