@@ -20,7 +20,7 @@ const RecentView = (props: ViewProps) => {
             <Line type='monotone' dataKey='value' points={ [] } />
             <Tooltip viewBox={{ x: 0, y: 0, width: 0, height: 0 }} />
             <XAxis dataKey="name" />
-            <YAxis label='Consumed Power' unit='Watt' />
+            <YAxis label='Consumed Power' unit='Watt' type='number' dataKey='value' />
         </LineChart>
     );
 };
