@@ -2,9 +2,7 @@ import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import * as moment from 'moment';
 
-import DatePicker from 'material-ui/DatePicker';
-import LinearProgress from 'material-ui/LinearProgress';
-import Snackbar from 'material-ui/Snackbar';
+import { DatePicker, LinearProgress, Snackbar } from 'material-ui';
 
 const retrieveHistoricalReadings = jest.fn(() => Promise.resolve());
 jest.mock('../../api', () => ({ retrieveHistoricalReadings }));

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import LinearProgress from 'material-ui/LinearProgress';
+import { LinearProgress } from 'material-ui';
 
 import { LiveDataService } from '../api'
 import { LiveReading } from '../model';

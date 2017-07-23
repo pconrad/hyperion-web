@@ -1,7 +1,6 @@
 import * as React from 'react'
 
-import Snackbar from 'material-ui/Snackbar';
-import LinearProgress from 'material-ui/LinearProgress';
+import { LinearProgress, Snackbar } from 'material-ui';
 
 import View from './view'
 import { ApplicationInfo } from '../model';

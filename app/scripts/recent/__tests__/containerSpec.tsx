@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 
-import LinearProgress from 'material-ui/LinearProgress';
-import Snackbar from 'material-ui/Snackbar';
+import { LinearProgress, Snackbar } from 'material-ui';
 
 const retrieveRecentReadings = jest.fn(() => Promise.resolve());
 jest.mock('../../api', () => ({ retrieveRecentReadings }));

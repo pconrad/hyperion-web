@@ -2,8 +2,7 @@ import * as React from 'react';
 import * as ReactTestUtils from 'react-addons-test-utils'
 import { MuiThemeProvider } from 'material-ui/styles';
 
-import AppBar from 'material-ui/AppBar';
-import MenuItem from 'material-ui/MenuItem';
+import { AppBar, MenuItem } from 'material-ui';
 
 import { App, AppState } from '../app';
 
