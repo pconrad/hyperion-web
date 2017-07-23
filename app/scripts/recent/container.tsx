@@ -25,7 +25,7 @@ class RecentContainer extends React.Component<{}, State> {
             .then(readings => this.setState({ ...this.state, loading: false, readings }))
             .catch(error => this.setState({ ...this.state, loading: false, error }))
     }
-    
+
     render() {
         const { error, loading, readings } = this.state;
 

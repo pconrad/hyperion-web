@@ -32,7 +32,7 @@ export const View = (props: ViewProps) => {
                     <TableRowColumn>Current electricity production</TableRowColumn>
                     <TableRowColumn>{ props.data.elecProd } kWh</TableRowColumn>
                 </TableRow>
-                { props.data.gas && 
+                { props.data.gas &&
                     <TableRow>
                         <TableRowColumn>Total gas consumption</TableRowColumn>
                         <TableRowColumn>{ props.data.gas } m<sup>3</sup></TableRowColumn>

@@ -54,7 +54,7 @@ describe('<HistoryContainer />', () => {
         // Act
         const container = shallow(<HistoryContainer />);
         selectDate(container, selectedDate);
-        
+
         // Assert
         setTimeout(() => {
             expect(container.find(LinearProgress).exists()).toBe(false);
@@ -73,7 +73,7 @@ describe('<HistoryContainer />', () => {
         // Act
         const container = shallow(<HistoryContainer />);
         selectDate(container, selectedDate);
-        
+
         // Assert
         setTimeout(() => {
             expect(container.find(LinearProgress).exists()).toBe(false);

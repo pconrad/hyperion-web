@@ -28,7 +28,7 @@ class LiveContainer extends React.Component<Props, { lastReading?: LiveReading }
     render() {
         const { lastReading } = this.state;
         const loading = !lastReading;
-        
+
         return (<div>
             <h1>Live data</h1>
             { loading     && <LinearProgress /> }

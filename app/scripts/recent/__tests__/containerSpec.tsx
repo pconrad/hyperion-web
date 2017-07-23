@@ -32,7 +32,7 @@ describe('<RecentContainer />', () => {
 
         // Act
         const container = shallow(<RecentContainer />);
-        
+
         // Assert
         setTimeout(() => {
             expect(container.find(LinearProgress).exists()).toBe(false);
@@ -41,7 +41,7 @@ describe('<RecentContainer />', () => {
             done();
         }, 250);
     });
-    
+
     it('should show data when fetched', (done) => {
         // Arrange
         const result = [{}, {}];
@@ -49,7 +49,7 @@ describe('<RecentContainer />', () => {
 
         // Act
         const container = shallow(<RecentContainer />);
-        
+
         // Assert
         setTimeout(() => {
             expect(container.find(LinearProgress).exists()).toBe(false);

@@ -33,7 +33,7 @@ describe('<AboutContainer />', () => {
 
         // Act
         const container = shallow(<AboutContainer />);
-        
+
         // Assert
         setTimeout(() => {
             expect(container.find(LinearProgress).exists()).toBe(false);
@@ -53,7 +53,7 @@ describe('<AboutContainer />', () => {
         container.setState({ ...container.state(), error });
         const snackbarProps = container.find(Snackbar).props();
         snackbarProps.onActionTouchTap && snackbarProps.onActionTouchTap(undefined as any);
-        
+
         // Assert
         expect(retrieveApplicationInfo).toHaveBeenCalledTimes(2);
     });
@@ -65,7 +65,7 @@ describe('<AboutContainer />', () => {
 
         // Act
         const container = shallow(<AboutContainer />);
-        
+
         // Assert
         setTimeout(() => {
             expect(container.find(LinearProgress).exists()).toBe(false);

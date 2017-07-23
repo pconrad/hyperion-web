@@ -17,7 +17,7 @@ describe('<App />', () => {
 
             // Act
             appbar.props.onLeftIconButtonTouchTap();
-            
+
             // Assert
             expect((app.state as AppState).drawerOpen).toBe(true);
         });
@@ -32,7 +32,7 @@ describe('<App />', () => {
 
             // Act
             menuItems[0].props.onTouchTap();
-            
+
             // Assert
             expect((app.state as AppState).drawerOpen).toBe(false);
         });
