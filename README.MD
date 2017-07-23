@@ -8,7 +8,7 @@ There are two ways to build the Hyperion frontend.
 Just run
 
     npm install
-    API_HOST=http://your-hyperion-instance npm run build-dev
+    API_HOST=http://your-hyperion-instance npm run dev
 
 ### For production
 Just run
@@ -17,7 +17,7 @@ Just run
     npm run build
 
 ## About the code
-Hyperion Web is written in Ecmascript 6 using the ReactJS-framework.
+Hyperion Web is written in [TypeScript](http://www.typescriptlang.org/) using the [React library](https://facebook.github.io/react/).
 
 Build status: [![Circle CI](https://circleci.com/gh/mthmulders/hyperion-web/tree/master.svg?style=svg)](https://circleci.com/gh/mthmulders/hyperion-web/tree/master)
 
