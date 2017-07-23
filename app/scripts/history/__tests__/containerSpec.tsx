@@ -1,13 +1,13 @@
-import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import * as moment from 'moment';
+import * as React from 'react';
 
 import { DatePicker, LinearProgress, Snackbar } from 'material-ui';
 
 const retrieveHistoricalReadings = jest.fn(() => Promise.resolve());
 jest.mock('../../api', () => ({ retrieveHistoricalReadings }));
 
-import HistoryContainer from '../container'
+import HistoryContainer from '../container';
 import View from '../view';
 
 describe('<HistoryContainer />', () => {
@@ -83,4 +83,4 @@ describe('<HistoryContainer />', () => {
             done();
         }, 250);
     });
-})
+});

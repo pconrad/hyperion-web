@@ -1,12 +1,12 @@
-import * as React from 'react';
 import { shallow } from 'enzyme';
+import * as React from 'react';
 
 import { LinearProgress, Snackbar } from 'material-ui';
 
 const retrieveRecentReadings = jest.fn(() => Promise.resolve());
 jest.mock('../../api', () => ({ retrieveRecentReadings }));
 
-import RecentContainer from '../container'
+import RecentContainer from '../container';
 import View from '../view';
 
 describe('<RecentContainer />', () => {

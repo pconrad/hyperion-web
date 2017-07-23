@@ -1,11 +1,11 @@
-import * as React from 'react'
+import * as React from 'react';
 
 import { Table, TableBody, TableRow, TableRowColumn } from 'material-ui';
 
 import { ApplicationInfo } from '../model';
 
 export interface ViewProps {
-    data: ApplicationInfo
+    data: ApplicationInfo;
 }
 
 export default (props: ViewProps) => (

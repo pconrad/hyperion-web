@@ -1,29 +1,29 @@
-import * as React from 'react'
+import * as React from 'react';
 
 import { LinearProgress, Snackbar} from 'material-ui';
 
-import { retrieveRecentReadings } from '../api'
-import { RecentReading } from '../model'
+import { retrieveRecentReadings } from '../api';
+import { RecentReading } from '../model';
 import View from './view';
 
 interface State {
-    error?: Error,
-    loading: boolean,
-    readings?: RecentReading[],
-    selectedDate?: Date
+    error?: Error;
+    loading: boolean;
+    readings?: RecentReading[];
+    selectedDate?: Date;
 }
 
 class RecentContainer extends React.Component<{}, State> {
     constructor() {
-        super()
-        this.state = { loading: false }
+        super();
+        this.state = { loading: false };
     }
 
     componentWillMount() {
         this.setState({ ...this.state, loading: true });
         retrieveRecentReadings()
-            .then(readings => this.setState({ ...this.state, loading: false, readings }))
-            .catch(error => this.setState({ ...this.state, loading: false, error }))
+            .then((readings) => this.setState({ ...this.state, loading: false, readings }))
+            .catch((error) => this.setState({ ...this.state, loading: false, error }));
     }
 
     render() {
@@ -40,4 +40,4 @@ class RecentContainer extends React.Component<{}, State> {
     }
 };
 
-export default RecentContainer
+export default RecentContainer;

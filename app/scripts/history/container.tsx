@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { DatePicker, LinearProgress, Snackbar } from 'material-ui';
 
-import { retrieveHistoricalReadings } from '../api'
+import { retrieveHistoricalReadings } from '../api';
 import { formatDateFull, isFutureDate } from '../dates';
 import { Reading } from '../model';
 import View from './view';
@@ -11,17 +11,17 @@ interface Props {
 }
 
 interface State {
-    error?: Error,
-    loading: boolean,
-    reading?: Reading,
-    selectedDate?: Date
+    error?: Error;
+    loading: boolean;
+    reading?: Reading;
+    selectedDate?: Date;
 }
 
 class HistoryContainer extends React.Component<Props, State> {
     constructor() {
         super();
         this.state = {
-            loading: false
+            loading: false,
         };
     }
 
@@ -31,8 +31,8 @@ class HistoryContainer extends React.Component<Props, State> {
     selectDate(selectedDate: Date) {
         this.setState({ ...this.state, selectedDate, loading: true });
         retrieveHistoricalReadings(selectedDate)
-            .then(reading => this.setState({ ...this.state, loading: false, reading }))
-            .catch(error => this.setState({ ...this.state, loading: false, error }));
+            .then((reading) => this.setState({ ...this.state, loading: false, reading }))
+            .catch((error) => this.setState({ ...this.state, loading: false, error }));
     }
 
     render() {
@@ -40,8 +40,8 @@ class HistoryContainer extends React.Component<Props, State> {
 
         return (<div>
             <h1>Retrieve history</h1>
-            <DatePicker hintText="Select a date..."
-                        container="inline"
+            <DatePicker hintText='Select a date...'
+                        container='inline'
                         autoOk={ true }
                         formatDate={ formatDateFull }
                         shouldDisableDate={ (date) => isFutureDate(date) }

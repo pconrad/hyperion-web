@@ -1,19 +1,19 @@
-import * as React from 'react';
 import { shallow } from 'enzyme';
+import * as React from 'react';
 
 import { LinearProgress } from 'material-ui';
 
 import { LiveReading } from '../../model';
-import { View } from '../view'
+import { View } from '../view';
 
 const mock = jest.fn();
 jest.mock('../../api', () => ({
     LiveDataService: class LiveDataService {
         connect = mock;
-    }
+    },
 }));
 
-import LiveContainer from '../container'
+import LiveContainer from '../container';
 
 describe('<LiveContainer />', () => {
     beforeEach(() => {

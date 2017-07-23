@@ -1,10 +1,10 @@
-import * as React from 'react'
+import * as React from 'react';
 
 import { LinearProgress } from 'material-ui';
 
-import { LiveDataService } from '../api'
+import { LiveDataService } from '../api';
 import { LiveReading } from '../model';
-import { View } from './view'
+import { View } from './view';
 
 interface Props {
 }
@@ -37,4 +37,4 @@ class LiveContainer extends React.Component<Props, { lastReading?: LiveReading }
     }
 }
 
-export default LiveContainer
+export default LiveContainer;

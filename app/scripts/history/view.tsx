@@ -1,12 +1,12 @@
-import * as React from 'react'
+import * as React from 'react';
 
 import { Table, TableBody, TableRow, TableRowColumn } from 'material-ui';
 
-import { formatDateFull } from '../dates'
+import { formatDateFull } from '../dates';
 import { Reading } from '../model';
 
 export interface ViewProps {
-    data: Reading
+    data: Reading;
 }
 
 export default (props: ViewProps) => (

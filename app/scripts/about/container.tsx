@@ -1,18 +1,18 @@
-import * as React from 'react'
+import * as React from 'react';
 
 import { LinearProgress, Snackbar } from 'material-ui';
 
-import View from './view'
-import { ApplicationInfo } from '../model';
 import { retrieveApplicationInfo } from '../api';
+import { ApplicationInfo } from '../model';
+import View from './view';
 
 interface Props {
 }
 
 interface State {
-    applicationInfo?: ApplicationInfo,
-    error?: Error,
-    loading: boolean
+    applicationInfo?: ApplicationInfo;
+    error?: Error;
+    loading: boolean;
 }
 
 export class AboutContainer extends React.Component<Props, State> {
@@ -24,8 +24,8 @@ export class AboutContainer extends React.Component<Props, State> {
     componentWillMount() {
         this.setState({ ...this.state, loading: true });
         retrieveApplicationInfo()
-            .then(applicationInfo => this.setState({ ...this.state, loading: false, applicationInfo }))
-            .catch(error => this.setState({ ...this.state, loading: false, error }));
+            .then((applicationInfo) => this.setState({ ...this.state, loading: false, applicationInfo }))
+            .catch((error) => this.setState({ ...this.state, loading: false, error }));
     }
 
     render() {
@@ -34,9 +34,9 @@ export class AboutContainer extends React.Component<Props, State> {
             <h1>About Υπερίων</h1>
             { loading         && <LinearProgress /> }
             { error           && <Snackbar autoHideDuration={ 2000 }
-                                           action="retry"
+                                           action='retry'
                                            message={ error.message }
-                                           onActionTouchTap={ e => this.componentWillMount() }
+                                           onActionTouchTap={ (e) => this.componentWillMount() }
                                            open={ !!error } /> }
             { applicationInfo && <View data={ applicationInfo } /> }
         </div>);

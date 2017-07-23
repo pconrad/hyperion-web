@@ -1,6 +1,6 @@
-import * as React from 'react';
-import * as ReactTestUtils from 'react-addons-test-utils'
 import { MuiThemeProvider } from 'material-ui/styles';
+import * as React from 'react';
+import * as ReactTestUtils from 'react-addons-test-utils';
 
 import { AppBar, MenuItem } from 'material-ui';
 
@@ -28,7 +28,7 @@ describe('<App />', () => {
             // Arrange
             const appbar: React.Component<any, any> = ReactTestUtils.findRenderedComponentWithType(root as React.Component<any, any>, AppBar);
             appbar.props.onLeftIconButtonTouchTap();
-            const menuItems: React.Component<any, any>[] = ReactTestUtils.scryRenderedComponentsWithType(root as React.Component<any, any>, MenuItem);
+            const menuItems: Array<React.Component<any, any>> = ReactTestUtils.scryRenderedComponentsWithType(root as React.Component<any, any>, MenuItem);
 
             // Act
             menuItems[0].props.onTouchTap();
