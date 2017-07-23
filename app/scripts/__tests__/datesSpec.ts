@@ -67,4 +67,14 @@ describe('Date-related functions', () => {
             });
         });
     });
+
+    describe('formatTime()', () => {
+        it('should properly format', () => {
+            // Act
+            const result = dates.formatTime(input);
+
+            // Assert
+            expect(result).toBe('03:15:42')
+        });
+    });
 });

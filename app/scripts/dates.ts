@@ -16,6 +16,10 @@ export const formatDateTimeFull = (input: Date) => {
     return moment(input).format('dddd, MMMM Do YYYY, HH:mm:ss');
 }
 
+export const formatTime = (input: Date) => {
+    return moment(input).format('HH:mm:ss');
+}
+
 export const isFutureDate = (input: Date) => {
     return moment(input).isAfter(moment.now());
 }
