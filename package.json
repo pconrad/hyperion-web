@@ -50,7 +50,7 @@
     "ts-jest": "18.0.3",
     "tsify": "3.0.0",
     "tslint": "4.0.2",
-    "typescript": "2.1.4",
+    "typescript": "2.4.2",
     "url": "0.11.0",
     "vinyl-buffer": "1.0.0",
     "vinyl-source-stream": "1.1.0",
