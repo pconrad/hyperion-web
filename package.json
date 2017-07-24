@@ -49,7 +49,9 @@
     "react-test-renderer": "15.4.2",
     "ts-jest": "18.0.3",
     "tsify": "3.0.0",
-    "tslint": "4.0.2",
+    "tslint": "4.5.1",
+    "tslintify": "2.0.2",
+    "tslint-react": "3.0.0",
     "typescript": "2.4.2",
     "url": "0.11.0",
     "vinyl-buffer": "1.0.0",
@@ -67,7 +69,10 @@
     "build": "JEST_JUNIT_CLASSNAME='{classname}' JEST_JUNIT_TITLE='{title}' gulp default",
     "dev": "gulp watch",
     "jest": "jest --watch -c jest-config.json",
-    "test": "gulp test"
+    "test": "gulp test",
+    "tslint": "tslint -c tslint.json 'app/**/*.ts?' -o tslint.out -t verbose --force",
+    "tslint-print": "tslint -c tslint.json 'app/**/*.ts?' -t stylish --force",
+    "tslint-fix": "tslint -c tslint.json 'app/**/*.ts?' -t stylish --force --fix"
   },
   "version": "1.0.0"
 }

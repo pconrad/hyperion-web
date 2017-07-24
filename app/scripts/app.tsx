@@ -10,8 +10,8 @@ export interface AppState {
     drawerOpen: boolean;
 }
 
-export class App extends React.Component<void, AppState> {
-    constructor(props: void) {
+export class App extends React.Component<{}, AppState> {
+    constructor(props: {}) {
         super(props);
         this.state = { drawerOpen: false };
     }
