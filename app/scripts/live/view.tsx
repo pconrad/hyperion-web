@@ -11,33 +11,23 @@ export interface ViewProps {
 
 const lowTariff = '0001';
 
+const makeRow = (label: string, value: string) => (
+    <TableRow>
+        <TableRowColumn>{ label }</TableRowColumn>
+        <TableRowColumn>{ value }</TableRowColumn>
+    </TableRow>
+);
+
 export const View = (props: ViewProps) => {
     const tariff = props.data.tariff === lowTariff ? 'Low' : 'Normal';
     return (
         <Table>
             <TableBody displayRowCheckbox={ false }>
-                <TableRow>
-                    <TableRowColumn>Timestamp</TableRowColumn>
-                    <TableRowColumn>{ formatDateTimeFull(props.data.ts) }</TableRowColumn>
-                </TableRow>
-                <TableRow>
-                    <TableRowColumn>Current electricity tariff</TableRowColumn>
-                    <TableRowColumn>{ tariff } </TableRowColumn>
-                </TableRow>
-                <TableRow>
-                    <TableRowColumn>Current electricity consumption</TableRowColumn>
-                    <TableRowColumn>{ props.data.elecCon } kWh</TableRowColumn>
-                </TableRow>
-                <TableRow>
-                    <TableRowColumn>Current electricity production</TableRowColumn>
-                    <TableRowColumn>{ props.data.elecProd } kWh</TableRowColumn>
-                </TableRow>
-                { props.data.gas &&
-                    <TableRow>
-                        <TableRowColumn>Total gas consumption</TableRowColumn>
-                        <TableRowColumn>{ props.data.gas } m<sup>3</sup></TableRowColumn>
-                    </TableRow>
-                }
+                { makeRow('Timestamp', formatDateTimeFull(props.data.ts)) }
+                { makeRow('Current electricity tariff', tariff) }
+                { makeRow('Current electricity consumption', `${props.data.elecCon} kWh`) }
+                { makeRow('Current electricity production', `${props.data.elecProd} kWh`) }
+                { props.data.gas && makeRow('Total gas consumption', `${props.data.gas} m3` ) }
             </TableBody>
         </Table>
     );

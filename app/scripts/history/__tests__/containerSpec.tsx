@@ -17,7 +17,9 @@ describe('<HistoryContainer />', () => {
 
     function selectDate<P, S>(container: ShallowWrapper<P, S>, input: Date) {
         const props = container.find(DatePicker).props();
-        props.onChange && props.onChange(undefined, input);
+        if (props.onChange) {
+            props.onChange(undefined, input);
+        }
     }
 
     it('should show a date selector', () => {

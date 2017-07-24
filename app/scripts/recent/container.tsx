@@ -19,24 +19,24 @@ class RecentContainer extends React.Component<{}, State> {
         this.state = { loading: false };
     }
 
-    componentWillMount() {
+    public componentWillMount() {
         this.setState({ ...this.state, loading: true });
         retrieveRecentReadings()
             .then((readings) => this.setState({ ...this.state, loading: false, readings }))
             .catch((error) => this.setState({ ...this.state, loading: false, error }));
     }
 
-    render() {
+    public render() {
         const { error, loading, readings } = this.state;
 
-        return (<div>
-            <h1>Recent data</h1>
-            { error      && <Snackbar   autoHideDuration={ 2000 }
-                                        message={ error.message }
-                                        open={ !!error } /> }
-            { loading    && <LinearProgress /> }
-            { readings   && <View       data={ readings } />}
-        </div>);
+        return (
+            <div>
+                <h1>Recent data</h1>
+                { error && <Snackbar autoHideDuration={ 2000 }  message={ error.message } open={ !!error } /> }
+                { loading && <LinearProgress /> }
+                { readings && <View data={ readings } />}
+            </div>
+        );
     }
 };
 

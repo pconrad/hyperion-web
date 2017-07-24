@@ -9,7 +9,7 @@ import { View } from '../view';
 const mock = jest.fn();
 jest.mock('../../api', () => ({
     LiveDataService: class LiveDataService {
-        connect = mock;
+        public connect = mock;
     },
 }));
 

@@ -52,7 +52,9 @@ describe('<AboutContainer />', () => {
         const container = shallow(<AboutContainer />);
         container.setState({ ...container.state(), error });
         const snackbarProps = container.find(Snackbar).props();
-        snackbarProps.onActionTouchTap && snackbarProps.onActionTouchTap(undefined as any);
+        if (snackbarProps.onActionTouchTap) {
+            snackbarProps.onActionTouchTap(undefined as any);
+        }
 
         // Assert
         expect(retrieveApplicationInfo).toHaveBeenCalledTimes(2);

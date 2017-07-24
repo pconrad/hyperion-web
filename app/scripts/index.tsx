@@ -15,15 +15,17 @@ import RecentContainer from './recent/container';
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 
-const routes = <Router history={ browserHistory } >
-    <Route component={ App }>
-        <Route path='/home' component={ Start } />
-        <Route path='/live' component={ LiveContainer } />
-        <Route path='/history' component={ HistoryContainer } />
-        <Route path='/recent' component={ RecentContainer } />
-        <Route path='/about' component={ AboutContainer } />
-    </Route>
-    <Redirect from='/' to='/home' />
-</Router>;
+const routes = (
+    <Router history={ browserHistory } >
+        <Route component={ App }>
+            <Route path='/home' component={ Start } />
+            <Route path='/live' component={ LiveContainer } />
+            <Route path='/history' component={ HistoryContainer } />
+            <Route path='/recent' component={ RecentContainer } />
+            <Route path='/about' component={ AboutContainer } />
+        </Route>
+        <Redirect from='/' to='/home' />
+    </Router>
+);
 
 ReactDOM.render(<MuiThemeProvider>{ routes }</MuiThemeProvider>, document.getElementById('app'));

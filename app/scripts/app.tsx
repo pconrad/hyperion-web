@@ -16,48 +16,40 @@ export class App extends React.Component<{}, AppState> {
         this.state = { drawerOpen: false };
     }
 
-    private handleToggle(e: any) {
+    public render() {
+        return (
+            <div>
+                <AppBar title={ 'Υπερίων' } onLeftIconButtonTouchTap={ this.handleToggle } />
+                <Drawer docked={ false } onRequestChange={ this.openDrawer } open={ this.state.drawerOpen }>
+
+                    { this.createMenuItem('Home', '/home' ) }
+                    { this.createMenuItem('Live', '/live' ) }
+                    { this.createMenuItem('Recent', '/recent' ) }
+                    { this.createMenuItem('History', '/history' ) }
+
+                    <Divider />
+                    
+                    { this.createMenuItem('About', '/about' ) }
+                </Drawer>
+
+                <Paper style={ style }>{ this.props.children }</Paper>
+            </div>
+        );
+    }
+
+    private openDrawer = (opening: boolean) => {
+        this.setState({ drawerOpen: opening });
+    }
+
+    private createMenuItem = (label: string, target: string) => (
+        <MenuItem containerElement={ <Link to={ target } /> } label={ label } onTouchTap={ this.handleMenuClick } >{ label }</MenuItem>
+    )
+
+    private handleToggle = (e: any) => {
         this.setState({ drawerOpen: !this.state.drawerOpen });
     }
 
-    private handleMenuClick(e: any) {
+    private handleMenuClick = (e: any) => {
         this.setState({ drawerOpen: false });
-    }
-
-    render() {
-        return (
-            <div>
-                <AppBar title={ 'Υπερίων' } onLeftIconButtonTouchTap={ (e) => this.handleToggle(e) } />
-                <Drawer
-                    docked={ false }
-                    onRequestChange={ (drawerOpen) => this.setState({ drawerOpen }) }
-                    open={ this.state.drawerOpen } >
-                    <MenuItem
-                        containerElement={ <Link to='/home' /> }
-                        label='Home'
-                        onTouchTap={ (e) => this.handleMenuClick(e) }>Home</MenuItem>
-                    <MenuItem
-                        containerElement={ <Link to='/live' /> }
-                        label='Live'
-                        onTouchTap={ (e) => this.handleMenuClick(e) }>Live</MenuItem>
-                    <MenuItem
-                        containerElement={ <Link to='/recent' /> }
-                        label='Recent'
-                        onTouchTap={ (e) => this.handleMenuClick(e) }>Recent</MenuItem>
-                    <MenuItem
-                        containerElement={ <Link to='/history' /> }
-                        label='History'
-                        onTouchTap={ (e) => this.handleMenuClick(e) }>History</MenuItem>
-                    <Divider />
-                    <MenuItem
-                        containerElement={ <Link to='/about' /> }
-                        label='About'
-                        onTouchTap={ (e) => this.handleMenuClick(e) }>About</MenuItem>
-                </Drawer>
-                <Paper style={ style }>
-                    { this.props.children }
-                </Paper>
-            </div>
-        );
     }
 }

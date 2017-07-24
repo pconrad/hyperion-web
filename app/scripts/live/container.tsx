@@ -17,23 +17,25 @@ class LiveContainer extends React.Component<Props, { lastReading?: LiveReading }
         this.state = { };
     }
 
-    componentWillMount() {
+    public componentWillMount() {
         this.liveDataService.connect((data) => this.setState({ lastReading: data }));
     }
 
-    componentWillUnmount() {
+    public componentWillUnmount() {
         this.liveDataService.disconnect();
     }
 
-    render() {
+    public render() {
         const { lastReading } = this.state;
         const loading = !lastReading;
 
-        return (<div>
-            <h1>Live data</h1>
-            { loading     && <LinearProgress /> }
-            { lastReading && <View data={ lastReading } /> }
-        </div>);
+        return (
+            <div>
+                <h1>Live data</h1>
+                { loading && <LinearProgress /> }
+                { lastReading && <View data={ lastReading } /> }
+            </div>
+        );
     }
 }
 
