@@ -1,5 +1,3 @@
-/// <reference types="whatwg-fetch" />
-
 import { ApplicationInfo, LiveReading, Reading, RecentReading } from './model';
 import { formatDateBackend } from './dates';
 
