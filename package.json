@@ -22,7 +22,6 @@
     "@types/react-tap-event-plugin": "0.0.30",
     "@types/react-test-renderer": "15.4.2",
     "@types/recharts": "0.22.1",
-    "@types/whatwg-fetch": "0.0.33",
     "@types/whatwg-streams": "0.0.2",
     "browserify": "13.3.0",
     "browser-sync": "2.18.7",
