@@ -2,7 +2,7 @@
 
 import * as fetchMock from 'fetch-mock';
 
-import * as api from '../api'
+import * as api from '../api';
 
 describe('Generic helper functions', () => {
     afterEach(() => {
@@ -58,11 +58,11 @@ describe('Generic helper functions', () => {
     describe('when the response status is in 2xx range', () => {
         it('should convert the body to JSON', () => {
             // Arrange
-            const body = "{ \"hello\": \"world\" }";
+            const body = JSON.stringify({ hello: 'world' });
             fetchMock.get('*', { status: 200, body });
-            
+
             // Act
-            return api.get('/').then(result => {
+            return api.get('/').then((result) => {
                 // Assert
                 expect(result).toEqual({ hello: 'world' });
             });
@@ -73,11 +73,11 @@ describe('Generic helper functions', () => {
 describe('retrieveApplicationInfo()', () => {
     it('should invoke /api/info', () => {
         // Arrange
-        const body = '{ \"appVersion\": 1 }';
+        const body = JSON.stringify({ appVersion: 1 });
         fetchMock.once('/api/info', { status: 200, body }, { method: 'GET' });
 
         // Act
-        api.retrieveApplicationInfo().then(result => {
+        api.retrieveApplicationInfo().then((result) => {
             // Assert
             expect(result).toEqual({ appVersion: 1 });
         });
@@ -87,12 +87,12 @@ describe('retrieveApplicationInfo()', () => {
 describe('retrieveHistoricalReadings()', () => {
     it('should invoke /api/history with parameter', () => {
         // Arrange
-        const body = '{ \"electricityLow\": 15 }';
+        const body = JSON.stringify({ electricityLow: 15 });
         fetchMock.once('/api/history?date=2014-11-30', { status: 200, body }, { method: 'GET' });
 
         // Act
         const searchDate = new Date(2014, 10, 30);
-        return api.retrieveHistoricalReadings(searchDate).then(result => {
+        return api.retrieveHistoricalReadings(searchDate).then((result) => {
             // Assert
             expect(result).toEqual({ electricityLow: 15 });
         });
@@ -102,7 +102,7 @@ describe('retrieveHistoricalReadings()', () => {
         it('should show a message that there is no reading', () => {
             // Arrange
             const body = 'No record found for date 2014-11-30';
-            fetchMock.once('/api/history?date=2014-11-30', { status: 404, body })
+            fetchMock.once('/api/history?date=2014-11-30', { status: 404, body });
 
             // Assert
             const searchDate = new Date(2014, 10, 30);
@@ -117,11 +117,11 @@ describe('retrieveHistoricalReadings()', () => {
 describe('retrieveRecentReadings()', () => {
     it('should invoke /api/recent', () => {
         // Arrange
-        const body = '[{ "tariff": "0001" }, { "tariff": "0001" }]';
+        const body = JSON.stringify([{ tariff: '0001' }, { tariff: '0001' }]);
         fetchMock.once('/api/recent', { status: 200, body }, { method: 'GET' });
 
         // Act
-        return api.retrieveRecentReadings().then(result => {
+        return api.retrieveRecentReadings().then((result) => {
             // Assert
             expect(result).toEqual([{ tariff: '0001' }, { tariff: '0001' }]);
         });

@@ -31,7 +31,7 @@ describe('Date-related functions', () => {
             const result = dates.formatDateFull(input);
 
             // Assert
-            expect(result).toBe('Thursday, December 20th 2012')
+            expect(result).toBe('Thursday, December 20th 2012');
         });
     });
 
@@ -41,29 +41,29 @@ describe('Date-related functions', () => {
             const result = dates.formatDateTimeFull(input);
 
             // Assert
-            expect(result).toBe('Thursday, December 20th 2012, 03:15:42')
+            expect(result).toBe('Thursday, December 20th 2012, 03:15:42');
         });
     });
 
     describe('isFutureDate()', () => {
         describe('when value is in the past', () => {
             it('should return false', () => {
-                const input: Date = moment().subtract(1, 'minute').toDate();
-                expect(dates.isFutureDate(input)).toBe(false);
+                const pastInput: Date = moment().subtract(1, 'minute').toDate();
+                expect(dates.isFutureDate(pastInput)).toBe(false);
             });
         });
 
         describe('when value is in the future', () => {
             it('should return false', () => {
-                const input: Date = moment().add(1, 'minute').toDate();
-                expect(dates.isFutureDate(input)).toBe(true);
+                const futureInput: Date = moment().add(1, 'minute').toDate();
+                expect(dates.isFutureDate(futureInput)).toBe(true);
             });
         });
 
         describe('when value is equal to today', () => {
             it('should return false', () => {
-                const input: Date = moment().toDate();
-                expect(dates.isFutureDate(input)).toBe(false);
+                const today: Date = moment().toDate();
+                expect(dates.isFutureDate(today)).toBe(false);
             });
         });
     });
@@ -74,7 +74,7 @@ describe('Date-related functions', () => {
             const result = dates.formatTime(input);
 
             // Assert
-            expect(result).toBe('03:15:42')
+            expect(result).toBe('03:15:42');
         });
     });
 });

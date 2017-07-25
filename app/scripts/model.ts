@@ -1,36 +1,35 @@
 export interface ApplicationInfo {
-    appVersion: string,
-    database: string,
-    freeMem: string,
-    javaVersion: string,
-    os: string,
-    scalaVersion: string,
-    totalMem: string
+    appVersion: string;
+    database: string;
+    freeMem: string;
+    javaVersion: string;
+    os: string;
+    scalaVersion: string;
+    totalMem: string;
 };
 
 export interface LiveReading {
-    elecCon: number,
-    elecProd: number,
-    gas: number,
-    tariff: string,
-    ts: Date
+    elecCon: number;
+    elecProd: number;
+    gas: number;
+    tariff: string;
+    ts: Date;
 }
 
 export interface Reading {
-    electricityLow: number,
-    electricityNormal: number,
-    gas: number,
-    recordDate: Date,
+    electricityLow: number;
+    electricityNormal: number;
+    gas: number;
+    recordDate: Date;
 };
 
 export interface RecentReading {
-    elecCon: number,
-    elecConsNormal: number,
-    elecConsLow: number,
-    elecProd: number,
-    elecProdNormal: number,
-    elecProdLow: number,
-    gas: number,
-    ts: Date,
-
+    elecCon: number;
+    elecConsNormal: number;
+    elecConsLow: number;
+    elecProd: number;
+    elecProdNormal: number;
+    elecProdLow: number;
+    gas: number;
+    ts: Date;
 };
