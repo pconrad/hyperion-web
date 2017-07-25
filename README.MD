@@ -1,5 +1,6 @@
 # Hyperion Web
 This is the web front-end to [Hyperion](https://github.com/mthmulders/hyperion).
+Hyperion is an application to monitor a 'Smart Meter' that follows the Dutch "Smart Meter" Requirements, or DSMR for short.
 
 ## Building
 There are two ways to build the Hyperion frontend.
