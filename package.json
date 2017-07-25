@@ -68,9 +68,9 @@
     "dev": "gulp watch",
     "jest": "jest --watch -c jest-config.json",
     "test": "gulp test",
-    "tslint": "tslint -c tslint.json 'app/**/*.ts?' -o tslint.out -t verbose --force",
-    "tslint-print": "tslint -c tslint.json 'app/**/*.ts?' -t stylish --force",
-    "tslint-fix": "tslint -c tslint.json 'app/**/*.ts?' -t stylish --force --fix"
+    "tslint": "tslint -c tslint.json 'app/**/*.{ts,tsx}' -o tslint.out -t verbose --force",
+    "tslint-print": "tslint -c tslint.json 'app/**/*.{ts,tsx}' -t stylish --force",
+    "tslint-fix": "tslint -c tslint.json 'app/**/*.{ts,tsx}' -t stylish --force --fix"
   },
   "version": "1.0.0"
 }
