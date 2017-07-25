@@ -25,6 +25,7 @@ var url = require('url');
 var useref = require('gulp-useref');
 var util = require('gulp-util');
 var transform = require('vinyl-transform');
+var tslintify = require('tslintify');
 var watchify = require('watchify');
 
 // Constants
@@ -33,40 +34,49 @@ var defaultApiHost = 'http://example.com/';
 var destFolder = './dist/scripts';
 var destFileName = 'app.js';
 
-var bundler = watchify(browserify({
-    cache: {},
-    debug: true,
-    entries: [ sourceFile ],
-    fullPaths: true,
-    insertGlobals: true,
-    packageCache: {},
-    plugin: [ tsify ]
-}));
+var b = browserify({
+        cache: {},
+        debug: true,
+        entries: [ sourceFile ],
+        fullPaths: true,
+        insertGlobals: false,
+        packageCache: {}
+    })
+// Awaits https://github.com/timothykang/tslintify/pull/1
+//    .plugin(tslintify, { format: 'stylish', warn: true })
+    .plugin(tsify)
+    .plugin(watchify)
+    .on('warning', function(warning) {
+        console.warn(warning);
+    })
+;
 
-function rebundle() {
-    return bundler.bundle()
-        // log errors if they happen
-        .on('error', util.log.bind(util, 'Browserify error'))
+function bundle() {
+    b.bundle()
         .pipe(source(destFileName))
         .pipe(buffer())
-        .pipe(sourcemaps.init({ loadMaps: true }))
+        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(destFolder))
-        .on('end', function() {
+        .on('warning', function(warning) {
+            console.warn(warning);
+        })
+        .on('error', function(error) {
+            console.error(error);
+        })
+        .on('end', function () {
             reload();
         });
 }
 
-bundler.on('update', rebundle);
-bundler.on('log', util.log);
+b.on('update', bundle);
+b.on('log', util.log);
 
 // Gulp tasks
-gulp.task('scripts', rebundle);
+gulp.task('scripts', bundle);
 
 gulp.task('buildScripts', function() {
-    return browserify(sourceFile)
-        .plugin(tsify)
-        .bundle()
+    return b.bundle()
         .pipe(source('app.js'))
         .pipe(gulp.dest(destFolder));
 });
