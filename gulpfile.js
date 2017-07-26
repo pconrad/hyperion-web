@@ -31,105 +31,53 @@ var watchify = require('watchify');
 // Constants
 var sourceFile = './app/scripts/index.tsx';
 var defaultApiHost = 'http://example.com/';
-var destFolder = './dist/scripts';
 var destFileName = 'app.js';
+var destFolder = './dist';
 
-var b = browserify({
-        cache: {},
-        debug: true,
-        entries: [ sourceFile ],
-        fullPaths: true,
-        insertGlobals: false,
-        packageCache: {}
-    })
-// Awaits https://github.com/timothykang/tslintify/pull/1
-//    .plugin(tslintify, { format: 'stylish', warn: true })
-    .plugin(tsify)
-    .plugin(watchify)
-    .on('warning', function(warning) {
-        console.warn(warning);
-    })
-;
-
-function bundle() {
-    b.bundle()
-        .pipe(source(destFileName))
-        .pipe(buffer())
-        .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(destFolder))
-        .on('warning', function(warning) {
-            console.warn(warning);
-        })
-        .on('error', function(error) {
-            console.error(error);
-        })
-        .on('end', function () {
-            reload();
-        });
+function handleErrors() {
+    var args = Array.prototype.slice.call(arguments);
+    notify.onError({
+        message: '<%= error.message %>',
+        title: 'Compile Error',
+    }).apply(this, args);
+    this.emit('end'); // Prevents Gulp from hanging on this task
 }
 
-b.on('update', bundle);
-b.on('log', util.log);
+function buildScript(file, watch) {
+    var props = {
+        cache: {},
+        debug : true,
+        entries: [ file ],
+        packageCache: {},
+        plugin: [ tsify ]
+    };
 
-// Gulp tasks
-gulp.task('scripts', bundle);
+    // watchify() if watch requested, otherwise run browserify() once 
+    var bundler = watch ? watchify(browserify(props)) : browserify(props);
+    
+    function rebundle() {
+        return bundler.bundle()
+            .on('warning', console.warn)
+            .on('end', browserSync.reload)
+            .on('error', handleErrors)
 
-gulp.task('buildScripts', function() {
-    return b.bundle()
-        .pipe(source('app.js'))
-        .pipe(gulp.dest(destFolder));
-});
+            .pipe(source(destFileName))
+            .pipe(buffer())
+            .pipe(sourcemaps.init({ loadMaps: true }))
+            .pipe(sourcemaps.write('.'))
+            
+            .pipe(gulp.dest(destFolder));
+    }
 
-gulp.task('html', function() {
-    return gulp.src('app/*.html')
-        .pipe(useref())
-        .pipe(gulp.dest('dist'))
-        .pipe(size());
-});
+    // listen for an update and run rebundle
+    bundler.on('update', function() {
+        gutil.log('Rebundling...');
+        rebundle();
+    });
 
-gulp.task('images', function() {
-    return gulp.src('app/images/**/*')
-        .pipe(cache(imagemin({
-            optimizationLevel: 3,
-            progressive: true,
-            interlaced: true
-        })))
-        .pipe(gulp.dest('dist/images'))
-        .pipe(size());
-});
-
-gulp.task('less', function () {
-  return gulp.src('./app/less/**/*.less')
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
-    .pipe(gulp.dest('./dist/styles'));
-});
-
-gulp.task('clean', function() {
-    cache.clearAll();
-    return del.sync([ 'dist/styles', 'dist/scripts', 'dist/images' ]);
-});
-
-gulp.task('jest', function () {
-    return gulp.src('.').pipe(jest({
-        config: require('./jest-config.json')
-    }));
-});
-
-gulp.task('bundle', ['less', 'scripts'], function() {
-    return gulp.src('./app/*.html')
-        .pipe(useref())
-        .pipe(gulp.dest('dist'));
-});
-
-// Robots.txt and favicon.ico
-gulp.task('extras', function() {
-    return gulp.src(['app/*.txt', 'app/*.ico'])
-        .pipe(gulp.dest('dist/'))
-        .pipe(size());
-});
+    // run it once the first time we're called
+    return rebundle();
+}
 
 function determineApiHost() {
     var apiHost = process.env.API_HOST || defaultApiHost
@@ -141,48 +89,85 @@ function determineApiHost() {
     return apiHost;
 }
 
-gulp.task('watch', ['clean', 'html', 'bundle'], function() {
-    var proxyOptions = url.parse(determineApiHost() + '/api');
-    proxyOptions.route = '/api';
+// Intermediate tasks
+gulp.task('clean', function () {
+    del.sync([ destFolder, 'tslint.out' ]);
+});
+gulp.task('createBundle', ['buildScripts'], function () {
+    return gulp.src('./*.html')
+        .pipe(useref())
+        .pipe(gulp.dest(destFolder));
+});
+gulp.task('extras', function() {
+    return gulp.src(['app/*.txt', 'app/*.ico'])
+        .pipe(gulp.dest('dist/'))
+        .pipe(size());
+});
+gulp.task('html', function () {
+    return gulp.src('app/*.html')
+        .pipe(useref())
+        .pipe(gulp.dest(destFolder))
+        .pipe(size());
+});
+gulp.task('images', function() {
+    return gulp.src('app/images/**/*')
+        .pipe(cache(imagemin({
+            optimizationLevel: 3,
+            progressive: true,
+            interlaced: true
+        })))
+        .pipe(gulp.dest('dist/images'))
+        .pipe(size());
+});
+gulp.task('jest', function () {
+    return gulp.src('.').pipe(jest({
+        config: require('./jest-config.json')
+    }));
+});
+gulp.task('less', function () {
+  return gulp.src('./app/less/**/*.less')
+    .pipe(less({
+      paths: [ path.join(__dirname, 'less', 'includes') ]
+    }))
+    .pipe(gulp.dest('./dist/styles'));
+});
+gulp.task('minify', [ 'scripts' ], function() {
+    return gulp.src(path.join(destFolder, destFileName))
+        .pipe(stripDebug())
+        .pipe(uglify())
+        .pipe(gulp.dest(destFolder))
+    ;
+});
+gulp.task('scripts', function() {
+    return buildScript(sourceFile, false);
+});
+gulp.task('test', ['jest']);
+gulp.task('watchify', function() {
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+    var proxyAPIOptions = url.parse(determineApiHost() + '/feapigateway');
+    proxyAPIOptions.route = '/api';
+    proxyAPIOptions.headers = {
+        'Cookie': 'API_TOKEN=' + test_bob
+    };
+
+    var proxyStyleOptions = url.parse('http://localhost:3500/style');
+    proxyStyleOptions.route = '/style';
 
     browserSync({
         notify: false,
+        open: false,
         logPrefix: 'BS',
         // Run as an https by uncommenting 'https: true'
         // Note: this uses an unsigned certificate which on first access
         //       will present a certificate warning in the browser.
         // https: true,
-        middleware: [ proxy(proxyOptions), historyApiFallback() ],
-        server: ['dist', 'app']
+        middleware: [proxy(proxyStyleOptions), proxy(proxyAPIOptions)],
+        server: ['dist', '.']
     });
 
-    // Watch .json files
-    gulp.watch('app/scripts/**/*.json', ['json']);
-
-    // Watch .html files
-    gulp.watch('app/*.html', ['html']);
-
-    gulp.watch(['app/styles/**/*.less', 'app/styles/**/*.less'], ['less', 'scripts', reload]);
-
-    // Watch image files
-    gulp.watch('app/images/**/*', reload);
+    return buildScript(sourceFile, true);
 });
 
-gulp.task('build', ['html', 'buildBundle', 'images', 'extras'], function() {
-    var src = path.join(destFolder, destFileName);
-    gulp.src(src)
-        .pipe(uglify())
-        .pipe(stripDebug())
-        .pipe(gulp.dest(destFolder));
-});
-
-gulp.task('buildBundle', ['less', 'buildScripts'], function() {
-    return gulp.src('./app/*.html')
-        .pipe(useref())
-        .pipe(gulp.dest('dist'));
-});
-
-gulp.task('test', ['jest']);
-
-// Default task
-gulp.task('default', ['clean', 'build', 'test' ]);
+// End-user tasks
+gulp.task('watch', ['clean', 'html', 'watchify']);
+gulp.task('default', ['clean', 'html', 'minify']);
