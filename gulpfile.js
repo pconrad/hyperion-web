@@ -32,7 +32,7 @@ var watchify = require('watchify');
 var sourceFile = './app/scripts/index.tsx';
 var defaultApiHost = 'http://example.com/';
 var destFileName = 'app.js';
-var destFolder = './dist/scripts';
+var destFolder = './dist';
 
 function handleErrors() {
     var args = Array.prototype.slice.call(arguments);
@@ -129,7 +129,7 @@ gulp.task('less', function () {
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    .pipe(gulp.dest('./dist/styles'));
+    .pipe(gulp.dest('./dist'));
 });
 gulp.task('minify', [ 'scripts' ], function() {
     return gulp.src(path.join(destFolder, destFileName))
