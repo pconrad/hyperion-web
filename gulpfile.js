@@ -32,7 +32,7 @@ var watchify = require('watchify');
 var sourceFile = './app/scripts/index.tsx';
 var defaultApiHost = 'http://example.com/';
 var destFileName = 'app.js';
-var destFolder = './dist';
+var destFolder = './dist/scripts';
 
 function handleErrors() {
     var args = Array.prototype.slice.call(arguments);
@@ -71,7 +71,7 @@ function buildScript(file, watch) {
 
     // listen for an update and run rebundle
     bundler.on('update', function() {
-        gutil.log('Rebundling...');
+        util.log('Rebundling...');
         rebundle();
     });
 
@@ -144,14 +144,8 @@ gulp.task('scripts', function() {
 gulp.task('test', ['jest']);
 gulp.task('watchify', function() {
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-    var proxyAPIOptions = url.parse(determineApiHost() + '/feapigateway');
+    var proxyAPIOptions = url.parse(determineApiHost() + '/api');
     proxyAPIOptions.route = '/api';
-    proxyAPIOptions.headers = {
-        'Cookie': 'API_TOKEN=' + test_bob
-    };
-
-    var proxyStyleOptions = url.parse('http://localhost:3500/style');
-    proxyStyleOptions.route = '/style';
 
     browserSync({
         notify: false,
@@ -161,7 +155,7 @@ gulp.task('watchify', function() {
         // Note: this uses an unsigned certificate which on first access
         //       will present a certificate warning in the browser.
         // https: true,
-        middleware: [proxy(proxyStyleOptions), proxy(proxyAPIOptions)],
+        middleware: [proxy(proxyAPIOptions)],
         server: ['dist', '.']
     });
 
