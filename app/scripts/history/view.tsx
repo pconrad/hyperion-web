@@ -10,7 +10,7 @@ export interface ViewProps {
 }
 
 export default (props: ViewProps) => (
-    <Table>
+    <Table selectable={ false }>
         <TableBody displayRowCheckbox={ false }>
             <TableRow>
                 <TableRowColumn>Date recorded</TableRowColumn>
