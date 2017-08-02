@@ -13,6 +13,7 @@ var historyApiFallback = require('connect-history-api-fallback');
 var imagemin = require('gulp-imagemin');
 var jest = require('gulp-jest').default;
 var less = require('gulp-less');
+var notify = require('gulp-notify');
 var proxy = require('proxy-middleware');
 var reload = browserSync.reload;
 var source = require('vinyl-source-stream');
@@ -34,7 +35,13 @@ var defaultApiHost = 'http://example.com/';
 var destFileName = 'app.js';
 var destFolder = './dist';
 
-function handleErrors() {
+function failOnErrors() {
+    var error = arguments[0];
+    console.error('Compile Error: ' + error);
+    process.exit(1);
+}
+
+function logErrors() {
     var args = Array.prototype.slice.call(arguments);
     notify.onError({
         message: '<%= error.message %>',
@@ -56,10 +63,11 @@ function buildScript(file, watch) {
     var bundler = watch ? watchify(browserify(props)) : browserify(props);
     
     function rebundle() {
-        return bundler.bundle()
+        return bundler
+            .bundle()
             .on('warning', console.warn)
             .on('end', browserSync.reload)
-            .on('error', handleErrors)
+            .on('error', watch ? logErrors : failOnErrors)
 
             .pipe(source(destFileName))
             .pipe(buffer())
