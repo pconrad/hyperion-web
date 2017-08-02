@@ -1,5 +1,6 @@
-import { Divider } from 'material-ui';
 import * as React from 'react';
+
+import Divider from 'material-ui/Divider';
 
 interface StartProps {
 }

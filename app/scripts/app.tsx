@@ -1,5 +1,10 @@
-import { AppBar, Divider, Drawer, MenuItem, Paper } from 'material-ui';
 import * as React from 'react';
+
+import AppBar from 'material-ui/AppBar';
+import Divider from 'material-ui/Divider';
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
+import Paper from 'material-ui/Paper';
 import { Link } from 'react-router';
 
 const style = {

@@ -2,7 +2,8 @@ import { MuiThemeProvider } from 'material-ui/styles';
 import * as React from 'react';
 import { findRenderedComponentWithType, renderIntoDocument, scryRenderedComponentsWithType } from 'react-addons-test-utils';
 
-import { AppBar, MenuItem } from 'material-ui';
+import AppBar from 'material-ui/AppBar';
+import MenuItem from 'material-ui/MenuItem';
 
 import { App, AppState } from '../app';
 

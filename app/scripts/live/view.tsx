@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Table, TableBody, TableRow, TableRowColumn } from 'material-ui';
+import Table, { TableBody, TableRow, TableRowColumn } from 'material-ui/Table';
 
 import { formatDateTimeFull } from '../dates';
 import { LiveReading } from '../model';

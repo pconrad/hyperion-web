@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
 
-import { LinearProgress } from 'material-ui';
+import LinearProgress from 'material-ui/LinearProgress';
 
 import { LiveReading } from '../../model';
 import { View } from '../view';
