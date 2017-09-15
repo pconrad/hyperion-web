@@ -39,5 +39,5 @@ jobs:
           destination: "test-reports/unit-test"
           path: "./test-reports/"
       - store_artifacts:
-          destination: "packages/zip"
+          destination: "packages/zip/"
           path: "build/hyperion-web.zip"
