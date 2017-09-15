@@ -55,11 +55,11 @@ export class LiveDataService {
         this.ws = new WebSocket(address);
     }
 
-    public connect(callback: (reading: LiveReading) => void) {
+    connect(callback: (reading: LiveReading) => void) {
         this.ws.onmessage = (event: MessageEvent) => callback(JSON.parse(event.data));
     }
 
-    public disconnect() {
+    disconnect() {
         this.ws.close();
     }
-};
+}

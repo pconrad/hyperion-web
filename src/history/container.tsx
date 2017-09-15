@@ -9,9 +9,6 @@ import { formatDateFull, isFutureDate } from '../dates';
 import { Reading } from '../model';
 import View from './view';
 
-interface Props {
-}
-
 interface State {
     error?: Error;
     loading: boolean;
@@ -19,7 +16,7 @@ interface State {
     selectedDate?: Date;
 }
 
-class HistoryContainer extends React.Component<Props, State> {
+class HistoryContainer extends React.Component<{}, State> {
     constructor() {
         super();
         this.state = {
@@ -27,7 +24,7 @@ class HistoryContainer extends React.Component<Props, State> {
         };
     }
 
-    public render() {
+    render() {
         const { error, loading, reading } = this.state;
 
         return (

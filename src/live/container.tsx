@@ -6,10 +6,11 @@ import { LiveDataService } from '../api';
 import { LiveReading } from '../model';
 import { View } from './view';
 
-interface Props {
+interface State {
+    lastReading?: LiveReading;
 }
 
-class LiveContainer extends React.Component<Props, { lastReading?: LiveReading }> {
+class LiveContainer extends React.Component<{}, State> {
     private liveDataService = new LiveDataService();
 
     constructor() {
@@ -17,15 +18,15 @@ class LiveContainer extends React.Component<Props, { lastReading?: LiveReading }
         this.state = { };
     }
 
-    public componentWillMount() {
+    componentWillMount() {
         this.liveDataService.connect((data) => this.setState({ lastReading: data }));
     }
 
-    public componentWillUnmount() {
+    componentWillUnmount() {
         this.liveDataService.disconnect();
     }
 
-    public render() {
+    render() {
         const { lastReading } = this.state;
         const loading = !lastReading;
 

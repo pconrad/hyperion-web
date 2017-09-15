@@ -4,33 +4,33 @@ import * as React from 'react';
 import LinearProgress from 'material-ui/LinearProgress';
 import Snackbar from 'material-ui/Snackbar';
 
-const retrieveApplicationInfo = jest.fn(() => Promise.resolve());
-jest.mock('../../api', () => ({ retrieveApplicationInfo }));
+const mockRetrieveApplicationInfo = jest.fn(() => Promise.resolve());
+jest.mock('../../api', () => ({ retrieveApplicationInfo: mockRetrieveApplicationInfo }));
 
 import AboutContainer from '../container';
 import View from '../view';
 
 describe('<AboutContainer />', () => {
     afterEach(() => {
-        retrieveApplicationInfo.mockReset();
+        mockRetrieveApplicationInfo.mockReset();
     });
 
     it('should show loading indicator while loading', () => {
         // Arrange
-        retrieveApplicationInfo.mockImplementation(() => Promise.resolve());
+        mockRetrieveApplicationInfo.mockImplementation(() => Promise.resolve());
 
         // Act
         const container = shallow(<AboutContainer />);
 
         // Assert
         expect(container.find(LinearProgress).exists()).toBe(true);
-        expect(retrieveApplicationInfo).toHaveBeenCalled();
+        expect(mockRetrieveApplicationInfo).toHaveBeenCalled();
     });
 
     it('should show error when one occurs', (done) => {
         // Arrange
         const error = new Error('Ahw, an error');
-        retrieveApplicationInfo.mockImplementation(() => Promise.reject(error));
+        mockRetrieveApplicationInfo.mockImplementation(() => Promise.reject(error));
 
         // Act
         const container = shallow(<AboutContainer />);
@@ -47,7 +47,7 @@ describe('<AboutContainer />', () => {
     it('should retry when tapping the snackbar', () => {
         // Arrange
         const error = new Error('Ahw, an error');
-        retrieveApplicationInfo.mockImplementation(() => Promise.reject(error));
+        mockRetrieveApplicationInfo.mockImplementation(() => Promise.reject(error));
 
         // Act
         const container = shallow(<AboutContainer />);
@@ -58,13 +58,13 @@ describe('<AboutContainer />', () => {
         }
 
         // Assert
-        expect(retrieveApplicationInfo).toHaveBeenCalledTimes(2);
+        expect(mockRetrieveApplicationInfo).toHaveBeenCalledTimes(2);
     });
 
     it('should show data when fetched', (done) => {
         // Arrange
         const result = {};
-        retrieveApplicationInfo.mockImplementation(() => Promise.resolve(result));
+        mockRetrieveApplicationInfo.mockImplementation(() => Promise.resolve(result));
 
         // Act
         const container = shallow(<AboutContainer />);

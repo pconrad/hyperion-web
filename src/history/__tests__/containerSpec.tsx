@@ -6,15 +6,15 @@ import DatePicker from 'material-ui/DatePicker';
 import LinearProgress from 'material-ui/LinearProgress';
 import Snackbar from 'material-ui/Snackbar';
 
-const retrieveHistoricalReadings = jest.fn(() => Promise.resolve());
-jest.mock('../../api', () => ({ retrieveHistoricalReadings }));
+const mockRetrieveHistoricalReadings = jest.fn(() => Promise.resolve());
+jest.mock('../../api', () => ({ retrieveHistoricalReadings: mockRetrieveHistoricalReadings }));
 
 import HistoryContainer from '../container';
 import View from '../view';
 
 describe('<HistoryContainer />', () => {
     afterEach(() => {
-        retrieveHistoricalReadings.mockReset();
+        mockRetrieveHistoricalReadings.mockReset();
     });
 
     function selectDate<P, S>(container: ShallowWrapper<P, S>, input: Date) {
@@ -32,14 +32,14 @@ describe('<HistoryContainer />', () => {
 
         // Assert
         expect(container.find(DatePicker).exists()).toBe(true);
-        expect(retrieveHistoricalReadings).not.toHaveBeenCalled();
+        expect(mockRetrieveHistoricalReadings).not.toHaveBeenCalled();
         expect(container.find(LinearProgress).exists()).toBe(false);
     });
 
     it('should show loading indicator while loading', () => {
         // Arrange
         const selectedDate = moment().subtract(1, 'days').toDate();
-        retrieveHistoricalReadings.mockImplementation(() => Promise.resolve());
+        mockRetrieveHistoricalReadings.mockImplementation(() => Promise.resolve());
 
         // Act
         const container = shallow(<HistoryContainer />);
@@ -53,7 +53,7 @@ describe('<HistoryContainer />', () => {
         // Arrange
         const selectedDate = moment().subtract(1, 'days').toDate();
         const error = new Error('Ahw, an error');
-        retrieveHistoricalReadings.mockImplementation(() => Promise.reject(error));
+        mockRetrieveHistoricalReadings.mockImplementation(() => Promise.reject(error));
 
         // Act
         const container = shallow(<HistoryContainer />);
@@ -72,7 +72,7 @@ describe('<HistoryContainer />', () => {
         // Arrange
         const selectedDate = moment().subtract(1, 'days').toDate();
         const result = {};
-        retrieveHistoricalReadings.mockImplementation(() => Promise.resolve(result));
+        mockRetrieveHistoricalReadings.mockImplementation(() => Promise.resolve(result));
 
         // Act
         const container = shallow(<HistoryContainer />);

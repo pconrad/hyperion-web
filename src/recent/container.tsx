@@ -20,14 +20,14 @@ class RecentContainer extends React.Component<{}, State> {
         this.state = { loading: false };
     }
 
-    public componentWillMount() {
+    componentWillMount() {
         this.setState({ ...this.state, loading: true });
         retrieveRecentReadings()
             .then((readings) => this.setState({ ...this.state, loading: false, readings }))
             .catch((error) => this.setState({ ...this.state, loading: false, error }));
     }
 
-    public render() {
+    render() {
         const { error, loading, readings } = this.state;
 
         return (
@@ -39,6 +39,6 @@ class RecentContainer extends React.Component<{}, State> {
             </div>
         );
     }
-};
+}
 
 export default RecentContainer;

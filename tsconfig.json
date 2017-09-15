@@ -1,15 +1,23 @@
 {
   "compilerOptions": {
     "forceConsistentCasingInFileNames": true,
-    "inlineSourceMap": true,
     "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
     "noEmitOnError": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
+    "outDir": "build/dist",
+    "rootDir": "src",
     "sourceMap": true,
-    "strictNullChecks": true
-  }
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }

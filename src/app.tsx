@@ -21,7 +21,7 @@ export class App extends React.Component<{}, AppState> {
         this.state = { drawerOpen: false };
     }
 
-    public render() {
+    render() {
         return (
             <div>
                 <AppBar title={ 'Υπερίων' } onLeftIconButtonTouchTap={ this.handleToggle } />
@@ -33,7 +33,7 @@ export class App extends React.Component<{}, AppState> {
                     { this.createMenuItem('History', '/history' ) }
 
                     <Divider />
-                    
+
                     { this.createMenuItem('About', '/about' ) }
                 </Drawer>
 

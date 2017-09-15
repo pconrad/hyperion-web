@@ -1,5 +1,3 @@
-// <reference types="whatwg-fetch" />
-
 import * as fetchMock from 'fetch-mock';
 
 import * as api from '../api';

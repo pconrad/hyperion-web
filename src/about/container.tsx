@@ -7,29 +7,26 @@ import { retrieveApplicationInfo } from '../api';
 import { ApplicationInfo } from '../model';
 import View from './view';
 
-interface Props {
-}
-
 interface State {
     applicationInfo?: ApplicationInfo;
     error?: Error;
     loading: boolean;
 }
 
-export class AboutContainer extends React.Component<Props, State> {
+export class AboutContainer extends React.Component<{}, State> {
     constructor() {
         super();
         this.state = { loading: false };
     }
 
-    public componentWillMount() {
+    componentWillMount() {
         this.setState({ ...this.state, loading: true });
         retrieveApplicationInfo()
             .then((applicationInfo) => this.setState({ ...this.state, loading: false, applicationInfo }))
             .catch((error) => this.setState({ ...this.state, loading: false, error }));
     }
 
-    public render() {
+    render() {
         const { applicationInfo, error, loading } = this.state;
         return (
             <div>

@@ -2,10 +2,7 @@ import * as React from 'react';
 
 import Divider from 'material-ui/Divider';
 
-interface StartProps {
-}
-
-export const Start = (props: StartProps) => (
+export const Start = (props: {}) => (
     <div>
         <h1>Welcome to Υπερίων</h1>
         <p>
