@@ -40,4 +40,4 @@ jobs:
           path: "./test-reports/"
       - store_artifacts:
           destination: "packages/zip/"
-          path: "build/hyperion-web.zip"
+          path: "build/"
