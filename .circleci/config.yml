@@ -2,42 +2,42 @@ version: 2
 jobs:
   build:
 
-  docker:
-   - image: circleci/node:8.4
+    docker:
+    - image: circleci/node:8.4
   
-  steps:
-    - checkout
+    steps:
+      - checkout
 
-    - restore_cache:
-        key: dependency-cache-{{ checksum "package.json" }}
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
 
-    - run:
-        name: install-npm-wee
-        command: npm install
+      - run:
+          name: install-npm-wee
+          command: npm install
 
 
-    - save_cache:
-        key: dependency-cache-{{ checksum "package.json" }}
-        paths:
-          - ./node_modules
-    
-    - run:
-        name: Run tests
-        command: JEST_JUNIT_OUTPUT=test-reports/junit.xml npm run test:ci
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      
+      - run:
+          name: Run tests
+          command: JEST_JUNIT_OUTPUT=test-reports/junit.xml npm run test:ci
 
-    - run:
-        name: Create production build
-        command: |
-          npm run build
-          pushd build
-          zip -9vr ./hyperion-web.zip .
-          popd
-    
-    - store_test_results:
-        path: "./test-reports/"
-    - store_artifacts:
-        destination: "test-reports/unit-test"
-        path: "./test-reports/"
-    - store_artifacts:
-        destination: "packages/zip"
-        path: "build/hyperion-web.zip"
+      - run:
+          name: Create production build
+          command: |
+            npm run build
+            pushd build
+            zip -9vr ./hyperion-web.zip .
+            popd
+      
+      - store_test_results:
+          path: "./test-reports/"
+      - store_artifacts:
+          destination: "test-reports/unit-test"
+          path: "./test-reports/"
+      - store_artifacts:
+          destination: "packages/zip"
+          path: "build/hyperion-web.zip"
