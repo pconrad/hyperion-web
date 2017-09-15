@@ -12,7 +12,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
 
       - run:
-          name: install-npm-wee
+          name: Download Node modules
           command: npm install
 
 
