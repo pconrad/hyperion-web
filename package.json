@@ -1,11 +1,10 @@
 {
   "dependencies": {
-    "material-ui": "0.18.7",
+    "material-ui": "0.19.1",
     "moment": "2.18.1",
     "react": "15.6.1",
     "react-dom": "15.6.1",
     "react-router": "3.0.2",
-    "react-tap-event-plugin": "2.0.1",
     "recharts": "0.22.2"
   },
   "description": "Hyperion Web frontend",
@@ -17,9 +16,8 @@
     "@types/react": "16.0.5",
     "@types/react-addons-test-utils": "0.14.17",
     "@types/react-dom": "15.5.4",
-    "@types/material-ui": "0.17.17",
+    "@types/material-ui": "0.18.1",
     "@types/react-router": "2.0.45",
-    "@types/react-tap-event-plugin": "0.0.30",
     "@types/recharts": "0.22.1",
     "enzyme": "2.9.1",
     "fetch-mock": "5.9.4",

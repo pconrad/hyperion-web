@@ -47,7 +47,7 @@ export class App extends React.Component<{}, AppState> {
     }
 
     private createMenuItem = (label: string, target: string) => (
-        <MenuItem containerElement={ <Link to={ target } /> } label={ label } onTouchTap={ this.handleMenuClick } >{ label }</MenuItem>
+        <MenuItem containerElement={ <Link to={ target } /> } label={ label } onClick={ this.handleMenuClick } >{ label }</MenuItem>
     )
 
     private handleToggle = (e: any) => {

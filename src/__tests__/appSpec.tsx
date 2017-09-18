@@ -32,7 +32,7 @@ describe('<App />', () => {
             const menuItems: Array<React.Component<any>> = scryRenderedComponentsWithType(root as React.Component<any>, MenuItem);
 
             // Act
-            menuItems[0].props.onTouchTap();
+            menuItems[0].props.onClick();
 
             // Assert
             expect((app.state as AppState).drawerOpen).toBe(false);

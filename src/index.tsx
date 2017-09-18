@@ -2,7 +2,6 @@ import { MuiThemeProvider } from 'material-ui/styles';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { browserHistory, Redirect, Route, Router } from 'react-router';
-import * as injectTapEventPlugin from 'react-tap-event-plugin';
 
 import AboutContainer from './about/container';
 import { App } from './app';
@@ -10,10 +9,6 @@ import { Start } from './components/start';
 import HistoryContainer from './history/container';
 import LiveContainer from './live/container';
 import RecentContainer from './recent/container';
-
-// Needed for onTouchTap
-// http://stackoverflow.com/a/34015469/988941
-injectTapEventPlugin();
 
 const routes = (
     <Router history={ browserHistory } >
