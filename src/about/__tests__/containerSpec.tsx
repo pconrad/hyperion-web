@@ -53,8 +53,8 @@ describe('<AboutContainer />', () => {
         const container = shallow(<AboutContainer />);
         container.setState({ ...container.state(), error });
         const snackbarProps = container.find(Snackbar).props();
-        if (snackbarProps.onActionTouchTap) {
-            snackbarProps.onActionTouchTap(undefined as any);
+        if (snackbarProps.onActionClick) {
+            snackbarProps.onActionClick(undefined as any);
         }
 
         // Assert

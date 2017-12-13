@@ -43,7 +43,7 @@ export class AboutContainer extends React.Component<{}, State> {
             autoHideDuration={ 2000 }
             action='retry'
             message={ error.message }
-            onActionTouchTap={ this.retry }
+            onActionClick={ this.retry }
             open={ !!error }
         />
     )
