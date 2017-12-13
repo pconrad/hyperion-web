@@ -5,6 +5,7 @@ import Divider from 'material-ui/Divider';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import Paper from 'material-ui/Paper';
+import ArrowDropRight from 'material-ui/svg-icons/navigation-arrow-drop-right';
 import { Link } from 'react-router';
 
 const style = {
@@ -14,6 +15,9 @@ const style = {
 export interface AppState {
     drawerOpen: boolean;
 }
+
+// tslint:disable-next-line:no-empty
+const noop = () => {};
 
 export class App extends React.Component<{}, AppState> {
     constructor(props: {}) {
@@ -27,14 +31,14 @@ export class App extends React.Component<{}, AppState> {
                 <AppBar title={ 'Υπερίων' } onLeftIconButtonTouchTap={ this.handleToggle } />
                 <Drawer docked={ false } onRequestChange={ this.openDrawer } open={ this.state.drawerOpen }>
 
-                    { this.createMenuItem('Home', '/home' ) }
-                    { this.createMenuItem('Live', '/live' ) }
-                    { this.createMenuItem('Recent', '/recent' ) }
-                    { this.createMenuItem('History', '/history' ) }
+                    { this.createMenuItem('Home', '/home') }
+                    { this.createMenuItem('Live', '/live') }
+                    { this.createMenuItem('Recent', '/recent') }
+                    { this.createMenuItemWithChildren('History', '/history', this.historyChildren()) }
 
                     <Divider />
 
-                    { this.createMenuItem('About', '/about' ) }
+                    { this.createMenuItem('About', '/about') }
                 </Drawer>
 
                 <Paper style={ style }>{ this.props.children }</Paper>
@@ -46,9 +50,35 @@ export class App extends React.Component<{}, AppState> {
         this.setState({ drawerOpen: opening });
     }
 
-    private createMenuItem = (label: string, target: string) => (
-        <MenuItem containerElement={ <Link to={ target } /> } label={ label } onClick={ this.handleMenuClick } >{ label }</MenuItem>
-    )
+    private historyChildren = () => ([
+        this.createMenuItem('By date', '/history/daily'),
+    ])
+
+    private createMenuItemWithChildren = (label: string, target: string, children: JSX.Element[]) => {
+        return (
+            <MenuItem
+                containerElement={ <Link to={ target } /> }
+                label={ label }
+                rightIcon= { <ArrowDropRight /> }
+                menuItems= { children }
+                onClick={ noop }
+            >
+                { label }
+            </MenuItem>
+        );
+    }
+
+    private createMenuItem = (label: string, target: string) => {
+        return (
+            <MenuItem
+                containerElement={ <Link to={ target } /> }
+                label={ label }
+                onClick={ this.handleMenuClick }
+            >
+                { label }
+            </MenuItem>
+        );
+    }
 
     private handleToggle = (e: any) => {
         this.setState({ drawerOpen: !this.state.drawerOpen });

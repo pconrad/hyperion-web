@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import Table, { TableBody, TableRow, TableRowColumn } from 'material-ui/Table';
 
-import { formatDateFull } from '../dates';
-import { Reading } from '../model';
+import { formatDateFull } from '../../dates';
+import { Reading } from '../../model';
 
 export interface ViewProps {
     data: Reading;
