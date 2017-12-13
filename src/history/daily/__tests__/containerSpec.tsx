@@ -7,7 +7,7 @@ import LinearProgress from 'material-ui/LinearProgress';
 import Snackbar from 'material-ui/Snackbar';
 
 const mockRetrieveHistoricalReadings = jest.fn(() => Promise.resolve());
-jest.mock('../../api', () => ({ retrieveHistoricalReadings: mockRetrieveHistoricalReadings }));
+jest.mock('../../../api', () => ({ retrieveHistoricalReadings: mockRetrieveHistoricalReadings }));
 
 import HistoryContainer from '../container';
 import View from '../view';
