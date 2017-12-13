@@ -24,7 +24,7 @@ describe('<App />', () => {
             const appbar: React.Component<any> = findRenderedComponentWithType(root as React.Component<any>, AppBar);
 
             // Act
-            appbar.props.onLeftIconButtonTouchTap();
+            appbar.props.onLeftIconButtonClick();
 
             // Assert
             expect((app.state as AppState).drawerOpen).toBe(true);
@@ -35,7 +35,7 @@ describe('<App />', () => {
         it('should hide the drawer', () => {
             // Arrange
             const appbar: React.Component<any> = findRenderedComponentWithType(root as React.Component<any>, AppBar);
-            appbar.props.onLeftIconButtonTouchTap();
+            appbar.props.onLeftIconButtonClick();
             const menuItems: Array<React.Component<any>> = scryRenderedComponentsWithType(root as React.Component<any>, MenuItem);
 
             // Act

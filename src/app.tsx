@@ -34,7 +34,7 @@ export class App extends React.Component<{}, AppState> {
     render() {
         return (
             <div>
-                <AppBar title={ 'Υπερίων' } onLeftIconButtonTouchTap={ this.handleToggle } />
+                <AppBar title={ 'Υπερίων' } onLeftIconButtonClick={ this.handleToggle } />
                 <Drawer docked={ false } onRequestChange={ this.openDrawer } open={ this.state.drawerOpen }>
 
                     { this.createMenuItem('Home', '/') }

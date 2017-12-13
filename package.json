@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "material-ui": "0.19.1",
+    "material-ui": "0.20.0",
     "moment": "2.18.1",
     "react": "15.6.1",
     "react-dom": "15.6.1",
@@ -16,7 +16,7 @@
     "@types/react": "16.0.5",
     "@types/react-addons-test-utils": "0.14.17",
     "@types/react-dom": "15.5.4",
-    "@types/material-ui": "0.18.1",
+    "@types/material-ui": "0.18.5",
     "@types/react-router-dom": "4.2.3",
     "@types/recharts": "0.22.1",
     "enzyme": "2.9.1",
