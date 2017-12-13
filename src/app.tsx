@@ -6,7 +6,13 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import Paper from 'material-ui/Paper';
 import ArrowDropRight from 'material-ui/svg-icons/navigation-arrow-drop-right';
-import { Link } from 'react-router';
+import { Link, Route, Switch } from 'react-router-dom';
+
+import AboutContainer from './about/container';
+import { Start } from './components/start';
+import DailyHistoryContainer from './history/daily/container';
+import LiveContainer from './live/container';
+import RecentContainer from './recent/container';
 
 const style = {
     padding: 19,
@@ -31,7 +37,7 @@ export class App extends React.Component<{}, AppState> {
                 <AppBar title={ 'Υπερίων' } onLeftIconButtonTouchTap={ this.handleToggle } />
                 <Drawer docked={ false } onRequestChange={ this.openDrawer } open={ this.state.drawerOpen }>
 
-                    { this.createMenuItem('Home', '/home') }
+                    { this.createMenuItem('Home', '/') }
                     { this.createMenuItem('Live', '/live') }
                     { this.createMenuItem('Recent', '/recent') }
                     { this.createMenuItemWithChildren('History', '/history', this.historyChildren()) }
@@ -41,7 +47,15 @@ export class App extends React.Component<{}, AppState> {
                     { this.createMenuItem('About', '/about') }
                 </Drawer>
 
-                <Paper style={ style }>{ this.props.children }</Paper>
+                <Paper style={ style }>
+                    <Switch>
+                        <Route exact={ true } path='/' component={ Start } />
+                        <Route path='/live' component={ LiveContainer } />
+                        <Route path='/history/daily' component={ DailyHistoryContainer } />
+                        <Route path='/recent' component={ RecentContainer } />
+                        <Route path='/about' component={ AboutContainer } />
+                    </Switch>
+                </Paper>
             </div>
         );
     }

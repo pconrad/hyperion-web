@@ -4,11 +4,18 @@ import { findRenderedComponentWithType, renderIntoDocument, scryRenderedComponen
 
 import AppBar from 'material-ui/AppBar';
 import MenuItem from 'material-ui/MenuItem';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import { App, AppState } from '../app';
 
 describe('<App />', () => {
-    const root = renderIntoDocument(<MuiThemeProvider><App /></MuiThemeProvider>);
+    const root = renderIntoDocument(
+        <MuiThemeProvider>
+            <Router>
+                <App />
+            </Router>
+        </MuiThemeProvider>,
+    );
     const app = findRenderedComponentWithType(root as React.Component<any, any>, App as any);
 
     describe('when clicking the hamburger', () => {
