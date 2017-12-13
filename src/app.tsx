@@ -59,8 +59,8 @@ export class App extends React.Component<{}, AppState> {
             <MenuItem
                 containerElement={ <Link to={ target } /> }
                 label={ label }
-                rightIcon= { <ArrowDropRight /> }
-                menuItems= { children }
+                rightIcon={ <ArrowDropRight /> }
+                menuItems={ children }
                 onClick={ noop }
             >
                 { label }
