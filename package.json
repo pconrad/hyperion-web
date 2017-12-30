@@ -16,7 +16,7 @@
     "@types/react": "16.0.5",
     "@types/react-addons-test-utils": "0.14.17",
     "@types/react-dom": "15.5.4",
-    "@types/material-ui": "0.20.0",
+    "@types/material-ui": "0.20.1",
     "@types/react-router-dom": "4.2.3",
     "@types/recharts": "0.22.1",
     "enzyme": "2.9.1",
