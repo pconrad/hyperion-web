@@ -36,6 +36,7 @@ describe('<RecentContainer />', () => {
 
         // Assert
         setTimeout(() => {
+            container.update();
             expect(container.find(LinearProgress).exists()).toBe(false);
             expect(container.find(Snackbar).exists()).toBe(true);
             expect(container.find(Snackbar).props().message).toMatch(error.message);
@@ -53,6 +54,7 @@ describe('<RecentContainer />', () => {
 
         // Assert
         setTimeout(() => {
+            container.update();
             expect(container.find(LinearProgress).exists()).toBe(false);
             expect(container.find(Snackbar).exists()).toBe(false);
             expect(container.find(View).exists()).toBe(true);

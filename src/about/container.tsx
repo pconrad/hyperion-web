@@ -7,15 +7,19 @@ import { retrieveApplicationInfo } from '../api';
 import { ApplicationInfo } from '../model';
 import View from './view';
 
+// tslint:disable-next-line:no-empty-interface
+interface Props {
+}
+
 interface State {
     applicationInfo?: ApplicationInfo;
     error?: Error;
     loading: boolean;
 }
 
-export class AboutContainer extends React.Component<{}, State> {
-    constructor() {
-        super();
+export class AboutContainer extends React.Component<Props, State> {
+    constructor(props: Props) {
+        super(props);
         this.state = { loading: false };
     }
 

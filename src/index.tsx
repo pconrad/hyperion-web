@@ -1,6 +1,7 @@
-import { MuiThemeProvider } from 'material-ui/styles';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+
+import { MuiThemeProvider } from 'material-ui/styles';
 import { BrowserRouter } from 'react-router-dom';
 
 import { App } from './app';

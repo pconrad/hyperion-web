@@ -33,7 +33,7 @@ export class App extends React.Component<{}, AppState> {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <AppBar title={ 'Υπερίων' } onLeftIconButtonClick={ this.handleToggle } />
                 <Drawer docked={ false } onRequestChange={ this.openDrawer } open={ this.state.drawerOpen }>
 
@@ -56,7 +56,7 @@ export class App extends React.Component<{}, AppState> {
                         <Route path='/about' component={ AboutContainer } />
                     </Switch>
                 </Paper>
-            </div>
+            </React.Fragment>
         );
     }
 

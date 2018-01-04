@@ -7,6 +7,10 @@ import { retrieveRecentReadings } from '../api';
 import { RecentReading } from '../model';
 import View from './view';
 
+// tslint:disable-next-line:no-empty-interface
+interface Props {
+}
+
 interface State {
     error?: Error;
     loading: boolean;
@@ -14,9 +18,9 @@ interface State {
     selectedDate?: Date;
 }
 
-class RecentContainer extends React.Component<{}, State> {
-    constructor() {
-        super();
+class RecentContainer extends React.Component<Props, State> {
+    constructor(props: Props) {
+        super(props);
         this.state = { loading: false };
     }
 
