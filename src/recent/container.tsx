@@ -7,16 +7,12 @@ import View from './view';
 
 const PromisedRecentReadingsView = Promised<RecentReading[]>('data', View);
 
-// tslint:disable-next-line:no-empty-interface
-interface Props {
-}
-
 interface State {
     promise: Promise<RecentReading[]>;
 }
 
-class RecentContainer extends React.Component<Props, State> {
-    constructor(props: Props) {
+class RecentContainer extends React.Component<{}, State> {
+    constructor(props: {}) {
         super(props);
     }
 

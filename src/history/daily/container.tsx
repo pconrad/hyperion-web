@@ -10,17 +10,13 @@ import View from './view';
 
 const PromisedRecentReadingsView = Promised<Reading>('data', View);
 
-// tslint:disable-next-line:no-empty-interface
-interface Props {
-}
-
 interface State {
     promise?: Promise<Reading>;
     selectedDate?: Date;
 }
 
-class HistoryContainer extends React.Component<Props, State> {
-    constructor(props: Props) {
+class HistoryContainer extends React.Component<{}, State> {
+    constructor(props: {}) {
         super(props);
         this.state = {};
     }

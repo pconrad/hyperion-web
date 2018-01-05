@@ -7,16 +7,12 @@ import View from './view';
 
 const PromisedAboutView = Promised<ApplicationInfo>('data', View);
 
-// tslint:disable-next-line:no-empty-interface
-interface Props {
-}
-
 interface State {
     promise: Promise<ApplicationInfo>;
 }
 
-export class AboutContainer extends React.Component<Props, State> {
-    constructor(props: Props) {
+export class AboutContainer extends React.Component<{}, State> {
+    constructor(props: {}) {
         super(props);
     }
 

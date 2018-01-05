@@ -6,18 +6,14 @@ import { LiveDataService } from '../api';
 import { LiveReading } from '../model';
 import View from './view';
 
-// tslint:disable-next-line:no-empty-interface
-interface Props {
-}
-
 interface State {
     lastReading?: LiveReading;
 }
 
-class LiveContainer extends React.Component<Props, State> {
+class LiveContainer extends React.Component<{}, State> {
     private liveDataService = new LiveDataService();
 
-    constructor(props: Props) {
+    constructor(props: {}) {
         super(props);
         this.state = { };
     }
