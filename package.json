@@ -9,7 +9,6 @@
   },
   "description": "Hyperion Web frontend",
   "devDependencies": {
-    "@types/core-js": "0.9.43",
     "@types/enzyme": "3.1.5",
     "@types/enzyme-adapter-react-16": "1.0.1",
     "@types/fetch-mock": "5.8.3",
