@@ -31,11 +31,11 @@ class LiveContainer extends React.Component<{}, State> {
         const loading = !lastReading;
 
         return (
-            <div>
+            <React.Fragment>
                 <h1>Live data</h1>
                 { loading && <LinearProgress /> }
                 { lastReading && <View data={ lastReading } /> }
-            </div>
+            </React.Fragment>
         );
     }
 }

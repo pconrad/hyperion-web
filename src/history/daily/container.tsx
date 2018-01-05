@@ -25,7 +25,7 @@ class HistoryContainer extends React.Component<{}, State> {
         const { promise } = this.state;
 
         return (
-            <div>
+            <React.Fragment>
                 <h1>Retrieve history</h1>
                 <DatePicker
                     hintText='Select a date...'
@@ -37,7 +37,7 @@ class HistoryContainer extends React.Component<{}, State> {
                 />
                 <br />
                 { promise && <PromisedRecentReadingsView promise={ promise } /> }
-            </div>
+            </React.Fragment>
         );
     }
 
