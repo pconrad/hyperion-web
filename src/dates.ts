@@ -12,12 +12,20 @@ export const formatDateFull = (input: Date) => {
     return moment(input).format('dddd, MMMM Do YYYY');
 };
 
-export const formatDateTimeFull = (input: Date) => {
-    return moment(input).format('dddd, MMMM Do YYYY, HH:mm:ss');
+const sanitiseInput = (input: Date | string): moment.Moment => {
+    if (input instanceof Date) {
+        return moment(input);
+    } else {
+        return moment.parseZone(input);
+    }
 };
 
-export const formatTime = (input: Date) => {
-    return moment(input).format('HH:mm:ss');
+export const formatDateTimeFull = (input: Date | string) => {
+    return sanitiseInput(input).format('dddd, MMMM Do YYYY, HH:mm:ss');
+};
+
+export const formatTime = (input: Date | string) => {
+    return sanitiseInput(input).format('HH:mm:ss');
 };
 
 export const isFutureDate = (input: Date) => {

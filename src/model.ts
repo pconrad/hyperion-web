@@ -13,8 +13,8 @@ export interface LiveReading {
     elecProd: number;
     gas: number;
     tariff: string;
-    ts: Date;
-}
+    ts: string;
+};
 
 export interface Reading {
     electricityLow: number;
@@ -31,5 +31,5 @@ export interface RecentReading {
     elecProdNormal: number;
     elecProdLow: number;
     gas: number;
-    ts: Date;
+    ts: string;
 };

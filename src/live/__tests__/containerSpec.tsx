@@ -37,7 +37,7 @@ describe('<LiveContainer />', () => {
         it('should show data', () => {
             // Arrange
             mock.mockImplementation((callback: (data: LiveReading) => void) => {
-                callback({ elecCon: 0, elecProd: 0, gas: 0, tariff: '0001', ts: new Date() });
+                callback({ elecCon: 0, elecProd: 0, gas: 0, tariff: '0001', ts: new Date().toISOString() });
             });
 
             // Act

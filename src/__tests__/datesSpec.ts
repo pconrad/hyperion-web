@@ -4,6 +4,7 @@ import * as dates from '../dates';
 
 describe('Date-related functions', () => {
     const input = new Date(2012, 11, 20, 3, 15, 42);
+    const inputWithTimezone = '2018-01-05T15:40:47+01:00';
 
     describe('formatDateShort()', () => {
         it('should properly format', () => {
@@ -43,6 +44,16 @@ describe('Date-related functions', () => {
             // Assert
             expect(result).toBe('Thursday, December 20th 2012, 03:15:42');
         });
+
+        it('should not process timezone info', () => {
+            // Act
+            const result = dates.formatDateTimeFull(inputWithTimezone);
+
+            // Assert
+            expect(result).toBe('Friday, January 5th 2018, 15:40:47');
+            // When running in a different timezone, the above output would
+            // probably be different.
+        });
     });
 
     describe('isFutureDate()', () => {
@@ -75,6 +86,14 @@ describe('Date-related functions', () => {
 
             // Assert
             expect(result).toBe('03:15:42');
+        });
+
+        it('should properly format', () => {
+            // Act
+            const result = dates.formatTime(inputWithTimezone);
+
+            // Assert
+            expect(result).toBe('15:40:47');
         });
     });
 });
