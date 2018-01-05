@@ -26,11 +26,12 @@ class HistoryContainer extends React.Component<{}, State> {
 
         return (
             <React.Fragment>
-                <h1>Retrieve history</h1>
+                <h1>Retrieve history by date</h1>
                 <DatePicker
                     hintText='Select a date...'
                     container='inline'
                     autoOk={ true }
+                    firstDayOfWeek={ 0 }
                     formatDate={ formatDateFull }
                     shouldDisableDate={ isFutureDate }
                     onChange={ this.selectDate }
