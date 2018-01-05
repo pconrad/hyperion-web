@@ -1,0 +1,1359 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<View /> should present some data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <View
+    data={
+        Object {
+            "appVersion": "2.0.2",
+            "database": "PostgreSQL 9.3.4",
+            "freeMem": "11 MB",
+            "javaVersion": "1.8.0_151 (Oracle Corporation)",
+            "os": "Linux 4.1.19+ (32 bits)",
+            "scalaVersion": "2.12.3",
+            "totalMem": "32 MB",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "allRowsSelected": false,
+      "children": <TableBody
+        allRowsSelected={false}
+        deselectOnClickaway={true}
+        displayRowCheckbox={false}
+        multiSelectable={false}
+        preScanRows={true}
+        selectable={true}
+        style={Object {}}
+>
+        <TableRow
+                displayBorder={true}
+                hoverable={false}
+                hovered={false}
+                selectable={true}
+                striped={false}
+        >
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        Application version
+                </TableRowColumn>
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        2.0.2
+                </TableRowColumn>
+        </TableRow>
+        <TableRow
+                displayBorder={true}
+                hoverable={false}
+                hovered={false}
+                selectable={true}
+                striped={false}
+        >
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        Java runtime
+                </TableRowColumn>
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        1.8.0_151 (Oracle Corporation)
+                </TableRowColumn>
+        </TableRow>
+        <TableRow
+                displayBorder={true}
+                hoverable={false}
+                hovered={false}
+                selectable={true}
+                striped={false}
+        >
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        Scala version
+                </TableRowColumn>
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        2.12.3
+                </TableRowColumn>
+        </TableRow>
+        <TableRow
+                displayBorder={true}
+                hoverable={false}
+                hovered={false}
+                selectable={true}
+                striped={false}
+        >
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        Operating system
+                </TableRowColumn>
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        Linux 4.1.19+ (32 bits)
+                </TableRowColumn>
+        </TableRow>
+        <TableRow
+                displayBorder={true}
+                hoverable={false}
+                hovered={false}
+                selectable={true}
+                striped={false}
+        >
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        Database
+                </TableRowColumn>
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        PostgreSQL 9.3.4
+                </TableRowColumn>
+        </TableRow>
+        <TableRow
+                displayBorder={true}
+                hoverable={false}
+                hovered={false}
+                selectable={true}
+                striped={false}
+        >
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        Free memory
+                </TableRowColumn>
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        11 MB
+                </TableRowColumn>
+        </TableRow>
+        <TableRow
+                displayBorder={true}
+                hoverable={false}
+                hovered={false}
+                selectable={true}
+                striped={false}
+        >
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        Total memory
+                </TableRowColumn>
+                <TableRowColumn
+                        hoverable={false}
+                >
+                        32 MB
+                </TableRowColumn>
+        </TableRow>
+</TableBody>,
+      "fixedFooter": true,
+      "fixedHeader": true,
+      "height": "inherit",
+      "multiSelectable": false,
+      "selectable": true,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "allRowsSelected": false,
+        "children": Array [
+          <TableRow
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
+>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        Application version
+            </TableRowColumn>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        2.0.2
+            </TableRowColumn>
+</TableRow>,
+          <TableRow
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
+>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        Java runtime
+            </TableRowColumn>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        1.8.0_151 (Oracle Corporation)
+            </TableRowColumn>
+</TableRow>,
+          <TableRow
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
+>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        Scala version
+            </TableRowColumn>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        2.12.3
+            </TableRowColumn>
+</TableRow>,
+          <TableRow
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
+>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        Operating system
+            </TableRowColumn>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        Linux 4.1.19+ (32 bits)
+            </TableRowColumn>
+</TableRow>,
+          <TableRow
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
+>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        Database
+            </TableRowColumn>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        PostgreSQL 9.3.4
+            </TableRowColumn>
+</TableRow>,
+          <TableRow
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
+>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        Free memory
+            </TableRowColumn>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        11 MB
+            </TableRowColumn>
+</TableRow>,
+          <TableRow
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
+>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        Total memory
+            </TableRowColumn>
+            <TableRowColumn
+                        hoverable={false}
+            >
+                        32 MB
+            </TableRowColumn>
+</TableRow>,
+        ],
+        "deselectOnClickaway": true,
+        "displayRowCheckbox": false,
+        "multiSelectable": false,
+        "preScanRows": true,
+        "selectable": true,
+        "style": Object {},
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <TableRowColumn
+                hoverable={false}
+>
+                Application version
+</TableRowColumn>,
+              <TableRowColumn
+                hoverable={false}
+>
+                2.0.2
+</TableRowColumn>,
+            ],
+            "displayBorder": true,
+            "hoverable": false,
+            "hovered": false,
+            "selectable": true,
+            "striped": false,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Application version",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "Application version",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "2.0.2",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "2.0.2",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <TableRowColumn
+                hoverable={false}
+>
+                Java runtime
+</TableRowColumn>,
+              <TableRowColumn
+                hoverable={false}
+>
+                1.8.0_151 (Oracle Corporation)
+</TableRowColumn>,
+            ],
+            "displayBorder": true,
+            "hoverable": false,
+            "hovered": false,
+            "selectable": true,
+            "striped": false,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Java runtime",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "Java runtime",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "1.8.0_151 (Oracle Corporation)",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "1.8.0_151 (Oracle Corporation)",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <TableRowColumn
+                hoverable={false}
+>
+                Scala version
+</TableRowColumn>,
+              <TableRowColumn
+                hoverable={false}
+>
+                2.12.3
+</TableRowColumn>,
+            ],
+            "displayBorder": true,
+            "hoverable": false,
+            "hovered": false,
+            "selectable": true,
+            "striped": false,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Scala version",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "Scala version",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "2.12.3",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "2.12.3",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <TableRowColumn
+                hoverable={false}
+>
+                Operating system
+</TableRowColumn>,
+              <TableRowColumn
+                hoverable={false}
+>
+                Linux 4.1.19+ (32 bits)
+</TableRowColumn>,
+            ],
+            "displayBorder": true,
+            "hoverable": false,
+            "hovered": false,
+            "selectable": true,
+            "striped": false,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Operating system",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "Operating system",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Linux 4.1.19+ (32 bits)",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "Linux 4.1.19+ (32 bits)",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <TableRowColumn
+                hoverable={false}
+>
+                Database
+</TableRowColumn>,
+              <TableRowColumn
+                hoverable={false}
+>
+                PostgreSQL 9.3.4
+</TableRowColumn>,
+            ],
+            "displayBorder": true,
+            "hoverable": false,
+            "hovered": false,
+            "selectable": true,
+            "striped": false,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Database",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "Database",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "PostgreSQL 9.3.4",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "PostgreSQL 9.3.4",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <TableRowColumn
+                hoverable={false}
+>
+                Free memory
+</TableRowColumn>,
+              <TableRowColumn
+                hoverable={false}
+>
+                11 MB
+</TableRowColumn>,
+            ],
+            "displayBorder": true,
+            "hoverable": false,
+            "hovered": false,
+            "selectable": true,
+            "striped": false,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Free memory",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "Free memory",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "11 MB",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "11 MB",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <TableRowColumn
+                hoverable={false}
+>
+                Total memory
+</TableRowColumn>,
+              <TableRowColumn
+                hoverable={false}
+>
+                32 MB
+</TableRowColumn>,
+            ],
+            "displayBorder": true,
+            "hoverable": false,
+            "hovered": false,
+            "selectable": true,
+            "striped": false,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Total memory",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "Total memory",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "32 MB",
+                "hoverable": false,
+              },
+              "ref": null,
+              "rendered": "32 MB",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "allRowsSelected": false,
+        "children": <TableBody
+          allRowsSelected={false}
+          deselectOnClickaway={true}
+          displayRowCheckbox={false}
+          multiSelectable={false}
+          preScanRows={true}
+          selectable={true}
+          style={Object {}}
+>
+          <TableRow
+                    displayBorder={true}
+                    hoverable={false}
+                    hovered={false}
+                    selectable={true}
+                    striped={false}
+          >
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              Application version
+                    </TableRowColumn>
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              2.0.2
+                    </TableRowColumn>
+          </TableRow>
+          <TableRow
+                    displayBorder={true}
+                    hoverable={false}
+                    hovered={false}
+                    selectable={true}
+                    striped={false}
+          >
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              Java runtime
+                    </TableRowColumn>
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              1.8.0_151 (Oracle Corporation)
+                    </TableRowColumn>
+          </TableRow>
+          <TableRow
+                    displayBorder={true}
+                    hoverable={false}
+                    hovered={false}
+                    selectable={true}
+                    striped={false}
+          >
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              Scala version
+                    </TableRowColumn>
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              2.12.3
+                    </TableRowColumn>
+          </TableRow>
+          <TableRow
+                    displayBorder={true}
+                    hoverable={false}
+                    hovered={false}
+                    selectable={true}
+                    striped={false}
+          >
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              Operating system
+                    </TableRowColumn>
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              Linux 4.1.19+ (32 bits)
+                    </TableRowColumn>
+          </TableRow>
+          <TableRow
+                    displayBorder={true}
+                    hoverable={false}
+                    hovered={false}
+                    selectable={true}
+                    striped={false}
+          >
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              Database
+                    </TableRowColumn>
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              PostgreSQL 9.3.4
+                    </TableRowColumn>
+          </TableRow>
+          <TableRow
+                    displayBorder={true}
+                    hoverable={false}
+                    hovered={false}
+                    selectable={true}
+                    striped={false}
+          >
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              Free memory
+                    </TableRowColumn>
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              11 MB
+                    </TableRowColumn>
+          </TableRow>
+          <TableRow
+                    displayBorder={true}
+                    hoverable={false}
+                    hovered={false}
+                    selectable={true}
+                    striped={false}
+          >
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              Total memory
+                    </TableRowColumn>
+                    <TableRowColumn
+                              hoverable={false}
+                    >
+                              32 MB
+                    </TableRowColumn>
+          </TableRow>
+</TableBody>,
+        "fixedFooter": true,
+        "fixedHeader": true,
+        "height": "inherit",
+        "multiSelectable": false,
+        "selectable": true,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "allRowsSelected": false,
+          "children": Array [
+            <TableRow
+              displayBorder={true}
+              hoverable={false}
+              hovered={false}
+              selectable={true}
+              striped={false}
+>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            Application version
+              </TableRowColumn>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            2.0.2
+              </TableRowColumn>
+</TableRow>,
+            <TableRow
+              displayBorder={true}
+              hoverable={false}
+              hovered={false}
+              selectable={true}
+              striped={false}
+>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            Java runtime
+              </TableRowColumn>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            1.8.0_151 (Oracle Corporation)
+              </TableRowColumn>
+</TableRow>,
+            <TableRow
+              displayBorder={true}
+              hoverable={false}
+              hovered={false}
+              selectable={true}
+              striped={false}
+>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            Scala version
+              </TableRowColumn>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            2.12.3
+              </TableRowColumn>
+</TableRow>,
+            <TableRow
+              displayBorder={true}
+              hoverable={false}
+              hovered={false}
+              selectable={true}
+              striped={false}
+>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            Operating system
+              </TableRowColumn>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            Linux 4.1.19+ (32 bits)
+              </TableRowColumn>
+</TableRow>,
+            <TableRow
+              displayBorder={true}
+              hoverable={false}
+              hovered={false}
+              selectable={true}
+              striped={false}
+>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            Database
+              </TableRowColumn>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            PostgreSQL 9.3.4
+              </TableRowColumn>
+</TableRow>,
+            <TableRow
+              displayBorder={true}
+              hoverable={false}
+              hovered={false}
+              selectable={true}
+              striped={false}
+>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            Free memory
+              </TableRowColumn>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            11 MB
+              </TableRowColumn>
+</TableRow>,
+            <TableRow
+              displayBorder={true}
+              hoverable={false}
+              hovered={false}
+              selectable={true}
+              striped={false}
+>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            Total memory
+              </TableRowColumn>
+              <TableRowColumn
+                            hoverable={false}
+              >
+                            32 MB
+              </TableRowColumn>
+</TableRow>,
+          ],
+          "deselectOnClickaway": true,
+          "displayRowCheckbox": false,
+          "multiSelectable": false,
+          "preScanRows": true,
+          "selectable": true,
+          "style": Object {},
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <TableRowColumn
+                  hoverable={false}
+>
+                  Application version
+</TableRowColumn>,
+                <TableRowColumn
+                  hoverable={false}
+>
+                  2.0.2
+</TableRowColumn>,
+              ],
+              "displayBorder": true,
+              "hoverable": false,
+              "hovered": false,
+              "selectable": true,
+              "striped": false,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Application version",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "Application version",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "2.0.2",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "2.0.2",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <TableRowColumn
+                  hoverable={false}
+>
+                  Java runtime
+</TableRowColumn>,
+                <TableRowColumn
+                  hoverable={false}
+>
+                  1.8.0_151 (Oracle Corporation)
+</TableRowColumn>,
+              ],
+              "displayBorder": true,
+              "hoverable": false,
+              "hovered": false,
+              "selectable": true,
+              "striped": false,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Java runtime",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "Java runtime",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "1.8.0_151 (Oracle Corporation)",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "1.8.0_151 (Oracle Corporation)",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <TableRowColumn
+                  hoverable={false}
+>
+                  Scala version
+</TableRowColumn>,
+                <TableRowColumn
+                  hoverable={false}
+>
+                  2.12.3
+</TableRowColumn>,
+              ],
+              "displayBorder": true,
+              "hoverable": false,
+              "hovered": false,
+              "selectable": true,
+              "striped": false,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Scala version",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "Scala version",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "2.12.3",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "2.12.3",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <TableRowColumn
+                  hoverable={false}
+>
+                  Operating system
+</TableRowColumn>,
+                <TableRowColumn
+                  hoverable={false}
+>
+                  Linux 4.1.19+ (32 bits)
+</TableRowColumn>,
+              ],
+              "displayBorder": true,
+              "hoverable": false,
+              "hovered": false,
+              "selectable": true,
+              "striped": false,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Operating system",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "Operating system",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Linux 4.1.19+ (32 bits)",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "Linux 4.1.19+ (32 bits)",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <TableRowColumn
+                  hoverable={false}
+>
+                  Database
+</TableRowColumn>,
+                <TableRowColumn
+                  hoverable={false}
+>
+                  PostgreSQL 9.3.4
+</TableRowColumn>,
+              ],
+              "displayBorder": true,
+              "hoverable": false,
+              "hovered": false,
+              "selectable": true,
+              "striped": false,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Database",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "Database",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "PostgreSQL 9.3.4",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "PostgreSQL 9.3.4",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <TableRowColumn
+                  hoverable={false}
+>
+                  Free memory
+</TableRowColumn>,
+                <TableRowColumn
+                  hoverable={false}
+>
+                  11 MB
+</TableRowColumn>,
+              ],
+              "displayBorder": true,
+              "hoverable": false,
+              "hovered": false,
+              "selectable": true,
+              "striped": false,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Free memory",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "Free memory",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "11 MB",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "11 MB",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <TableRowColumn
+                  hoverable={false}
+>
+                  Total memory
+</TableRowColumn>,
+                <TableRowColumn
+                  hoverable={false}
+>
+                  32 MB
+</TableRowColumn>,
+              ],
+              "displayBorder": true,
+              "hoverable": false,
+              "hovered": false,
+              "selectable": true,
+              "striped": false,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Total memory",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "Total memory",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "32 MB",
+                  "hoverable": false,
+                },
+                "ref": null,
+                "rendered": "32 MB",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

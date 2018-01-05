@@ -18,7 +18,7 @@ const makeRow = (label: string, value: string) => (
     </TableRow>
 );
 
-export const View = (props: ViewProps) => {
+const View = (props: ViewProps) => {
     const tariff = props.data.tariff === lowTariff ? 'Low' : 'Normal';
     return (
         <Table>
@@ -32,3 +32,5 @@ export const View = (props: ViewProps) => {
         </Table>
     );
 };
+
+export default View;

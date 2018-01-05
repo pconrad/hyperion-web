@@ -1,0 +1,619 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<View /> should present some data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <RecentView
+    data={
+        Array [
+            Object {
+              "elecCon": 0.265,
+              "elecConsLow": 2150.714,
+              "elecConsNormal": 2702.641,
+              "elecProd": 0,
+              "elecProdLow": 0,
+              "elecProdNormal": 0,
+              "gas": 3781.676,
+              "tariff": "0002",
+              "ts": 2018-01-05T14:40:47.000Z,
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <CartesianGrid
+          fill="none"
+          height={0}
+          horizontal={true}
+          horizontalPoints={Array []}
+          stroke="#ccc"
+          vertical={true}
+          verticalPoints={Array []}
+          width={0}
+          x={0}
+          y={0}
+/>,
+        <Line
+          activeDot={true}
+          animationBegin={0}
+          animationDuration={1500}
+          animationEasing="ease"
+          connectNulls={false}
+          dataKey="value"
+          dot={true}
+          fill="#fff"
+          isAnimationActive={true}
+          legendType="line"
+          onAnimationEnd={[Function]}
+          onAnimationStart={[Function]}
+          points={Array []}
+          stroke="#3182bd"
+          strokeWidth={1}
+          type="monotone"
+          xAxisId={0}
+          yAxisId={0}
+/>,
+        <Tooltip
+          active={false}
+          animationDuration={400}
+          animationEasing="ease"
+          coordinate={
+                    Object {
+                              "x": 0,
+                              "y": 0,
+                            }
+          }
+          cursor={true}
+          cursorStyle={Object {}}
+          isAnimationActive={true}
+          itemSorter={[Function]}
+          itemStyle={Object {}}
+          labelStyle={Object {}}
+          offset={10}
+          separator=" : "
+          viewBox={
+                    Object {
+                              "height": 0,
+                              "width": 0,
+                              "x": 0,
+                              "y": 0,
+                            }
+          }
+          wrapperStyle={Object {}}
+/>,
+        <XAxis
+          allowDataOverflow={false}
+          allowDecimals={true}
+          dataKey="name"
+          domain={
+                    Array [
+                              0,
+                              "auto",
+                            ]
+          }
+          height={30}
+          hide={false}
+          mirror={false}
+          orientation="bottom"
+          padding={
+                    Object {
+                              "left": 0,
+                              "right": 0,
+                            }
+          }
+          reversed={false}
+          scale="auto"
+          tickCount={5}
+          type="category"
+          width={0}
+          xAxisId={0}
+/>,
+        <YAxis
+          allowDataOverflow={false}
+          allowDecimals={true}
+          dataKey="value"
+          domain={
+                    Array [
+                              0,
+                              "auto",
+                            ]
+          }
+          height={0}
+          hide={false}
+          label="Consumed Power"
+          mirror={false}
+          orientation="left"
+          padding={
+                    Object {
+                              "bottom": 0,
+                              "top": 0,
+                            }
+          }
+          reversed={false}
+          scale="auto"
+          tickCount={5}
+          type="number"
+          unit="Watt"
+          width={60}
+          yAxisId={0}
+/>,
+      ],
+      "data": Array [
+        Object {
+          "name": "15:40:47",
+          "value": 265,
+        },
+      ],
+      "height": 350,
+      "layout": "horizontal",
+      "margin": Object {
+        "bottom": 5,
+        "left": 5,
+        "right": 5,
+        "top": 5,
+      },
+      "stackOffset": "none",
+      "width": 900,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "fill": "none",
+          "height": 0,
+          "horizontal": true,
+          "horizontalPoints": Array [],
+          "stroke": "#ccc",
+          "vertical": true,
+          "verticalPoints": Array [],
+          "width": 0,
+          "x": 0,
+          "y": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "activeDot": true,
+          "animationBegin": 0,
+          "animationDuration": 1500,
+          "animationEasing": "ease",
+          "connectNulls": false,
+          "dataKey": "value",
+          "dot": true,
+          "fill": "#fff",
+          "isAnimationActive": true,
+          "legendType": "line",
+          "onAnimationEnd": [Function],
+          "onAnimationStart": [Function],
+          "points": Array [],
+          "stroke": "#3182bd",
+          "strokeWidth": 1,
+          "type": "monotone",
+          "xAxisId": 0,
+          "yAxisId": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "active": false,
+          "animationDuration": 400,
+          "animationEasing": "ease",
+          "coordinate": Object {
+            "x": 0,
+            "y": 0,
+          },
+          "cursor": true,
+          "cursorStyle": Object {},
+          "isAnimationActive": true,
+          "itemSorter": [Function],
+          "itemStyle": Object {},
+          "labelStyle": Object {},
+          "offset": 10,
+          "separator": " : ",
+          "viewBox": Object {
+            "height": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0,
+          },
+          "wrapperStyle": Object {},
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "allowDataOverflow": false,
+          "allowDecimals": true,
+          "dataKey": "name",
+          "domain": Array [
+            0,
+            "auto",
+          ],
+          "height": 30,
+          "hide": false,
+          "mirror": false,
+          "orientation": "bottom",
+          "padding": Object {
+            "left": 0,
+            "right": 0,
+          },
+          "reversed": false,
+          "scale": "auto",
+          "tickCount": 5,
+          "type": "category",
+          "width": 0,
+          "xAxisId": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "allowDataOverflow": false,
+          "allowDecimals": true,
+          "dataKey": "value",
+          "domain": Array [
+            0,
+            "auto",
+          ],
+          "height": 0,
+          "hide": false,
+          "label": "Consumed Power",
+          "mirror": false,
+          "orientation": "left",
+          "padding": Object {
+            "bottom": 0,
+            "top": 0,
+          },
+          "reversed": false,
+          "scale": "auto",
+          "tickCount": 5,
+          "type": "number",
+          "unit": "Watt",
+          "width": 60,
+          "yAxisId": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <CartesianGrid
+            fill="none"
+            height={0}
+            horizontal={true}
+            horizontalPoints={Array []}
+            stroke="#ccc"
+            vertical={true}
+            verticalPoints={Array []}
+            width={0}
+            x={0}
+            y={0}
+/>,
+          <Line
+            activeDot={true}
+            animationBegin={0}
+            animationDuration={1500}
+            animationEasing="ease"
+            connectNulls={false}
+            dataKey="value"
+            dot={true}
+            fill="#fff"
+            isAnimationActive={true}
+            legendType="line"
+            onAnimationEnd={[Function]}
+            onAnimationStart={[Function]}
+            points={Array []}
+            stroke="#3182bd"
+            strokeWidth={1}
+            type="monotone"
+            xAxisId={0}
+            yAxisId={0}
+/>,
+          <Tooltip
+            active={false}
+            animationDuration={400}
+            animationEasing="ease"
+            coordinate={
+                        Object {
+                                    "x": 0,
+                                    "y": 0,
+                                  }
+            }
+            cursor={true}
+            cursorStyle={Object {}}
+            isAnimationActive={true}
+            itemSorter={[Function]}
+            itemStyle={Object {}}
+            labelStyle={Object {}}
+            offset={10}
+            separator=" : "
+            viewBox={
+                        Object {
+                                    "height": 0,
+                                    "width": 0,
+                                    "x": 0,
+                                    "y": 0,
+                                  }
+            }
+            wrapperStyle={Object {}}
+/>,
+          <XAxis
+            allowDataOverflow={false}
+            allowDecimals={true}
+            dataKey="name"
+            domain={
+                        Array [
+                                    0,
+                                    "auto",
+                                  ]
+            }
+            height={30}
+            hide={false}
+            mirror={false}
+            orientation="bottom"
+            padding={
+                        Object {
+                                    "left": 0,
+                                    "right": 0,
+                                  }
+            }
+            reversed={false}
+            scale="auto"
+            tickCount={5}
+            type="category"
+            width={0}
+            xAxisId={0}
+/>,
+          <YAxis
+            allowDataOverflow={false}
+            allowDecimals={true}
+            dataKey="value"
+            domain={
+                        Array [
+                                    0,
+                                    "auto",
+                                  ]
+            }
+            height={0}
+            hide={false}
+            label="Consumed Power"
+            mirror={false}
+            orientation="left"
+            padding={
+                        Object {
+                                    "bottom": 0,
+                                    "top": 0,
+                                  }
+            }
+            reversed={false}
+            scale="auto"
+            tickCount={5}
+            type="number"
+            unit="Watt"
+            width={60}
+            yAxisId={0}
+/>,
+        ],
+        "data": Array [
+          Object {
+            "name": "15:40:47",
+            "value": 265,
+          },
+        ],
+        "height": 350,
+        "layout": "horizontal",
+        "margin": Object {
+          "bottom": 5,
+          "left": 5,
+          "right": 5,
+          "top": 5,
+        },
+        "stackOffset": "none",
+        "width": 900,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "fill": "none",
+            "height": 0,
+            "horizontal": true,
+            "horizontalPoints": Array [],
+            "stroke": "#ccc",
+            "vertical": true,
+            "verticalPoints": Array [],
+            "width": 0,
+            "x": 0,
+            "y": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "activeDot": true,
+            "animationBegin": 0,
+            "animationDuration": 1500,
+            "animationEasing": "ease",
+            "connectNulls": false,
+            "dataKey": "value",
+            "dot": true,
+            "fill": "#fff",
+            "isAnimationActive": true,
+            "legendType": "line",
+            "onAnimationEnd": [Function],
+            "onAnimationStart": [Function],
+            "points": Array [],
+            "stroke": "#3182bd",
+            "strokeWidth": 1,
+            "type": "monotone",
+            "xAxisId": 0,
+            "yAxisId": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "active": false,
+            "animationDuration": 400,
+            "animationEasing": "ease",
+            "coordinate": Object {
+              "x": 0,
+              "y": 0,
+            },
+            "cursor": true,
+            "cursorStyle": Object {},
+            "isAnimationActive": true,
+            "itemSorter": [Function],
+            "itemStyle": Object {},
+            "labelStyle": Object {},
+            "offset": 10,
+            "separator": " : ",
+            "viewBox": Object {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0,
+            },
+            "wrapperStyle": Object {},
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "allowDataOverflow": false,
+            "allowDecimals": true,
+            "dataKey": "name",
+            "domain": Array [
+              0,
+              "auto",
+            ],
+            "height": 30,
+            "hide": false,
+            "mirror": false,
+            "orientation": "bottom",
+            "padding": Object {
+              "left": 0,
+              "right": 0,
+            },
+            "reversed": false,
+            "scale": "auto",
+            "tickCount": 5,
+            "type": "category",
+            "width": 0,
+            "xAxisId": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "allowDataOverflow": false,
+            "allowDecimals": true,
+            "dataKey": "value",
+            "domain": Array [
+              0,
+              "auto",
+            ],
+            "height": 0,
+            "hide": false,
+            "label": "Consumed Power",
+            "mirror": false,
+            "orientation": "left",
+            "padding": Object {
+              "bottom": 0,
+              "top": 0,
+            },
+            "reversed": false,
+            "scale": "auto",
+            "tickCount": 5,
+            "type": "number",
+            "unit": "Watt",
+            "width": 60,
+            "yAxisId": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

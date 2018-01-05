@@ -4,12 +4,12 @@ import * as React from 'react';
 import LinearProgress from 'material-ui/LinearProgress';
 
 import { LiveReading } from '../../model';
-import { View } from '../view';
+import View from '../view';
 
 const mock = jest.fn();
 jest.mock('../../api', () => ({
     LiveDataService: class LiveDataService {
-        public connect = mock;
+        connect = mock;
     },
 }));
 

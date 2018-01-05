@@ -4,7 +4,7 @@ import LinearProgress from 'material-ui/LinearProgress';
 
 import { LiveDataService } from '../api';
 import { LiveReading } from '../model';
-import { View } from './view';
+import View from './view';
 
 // tslint:disable-next-line:no-empty-interface
 interface Props {
