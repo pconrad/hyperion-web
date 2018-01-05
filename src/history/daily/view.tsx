@@ -9,7 +9,7 @@ export interface ViewProps {
     data: Reading;
 }
 
-export default (props: ViewProps) => (
+const DailyReadingView: React.StatelessComponent<ViewProps> = (props) => (
     <Table selectable={ false }>
         <TableBody displayRowCheckbox={ false }>
             <TableRow>
@@ -31,3 +31,5 @@ export default (props: ViewProps) => (
         </TableBody>
     </Table>
 );
+
+export default DailyReadingView;

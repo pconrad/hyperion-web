@@ -1,46 +1,37 @@
 import * as React from 'react';
 
-import LinearProgress from 'material-ui/LinearProgress';
-import Snackbar from 'material-ui/Snackbar';
-
 import { retrieveRecentReadings } from '../api';
 import { RecentReading } from '../model';
+import Promised from '../promised';
 import View from './view';
+
+const PromisedRecentReadingsView = Promised<RecentReading[]>('data', View);
 
 // tslint:disable-next-line:no-empty-interface
 interface Props {
 }
 
 interface State {
-    error?: Error;
-    loading: boolean;
-    readings?: RecentReading[];
-    selectedDate?: Date;
+    promise: Promise<RecentReading[]>;
 }
 
 class RecentContainer extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
-        this.state = { loading: false };
     }
 
     componentWillMount() {
-        this.setState({ ...this.state, loading: true });
-        retrieveRecentReadings()
-            .then((readings) => this.setState({ ...this.state, loading: false, readings }))
-            .catch((error) => this.setState({ ...this.state, loading: false, error }));
+        this.setState({ promise: retrieveRecentReadings() });
     }
 
     render() {
-        const { error, loading, readings } = this.state;
+        const { promise } = this.state;
 
         return (
-            <div>
+            <React.Fragment>
                 <h1>Recent data</h1>
-                { error && <Snackbar autoHideDuration={ 2000 }  message={ error.message } open={ !!error } /> }
-                { loading && <LinearProgress /> }
-                { readings && <View data={ readings } />}
-            </div>
+                <PromisedRecentReadingsView promise={ promise } />
+            </React.Fragment>
         );
     }
 }

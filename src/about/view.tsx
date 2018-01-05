@@ -8,7 +8,7 @@ export interface ViewProps {
     data: ApplicationInfo;
 }
 
-export default (props: ViewProps) => (
+const View: React.StatelessComponent<ViewProps> = (props) => (
     <Table>
         <TableBody displayRowCheckbox={ false }>
             <TableRow>
@@ -42,3 +42,5 @@ export default (props: ViewProps) => (
         </TableBody>
     </Table>
 );
+
+export default View;

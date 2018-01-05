@@ -11,7 +11,7 @@ export interface ViewProps {
 
 const label = (reading: RecentReading) => formatTime(reading.ts);
 
-const RecentView = (props: ViewProps) => {
+const RecentView: React.StatelessComponent<ViewProps> = (props) => {
     const data = props.data.map((item) => ({ name: label(item), value: item.elecCon * 1000 }));
 
     return (

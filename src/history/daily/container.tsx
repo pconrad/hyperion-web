@@ -1,35 +1,32 @@
 import * as React from 'react';
 
 import DatePicker from 'material-ui/DatePicker';
-import LinearProgress from 'material-ui/LinearProgress';
-import Snackbar from 'material-ui/Snackbar';
 
 import { retrieveHistoricalReadings } from '../../api';
 import { formatDateFull, isFutureDate } from '../../dates';
 import { Reading } from '../../model';
+import Promised from '../../promised';
 import View from './view';
+
+const PromisedRecentReadingsView = Promised<Reading>('data', View);
 
 // tslint:disable-next-line:no-empty-interface
 interface Props {
 }
 
 interface State {
-    error?: Error;
-    loading: boolean;
-    reading?: Reading;
+    promise?: Promise<Reading>;
     selectedDate?: Date;
 }
 
 class HistoryContainer extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
-        this.state = {
-            loading: false,
-        };
+        this.state = {};
     }
 
     render() {
-        const { error, loading, reading } = this.state;
+        const { promise } = this.state;
 
         return (
             <div>
@@ -43,18 +40,17 @@ class HistoryContainer extends React.Component<Props, State> {
                     onChange={ this.selectDate }
                 />
                 <br />
-                { loading    && <LinearProgress /> }
-                { error      && <Snackbar autoHideDuration={ 2000 } message={ error.message } open={ !!error } /> }
-                { reading    && <View       data={ reading } /> }
+                { promise && <PromisedRecentReadingsView promise={ promise } /> }
             </div>
         );
     }
 
     private selectDate = (event: any, selectedDate: Date) => {
-        this.setState({ ...this.state, selectedDate, loading: true });
-        retrieveHistoricalReadings(selectedDate)
-            .then((reading) => this.setState({ ...this.state, loading: false, reading }))
-            .catch((error) => this.setState({ ...this.state, loading: false, error }));
+        // First remove the old promise (forcing React to re-render container)...
+        this.setState({ promise: undefined }, () => {
+            // ... only then to create the new promise (forcing another re-render).
+            this.setState({ promise: retrieveHistoricalReadings(selectedDate) });
+        });
     }
 }
 

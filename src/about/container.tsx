@@ -1,58 +1,38 @@
 import * as React from 'react';
 
-import LinearProgress from 'material-ui/LinearProgress';
-import Snackbar from 'material-ui/Snackbar';
-
 import { retrieveApplicationInfo } from '../api';
 import { ApplicationInfo } from '../model';
+import Promised from '../promised';
 import View from './view';
+
+const PromisedAboutView = Promised<ApplicationInfo>('data', View);
 
 // tslint:disable-next-line:no-empty-interface
 interface Props {
 }
 
 interface State {
-    applicationInfo?: ApplicationInfo;
-    error?: Error;
-    loading: boolean;
+    promise: Promise<ApplicationInfo>;
 }
 
 export class AboutContainer extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
-        this.state = { loading: false };
     }
 
     componentWillMount() {
-        this.setState({ ...this.state, loading: true });
-        retrieveApplicationInfo()
-            .then((applicationInfo) => this.setState({ ...this.state, loading: false, applicationInfo }))
-            .catch((error) => this.setState({ ...this.state, loading: false, error }));
+        this.setState({ promise: retrieveApplicationInfo() });
     }
 
     render() {
-        const { applicationInfo, error, loading } = this.state;
+        const { promise } = this.state;
         return (
-            <div>
+            <React.Fragment>
                 <h1>About Υπερίων</h1>
-                { loading && <LinearProgress /> }
-                { error && this.showError(error) }
-                { applicationInfo && <View data={ applicationInfo } /> }
-            </div>
+                <PromisedAboutView promise={ promise } />
+            </React.Fragment>
         );
     }
-
-    private showError = (error: Error) => (
-        <Snackbar
-            autoHideDuration={ 2000 }
-            action='retry'
-            message={ error.message }
-            onActionClick={ this.retry }
-            open={ !!error }
-        />
-    )
-
-    private retry = () => this.componentWillMount();
 }
 
 export default AboutContainer;
