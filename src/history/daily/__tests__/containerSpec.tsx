@@ -8,9 +8,9 @@ import LinearProgress from 'material-ui/LinearProgress';
 const mockApi = jest.fn(() => Promise.resolve());
 jest.mock('../../../api', () => ({ retrieveHistoricalReadingForDate: mockApi }));
 
-import HistoryContainer from '../container';
+import DailyHistoryContainer from '../container';
 
-describe('<HistoryContainer />', () => {
+describe('<DailyHistoryContainer />', () => {
     afterEach(() => {
         mockApi.mockReset();
     });
@@ -26,7 +26,7 @@ describe('<HistoryContainer />', () => {
         // Arrange
 
         // Act
-        const container = shallow(<HistoryContainer />);
+        const container = shallow(<DailyHistoryContainer />);
 
         // Assert
         expect(container.find(DatePicker).exists()).toBe(true);
@@ -41,7 +41,7 @@ describe('<HistoryContainer />', () => {
         mockApi.mockImplementation(() => Promise.resolve(result));
 
         // Act
-        const container = shallow(<HistoryContainer />);
+        const container = shallow(<DailyHistoryContainer />);
         selectDate(container, selectedDate);
 
         // Assert

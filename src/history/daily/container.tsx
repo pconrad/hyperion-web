@@ -15,7 +15,7 @@ interface State {
     selectedDate?: Date;
 }
 
-class HistoryContainer extends React.Component<{}, State> {
+class DailyHistoryContainer extends React.Component<{}, State> {
     constructor(props: {}) {
         super(props);
         this.state = {};
@@ -51,4 +51,4 @@ class HistoryContainer extends React.Component<{}, State> {
     }
 }
 
-export default HistoryContainer;
+export default DailyHistoryContainer;
