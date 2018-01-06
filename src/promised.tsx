@@ -9,6 +9,8 @@ interface PromisedState {
     value?: any;
 }
 
+// Inspired by http://natpryce.com/articles/000814.html
+
 // tslint:disable-next-line:only-arrow-functions
 const Promised = function<T, ChildProps = {}>(propName: string, Wrapped: React.ComponentType<ChildProps>) {
     interface WrapperProp {
