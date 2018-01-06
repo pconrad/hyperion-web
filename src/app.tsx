@@ -11,6 +11,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 import AboutContainer from './about/container';
 import { Start } from './components/start';
 import DailyHistoryContainer from './history/daily/container';
+import MonthlyHistoryContainer from './history/monthly/container';
 import LiveContainer from './live/container';
 import RecentContainer from './recent/container';
 
@@ -40,7 +41,7 @@ export class App extends React.Component<{}, AppState> {
                     { this.createMenuItem('Home', '/') }
                     { this.createMenuItem('Live', '/live') }
                     { this.createMenuItem('Recent', '/recent') }
-                    { this.createMenuItemWithChildren('History', '/history', this.historyChildren()) }
+                    { this.createMenuItemWithChildren('History', this.historyChildren()) }
 
                     <Divider />
 
@@ -52,6 +53,7 @@ export class App extends React.Component<{}, AppState> {
                         <Route exact={ true } path='/' component={ Start } />
                         <Route path='/live' component={ LiveContainer } />
                         <Route path='/history/daily' component={ DailyHistoryContainer } />
+                        <Route path='/history/monthly' component={ MonthlyHistoryContainer } />
                         <Route path='/recent' component={ RecentContainer } />
                         <Route path='/about' component={ AboutContainer } />
                     </Switch>
@@ -66,12 +68,12 @@ export class App extends React.Component<{}, AppState> {
 
     private historyChildren = () => ([
         this.createMenuItem('By date', '/history/daily'),
+        this.createMenuItem('By month', '/history/monthly'),
     ])
 
-    private createMenuItemWithChildren = (label: string, target: string, children: JSX.Element[]) => {
+    private createMenuItemWithChildren = (label: string, children: JSX.Element[]) => {
         return (
             <MenuItem
-                containerElement={ <Link to={ target } /> }
                 label={ label }
                 rightIcon={ <ArrowDropRight /> }
                 menuItems={ children }
