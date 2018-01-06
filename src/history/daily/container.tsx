@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import DatePicker from 'material-ui/DatePicker';
 
-import { retrieveHistoricalReadings } from '../../api';
+import { retrieveHistoricalReadingForDate } from '../../api';
 import { formatDateFull, isFutureDate } from '../../dates';
 import { Reading } from '../../model';
 import Promised from '../../promised';
@@ -46,7 +46,7 @@ class HistoryContainer extends React.Component<{}, State> {
         // First remove the old promise (forcing React to re-render container)...
         this.setState({ promise: undefined }, () => {
             // ... only then to create the new promise (forcing another re-render).
-            this.setState({ promise: retrieveHistoricalReadings(selectedDate) });
+            this.setState({ promise: retrieveHistoricalReadingForDate(selectedDate) });
         });
     }
 }

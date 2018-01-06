@@ -34,7 +34,7 @@ export const get = (input: RequestInfo, init?: RequestInit, errorMapping: ErrorM
 
 export const retrieveApplicationInfo = (): Promise<ApplicationInfo> => get('/api/info');
 
-export const retrieveHistoricalReadings = (searchDate: Date): Promise<Reading> => {
+export const retrieveHistoricalReadingForDate = (searchDate: Date): Promise<Reading> => {
     const errorMapping: ErrorMapping = {
         404: (response) => Promise.resolve('No record found for selected date'),
     };

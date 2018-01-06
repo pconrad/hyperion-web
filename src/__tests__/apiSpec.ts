@@ -82,15 +82,15 @@ describe('retrieveApplicationInfo()', () => {
     });
 });
 
-describe('retrieveHistoricalReadings()', () => {
-    it('should invoke /api/history with parameter', () => {
+describe('retrieveHistoricalReadingsForDate()', () => {
+    it('should invoke /api/history with date parameter', () => {
         // Arrange
         const body = JSON.stringify({ electricityLow: 15 });
         fetchMock.once('/api/history?date=2014-11-30', { status: 200, body }, { method: 'GET' });
 
         // Act
         const searchDate = new Date(2014, 10, 30);
-        return api.retrieveHistoricalReadings(searchDate).then((result) => {
+        return api.retrieveHistoricalReadingForDate(searchDate).then((result) => {
             // Assert
             expect(result).toEqual({ electricityLow: 15 });
         });
@@ -104,7 +104,7 @@ describe('retrieveHistoricalReadings()', () => {
 
             // Assert
             const searchDate = new Date(2014, 10, 30);
-            return api.retrieveHistoricalReadings(searchDate).catch((error: Error) => {
+            return api.retrieveHistoricalReadingForDate(searchDate).catch((error: Error) => {
                 // Act
                 expect(error.message).toBe('No record found for selected date');
             });
