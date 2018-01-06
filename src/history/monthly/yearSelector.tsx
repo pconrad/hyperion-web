@@ -7,32 +7,62 @@ interface YearSelectorProps {
     updateSelectedYear: (selectedYear?: number) => void;
 }
 
-class YearSelector extends React.Component<YearSelectorProps, {}> {
+interface YearSelectorState {
+    error?: string;
+    value: string;
+}
+
+class YearSelector extends React.Component<YearSelectorProps, YearSelectorState> {
     constructor(props: YearSelectorProps) {
         super(props);
-        this.state = {};
+        const value = props.selectedYear ? props.selectedYear.toString() : '';
+        this.state = { value };
+    }
+
+    componentWillReceiveProps(props: YearSelectorProps) {
+        const value = props.selectedYear ? props.selectedYear.toString() : '';
+        this.setState({ value });
     }
 
     render() {
-        const { selectedYear } = this.props;
+        const { error, value } = this.state;
 
         return (
             <React.Fragment>
                 <TextField
+                    errorText={ error }
                     hintText='Year'
-                    onChange={ this.callback }
-                    value={ selectedYear }
+                    onChange={ this.onChange }
+                    value={ value }
                 />
             </React.Fragment>
         );
     }
 
-    private callback = (e: React.FormEvent<{}>, newValue: string) => {
-        const numeric = Number(newValue);
-        if (newValue.length === 0) {
+    private onChange = (e: React.FormEvent<{}>, value: string) => {
+        if (value.length === 0) {
+            this.setState({ value });
             this.props.updateSelectedYear(undefined);
-        } else if (!Number.isNaN(numeric)) {
+            return;
+        }
+
+        const numeric = Number(value);
+        if (Number.isNaN(numeric)) {
+            return;
+        }
+
+        const error = this.determineErrorText(numeric);
+        this.setState({ error, value });
+        if (!error) {
             this.props.updateSelectedYear(numeric);
+        }
+    }
+
+    private determineErrorText = (input: number) => {
+        if (input < 2010) {
+            return 'Please enter a year later than 2010';
+        } else {
+            return undefined;
         }
     }
 }

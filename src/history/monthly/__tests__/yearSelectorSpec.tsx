@@ -14,7 +14,7 @@ describe('<YearSelector />', () => {
         const selector = shallow(<YearSelector selectedYear={ selectedYear } updateSelectedYear={ jest.fn() } />);
 
         // Assert
-        expect(selector.find(TextField).first().props().value).toBe(selectedYear);
+        expect(selector.find(TextField).first().props().value).toBe(selectedYear.toString());
     });
 
     it('should invoke the callback when a month is selected', (done) => {
