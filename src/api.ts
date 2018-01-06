@@ -42,6 +42,13 @@ export const retrieveHistoricalReadingForDate = (searchDate: Date): Promise<Read
     return get(`/api/history?date=${input}`, undefined, errorMapping);
 };
 
+export const retrieveHistoricalReadingsForMonth = (month: number, year: number): Promise<Reading[]> => {
+    const errorMapping: ErrorMapping = {
+        404: (response) => Promise.resolve('No record found for selected month'),
+    };
+    return get(`/api/history?month=${month}&year=${year}`, undefined, errorMapping);
+};
+
 export const retrieveRecentReadings = (): Promise<RecentReading[]> => get('/api/recent');
 
 export class LiveDataService {

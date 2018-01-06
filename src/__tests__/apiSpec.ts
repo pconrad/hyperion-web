@@ -112,6 +112,33 @@ describe('retrieveHistoricalReadingsForDate()', () => {
     });
 });
 
+describe('retrieveHistoricalReadingsForMonth()', () => {
+    it('should invoke /api/history with month and year parameters', () => {
+        // Arrange
+        const body = JSON.stringify([{ electricityLow: 15 }]);
+        fetchMock.once('/api/history?month=11&year=2014', { status: 200, body }, { method: 'GET' });
+
+        // Act
+        return api.retrieveHistoricalReadingsForMonth(11, 2014).then((result) => {
+            // Assert
+            expect(result).toEqual([{ electricityLow: 15 }]);
+        });
+    });
+
+    describe('when there is no reading for a given month', () => {
+        it('should show a message that there is no reading', () => {
+            // Arrange
+            fetchMock.once('/api/history?month=11&year=2014', { status: 404 });
+
+            // Assert
+            return api.retrieveHistoricalReadingsForMonth(11, 2014).catch((error: Error) => {
+                // Act
+                expect(error.message).toBe('No record found for selected month');
+            });
+        });
+    });
+});
+
 describe('retrieveRecentReadings()', () => {
     it('should invoke /api/recent', () => {
         // Arrange
