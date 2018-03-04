@@ -6,7 +6,7 @@ export interface ApplicationInfo {
     os: string;
     scalaVersion: string;
     totalMem: string;
-};
+}
 
 export interface LiveReading {
     elecCon: number;
@@ -14,14 +14,14 @@ export interface LiveReading {
     gas: number;
     tariff: string;
     ts: string;
-};
+}
 
 export interface Reading {
     electricityLow: number;
     electricityNormal: number;
     gas: number;
     recordDate: Date;
-};
+}
 
 export interface RecentReading {
     elecCon: number;
@@ -32,4 +32,4 @@ export interface RecentReading {
     elecProdLow: number;
     gas: number;
     ts: string;
-};
+}
