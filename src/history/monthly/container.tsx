@@ -40,7 +40,7 @@ class MonthlyHistoryContainer extends React.Component<{}, State> {
         );
     }
 
-    private retrieveDateIfNecessary = () => {
+    private retrieveDataIfNecessary = () => {
         const month = this.state.selectedMonth;
         const year = this.state.selectedYear;
 
@@ -56,11 +56,11 @@ class MonthlyHistoryContainer extends React.Component<{}, State> {
     }
 
     private updateSelectedYear = (selectedYear: number) => {
-        this.setState({ selectedYear }, this.retrieveDateIfNecessary);
+        this.setState({ selectedYear }, this.retrieveDataIfNecessary);
     }
 
     private updateSelectedMonth = (selectedMonth: number) => {
-        this.setState({ selectedMonth }, this.retrieveDateIfNecessary);
+        this.setState({ selectedMonth }, this.retrieveDataIfNecessary);
     }
 }
 
