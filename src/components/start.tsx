@@ -16,7 +16,7 @@ export const Start = (props: {}) => (
         <Divider />
 
         <p>
-            &copy; 2016 - 2017 Maarten Mulders.<br />
+            &copy; 2016 - 2018 Maarten Mulders.<br />
             Source code is available at <a href='https://github.com/mthmulders/hyperion-web' target='_blank'>GitHub</a>.
         </p>
     </div>
