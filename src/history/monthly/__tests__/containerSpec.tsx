@@ -3,8 +3,8 @@ import * as React from 'react';
 
 const mockApi = jest.fn(() => Promise.resolve());
 jest.mock('../../../api', () => ({ retrieveHistoricalReadingsForMonth: mockApi }));
-import MonthSelector from '../monthSelector';
-import YearSelector from '../yearSelector';
+import MonthSelector from '../../../components/monthSelector';
+import YearSelector from '../../../components/yearSelector';
 
 import MonthlyHistoryContainer from '../container';
 

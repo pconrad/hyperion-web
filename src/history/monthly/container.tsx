@@ -3,11 +3,11 @@ import * as React from 'react';
 import Divider from 'material-ui/Divider';
 
 import { retrieveHistoricalReadingsForMonth as retrieveHistoricalReadings } from '../../api';
+import MonthSelector from '../../components/monthSelector';
+import YearSelector from '../../components/yearSelector';
 import { Reading } from '../../model';
 import Promised from '../../promised';
-import MonthSelector from './monthSelector';
 import View from './view';
-import YearSelector from './yearSelector';
 
 const PromisedMonthlyReadingView = Promised<Reading[]>('data', View);
 
