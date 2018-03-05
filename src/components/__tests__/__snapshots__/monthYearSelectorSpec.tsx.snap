@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MonthYearSelector /> should look acceptable 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MonthYearSelector
+    selectedMonth={2018}
+    selectedYear={1}
+    updateSelectedMonth={[Function]}
+    updateSelectedYear={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <tr>
+        <td>
+                <MonthSelector
+                        selectedMonth={2018}
+                        updateSelectedMonth={[Function]}
+                />
+        </td>
+        <td>
+                <YearSelector
+                        selectedYear={1}
+                        updateSelectedYear={[Function]}
+                />
+        </td>
+</tr>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <td>
+            <MonthSelector
+                        selectedMonth={2018}
+                        updateSelectedMonth={[Function]}
+            />
+</td>,
+          <td>
+            <YearSelector
+                        selectedYear={1}
+                        updateSelectedYear={[Function]}
+            />
+</td>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <MonthSelector
+              selectedMonth={2018}
+              updateSelectedMonth={[Function]}
+/>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "selectedMonth": 2018,
+              "updateSelectedMonth": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "td",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <YearSelector
+              selectedYear={1}
+              updateSelectedYear={[Function]}
+/>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "selectedYear": 1,
+              "updateSelectedYear": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "td",
+        },
+      ],
+      "type": "tr",
+    },
+    "type": "table",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <tr>
+          <td>
+                    <MonthSelector
+                              selectedMonth={2018}
+                              updateSelectedMonth={[Function]}
+                    />
+          </td>
+          <td>
+                    <YearSelector
+                              selectedYear={1}
+                              updateSelectedYear={[Function]}
+                    />
+          </td>
+</tr>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <td>
+              <MonthSelector
+                            selectedMonth={2018}
+                            updateSelectedMonth={[Function]}
+              />
+</td>,
+            <td>
+              <YearSelector
+                            selectedYear={1}
+                            updateSelectedYear={[Function]}
+              />
+</td>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <MonthSelector
+                selectedMonth={2018}
+                updateSelectedMonth={[Function]}
+/>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "selectedMonth": 2018,
+                "updateSelectedMonth": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "td",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <YearSelector
+                selectedYear={1}
+                updateSelectedYear={[Function]}
+/>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "selectedYear": 1,
+                "updateSelectedYear": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "td",
+          },
+        ],
+        "type": "tr",
+      },
+      "type": "table",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
