@@ -166,7 +166,7 @@ ShallowWrapper {
         "top": 5,
       },
       "stackOffset": "none",
-      "width": 900,
+      "width": 1200,
     },
     "ref": null,
     "rendered": Array [
@@ -456,7 +456,7 @@ ShallowWrapper {
           "top": 5,
         },
         "stackOffset": "none",
-        "width": 900,
+        "width": 1200,
       },
       "ref": null,
       "rendered": Array [
