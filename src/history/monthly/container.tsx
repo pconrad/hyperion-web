@@ -3,8 +3,7 @@ import * as React from 'react';
 import Divider from 'material-ui/Divider';
 
 import { retrieveHistoricalReadingsForMonth as retrieveHistoricalReadings } from '../../api';
-import MonthSelector from '../../components/monthSelector';
-import YearSelector from '../../components/yearSelector';
+import MonthYearSelector from '../../components/monthYearSelector';
 import { Reading } from '../../model';
 import Promised from '../../promised';
 import View from './view';
@@ -29,9 +28,12 @@ class MonthlyHistoryContainer extends React.Component<{}, State> {
         return (
             <React.Fragment>
                 <h1>Retrieve history by month</h1>
-                <MonthSelector selectedMonth={ selectedMonth } updateSelectedMonth={ this.updateSelectedMonth } />
-                <br />
-                <YearSelector selectedYear={ selectedYear } updateSelectedYear={ this.updateSelectedYear } />
+                <MonthYearSelector
+                    selectedMonth={ selectedMonth }
+                    selectedYear={ selectedYear }
+                    updateSelectedMonth={ this.updateSelectedMonth }
+                    updateSelectedYear={ this.updateSelectedYear }
+                />
                 <br />
                 <Divider />
                 <br />

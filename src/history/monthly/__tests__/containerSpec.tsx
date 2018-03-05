@@ -3,8 +3,7 @@ import * as React from 'react';
 
 const mockApi = jest.fn(() => Promise.resolve());
 jest.mock('../../../api', () => ({ retrieveHistoricalReadingsForMonth: mockApi }));
-import MonthSelector from '../../../components/monthSelector';
-import YearSelector from '../../../components/yearSelector';
+import MonthYearSelector from '../../../components/monthYearSelector';
 
 import MonthlyHistoryContainer from '../container';
 
@@ -14,14 +13,14 @@ describe('<MonthlyHistoryContainer />', () => {
     });
 
     function selectMonth<P, S>(container: ShallowWrapper<P, S>, month: number) {
-        const props = container.find(MonthSelector).props();
+        const props = container.find(MonthYearSelector).props();
         if (props.updateSelectedMonth) {
             props.updateSelectedMonth(month);
         }
     }
 
     function selectYear<P, S>(container: ShallowWrapper<P, S>, year: number) {
-        const props = container.find(YearSelector).props();
+        const props = container.find(MonthYearSelector).props();
         if (props.updateSelectedYear) {
             props.updateSelectedYear(year);
         }
@@ -34,7 +33,7 @@ describe('<MonthlyHistoryContainer />', () => {
         const container = shallow(<MonthlyHistoryContainer />);
 
         // Assert
-        expect(container.find(MonthSelector).exists()).toBe(true);
+        expect(container.find(MonthYearSelector).exists()).toBe(true);
         expect(mockApi).not.toHaveBeenCalled();
     });
 
@@ -45,7 +44,7 @@ describe('<MonthlyHistoryContainer />', () => {
         const container = shallow(<MonthlyHistoryContainer />);
 
         // Assert
-        expect(container.find(YearSelector).exists()).toBe(true);
+        expect(container.find(MonthYearSelector).exists()).toBe(true);
         expect(mockApi).not.toHaveBeenCalled();
     });
 
