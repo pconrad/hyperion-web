@@ -33,7 +33,6 @@ class YearSelector extends React.Component<YearSelectorProps, YearSelectorState>
                     errorText={ error }
                     hintText='Year'
                     onChange={ this.onChange }
-                    style={ { height: '72px' } }
                     value={ value }
                 />
             </React.Fragment>

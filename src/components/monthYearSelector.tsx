@@ -11,12 +11,11 @@ interface MonthYearSelectorProps {
 }
 
 const MonthYearSelector = (props: MonthYearSelectorProps) => (
-    <table>
-        <tr>
-            <td><MonthSelector selectedMonth={ props.selectedMonth } updateSelectedMonth={ props.updateSelectedMonth } /></td>
-            <td><YearSelector selectedYear={ props.selectedYear } updateSelectedYear={ props.updateSelectedYear } /></td>
-        </tr>
-    </table>
+    <>
+        <MonthSelector selectedMonth={ props.selectedMonth } updateSelectedMonth={ props.updateSelectedMonth } />
+        <br />
+        <YearSelector selectedYear={ props.selectedYear } updateSelectedYear={ props.updateSelectedYear } />
+    </>
 );
 
 export default MonthYearSelector;

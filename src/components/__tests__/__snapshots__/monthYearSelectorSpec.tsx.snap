@@ -20,42 +20,74 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": <tr>
-        <td>
-                <MonthSelector
-                        selectedMonth={2018}
-                        updateSelectedMonth={[Function]}
-                />
-        </td>
-        <td>
-                <YearSelector
-                        selectedYear={1}
-                        updateSelectedYear={[Function]}
-                />
-        </td>
-</tr>,
+      "children": Array [
+        <MonthSelector
+          selectedMonth={2018}
+          updateSelectedMonth={[Function]}
+/>,
+        <br />,
+        <YearSelector
+          selectedYear={1}
+          updateSelectedYear={[Function]}
+/>,
+      ],
     },
     "ref": null,
-    "rendered": Object {
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "selectedMonth": 2018,
+          "updateSelectedMonth": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "selectedYear": 1,
+          "updateSelectedYear": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
         "children": Array [
-          <td>
-            <MonthSelector
-                        selectedMonth={2018}
-                        updateSelectedMonth={[Function]}
-            />
-</td>,
-          <td>
-            <YearSelector
-                        selectedYear={1}
-                        updateSelectedYear={[Function]}
-            />
-</td>,
+          <MonthSelector
+            selectedMonth={2018}
+            updateSelectedMonth={[Function]}
+/>,
+          <br />,
+          <YearSelector
+            selectedYear={1}
+            updateSelectedYear={[Function]}
+/>,
         ],
       },
       "ref": null,
@@ -63,156 +95,38 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": <MonthSelector
-              selectedMonth={2018}
-              updateSelectedMonth={[Function]}
-/>,
+            "selectedMonth": 2018,
+            "updateSelectedMonth": [Function],
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "selectedMonth": 2018,
-              "updateSelectedMonth": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": "td",
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
           "props": Object {
-            "children": <YearSelector
-              selectedYear={1}
-              updateSelectedYear={[Function]}
-/>,
+            "selectedYear": 1,
+            "updateSelectedYear": [Function],
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "selectedYear": 1,
-              "updateSelectedYear": [Function],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": "td",
+          "rendered": null,
+          "type": [Function],
         },
       ],
-      "type": "tr",
-    },
-    "type": "table",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <tr>
-          <td>
-                    <MonthSelector
-                              selectedMonth={2018}
-                              updateSelectedMonth={[Function]}
-                    />
-          </td>
-          <td>
-                    <YearSelector
-                              selectedYear={1}
-                              updateSelectedYear={[Function]}
-                    />
-          </td>
-</tr>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <td>
-              <MonthSelector
-                            selectedMonth={2018}
-                            updateSelectedMonth={[Function]}
-              />
-</td>,
-            <td>
-              <YearSelector
-                            selectedYear={1}
-                            updateSelectedYear={[Function]}
-              />
-</td>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <MonthSelector
-                selectedMonth={2018}
-                updateSelectedMonth={[Function]}
-/>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "selectedMonth": 2018,
-                "updateSelectedMonth": [Function],
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": "td",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": <YearSelector
-                selectedYear={1}
-                updateSelectedYear={[Function]}
-/>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "selectedYear": 1,
-                "updateSelectedYear": [Function],
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": "td",
-          },
-        ],
-        "type": "tr",
-      },
-      "type": "table",
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {
