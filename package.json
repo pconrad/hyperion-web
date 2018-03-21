@@ -18,7 +18,7 @@
     "@types/react-dom": "15.5.4",
     "@types/material-ui": "0.20.1",
     "@types/react-router-dom": "4.2.4",
-    "@types/recharts": "0.22.1",
+    "@types/recharts": "1.0.18",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "fetch-mock": "5.9.4",
