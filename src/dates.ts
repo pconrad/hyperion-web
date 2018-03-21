@@ -4,6 +4,10 @@ export const formatDateBackend = (input: Date) => {
     return moment(input).format('YYYY-MM-DD');
 };
 
+export const formatDateMedium = (input: Date) => {
+    return moment(input).format('ddd D MMM YYYY');
+};
+
 export const formatDateShort = (input: Date) => {
     return moment(input).format('DD MMM YYYY');
 };

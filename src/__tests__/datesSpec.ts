@@ -6,6 +6,16 @@ describe('Date-related functions', () => {
     const input = new Date(2012, 11, 20, 3, 15, 42);
     const inputWithTimezone = '2018-01-05T15:40:47+01:00';
 
+    describe('formatDateBackend()', () => {
+        it('should properly format', () => {
+            // Act
+            const result = dates.formatDateBackend(input);
+
+            // Assert
+            expect(result).toBe('2012-12-20');
+        });
+    });
+
     describe('formatDateShort()', () => {
         it('should properly format', () => {
             // Act
@@ -16,13 +26,13 @@ describe('Date-related functions', () => {
         });
     });
 
-    describe('formatDateBackend()', () => {
+    describe('formatDateMedium()', () => {
         it('should properly format', () => {
             // Act
-            const result = dates.formatDateBackend(input);
+            const result = dates.formatDateMedium(input);
 
             // Assert
-            expect(result).toBe('2012-12-20');
+            expect(result).toBe('Thu 20 Dec 2012');
         });
     });
 
