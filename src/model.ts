@@ -33,3 +33,10 @@ export interface RecentReading {
     gas: number;
     ts: string;
 }
+
+export interface UsageRecord {
+    date: Date;
+    electricityNormal: number;
+    electricityLow: number;
+    gas: number;
+}

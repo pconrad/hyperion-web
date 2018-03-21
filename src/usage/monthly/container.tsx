@@ -1,20 +1,21 @@
 import * as React from 'react';
 
-import { retrieveHistoricalReadingsForMonth as retrieveHistoricalReadings } from '../../api';
+import { retrieveUsageRecordsForMonth } from '../../api';
+
 import MonthYearSelector from '../../components/monthYearSelector';
-import { Reading } from '../../model';
+import { UsageRecord } from '../../model';
 import Promised from '../../promised';
 import View from './view';
 
-const PromisedMonthlyReadingView = Promised<Reading[]>('data', View);
+const PromisedMonthlyReadingView = Promised<UsageRecord[]>('data', View);
 
 interface State {
-    promise?: Promise<Reading[]>;
+    promise?: Promise<UsageRecord[]>;
     selectedMonth?: number;
     selectedYear?: number;
 }
 
-class MonthlyHistoryContainer extends React.Component<{}, State> {
+class MonthlyUsageContainer extends React.Component<{}, State> {
     constructor(props: {}) {
         super(props);
         this.state = {};
@@ -27,7 +28,7 @@ class MonthlyHistoryContainer extends React.Component<{}, State> {
             <>
                 <div className='row'>
                     <div className='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-                        <h1>Retrieve history by month</h1>
+                        <h1>Retrieve usage by month</h1>
                     </div>
                 </div>
                 <div className='row'>
@@ -58,7 +59,7 @@ class MonthlyHistoryContainer extends React.Component<{}, State> {
         // First remove the old promise (forcing React to re-render container)...
         this.setState({ promise: undefined }, () => {
             // ... only then to create the new promise (forcing another re-render).
-            this.setState({ promise: retrieveHistoricalReadings(month, year) });
+            this.setState({ promise: retrieveUsageRecordsForMonth(month, year) });
         });
     }
 
@@ -71,4 +72,4 @@ class MonthlyHistoryContainer extends React.Component<{}, State> {
     }
 }
 
-export default MonthlyHistoryContainer;
+export default MonthlyUsageContainer;

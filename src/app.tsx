@@ -14,6 +14,7 @@ import DailyHistoryContainer from './history/daily/container';
 import MonthlyHistoryContainer from './history/monthly/container';
 import LiveContainer from './live/container';
 import RecentContainer from './recent/container';
+import MonthlyUsageContainer from './usage/monthly/container';
 
 const style = {
     padding: 19,
@@ -42,6 +43,7 @@ export class App extends React.Component<{}, AppState> {
                     { this.createMenuItem('Live', '/live') }
                     { this.createMenuItem('Recent', '/recent') }
                     { this.createMenuItemWithChildren('History', this.historyChildren()) }
+                    { this.createMenuItemWithChildren('Usage', this.usageChildren()) }
 
                     <Divider />
 
@@ -55,6 +57,7 @@ export class App extends React.Component<{}, AppState> {
                         <Route path='/history/daily' component={ DailyHistoryContainer } />
                         <Route path='/history/monthly' component={ MonthlyHistoryContainer } />
                         <Route path='/recent' component={ RecentContainer } />
+                        <Route path='/usage/monthly' component={ MonthlyUsageContainer } />
                         <Route path='/about' component={ AboutContainer } />
                     </Switch>
                 </Paper>
@@ -69,6 +72,10 @@ export class App extends React.Component<{}, AppState> {
     private historyChildren = () => ([
         this.createMenuItem('By date', '/history/daily'),
         this.createMenuItem('By month', '/history/monthly'),
+    ])
+
+    private usageChildren = () => ([
+        this.createMenuItem('By month', '/usage/monthly'),
     ])
 
     private createMenuItemWithChildren = (label: string, children: JSX.Element[]) => {
