@@ -38,8 +38,8 @@
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "test:ci": "react-scripts-ts test --env=jsdom --testResultsProcessor ./node_modules/jest-junit",
+    "test": "react-scripts-ts test --env=jsdom --coverage",
+    "test:ci": "react-scripts-ts test --env=jsdom --testResultsProcessor ./node_modules/jest-junit --coverage",
     "eject": "react-scripts-ts eject",
     "tslint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' -o tslint.out -t verbose --force",
     "tslint-print": "tslint -c tslint.json 'src/**/*.{ts,tsx}' -t stylish --force",
