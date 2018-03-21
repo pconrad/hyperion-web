@@ -1,5 +1,5 @@
 import { formatDateBackend } from './dates';
-import { ApplicationInfo, LiveReading, Reading, RecentReading } from './model';
+import { ApplicationInfo, LiveReading, Reading, RecentReading, UsageRecord } from './model';
 
 interface ErrorMapping {
     [key: number]: (response: Response) => Promise<string>;
@@ -50,6 +50,13 @@ export const retrieveHistoricalReadingsForMonth = (month: number, year: number):
 };
 
 export const retrieveRecentReadings = (): Promise<RecentReading[]> => get('/api/recent');
+
+export const retrieveUsageRecordsForMonth = (month: number, year: number): Promise<UsageRecord[]> => {
+    const errorMapping: ErrorMapping = {
+        404: (response) => Promise.resolve('No records found for selected month'),
+    };
+    return get(`/api/usage?month=${month}&year=${year}`, undefined, errorMapping);
+};
 
 export class LiveDataService {
     private ws: WebSocket;

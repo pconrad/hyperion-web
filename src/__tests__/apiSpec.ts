@@ -139,6 +139,33 @@ describe('retrieveHistoricalReadingsForMonth()', () => {
     });
 });
 
+describe('retrieveUsageRecordsForMonth()', () => {
+    it('should invoke /api/usage with month and year parameters', () => {
+        // Arrange
+        const body = JSON.stringify([{ electricityLow: 15 }]);
+        fetchMock.once('/api/usage?month=11&year=2014', { status: 200, body }, { method: 'GET' });
+
+        // Act
+        return api.retrieveUsageRecordsForMonth(11, 2014).then((result) => {
+            // Assert
+            expect(result).toEqual([{ electricityLow: 15 }]);
+        });
+    });
+
+    describe('when there is no reading for a given month', () => {
+        it('should show a message that there is no reading', () => {
+            // Arrange
+            fetchMock.once('/api/usage?month=11&year=2014', { status: 404 });
+
+            // Assert
+            return api.retrieveUsageRecordsForMonth(11, 2014).catch((error: Error) => {
+                // Act
+                expect(error.message).toBe('No records found for selected month');
+            });
+        });
+    });
+});
+
 describe('retrieveRecentReadings()', () => {
     it('should invoke /api/recent', () => {
         // Arrange
