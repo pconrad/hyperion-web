@@ -1,10 +1,11 @@
 import * as React from 'react';
 
 import { retrieveRecentReadings } from '../api';
+import asyncComponent from '../components/AsyncComponent';
 import { RecentReading } from '../model';
 import Promised from '../promised';
-import View from './view';
 
+const View = asyncComponent(() => import('./view'));
 const PromisedRecentReadingsView = Promised<RecentReading[]>('data', View);
 
 interface State {

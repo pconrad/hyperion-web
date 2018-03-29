@@ -2,9 +2,11 @@ import * as React from 'react';
 
 import { Tab, Tabs } from 'material-ui/Tabs';
 
+import asyncComponent from '../../components/AsyncComponent';
 import { UsageRecord } from '../../model';
-import GraphView from './graphView';
 import TableView from './tableView';
+
+const GraphView: React.ComponentType<{ data: UsageRecord[] }> = asyncComponent(() => import('./graphView'));
 
 export interface ViewProps {
     data: UsageRecord[];
