@@ -1,6 +1,10 @@
 module.exports = function(config) {
   config.set({
     coverageAnalysis: 'off',
+    files: [
+      { pattern: 'node_modules/react-scripts-ts/**/*.js' },
+      { pattern: 'node_modules/ts-jest/**/*.js' },
+    ],
     logLevel: 'info',
     mutate: [
       'src/**/*.ts?',
