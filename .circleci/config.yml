@@ -24,6 +24,10 @@ jobs:
       - run:
           name: Run tests
           command: JEST_JUNIT_OUTPUT=test-reports/junit.xml npm run test:ci
+      
+      - run:
+          name: Perform mutation testing
+          command: npm run stryker
 
       - run:
           name: Create production build
