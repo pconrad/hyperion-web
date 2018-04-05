@@ -22,6 +22,8 @@ Hyperion Web is written in [TypeScript](http://www.typescriptlang.org/) using th
 
 Build status: [![Circle CI](https://circleci.com/gh/mthmulders/hyperion-web/tree/master.svg?style=svg)](https://circleci.com/gh/mthmulders/hyperion-web/tree/master)
 
+Mutation score: [![Mutation testing badge](https://badge.stryker-mutator.io/github.com/mthmulders/hyperion-web/master)](https://stryker-mutator.github.io)
+
 ## Design
 The code is structured according to the ["Presentational and Container Components"](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) pattern.
 
