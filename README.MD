@@ -1,6 +1,6 @@
 # Hyperion Web
 [![Circle CI](https://circleci.com/gh/mthmulders/hyperion-web/tree/master.svg?style=svg)](https://circleci.com/gh/mthmulders/hyperion-web/tree/master)
-[![BCH compliance](https://bettercodehub.com/edge/badge/mthmulders/hyperion-web?branch=master)](https://bettercodehub.com/)
+[![BCH compliance](https://bettercodehub.com/edge/badge/mthmulders/hyperion-web?branch=master)](https://bettercodehub.com/results/mthmulders/hyperion-web)
 
 This is the web front-end to [Hyperion](https://github.com/mthmulders/hyperion).
 Hyperion is an application to monitor a 'Smart Meter' that follows the Dutch "Smart Meter" Requirements, or DSMR for short.
