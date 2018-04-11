@@ -1,4 +1,7 @@
 # Hyperion Web
+[![Circle CI](https://circleci.com/gh/mthmulders/hyperion-web/tree/master.svg?style=svg)](https://circleci.com/gh/mthmulders/hyperion-web/tree/master)
+[![BCH compliance](https://bettercodehub.com/edge/badge/mthmulders/hyperion-web?branch=master)](https://bettercodehub.com/)
+
 This is the web front-end to [Hyperion](https://github.com/mthmulders/hyperion).
 Hyperion is an application to monitor a 'Smart Meter' that follows the Dutch "Smart Meter" Requirements, or DSMR for short.
 
@@ -19,8 +22,6 @@ Just run
 
 ## About the code
 Hyperion Web is written in [TypeScript](http://www.typescriptlang.org/) using the [React library](https://facebook.github.io/react/).
-
-Build status: [![Circle CI](https://circleci.com/gh/mthmulders/hyperion-web/tree/master.svg?style=svg)](https://circleci.com/gh/mthmulders/hyperion-web/tree/master)
 
 ## Design
 The code is structured according to the ["Presentational and Container Components"](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) pattern.
