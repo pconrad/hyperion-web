@@ -1,10 +1,15 @@
 module.exports = function(config) {
   config.set({
     coverageAnalysis: 'off',
+    files: [
+      'src/**/*.ts',
+      'src/**/*.tsx',
+    ],
     logLevel: 'info',
     mutate: [
-      'src/**/*.ts?',
-      '!src/**/__tests__/*.ts?'
+      'src/**/*.ts',
+      'src/**/*.tsx',
+      '!src/**/__tests__/*'
     ],
     mutator: 'typescript',
     reporter: ['html', 'clear-text', 'progress', 'dashboard'],
