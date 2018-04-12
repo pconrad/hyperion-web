@@ -5,7 +5,7 @@ module.exports = function(config) {
       'src/**/*.ts',
       'src/**/*.tsx',
     ],
-    logLevel: 'info',
+    logLevel: 'debug',
     mutate: [
       'src/**/*.ts',
       'src/**/*.tsx',
