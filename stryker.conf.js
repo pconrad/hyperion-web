@@ -14,7 +14,7 @@ module.exports = function(config) {
     mutator: 'typescript',
     reporter: ['html', 'clear-text', 'progress', 'dashboard'],
     testRunner: 'jest',
-    transpilers: ['typescript'],
+    // transpilers: ['typescript'],
     tsconfigFile: 'tsconfig.json',
   });
 };
