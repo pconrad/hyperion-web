@@ -30,7 +30,7 @@
     "stryker": "0.22.0",
     "stryker-api": "0.16.0",
     "stryker-html-reporter": "0.13.1",
-    "stryker-jest-runner": "0.6.0",
+    "stryker-jest-runner": "0.7.0",
     "stryker-typescript": "0.10.1",
     "typescript": "2.6.2"
   },

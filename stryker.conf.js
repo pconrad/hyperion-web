@@ -1,20 +1,20 @@
 module.exports = function(config) {
   config.set({
     coverageAnalysis: 'off',
-    files: [
-      'src/**/*.ts',
-      'src/**/*.tsx',
-    ],
     logLevel: 'trace',
+    maxConcurrentTestRunners: 5,
     mutate: [
       'src/**/*.ts',
       'src/**/*.tsx',
       '!src/**/__tests__/*'
     ],
     mutator: 'typescript',
+    jest: {
+      project: 'react-ts'
+    },
     reporter: ['html', 'clear-text', 'progress', 'dashboard'],
     testRunner: 'jest',
-    // transpilers: ['typescript'],
+    timeoutMs: 60000,
     tsconfigFile: 'tsconfig.json',
   });
 };
