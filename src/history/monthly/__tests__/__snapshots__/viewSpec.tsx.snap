@@ -6,24 +6,24 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MonthlyReadingView
     data={
-        Array [
-            Object {
-              "elecCon": 0.265,
-              "electricityLow": 2150.714,
-              "electricityNormal": 2702.641,
-              "gas": 3781.676,
-              "recordDate": 2018-01-05T00:00:00.000Z,
-            },
-            Object {
-              "elecCon": 0.265,
-              "electricityLow": 2150.714,
-              "electricityNormal": 2702.641,
-              "gas": 3781.676,
-              "recordDate": 2018-01-06T00:00:00.000Z,
-            },
-          ]
+      Array [
+        Object {
+          "elecCon": 0.265,
+          "electricityLow": 2150.714,
+          "electricityNormal": 2702.641,
+          "gas": 3781.676,
+          "recordDate": 2018-01-05T00:00:00.000Z,
+        },
+        Object {
+          "elecCon": 0.265,
+          "electricityLow": 2150.714,
+          "electricityNormal": 2702.641,
+          "gas": 3781.676,
+          "recordDate": 2018-01-06T00:00:00.000Z,
+        },
+      ]
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -43,28 +43,28 @@ ShallowWrapper {
           displaySelectAll={false}
           enableSelectAll={true}
           selectAllSelected={false}
->
+        >
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableHeaderColumn>
-                              Date
-                    </TableHeaderColumn>
-                    <TableHeaderColumn>
-                              Electricity (low)
-                    </TableHeaderColumn>
-                    <TableHeaderColumn>
-                              Electricity (normal)
-                    </TableHeaderColumn>
-                    <TableHeaderColumn>
-                              Gas
-                    </TableHeaderColumn>
+            <TableHeaderColumn>
+              Date
+            </TableHeaderColumn>
+            <TableHeaderColumn>
+              Electricity (low)
+            </TableHeaderColumn>
+            <TableHeaderColumn>
+              Electricity (normal)
+            </TableHeaderColumn>
+            <TableHeaderColumn>
+              Gas
+            </TableHeaderColumn>
           </TableRow>
-</TableHeader>,
+        </TableHeader>,
         <TableBody
           allRowsSelected={false}
           deselectOnClickaway={true}
@@ -73,76 +73,76 @@ ShallowWrapper {
           preScanRows={true}
           selectable={true}
           style={Object {}}
->
+        >
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              05 Jan 2018
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              2150.714
-                               kWh
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              2702.641
-                               kWh
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              3781.676
-                               m
-                              <sup>
-                                        3
-                              </sup>
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              05 Jan 2018
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              2150.714
+               kWh
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              2702.641
+               kWh
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              3781.676
+               m
+              <sup>
+                3
+              </sup>
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              06 Jan 2018
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              2150.714
-                               kWh
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              2702.641
-                               kWh
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              3781.676
-                               m
-                              <sup>
-                                        3
-                              </sup>
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              06 Jan 2018
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              2150.714
+               kWh
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              2702.641
+               kWh
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              3781.676
+               m
+              <sup>
+                3
+              </sup>
+            </TableRowColumn>
           </TableRow>
-</TableBody>,
+        </TableBody>,
       ],
       "fixedFooter": true,
       "fixedHeader": true,
@@ -164,20 +164,20 @@ ShallowWrapper {
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableHeaderColumn>
-                        Date
+              Date
             </TableHeaderColumn>
             <TableHeaderColumn>
-                        Electricity (low)
+              Electricity (low)
             </TableHeaderColumn>
             <TableHeaderColumn>
-                        Electricity (normal)
+              Electricity (normal)
             </TableHeaderColumn>
             <TableHeaderColumn>
-                        Gas
+              Gas
             </TableHeaderColumn>
-</TableRow>,
+          </TableRow>,
           "displaySelectAll": false,
           "enableSelectAll": true,
           "selectAllSelected": false,
@@ -191,16 +191,16 @@ ShallowWrapper {
             "children": Array [
               <TableHeaderColumn>
                 Date
-</TableHeaderColumn>,
+              </TableHeaderColumn>,
               <TableHeaderColumn>
                 Electricity (low)
-</TableHeaderColumn>,
+              </TableHeaderColumn>,
               <TableHeaderColumn>
                 Electricity (normal)
-</TableHeaderColumn>,
+              </TableHeaderColumn>,
               <TableHeaderColumn>
                 Gas
-</TableHeaderColumn>,
+              </TableHeaderColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -272,68 +272,68 @@ ShallowWrapper {
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            05 Jan 2018
+                05 Jan 2018
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            2150.714
-                             kWh
+                2150.714
+                 kWh
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            2702.641
-                             kWh
+                2702.641
+                 kWh
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            3781.676
-                             m
-                            <sup>
-                                          3
-                            </sup>
+                3781.676
+                 m
+                <sup>
+                  3
+                </sup>
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            06 Jan 2018
+                06 Jan 2018
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            2150.714
-                             kWh
+                2150.714
+                 kWh
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            2702.641
-                             kWh
+                2702.641
+                 kWh
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            3781.676
-                             m
-                            <sup>
-                                          3
-                            </sup>
+                3781.676
+                 m
+                <sup>
+                  3
+                </sup>
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
           ],
           "deselectOnClickaway": true,
           "displayRowCheckbox": false,
@@ -352,30 +352,30 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   05 Jan 2018
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   2150.714
                    kWh
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   2702.641
                    kWh
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   3781.676
                    m
                   <sup>
-                                    3
+                    3
                   </sup>
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -443,7 +443,7 @@ ShallowWrapper {
                     " m",
                     <sup>
                       3
-</sup>,
+                    </sup>,
                   ],
                   "hoverable": false,
                 },
@@ -476,30 +476,30 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   06 Jan 2018
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   2150.714
                    kWh
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   2702.641
                    kWh
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   3781.676
                    m
                   <sup>
-                                    3
+                    3
                   </sup>
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -567,7 +567,7 @@ ShallowWrapper {
                     " m",
                     <sup>
                       3
-</sup>,
+                    </sup>,
                   ],
                   "hoverable": false,
                 },
@@ -611,28 +611,28 @@ ShallowWrapper {
             displaySelectAll={false}
             enableSelectAll={true}
             selectAllSelected={false}
->
+          >
             <TableRow
-                        displayBorder={true}
-                        hoverable={false}
-                        hovered={false}
-                        selectable={true}
-                        striped={false}
+              displayBorder={true}
+              hoverable={false}
+              hovered={false}
+              selectable={true}
+              striped={false}
             >
-                        <TableHeaderColumn>
-                                    Date
-                        </TableHeaderColumn>
-                        <TableHeaderColumn>
-                                    Electricity (low)
-                        </TableHeaderColumn>
-                        <TableHeaderColumn>
-                                    Electricity (normal)
-                        </TableHeaderColumn>
-                        <TableHeaderColumn>
-                                    Gas
-                        </TableHeaderColumn>
+              <TableHeaderColumn>
+                Date
+              </TableHeaderColumn>
+              <TableHeaderColumn>
+                Electricity (low)
+              </TableHeaderColumn>
+              <TableHeaderColumn>
+                Electricity (normal)
+              </TableHeaderColumn>
+              <TableHeaderColumn>
+                Gas
+              </TableHeaderColumn>
             </TableRow>
-</TableHeader>,
+          </TableHeader>,
           <TableBody
             allRowsSelected={false}
             deselectOnClickaway={true}
@@ -641,76 +641,76 @@ ShallowWrapper {
             preScanRows={true}
             selectable={true}
             style={Object {}}
->
+          >
             <TableRow
-                        displayBorder={true}
-                        hoverable={false}
-                        hovered={false}
-                        selectable={true}
-                        striped={false}
+              displayBorder={true}
+              hoverable={false}
+              hovered={false}
+              selectable={true}
+              striped={false}
             >
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
-                                    05 Jan 2018
-                        </TableRowColumn>
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
-                                    2150.714
-                                     kWh
-                        </TableRowColumn>
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
-                                    2702.641
-                                     kWh
-                        </TableRowColumn>
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
-                                    3781.676
-                                     m
-                                    <sup>
-                                                3
-                                    </sup>
-                        </TableRowColumn>
+              <TableRowColumn
+                hoverable={false}
+              >
+                05 Jan 2018
+              </TableRowColumn>
+              <TableRowColumn
+                hoverable={false}
+              >
+                2150.714
+                 kWh
+              </TableRowColumn>
+              <TableRowColumn
+                hoverable={false}
+              >
+                2702.641
+                 kWh
+              </TableRowColumn>
+              <TableRowColumn
+                hoverable={false}
+              >
+                3781.676
+                 m
+                <sup>
+                  3
+                </sup>
+              </TableRowColumn>
             </TableRow>
             <TableRow
-                        displayBorder={true}
-                        hoverable={false}
-                        hovered={false}
-                        selectable={true}
-                        striped={false}
+              displayBorder={true}
+              hoverable={false}
+              hovered={false}
+              selectable={true}
+              striped={false}
             >
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
-                                    06 Jan 2018
-                        </TableRowColumn>
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
-                                    2150.714
-                                     kWh
-                        </TableRowColumn>
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
-                                    2702.641
-                                     kWh
-                        </TableRowColumn>
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
-                                    3781.676
-                                     m
-                                    <sup>
-                                                3
-                                    </sup>
-                        </TableRowColumn>
+              <TableRowColumn
+                hoverable={false}
+              >
+                06 Jan 2018
+              </TableRowColumn>
+              <TableRowColumn
+                hoverable={false}
+              >
+                2150.714
+                 kWh
+              </TableRowColumn>
+              <TableRowColumn
+                hoverable={false}
+              >
+                2702.641
+                 kWh
+              </TableRowColumn>
+              <TableRowColumn
+                hoverable={false}
+              >
+                3781.676
+                 m
+                <sup>
+                  3
+                </sup>
+              </TableRowColumn>
             </TableRow>
-</TableBody>,
+          </TableBody>,
         ],
         "fixedFooter": true,
         "fixedHeader": true,
@@ -732,20 +732,20 @@ ShallowWrapper {
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableHeaderColumn>
-                            Date
+                Date
               </TableHeaderColumn>
               <TableHeaderColumn>
-                            Electricity (low)
+                Electricity (low)
               </TableHeaderColumn>
               <TableHeaderColumn>
-                            Electricity (normal)
+                Electricity (normal)
               </TableHeaderColumn>
               <TableHeaderColumn>
-                            Gas
+                Gas
               </TableHeaderColumn>
-</TableRow>,
+            </TableRow>,
             "displaySelectAll": false,
             "enableSelectAll": true,
             "selectAllSelected": false,
@@ -759,16 +759,16 @@ ShallowWrapper {
               "children": Array [
                 <TableHeaderColumn>
                   Date
-</TableHeaderColumn>,
+                </TableHeaderColumn>,
                 <TableHeaderColumn>
                   Electricity (low)
-</TableHeaderColumn>,
+                </TableHeaderColumn>,
                 <TableHeaderColumn>
                   Electricity (normal)
-</TableHeaderColumn>,
+                </TableHeaderColumn>,
                 <TableHeaderColumn>
                   Gas
-</TableHeaderColumn>,
+                </TableHeaderColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -840,68 +840,68 @@ ShallowWrapper {
                 hovered={false}
                 selectable={true}
                 striped={false}
->
+              >
                 <TableRowColumn
-                                hoverable={false}
+                  hoverable={false}
                 >
-                                05 Jan 2018
+                  05 Jan 2018
                 </TableRowColumn>
                 <TableRowColumn
-                                hoverable={false}
+                  hoverable={false}
                 >
-                                2150.714
-                                 kWh
+                  2150.714
+                   kWh
                 </TableRowColumn>
                 <TableRowColumn
-                                hoverable={false}
+                  hoverable={false}
                 >
-                                2702.641
-                                 kWh
+                  2702.641
+                   kWh
                 </TableRowColumn>
                 <TableRowColumn
-                                hoverable={false}
+                  hoverable={false}
                 >
-                                3781.676
-                                 m
-                                <sup>
-                                                3
-                                </sup>
+                  3781.676
+                   m
+                  <sup>
+                    3
+                  </sup>
                 </TableRowColumn>
-</TableRow>,
+              </TableRow>,
               <TableRow
                 displayBorder={true}
                 hoverable={false}
                 hovered={false}
                 selectable={true}
                 striped={false}
->
+              >
                 <TableRowColumn
-                                hoverable={false}
+                  hoverable={false}
                 >
-                                06 Jan 2018
+                  06 Jan 2018
                 </TableRowColumn>
                 <TableRowColumn
-                                hoverable={false}
+                  hoverable={false}
                 >
-                                2150.714
-                                 kWh
+                  2150.714
+                   kWh
                 </TableRowColumn>
                 <TableRowColumn
-                                hoverable={false}
+                  hoverable={false}
                 >
-                                2702.641
-                                 kWh
+                  2702.641
+                   kWh
                 </TableRowColumn>
                 <TableRowColumn
-                                hoverable={false}
+                  hoverable={false}
                 >
-                                3781.676
-                                 m
-                                <sup>
-                                                3
-                                </sup>
+                  3781.676
+                   m
+                  <sup>
+                    3
+                  </sup>
                 </TableRowColumn>
-</TableRow>,
+              </TableRow>,
             ],
             "deselectOnClickaway": true,
             "displayRowCheckbox": false,
@@ -920,30 +920,30 @@ ShallowWrapper {
                 "children": Array [
                   <TableRowColumn
                     hoverable={false}
->
+                  >
                     05 Jan 2018
-</TableRowColumn>,
+                  </TableRowColumn>,
                   <TableRowColumn
                     hoverable={false}
->
+                  >
                     2150.714
                      kWh
-</TableRowColumn>,
+                  </TableRowColumn>,
                   <TableRowColumn
                     hoverable={false}
->
+                  >
                     2702.641
                      kWh
-</TableRowColumn>,
+                  </TableRowColumn>,
                   <TableRowColumn
                     hoverable={false}
->
+                  >
                     3781.676
                      m
                     <sup>
-                                        3
+                      3
                     </sup>
-</TableRowColumn>,
+                  </TableRowColumn>,
                 ],
                 "displayBorder": true,
                 "hoverable": false,
@@ -1011,7 +1011,7 @@ ShallowWrapper {
                       " m",
                       <sup>
                         3
-</sup>,
+                      </sup>,
                     ],
                     "hoverable": false,
                   },
@@ -1044,30 +1044,30 @@ ShallowWrapper {
                 "children": Array [
                   <TableRowColumn
                     hoverable={false}
->
+                  >
                     06 Jan 2018
-</TableRowColumn>,
+                  </TableRowColumn>,
                   <TableRowColumn
                     hoverable={false}
->
+                  >
                     2150.714
                      kWh
-</TableRowColumn>,
+                  </TableRowColumn>,
                   <TableRowColumn
                     hoverable={false}
->
+                  >
                     2702.641
                      kWh
-</TableRowColumn>,
+                  </TableRowColumn>,
                   <TableRowColumn
                     hoverable={false}
->
+                  >
                     3781.676
                      m
                     <sup>
-                                        3
+                      3
                     </sup>
-</TableRowColumn>,
+                  </TableRowColumn>,
                 ],
                 "displayBorder": true,
                 "hoverable": false,
@@ -1135,7 +1135,7 @@ ShallowWrapper {
                       " m",
                       <sup>
                         3
-</sup>,
+                      </sup>,
                     ],
                     "hoverable": false,
                   },

@@ -6,17 +6,17 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <View
     data={
-        Object {
-            "appVersion": "2.0.2",
-            "database": "PostgreSQL 9.3.4",
-            "freeMem": "11 MB",
-            "javaVersion": "1.8.0_151 (Oracle Corporation)",
-            "os": "Linux 4.1.19+ (32 bits)",
-            "scalaVersion": "2.12.3",
-            "totalMem": "32 MB",
-          }
+      Object {
+        "appVersion": "2.0.2",
+        "database": "PostgreSQL 9.3.4",
+        "freeMem": "11 MB",
+        "javaVersion": "1.8.0_151 (Oracle Corporation)",
+        "os": "Linux 4.1.19+ (32 bits)",
+        "scalaVersion": "2.12.3",
+        "totalMem": "32 MB",
+      }
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -38,134 +38,134 @@ ShallowWrapper {
         preScanRows={true}
         selectable={true}
         style={Object {}}
->
+      >
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Application version
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        2.0.2
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Application version
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            2.0.2
+          </TableRowColumn>
         </TableRow>
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Java runtime
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        1.8.0_151 (Oracle Corporation)
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Java runtime
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            1.8.0_151 (Oracle Corporation)
+          </TableRowColumn>
         </TableRow>
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Scala version
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        2.12.3
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Scala version
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            2.12.3
+          </TableRowColumn>
         </TableRow>
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Operating system
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Linux 4.1.19+ (32 bits)
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Operating system
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Linux 4.1.19+ (32 bits)
+          </TableRowColumn>
         </TableRow>
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Database
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        PostgreSQL 9.3.4
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Database
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            PostgreSQL 9.3.4
+          </TableRowColumn>
         </TableRow>
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Free memory
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        11 MB
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Free memory
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            11 MB
+          </TableRowColumn>
         </TableRow>
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Total memory
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        32 MB
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Total memory
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            32 MB
+          </TableRowColumn>
         </TableRow>
-</TableBody>,
+      </TableBody>,
       "fixedFooter": true,
       "fixedHeader": true,
       "height": "inherit",
@@ -186,126 +186,126 @@ ShallowWrapper {
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Application version
+              Application version
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        2.0.2
+              2.0.2
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
           <TableRow
             displayBorder={true}
             hoverable={false}
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Java runtime
+              Java runtime
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        1.8.0_151 (Oracle Corporation)
+              1.8.0_151 (Oracle Corporation)
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
           <TableRow
             displayBorder={true}
             hoverable={false}
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Scala version
+              Scala version
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        2.12.3
+              2.12.3
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
           <TableRow
             displayBorder={true}
             hoverable={false}
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Operating system
+              Operating system
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Linux 4.1.19+ (32 bits)
+              Linux 4.1.19+ (32 bits)
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
           <TableRow
             displayBorder={true}
             hoverable={false}
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Database
+              Database
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        PostgreSQL 9.3.4
+              PostgreSQL 9.3.4
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
           <TableRow
             displayBorder={true}
             hoverable={false}
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Free memory
+              Free memory
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        11 MB
+              11 MB
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
           <TableRow
             displayBorder={true}
             hoverable={false}
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Total memory
+              Total memory
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        32 MB
+              32 MB
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
         ],
         "deselectOnClickaway": true,
         "displayRowCheckbox": false,
@@ -324,14 +324,14 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Application version
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 2.0.2
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -376,14 +376,14 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Java runtime
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 1.8.0_151 (Oracle Corporation)
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -428,14 +428,14 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Scala version
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 2.12.3
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -480,14 +480,14 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Operating system
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Linux 4.1.19+ (32 bits)
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -532,14 +532,14 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Database
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 PostgreSQL 9.3.4
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -584,14 +584,14 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Free memory
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 11 MB
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -636,14 +636,14 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Total memory
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 32 MB
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -700,134 +700,134 @@ ShallowWrapper {
           preScanRows={true}
           selectable={true}
           style={Object {}}
->
+        >
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Application version
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              2.0.2
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Application version
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              2.0.2
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Java runtime
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              1.8.0_151 (Oracle Corporation)
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Java runtime
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              1.8.0_151 (Oracle Corporation)
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Scala version
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              2.12.3
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Scala version
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              2.12.3
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Operating system
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Linux 4.1.19+ (32 bits)
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Operating system
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Linux 4.1.19+ (32 bits)
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Database
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              PostgreSQL 9.3.4
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Database
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              PostgreSQL 9.3.4
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Free memory
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              11 MB
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Free memory
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              11 MB
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Total memory
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              32 MB
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Total memory
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              32 MB
+            </TableRowColumn>
           </TableRow>
-</TableBody>,
+        </TableBody>,
         "fixedFooter": true,
         "fixedHeader": true,
         "height": "inherit",
@@ -848,126 +848,126 @@ ShallowWrapper {
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Application version
+                Application version
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            2.0.2
+                2.0.2
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Java runtime
+                Java runtime
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            1.8.0_151 (Oracle Corporation)
+                1.8.0_151 (Oracle Corporation)
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Scala version
+                Scala version
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            2.12.3
+                2.12.3
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Operating system
+                Operating system
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Linux 4.1.19+ (32 bits)
+                Linux 4.1.19+ (32 bits)
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Database
+                Database
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            PostgreSQL 9.3.4
+                PostgreSQL 9.3.4
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Free memory
+                Free memory
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            11 MB
+                11 MB
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Total memory
+                Total memory
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            32 MB
+                32 MB
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
           ],
           "deselectOnClickaway": true,
           "displayRowCheckbox": false,
@@ -986,14 +986,14 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Application version
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   2.0.2
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -1038,14 +1038,14 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Java runtime
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   1.8.0_151 (Oracle Corporation)
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -1090,14 +1090,14 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Scala version
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   2.12.3
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -1142,14 +1142,14 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Operating system
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Linux 4.1.19+ (32 bits)
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -1194,14 +1194,14 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Database
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   PostgreSQL 9.3.4
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -1246,14 +1246,14 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Free memory
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   11 MB
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -1298,14 +1298,14 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Total memory
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   32 MB
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,

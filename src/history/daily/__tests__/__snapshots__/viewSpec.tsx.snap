@@ -6,15 +6,15 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DailyReadingView
     data={
-        Object {
-            "elecCon": 0.265,
-            "electricityLow": 2150.714,
-            "electricityNormal": 2702.641,
-            "gas": 3781.676,
-            "recordDate": 2018-01-05T00:00:00.000Z,
-          }
+      Object {
+        "elecCon": 0.265,
+        "electricityLow": 2150.714,
+        "electricityNormal": 2702.641,
+        "gas": 3781.676,
+        "recordDate": 2018-01-05T00:00:00.000Z,
+      }
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -36,86 +36,86 @@ ShallowWrapper {
         preScanRows={true}
         selectable={true}
         style={Object {}}
->
+      >
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Date recorded
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Friday, January 5th 2018
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Date recorded
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Friday, January 5th 2018
+          </TableRowColumn>
         </TableRow>
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Electricity (low)
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        2150.714
-                         kWh
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Electricity (low)
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            2150.714
+             kWh
+          </TableRowColumn>
         </TableRow>
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Electricity (normal)
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        2702.641
-                         kWh
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Electricity (normal)
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            2702.641
+             kWh
+          </TableRowColumn>
         </TableRow>
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Gas
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        3781.676
-                         m
-                        <sup>
-                                3
-                        </sup>
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Gas
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            3781.676
+             m
+            <sup>
+              3
+            </sup>
+          </TableRowColumn>
         </TableRow>
-</TableBody>,
+      </TableBody>,
       "fixedFooter": true,
       "fixedHeader": true,
       "height": "inherit",
@@ -136,78 +136,78 @@ ShallowWrapper {
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Date recorded
+              Date recorded
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Friday, January 5th 2018
+              Friday, January 5th 2018
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
           <TableRow
             displayBorder={true}
             hoverable={false}
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Electricity (low)
+              Electricity (low)
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        2150.714
-                         kWh
+              2150.714
+               kWh
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
           <TableRow
             displayBorder={true}
             hoverable={false}
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Electricity (normal)
+              Electricity (normal)
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        2702.641
-                         kWh
+              2702.641
+               kWh
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
           <TableRow
             displayBorder={true}
             hoverable={false}
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Gas
+              Gas
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        3781.676
-                         m
-                        <sup>
-                                    3
-                        </sup>
+              3781.676
+               m
+              <sup>
+                3
+              </sup>
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
         ],
         "deselectOnClickaway": true,
         "displayRowCheckbox": false,
@@ -226,14 +226,14 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Date recorded
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Friday, January 5th 2018
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -278,15 +278,15 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Electricity (low)
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 2150.714
                  kWh
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -337,15 +337,15 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Electricity (normal)
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 2702.641
                  kWh
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -396,18 +396,18 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Gas
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 3781.676
                  m
                 <sup>
-                                3
+                  3
                 </sup>
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -439,7 +439,7 @@ ShallowWrapper {
                   " m",
                   <sup>
                     3
-</sup>,
+                  </sup>,
                 ],
                 "hoverable": false,
               },
@@ -484,86 +484,86 @@ ShallowWrapper {
           preScanRows={true}
           selectable={true}
           style={Object {}}
->
+        >
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Date recorded
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Friday, January 5th 2018
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Date recorded
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Friday, January 5th 2018
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Electricity (low)
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              2150.714
-                               kWh
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Electricity (low)
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              2150.714
+               kWh
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Electricity (normal)
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              2702.641
-                               kWh
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Electricity (normal)
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              2702.641
+               kWh
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Gas
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              3781.676
-                               m
-                              <sup>
-                                        3
-                              </sup>
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Gas
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              3781.676
+               m
+              <sup>
+                3
+              </sup>
+            </TableRowColumn>
           </TableRow>
-</TableBody>,
+        </TableBody>,
         "fixedFooter": true,
         "fixedHeader": true,
         "height": "inherit",
@@ -584,78 +584,78 @@ ShallowWrapper {
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Date recorded
+                Date recorded
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Friday, January 5th 2018
+                Friday, January 5th 2018
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Electricity (low)
+                Electricity (low)
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            2150.714
-                             kWh
+                2150.714
+                 kWh
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Electricity (normal)
+                Electricity (normal)
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            2702.641
-                             kWh
+                2702.641
+                 kWh
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Gas
+                Gas
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            3781.676
-                             m
-                            <sup>
-                                          3
-                            </sup>
+                3781.676
+                 m
+                <sup>
+                  3
+                </sup>
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
           ],
           "deselectOnClickaway": true,
           "displayRowCheckbox": false,
@@ -674,14 +674,14 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Date recorded
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Friday, January 5th 2018
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -726,15 +726,15 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Electricity (low)
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   2150.714
                    kWh
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -785,15 +785,15 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Electricity (normal)
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   2702.641
                    kWh
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -844,18 +844,18 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Gas
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   3781.676
                    m
                   <sup>
-                                    3
+                    3
                   </sup>
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -887,7 +887,7 @@ ShallowWrapper {
                     " m",
                     <sup>
                       3
-</sup>,
+                    </sup>,
                   ],
                   "hoverable": false,
                 },

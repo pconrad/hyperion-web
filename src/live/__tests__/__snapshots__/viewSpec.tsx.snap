@@ -6,15 +6,15 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <View
     data={
-        Object {
-            "elecCon": 0.265,
-            "elecProd": 0,
-            "gas": 3781.676,
-            "tariff": "0002",
-            "ts": "2018-01-05T15:40:47+01:00",
-          }
+      Object {
+        "elecCon": 0.265,
+        "elecProd": 0,
+        "gas": 3781.676,
+        "tariff": "0002",
+        "ts": "2018-01-05T15:40:47+01:00",
+      }
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -36,98 +36,98 @@ ShallowWrapper {
         preScanRows={true}
         selectable={true}
         style={Object {}}
->
+      >
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Timestamp
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Friday, January 5th 2018, 15:40:47
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Timestamp
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Friday, January 5th 2018, 15:40:47
+          </TableRowColumn>
         </TableRow>
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Current electricity tariff
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Normal
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Current electricity tariff
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Normal
+          </TableRowColumn>
         </TableRow>
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Current electricity consumption
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        0.265 kWh
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Current electricity consumption
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            0.265 kWh
+          </TableRowColumn>
         </TableRow>
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Current electricity production
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        0 kWh
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Current electricity production
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            0 kWh
+          </TableRowColumn>
         </TableRow>
         <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
+          displayBorder={true}
+          hoverable={false}
+          hovered={false}
+          selectable={true}
+          striped={false}
         >
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        Total gas consumption
-                </TableRowColumn>
-                <TableRowColumn
-                        hoverable={false}
-                >
-                        3781.676 m3
-                </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            Total gas consumption
+          </TableRowColumn>
+          <TableRowColumn
+            hoverable={false}
+          >
+            3781.676 m3
+          </TableRowColumn>
         </TableRow>
-</TableBody>,
+      </TableBody>,
       "fixedFooter": true,
       "fixedHeader": true,
       "height": "inherit",
@@ -148,90 +148,90 @@ ShallowWrapper {
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Timestamp
+              Timestamp
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Friday, January 5th 2018, 15:40:47
+              Friday, January 5th 2018, 15:40:47
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
           <TableRow
             displayBorder={true}
             hoverable={false}
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Current electricity tariff
+              Current electricity tariff
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Normal
+              Normal
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
           <TableRow
             displayBorder={true}
             hoverable={false}
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Current electricity consumption
+              Current electricity consumption
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        0.265 kWh
+              0.265 kWh
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
           <TableRow
             displayBorder={true}
             hoverable={false}
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Current electricity production
+              Current electricity production
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        0 kWh
+              0 kWh
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
           <TableRow
             displayBorder={true}
             hoverable={false}
             hovered={false}
             selectable={true}
             striped={false}
->
+          >
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        Total gas consumption
+              Total gas consumption
             </TableRowColumn>
             <TableRowColumn
-                        hoverable={false}
+              hoverable={false}
             >
-                        3781.676 m3
+              3781.676 m3
             </TableRowColumn>
-</TableRow>,
+          </TableRow>,
         ],
         "deselectOnClickaway": true,
         "displayRowCheckbox": false,
@@ -250,14 +250,14 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Timestamp
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Friday, January 5th 2018, 15:40:47
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -302,14 +302,14 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Current electricity tariff
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Normal
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -354,14 +354,14 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Current electricity consumption
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 0.265 kWh
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -406,14 +406,14 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Current electricity production
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 0 kWh
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -458,14 +458,14 @@ ShallowWrapper {
             "children": Array [
               <TableRowColumn
                 hoverable={false}
->
+              >
                 Total gas consumption
-</TableRowColumn>,
+              </TableRowColumn>,
               <TableRowColumn
                 hoverable={false}
->
+              >
                 3781.676 m3
-</TableRowColumn>,
+              </TableRowColumn>,
             ],
             "displayBorder": true,
             "hoverable": false,
@@ -522,98 +522,98 @@ ShallowWrapper {
           preScanRows={true}
           selectable={true}
           style={Object {}}
->
+        >
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Timestamp
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Friday, January 5th 2018, 15:40:47
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Timestamp
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Friday, January 5th 2018, 15:40:47
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Current electricity tariff
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Normal
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Current electricity tariff
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Normal
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Current electricity consumption
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              0.265 kWh
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Current electricity consumption
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              0.265 kWh
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Current electricity production
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              0 kWh
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Current electricity production
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              0 kWh
+            </TableRowColumn>
           </TableRow>
           <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
+            displayBorder={true}
+            hoverable={false}
+            hovered={false}
+            selectable={true}
+            striped={false}
           >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              Total gas consumption
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
-                              3781.676 m3
-                    </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              Total gas consumption
+            </TableRowColumn>
+            <TableRowColumn
+              hoverable={false}
+            >
+              3781.676 m3
+            </TableRowColumn>
           </TableRow>
-</TableBody>,
+        </TableBody>,
         "fixedFooter": true,
         "fixedHeader": true,
         "height": "inherit",
@@ -634,90 +634,90 @@ ShallowWrapper {
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Timestamp
+                Timestamp
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Friday, January 5th 2018, 15:40:47
+                Friday, January 5th 2018, 15:40:47
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Current electricity tariff
+                Current electricity tariff
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Normal
+                Normal
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Current electricity consumption
+                Current electricity consumption
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            0.265 kWh
+                0.265 kWh
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Current electricity production
+                Current electricity production
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            0 kWh
+                0 kWh
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
             <TableRow
               displayBorder={true}
               hoverable={false}
               hovered={false}
               selectable={true}
               striped={false}
->
+            >
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            Total gas consumption
+                Total gas consumption
               </TableRowColumn>
               <TableRowColumn
-                            hoverable={false}
+                hoverable={false}
               >
-                            3781.676 m3
+                3781.676 m3
               </TableRowColumn>
-</TableRow>,
+            </TableRow>,
           ],
           "deselectOnClickaway": true,
           "displayRowCheckbox": false,
@@ -736,14 +736,14 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Timestamp
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Friday, January 5th 2018, 15:40:47
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -788,14 +788,14 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Current electricity tariff
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Normal
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -840,14 +840,14 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Current electricity consumption
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   0.265 kWh
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -892,14 +892,14 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Current electricity production
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   0 kWh
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
@@ -944,14 +944,14 @@ ShallowWrapper {
               "children": Array [
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   Total gas consumption
-</TableRowColumn>,
+                </TableRowColumn>,
                 <TableRowColumn
                   hoverable={false}
->
+                >
                   3781.676 m3
-</TableRowColumn>,
+                </TableRowColumn>,
               ],
               "displayBorder": true,
               "hoverable": false,
