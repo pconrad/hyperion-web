@@ -1,7 +1,6 @@
 module.exports = function(config) {
   config.set({
     coverageAnalysis: 'off',
-    logLevel: 'trace',
     maxConcurrentTestRunners: 5,
     mutate: [
       'src/**/*.ts',
