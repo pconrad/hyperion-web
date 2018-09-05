@@ -32,6 +32,11 @@
     "raf": "3.4.0",
     "react-test-renderer": "16.4.2",
     "react-scripts-ts": "2.17.0",
+    "stryker": "0.29.1",
+    "stryker-api": "0.21.0",
+    "stryker-html-reporter": "0.16.1",
+    "stryker-jest-runner": "1.2.0",
+    "stryker-typescript": "0.13.2",
     "typescript": "3.0.3"
   },
   "license": "MIT",
@@ -46,6 +51,7 @@
     "test": "react-scripts-ts test --env=jsdom --coverage",
     "test:ci": "react-scripts-ts test --env=jsdom --reporters=default --reporters=jest-junit --coverage",
     "eject": "react-scripts-ts eject",
+    "stryker": "stryker run",
     "tslint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' -o tslint.out -t verbose --force",
     "tslint-print": "tslint -c tslint.json 'src/**/*.{ts,tsx}' -t stylish --force",
     "tslint-fix": "tslint -c tslint.json 'src/**/*.{ts,tsx}' -t stylish --force --fix"
