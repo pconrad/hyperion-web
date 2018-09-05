@@ -9,11 +9,11 @@ module.exports = function(config) {
     ],
     mutator: 'typescript',
     jest: {
-      project: 'react-ts'
+      projectType: 'react-ts'
     },
-    reporter: ['html', 'clear-text', 'progress', 'dashboard'],
+    reporters: ['html', 'clear-text', 'progress', 'dashboard'],
     testRunner: 'jest',
-    timeoutMs: 60000,
+    timeoutMS: 60000,
     tsconfigFile: 'tsconfig.json',
   });
 };
