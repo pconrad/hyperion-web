@@ -6,24 +6,24 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MonthlyUsageTableView
     data={
-        Array [
-            Object {
-              "date": 2018-01-05T00:00:00.000Z,
-              "elecCon": 0.265,
-              "electricityLow": 2150.714,
-              "electricityNormal": 2702.641,
-              "gas": 3781.676,
-            },
-            Object {
-              "date": 2018-01-06T00:00:00.000Z,
-              "elecCon": 0.265,
-              "electricityLow": 2150.714,
-              "electricityNormal": 2702.641,
-              "gas": 3781.676,
-            },
-          ]
+      Array [
+        Object {
+          "date": 2018-01-05T00:00:00.000Z,
+          "elecCon": 0.265,
+          "electricityLow": 2150.714,
+          "electricityNormal": 2702.641,
+          "gas": 3781.676,
+        },
+        Object {
+          "date": 2018-01-06T00:00:00.000Z,
+          "elecCon": 0.265,
+          "electricityLow": 2150.714,
+          "electricityNormal": 2702.641,
+          "gas": 3781.676,
+        },
+      ]
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -40,62 +40,62 @@ ShallowWrapper {
       "children": Array [
         <thead>
           <tr>
-                    <th>
-                              Date
-                    </th>
-                    <th>
-                              Electricity (low)
-                    </th>
-                    <th>
-                              Electricity (normal)
-                    </th>
-                    <th>
-                              Gas
-                    </th>
+            <th>
+              Date
+            </th>
+            <th>
+              Electricity (low)
+            </th>
+            <th>
+              Electricity (normal)
+            </th>
+            <th>
+              Gas
+            </th>
           </tr>
-</thead>,
+        </thead>,
         <tbody>
           <tr>
-                    <td>
-                              05 Jan 2018
-                    </td>
-                    <td>
-                              2150.714
-                               kWh
-                    </td>
-                    <td>
-                              2702.641
-                               kWh
-                    </td>
-                    <td>
-                              3781.676
-                               m
-                              <sup>
-                                        3
-                              </sup>
-                    </td>
+            <td>
+              05 Jan 2018
+            </td>
+            <td>
+              2150.714
+               kWh
+            </td>
+            <td>
+              2702.641
+               kWh
+            </td>
+            <td>
+              3781.676
+               m
+              <sup>
+                3
+              </sup>
+            </td>
           </tr>
           <tr>
-                    <td>
-                              06 Jan 2018
-                    </td>
-                    <td>
-                              2150.714
-                               kWh
-                    </td>
-                    <td>
-                              2702.641
-                               kWh
-                    </td>
-                    <td>
-                              3781.676
-                               m
-                              <sup>
-                                        3
-                              </sup>
-                    </td>
+            <td>
+              06 Jan 2018
+            </td>
+            <td>
+              2150.714
+               kWh
+            </td>
+            <td>
+              2702.641
+               kWh
+            </td>
+            <td>
+              3781.676
+               m
+              <sup>
+                3
+              </sup>
+            </td>
           </tr>
-</tbody>,
+        </tbody>,
       ],
       "responsive": true,
       "responsiveTag": "div",
@@ -110,18 +110,18 @@ ShallowWrapper {
         "props": Object {
           "children": <tr>
             <th>
-                        Date
+              Date
             </th>
             <th>
-                        Electricity (low)
+              Electricity (low)
             </th>
             <th>
-                        Electricity (normal)
+              Electricity (normal)
             </th>
             <th>
-                        Gas
+              Gas
             </th>
-</tr>,
+          </tr>,
         },
         "ref": null,
         "rendered": Object {
@@ -132,16 +132,16 @@ ShallowWrapper {
             "children": Array [
               <th>
                 Date
-</th>,
+              </th>,
               <th>
                 Electricity (low)
-</th>,
+              </th>,
               <th>
                 Electricity (normal)
-</th>,
+              </th>,
               <th>
                 Gas
-</th>,
+              </th>,
             ],
           },
           "ref": null,
@@ -203,44 +203,44 @@ ShallowWrapper {
           "children": Array [
             <tr>
               <td>
-                            05 Jan 2018
+                05 Jan 2018
               </td>
               <td>
-                            2150.714
-                             kWh
+                2150.714
+                 kWh
               </td>
               <td>
-                            2702.641
-                             kWh
+                2702.641
+                 kWh
               </td>
               <td>
-                            3781.676
-                             m
-                            <sup>
-                                          3
-                            </sup>
+                3781.676
+                 m
+                <sup>
+                  3
+                </sup>
               </td>
-</tr>,
+            </tr>,
             <tr>
               <td>
-                            06 Jan 2018
+                06 Jan 2018
               </td>
               <td>
-                            2150.714
-                             kWh
+                2150.714
+                 kWh
               </td>
               <td>
-                            2702.641
-                             kWh
+                2702.641
+                 kWh
               </td>
               <td>
-                            3781.676
-                             m
-                            <sup>
-                                          3
-                            </sup>
+                3781.676
+                 m
+                <sup>
+                  3
+                </sup>
               </td>
-</tr>,
+            </tr>,
           ],
         },
         "ref": null,
@@ -253,22 +253,22 @@ ShallowWrapper {
               "children": Array [
                 <td>
                   05 Jan 2018
-</td>,
+                </td>,
                 <td>
                   2150.714
                    kWh
-</td>,
+                </td>,
                 <td>
                   2702.641
                    kWh
-</td>,
+                </td>,
                 <td>
                   3781.676
                    m
                   <sup>
-                                    3
+                    3
                   </sup>
-</td>,
+                </td>,
               ],
             },
             "ref": null,
@@ -328,7 +328,7 @@ ShallowWrapper {
                     " m",
                     <sup>
                       3
-</sup>,
+                    </sup>,
                   ],
                 },
                 "ref": null,
@@ -360,22 +360,22 @@ ShallowWrapper {
               "children": Array [
                 <td>
                   06 Jan 2018
-</td>,
+                </td>,
                 <td>
                   2150.714
                    kWh
-</td>,
+                </td>,
                 <td>
                   2702.641
                    kWh
-</td>,
+                </td>,
                 <td>
                   3781.676
                    m
                   <sup>
-                                    3
+                    3
                   </sup>
-</td>,
+                </td>,
               ],
             },
             "ref": null,
@@ -435,7 +435,7 @@ ShallowWrapper {
                     " m",
                     <sup>
                       3
-</sup>,
+                    </sup>,
                   ],
                 },
                 "ref": null,
@@ -475,62 +475,62 @@ ShallowWrapper {
         "children": Array [
           <thead>
             <tr>
-                        <th>
-                                    Date
-                        </th>
-                        <th>
-                                    Electricity (low)
-                        </th>
-                        <th>
-                                    Electricity (normal)
-                        </th>
-                        <th>
-                                    Gas
-                        </th>
+              <th>
+                Date
+              </th>
+              <th>
+                Electricity (low)
+              </th>
+              <th>
+                Electricity (normal)
+              </th>
+              <th>
+                Gas
+              </th>
             </tr>
-</thead>,
+          </thead>,
           <tbody>
             <tr>
-                        <td>
-                                    05 Jan 2018
-                        </td>
-                        <td>
-                                    2150.714
-                                     kWh
-                        </td>
-                        <td>
-                                    2702.641
-                                     kWh
-                        </td>
-                        <td>
-                                    3781.676
-                                     m
-                                    <sup>
-                                                3
-                                    </sup>
-                        </td>
+              <td>
+                05 Jan 2018
+              </td>
+              <td>
+                2150.714
+                 kWh
+              </td>
+              <td>
+                2702.641
+                 kWh
+              </td>
+              <td>
+                3781.676
+                 m
+                <sup>
+                  3
+                </sup>
+              </td>
             </tr>
             <tr>
-                        <td>
-                                    06 Jan 2018
-                        </td>
-                        <td>
-                                    2150.714
-                                     kWh
-                        </td>
-                        <td>
-                                    2702.641
-                                     kWh
-                        </td>
-                        <td>
-                                    3781.676
-                                     m
-                                    <sup>
-                                                3
-                                    </sup>
-                        </td>
+              <td>
+                06 Jan 2018
+              </td>
+              <td>
+                2150.714
+                 kWh
+              </td>
+              <td>
+                2702.641
+                 kWh
+              </td>
+              <td>
+                3781.676
+                 m
+                <sup>
+                  3
+                </sup>
+              </td>
             </tr>
-</tbody>,
+          </tbody>,
         ],
         "responsive": true,
         "responsiveTag": "div",
@@ -545,18 +545,18 @@ ShallowWrapper {
           "props": Object {
             "children": <tr>
               <th>
-                            Date
+                Date
               </th>
               <th>
-                            Electricity (low)
+                Electricity (low)
               </th>
               <th>
-                            Electricity (normal)
+                Electricity (normal)
               </th>
               <th>
-                            Gas
+                Gas
               </th>
-</tr>,
+            </tr>,
           },
           "ref": null,
           "rendered": Object {
@@ -567,16 +567,16 @@ ShallowWrapper {
               "children": Array [
                 <th>
                   Date
-</th>,
+                </th>,
                 <th>
                   Electricity (low)
-</th>,
+                </th>,
                 <th>
                   Electricity (normal)
-</th>,
+                </th>,
                 <th>
                   Gas
-</th>,
+                </th>,
               ],
             },
             "ref": null,
@@ -638,44 +638,44 @@ ShallowWrapper {
             "children": Array [
               <tr>
                 <td>
-                                05 Jan 2018
+                  05 Jan 2018
                 </td>
                 <td>
-                                2150.714
-                                 kWh
+                  2150.714
+                   kWh
                 </td>
                 <td>
-                                2702.641
-                                 kWh
+                  2702.641
+                   kWh
                 </td>
                 <td>
-                                3781.676
-                                 m
-                                <sup>
-                                                3
-                                </sup>
+                  3781.676
+                   m
+                  <sup>
+                    3
+                  </sup>
                 </td>
-</tr>,
+              </tr>,
               <tr>
                 <td>
-                                06 Jan 2018
+                  06 Jan 2018
                 </td>
                 <td>
-                                2150.714
-                                 kWh
+                  2150.714
+                   kWh
                 </td>
                 <td>
-                                2702.641
-                                 kWh
+                  2702.641
+                   kWh
                 </td>
                 <td>
-                                3781.676
-                                 m
-                                <sup>
-                                                3
-                                </sup>
+                  3781.676
+                   m
+                  <sup>
+                    3
+                  </sup>
                 </td>
-</tr>,
+              </tr>,
             ],
           },
           "ref": null,
@@ -688,22 +688,22 @@ ShallowWrapper {
                 "children": Array [
                   <td>
                     05 Jan 2018
-</td>,
+                  </td>,
                   <td>
                     2150.714
                      kWh
-</td>,
+                  </td>,
                   <td>
                     2702.641
                      kWh
-</td>,
+                  </td>,
                   <td>
                     3781.676
                      m
                     <sup>
-                                        3
+                      3
                     </sup>
-</td>,
+                  </td>,
                 ],
               },
               "ref": null,
@@ -763,7 +763,7 @@ ShallowWrapper {
                       " m",
                       <sup>
                         3
-</sup>,
+                      </sup>,
                     ],
                   },
                   "ref": null,
@@ -795,22 +795,22 @@ ShallowWrapper {
                 "children": Array [
                   <td>
                     06 Jan 2018
-</td>,
+                  </td>,
                   <td>
                     2150.714
                      kWh
-</td>,
+                  </td>,
                   <td>
                     2702.641
                      kWh
-</td>,
+                  </td>,
                   <td>
                     3781.676
                      m
                     <sup>
-                                        3
+                      3
                     </sup>
-</td>,
+                  </td>,
                 ],
               },
               "ref": null,
@@ -870,7 +870,7 @@ ShallowWrapper {
                       " m",
                       <sup>
                         3
-</sup>,
+                      </sup>,
                     ],
                   },
                   "ref": null,

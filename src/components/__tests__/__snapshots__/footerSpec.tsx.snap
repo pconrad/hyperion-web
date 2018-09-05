@@ -19,20 +19,20 @@ ShallowWrapper {
     "props": Object {
       "children": <div
         className="container"
->
+      >
         <span
-                className="text-muted"
+          className="text-muted"
         >
-                © 2016 - 2018 Maarten Mulders. Source code is available at 
-                <a
-                        href="https://github.com/mthmulders/hyperion-web"
-                        target="_blank"
-                >
-                        GitHub
-                </a>
-                .
+          © 2016 - 2018 Maarten Mulders. Source code is available at 
+          <a
+            href="https://github.com/mthmulders/hyperion-web"
+            target="_blank"
+          >
+            GitHub
+          </a>
+          .
         </span>
-</div>,
+      </div>,
       "className": "footer",
     },
     "ref": null,
@@ -43,16 +43,16 @@ ShallowWrapper {
       "props": Object {
         "children": <span
           className="text-muted"
->
+        >
           © 2016 - 2018 Maarten Mulders. Source code is available at 
           <a
-                    href="https://github.com/mthmulders/hyperion-web"
-                    target="_blank"
+            href="https://github.com/mthmulders/hyperion-web"
+            target="_blank"
           >
-                    GitHub
+            GitHub
           </a>
           .
-</span>,
+        </span>,
         "className": "container",
       },
       "ref": null,
@@ -66,9 +66,9 @@ ShallowWrapper {
             <a
               href="https://github.com/mthmulders/hyperion-web"
               target="_blank"
->
+            >
               GitHub
-</a>,
+            </a>,
             ".",
           ],
           "className": "text-muted",
@@ -105,20 +105,20 @@ ShallowWrapper {
       "props": Object {
         "children": <div
           className="container"
->
+        >
           <span
-                    className="text-muted"
+            className="text-muted"
           >
-                    © 2016 - 2018 Maarten Mulders. Source code is available at 
-                    <a
-                              href="https://github.com/mthmulders/hyperion-web"
-                              target="_blank"
-                    >
-                              GitHub
-                    </a>
-                    .
+            © 2016 - 2018 Maarten Mulders. Source code is available at 
+            <a
+              href="https://github.com/mthmulders/hyperion-web"
+              target="_blank"
+            >
+              GitHub
+            </a>
+            .
           </span>
-</div>,
+        </div>,
         "className": "footer",
       },
       "ref": null,
@@ -129,16 +129,16 @@ ShallowWrapper {
         "props": Object {
           "children": <span
             className="text-muted"
->
+          >
             © 2016 - 2018 Maarten Mulders. Source code is available at 
             <a
-                        href="https://github.com/mthmulders/hyperion-web"
-                        target="_blank"
+              href="https://github.com/mthmulders/hyperion-web"
+              target="_blank"
             >
-                        GitHub
+              GitHub
             </a>
             .
-</span>,
+          </span>,
           "className": "container",
         },
         "ref": null,
@@ -152,9 +152,9 @@ ShallowWrapper {
               <a
                 href="https://github.com/mthmulders/hyperion-web"
                 target="_blank"
->
+              >
                 GitHub
-</a>,
+              </a>,
               ".",
             ],
             "className": "text-muted",

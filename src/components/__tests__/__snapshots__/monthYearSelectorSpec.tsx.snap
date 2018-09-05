@@ -7,9 +7,9 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <MonthYearSelector
     selectedMonth={2018}
     selectedYear={1}
-    updateSelectedMonth={[Function]}
-    updateSelectedYear={[Function]}
-/>,
+    updateSelectedMonth={[MockFunction]}
+    updateSelectedYear={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -25,12 +25,12 @@ ShallowWrapper {
       "children": Array [
         <MonthSelector
           selectedMonth={2018}
-          updateSelectedMonth={[Function]}
-/>,
+          updateSelectedMonth={[MockFunction]}
+        />,
         <YearSelector
           selectedYear={1}
-          updateSelectedYear={[Function]}
-/>,
+          updateSelectedYear={[MockFunction]}
+        />,
       ],
       "tag": "form",
     },
@@ -42,7 +42,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "selectedMonth": 2018,
-          "updateSelectedMonth": [Function],
+          "updateSelectedMonth": [MockFunction],
         },
         "ref": null,
         "rendered": null,
@@ -54,7 +54,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "selectedYear": 1,
-          "updateSelectedYear": [Function],
+          "updateSelectedYear": [MockFunction],
         },
         "ref": null,
         "rendered": null,
@@ -72,12 +72,12 @@ ShallowWrapper {
         "children": Array [
           <MonthSelector
             selectedMonth={2018}
-            updateSelectedMonth={[Function]}
-/>,
+            updateSelectedMonth={[MockFunction]}
+          />,
           <YearSelector
             selectedYear={1}
-            updateSelectedYear={[Function]}
-/>,
+            updateSelectedYear={[MockFunction]}
+          />,
         ],
         "tag": "form",
       },
@@ -89,7 +89,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "selectedMonth": 2018,
-            "updateSelectedMonth": [Function],
+            "updateSelectedMonth": [MockFunction],
           },
           "ref": null,
           "rendered": null,
@@ -101,7 +101,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "selectedYear": 1,
-            "updateSelectedYear": [Function],
+            "updateSelectedYear": [MockFunction],
           },
           "ref": null,
           "rendered": null,

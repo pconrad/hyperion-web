@@ -19,138 +19,138 @@ ShallowWrapper {
     "props": Object {
       "children": <Container
         tag="div"
->
+      >
         <NavbarToggler
-                onClick={[Function]}
-                tag="button"
-                type="button"
+          onClick={[Function]}
+          tag="button"
+          type="button"
         />
         <Collapse
-                appear={false}
-                enter={true}
-                exit={true}
-                in={false}
-                isOpen={false}
-                mountOnEnter={false}
-                navbar={true}
-                onEnter={[Function]}
-                onEntered={[Function]}
-                onEntering={[Function]}
-                onExit={[Function]}
-                onExited={[Function]}
-                onExiting={[Function]}
-                tag="div"
-                timeout={350}
-                unmountOnExit={false}
+          appear={false}
+          enter={true}
+          exit={true}
+          in={false}
+          isOpen={false}
+          mountOnEnter={false}
+          navbar={true}
+          onEnter={[Function]}
+          onEntered={[Function]}
+          onEntering={[Function]}
+          onExit={[Function]}
+          onExited={[Function]}
+          onExiting={[Function]}
+          tag="div"
+          timeout={350}
+          unmountOnExit={false}
         >
-                <Nav
-                        className="md-auto"
-                        navbar={true}
-                        tag="ul"
-                        vertical={false}
+          <Nav
+            className="md-auto"
+            navbar={true}
+            tag="ul"
+            vertical={false}
+          >
+            <NavItem
+              tag="li"
+            >
+              <NavLink
+                tag={[Function]}
+                to="/"
+              >
+                Home
+              </NavLink>
+            </NavItem>
+            <NavItem
+              tag="li"
+            >
+              <NavLink
+                tag={[Function]}
+                to="/live"
+              >
+                Live
+              </NavLink>
+            </NavItem>
+            <NavItem
+              tag="li"
+            >
+              <NavLink
+                tag={[Function]}
+                to="/recent"
+              >
+                Recent
+              </NavLink>
+            </NavItem>
+            <UncontrolledDropdown
+              inNavbar={true}
+              nav={true}
+            >
+              <DropdownToggle
+                aria-haspopup={true}
+                caret={true}
+                color="secondary"
+                nav={true}
+              >
+                History
+              </DropdownToggle>
+              <DropdownMenu
+                className="navbar-light"
+                flip={true}
+                tag="div"
+              >
+                <DropdownItem
+                  tag={[Function]}
+                  to="/history/daily"
+                  toggle={true}
                 >
-                        <NavItem
-                                tag="li"
-                        >
-                                <NavLink
-                                        tag={[Function]}
-                                        to="/"
-                                >
-                                        Home
-                                </NavLink>
-                        </NavItem>
-                        <NavItem
-                                tag="li"
-                        >
-                                <NavLink
-                                        tag={[Function]}
-                                        to="/live"
-                                >
-                                        Live
-                                </NavLink>
-                        </NavItem>
-                        <NavItem
-                                tag="li"
-                        >
-                                <NavLink
-                                        tag={[Function]}
-                                        to="/recent"
-                                >
-                                        Recent
-                                </NavLink>
-                        </NavItem>
-                        <UncontrolledDropdown
-                                inNavbar={true}
-                                nav={true}
-                        >
-                                <DropdownToggle
-                                        aria-haspopup={true}
-                                        caret={true}
-                                        color="secondary"
-                                        nav={true}
-                                >
-                                        History
-                                </DropdownToggle>
-                                <DropdownMenu
-                                        className="navbar-light"
-                                        flip={true}
-                                        tag="div"
-                                >
-                                        <DropdownItem
-                                                tag={[Function]}
-                                                to="/history/daily"
-                                                toggle={true}
-                                        >
-                                                Daily
-                                        </DropdownItem>
-                                        <DropdownItem
-                                                tag={[Function]}
-                                                to="/history/monthly"
-                                                toggle={true}
-                                        >
-                                                Monthly
-                                        </DropdownItem>
-                                </DropdownMenu>
-                        </UncontrolledDropdown>
-                        <UncontrolledDropdown
-                                inNavbar={true}
-                                nav={true}
-                        >
-                                <DropdownToggle
-                                        aria-haspopup={true}
-                                        caret={true}
-                                        color="secondary"
-                                        nav={true}
-                                >
-                                        Usage
-                                </DropdownToggle>
-                                <DropdownMenu
-                                        className="navbar-light"
-                                        flip={true}
-                                        tag="div"
-                                >
-                                        <DropdownItem
-                                                tag={[Function]}
-                                                to="/usage/monthly"
-                                                toggle={true}
-                                        >
-                                                Monthly
-                                        </DropdownItem>
-                                </DropdownMenu>
-                        </UncontrolledDropdown>
-                        <NavItem
-                                tag="li"
-                        >
-                                <NavLink
-                                        tag={[Function]}
-                                        to="/about"
-                                >
-                                        About
-                                </NavLink>
-                        </NavItem>
-                </Nav>
+                  Daily
+                </DropdownItem>
+                <DropdownItem
+                  tag={[Function]}
+                  to="/history/monthly"
+                  toggle={true}
+                >
+                  Monthly
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <UncontrolledDropdown
+              inNavbar={true}
+              nav={true}
+            >
+              <DropdownToggle
+                aria-haspopup={true}
+                caret={true}
+                color="secondary"
+                nav={true}
+              >
+                Usage
+              </DropdownToggle>
+              <DropdownMenu
+                className="navbar-light"
+                flip={true}
+                tag="div"
+              >
+                <DropdownItem
+                  tag={[Function]}
+                  to="/usage/monthly"
+                  toggle={true}
+                >
+                  Monthly
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <NavItem
+              tag="li"
+            >
+              <NavLink
+                tag={[Function]}
+                to="/about"
+              >
+                About
+              </NavLink>
+            </NavItem>
+          </Nav>
         </Collapse>
-</Container>,
+      </Container>,
       "color": "primary",
       "dark": true,
       "expand": "md",
@@ -167,7 +167,7 @@ ShallowWrapper {
             onClick={[Function]}
             tag="button"
             type="button"
-/>,
+          />,
           <Collapse
             appear={false}
             enter={true}
@@ -185,114 +185,114 @@ ShallowWrapper {
             tag="div"
             timeout={350}
             unmountOnExit={false}
->
+          >
             <Nav
-                        className="md-auto"
-                        navbar={true}
-                        tag="ul"
-                        vertical={false}
+              className="md-auto"
+              navbar={true}
+              tag="ul"
+              vertical={false}
             >
-                        <NavItem
-                                    tag="li"
-                        >
-                                    <NavLink
-                                                tag={[Function]}
-                                                to="/"
-                                    >
-                                                Home
-                                    </NavLink>
-                        </NavItem>
-                        <NavItem
-                                    tag="li"
-                        >
-                                    <NavLink
-                                                tag={[Function]}
-                                                to="/live"
-                                    >
-                                                Live
-                                    </NavLink>
-                        </NavItem>
-                        <NavItem
-                                    tag="li"
-                        >
-                                    <NavLink
-                                                tag={[Function]}
-                                                to="/recent"
-                                    >
-                                                Recent
-                                    </NavLink>
-                        </NavItem>
-                        <UncontrolledDropdown
-                                    inNavbar={true}
-                                    nav={true}
-                        >
-                                    <DropdownToggle
-                                                aria-haspopup={true}
-                                                caret={true}
-                                                color="secondary"
-                                                nav={true}
-                                    >
-                                                History
-                                    </DropdownToggle>
-                                    <DropdownMenu
-                                                className="navbar-light"
-                                                flip={true}
-                                                tag="div"
-                                    >
-                                                <DropdownItem
-                                                            tag={[Function]}
-                                                            to="/history/daily"
-                                                            toggle={true}
-                                                >
-                                                            Daily
-                                                </DropdownItem>
-                                                <DropdownItem
-                                                            tag={[Function]}
-                                                            to="/history/monthly"
-                                                            toggle={true}
-                                                >
-                                                            Monthly
-                                                </DropdownItem>
-                                    </DropdownMenu>
-                        </UncontrolledDropdown>
-                        <UncontrolledDropdown
-                                    inNavbar={true}
-                                    nav={true}
-                        >
-                                    <DropdownToggle
-                                                aria-haspopup={true}
-                                                caret={true}
-                                                color="secondary"
-                                                nav={true}
-                                    >
-                                                Usage
-                                    </DropdownToggle>
-                                    <DropdownMenu
-                                                className="navbar-light"
-                                                flip={true}
-                                                tag="div"
-                                    >
-                                                <DropdownItem
-                                                            tag={[Function]}
-                                                            to="/usage/monthly"
-                                                            toggle={true}
-                                                >
-                                                            Monthly
-                                                </DropdownItem>
-                                    </DropdownMenu>
-                        </UncontrolledDropdown>
-                        <NavItem
-                                    tag="li"
-                        >
-                                    <NavLink
-                                                tag={[Function]}
-                                                to="/about"
-                                    >
-                                                About
-                                    </NavLink>
-                        </NavItem>
+              <NavItem
+                tag="li"
+              >
+                <NavLink
+                  tag={[Function]}
+                  to="/"
+                >
+                  Home
+                </NavLink>
+              </NavItem>
+              <NavItem
+                tag="li"
+              >
+                <NavLink
+                  tag={[Function]}
+                  to="/live"
+                >
+                  Live
+                </NavLink>
+              </NavItem>
+              <NavItem
+                tag="li"
+              >
+                <NavLink
+                  tag={[Function]}
+                  to="/recent"
+                >
+                  Recent
+                </NavLink>
+              </NavItem>
+              <UncontrolledDropdown
+                inNavbar={true}
+                nav={true}
+              >
+                <DropdownToggle
+                  aria-haspopup={true}
+                  caret={true}
+                  color="secondary"
+                  nav={true}
+                >
+                  History
+                </DropdownToggle>
+                <DropdownMenu
+                  className="navbar-light"
+                  flip={true}
+                  tag="div"
+                >
+                  <DropdownItem
+                    tag={[Function]}
+                    to="/history/daily"
+                    toggle={true}
+                  >
+                    Daily
+                  </DropdownItem>
+                  <DropdownItem
+                    tag={[Function]}
+                    to="/history/monthly"
+                    toggle={true}
+                  >
+                    Monthly
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <UncontrolledDropdown
+                inNavbar={true}
+                nav={true}
+              >
+                <DropdownToggle
+                  aria-haspopup={true}
+                  caret={true}
+                  color="secondary"
+                  nav={true}
+                >
+                  Usage
+                </DropdownToggle>
+                <DropdownMenu
+                  className="navbar-light"
+                  flip={true}
+                  tag="div"
+                >
+                  <DropdownItem
+                    tag={[Function]}
+                    to="/usage/monthly"
+                    toggle={true}
+                  >
+                    Monthly
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <NavItem
+                tag="li"
+              >
+                <NavLink
+                  tag={[Function]}
+                  to="/about"
+                >
+                  About
+                </NavLink>
+              </NavItem>
             </Nav>
-</Collapse>,
+          </Collapse>,
         ],
         "tag": "div",
       },
@@ -322,107 +322,107 @@ ShallowWrapper {
               navbar={true}
               tag="ul"
               vertical={false}
->
+            >
               <NavItem
-                            tag="li"
+                tag="li"
               >
-                            <NavLink
-                                          tag={[Function]}
-                                          to="/"
-                            >
-                                          Home
-                            </NavLink>
+                <NavLink
+                  tag={[Function]}
+                  to="/"
+                >
+                  Home
+                </NavLink>
               </NavItem>
               <NavItem
-                            tag="li"
+                tag="li"
               >
-                            <NavLink
-                                          tag={[Function]}
-                                          to="/live"
-                            >
-                                          Live
-                            </NavLink>
+                <NavLink
+                  tag={[Function]}
+                  to="/live"
+                >
+                  Live
+                </NavLink>
               </NavItem>
               <NavItem
-                            tag="li"
+                tag="li"
               >
-                            <NavLink
-                                          tag={[Function]}
-                                          to="/recent"
-                            >
-                                          Recent
-                            </NavLink>
+                <NavLink
+                  tag={[Function]}
+                  to="/recent"
+                >
+                  Recent
+                </NavLink>
               </NavItem>
               <UncontrolledDropdown
-                            inNavbar={true}
-                            nav={true}
+                inNavbar={true}
+                nav={true}
               >
-                            <DropdownToggle
-                                          aria-haspopup={true}
-                                          caret={true}
-                                          color="secondary"
-                                          nav={true}
-                            >
-                                          History
-                            </DropdownToggle>
-                            <DropdownMenu
-                                          className="navbar-light"
-                                          flip={true}
-                                          tag="div"
-                            >
-                                          <DropdownItem
-                                                        tag={[Function]}
-                                                        to="/history/daily"
-                                                        toggle={true}
-                                          >
-                                                        Daily
-                                          </DropdownItem>
-                                          <DropdownItem
-                                                        tag={[Function]}
-                                                        to="/history/monthly"
-                                                        toggle={true}
-                                          >
-                                                        Monthly
-                                          </DropdownItem>
-                            </DropdownMenu>
+                <DropdownToggle
+                  aria-haspopup={true}
+                  caret={true}
+                  color="secondary"
+                  nav={true}
+                >
+                  History
+                </DropdownToggle>
+                <DropdownMenu
+                  className="navbar-light"
+                  flip={true}
+                  tag="div"
+                >
+                  <DropdownItem
+                    tag={[Function]}
+                    to="/history/daily"
+                    toggle={true}
+                  >
+                    Daily
+                  </DropdownItem>
+                  <DropdownItem
+                    tag={[Function]}
+                    to="/history/monthly"
+                    toggle={true}
+                  >
+                    Monthly
+                  </DropdownItem>
+                </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown
-                            inNavbar={true}
-                            nav={true}
+                inNavbar={true}
+                nav={true}
               >
-                            <DropdownToggle
-                                          aria-haspopup={true}
-                                          caret={true}
-                                          color="secondary"
-                                          nav={true}
-                            >
-                                          Usage
-                            </DropdownToggle>
-                            <DropdownMenu
-                                          className="navbar-light"
-                                          flip={true}
-                                          tag="div"
-                            >
-                                          <DropdownItem
-                                                        tag={[Function]}
-                                                        to="/usage/monthly"
-                                                        toggle={true}
-                                          >
-                                                        Monthly
-                                          </DropdownItem>
-                            </DropdownMenu>
+                <DropdownToggle
+                  aria-haspopup={true}
+                  caret={true}
+                  color="secondary"
+                  nav={true}
+                >
+                  Usage
+                </DropdownToggle>
+                <DropdownMenu
+                  className="navbar-light"
+                  flip={true}
+                  tag="div"
+                >
+                  <DropdownItem
+                    tag={[Function]}
+                    to="/usage/monthly"
+                    toggle={true}
+                  >
+                    Monthly
+                  </DropdownItem>
+                </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem
-                            tag="li"
+                tag="li"
               >
-                            <NavLink
-                                          tag={[Function]}
-                                          to="/about"
-                            >
-                                          About
-                            </NavLink>
+                <NavLink
+                  tag={[Function]}
+                  to="/about"
+                >
+                  About
+                </NavLink>
               </NavItem>
-</Nav>,
+            </Nav>,
             "enter": true,
             "exit": true,
             "in": false,
@@ -448,103 +448,103 @@ ShallowWrapper {
               "children": Array [
                 <NavItem
                   tag="li"
->
+                >
                   <NavLink
-                                    tag={[Function]}
-                                    to="/"
+                    tag={[Function]}
+                    to="/"
                   >
-                                    Home
+                    Home
                   </NavLink>
-</NavItem>,
+                </NavItem>,
                 <NavItem
                   tag="li"
->
+                >
                   <NavLink
-                                    tag={[Function]}
-                                    to="/live"
+                    tag={[Function]}
+                    to="/live"
                   >
-                                    Live
+                    Live
                   </NavLink>
-</NavItem>,
+                </NavItem>,
                 <NavItem
                   tag="li"
->
+                >
                   <NavLink
-                                    tag={[Function]}
-                                    to="/recent"
+                    tag={[Function]}
+                    to="/recent"
                   >
-                                    Recent
+                    Recent
                   </NavLink>
-</NavItem>,
+                </NavItem>,
                 <UncontrolledDropdown
                   inNavbar={true}
                   nav={true}
->
+                >
                   <DropdownToggle
-                                    aria-haspopup={true}
-                                    caret={true}
-                                    color="secondary"
-                                    nav={true}
+                    aria-haspopup={true}
+                    caret={true}
+                    color="secondary"
+                    nav={true}
                   >
-                                    History
+                    History
                   </DropdownToggle>
                   <DropdownMenu
-                                    className="navbar-light"
-                                    flip={true}
-                                    tag="div"
+                    className="navbar-light"
+                    flip={true}
+                    tag="div"
                   >
-                                    <DropdownItem
-                                                      tag={[Function]}
-                                                      to="/history/daily"
-                                                      toggle={true}
-                                    >
-                                                      Daily
-                                    </DropdownItem>
-                                    <DropdownItem
-                                                      tag={[Function]}
-                                                      to="/history/monthly"
-                                                      toggle={true}
-                                    >
-                                                      Monthly
-                                    </DropdownItem>
+                    <DropdownItem
+                      tag={[Function]}
+                      to="/history/daily"
+                      toggle={true}
+                    >
+                      Daily
+                    </DropdownItem>
+                    <DropdownItem
+                      tag={[Function]}
+                      to="/history/monthly"
+                      toggle={true}
+                    >
+                      Monthly
+                    </DropdownItem>
                   </DropdownMenu>
-</UncontrolledDropdown>,
+                </UncontrolledDropdown>,
                 <UncontrolledDropdown
                   inNavbar={true}
                   nav={true}
->
+                >
                   <DropdownToggle
-                                    aria-haspopup={true}
-                                    caret={true}
-                                    color="secondary"
-                                    nav={true}
+                    aria-haspopup={true}
+                    caret={true}
+                    color="secondary"
+                    nav={true}
                   >
-                                    Usage
+                    Usage
                   </DropdownToggle>
                   <DropdownMenu
-                                    className="navbar-light"
-                                    flip={true}
-                                    tag="div"
+                    className="navbar-light"
+                    flip={true}
+                    tag="div"
                   >
-                                    <DropdownItem
-                                                      tag={[Function]}
-                                                      to="/usage/monthly"
-                                                      toggle={true}
-                                    >
-                                                      Monthly
-                                    </DropdownItem>
+                    <DropdownItem
+                      tag={[Function]}
+                      to="/usage/monthly"
+                      toggle={true}
+                    >
+                      Monthly
+                    </DropdownItem>
                   </DropdownMenu>
-</UncontrolledDropdown>,
+                </UncontrolledDropdown>,
                 <NavItem
                   tag="li"
->
+                >
                   <NavLink
-                                    tag={[Function]}
-                                    to="/about"
+                    tag={[Function]}
+                    to="/about"
                   >
-                                    About
+                    About
                   </NavLink>
-</NavItem>,
+                </NavItem>,
               ],
               "className": "md-auto",
               "navbar": true,
@@ -561,9 +561,9 @@ ShallowWrapper {
                   "children": <NavLink
                     tag={[Function]}
                     to="/"
->
+                  >
                     Home
-</NavLink>,
+                  </NavLink>,
                   "tag": "li",
                 },
                 "ref": null,
@@ -590,9 +590,9 @@ ShallowWrapper {
                   "children": <NavLink
                     tag={[Function]}
                     to="/live"
->
+                  >
                     Live
-</NavLink>,
+                  </NavLink>,
                   "tag": "li",
                 },
                 "ref": null,
@@ -619,9 +619,9 @@ ShallowWrapper {
                   "children": <NavLink
                     tag={[Function]}
                     to="/recent"
->
+                  >
                     Recent
-</NavLink>,
+                  </NavLink>,
                   "tag": "li",
                 },
                 "ref": null,
@@ -651,29 +651,29 @@ ShallowWrapper {
                       caret={true}
                       color="secondary"
                       nav={true}
->
+                    >
                       History
-</DropdownToggle>,
+                    </DropdownToggle>,
                     <DropdownMenu
                       className="navbar-light"
                       flip={true}
                       tag="div"
->
+                    >
                       <DropdownItem
-                                            tag={[Function]}
-                                            to="/history/daily"
-                                            toggle={true}
+                        tag={[Function]}
+                        to="/history/daily"
+                        toggle={true}
                       >
-                                            Daily
+                        Daily
                       </DropdownItem>
                       <DropdownItem
-                                            tag={[Function]}
-                                            to="/history/monthly"
-                                            toggle={true}
+                        tag={[Function]}
+                        to="/history/monthly"
+                        toggle={true}
                       >
-                                            Monthly
+                        Monthly
                       </DropdownItem>
-</DropdownMenu>,
+                    </DropdownMenu>,
                   ],
                   "inNavbar": true,
                   "nav": true,
@@ -705,16 +705,16 @@ ShallowWrapper {
                           tag={[Function]}
                           to="/history/daily"
                           toggle={true}
->
+                        >
                           Daily
-</DropdownItem>,
+                        </DropdownItem>,
                         <DropdownItem
                           tag={[Function]}
                           to="/history/monthly"
                           toggle={true}
->
+                        >
                           Monthly
-</DropdownItem>,
+                        </DropdownItem>,
                       ],
                       "className": "navbar-light",
                       "flip": true,
@@ -767,22 +767,22 @@ ShallowWrapper {
                       caret={true}
                       color="secondary"
                       nav={true}
->
+                    >
                       Usage
-</DropdownToggle>,
+                    </DropdownToggle>,
                     <DropdownMenu
                       className="navbar-light"
                       flip={true}
                       tag="div"
->
+                    >
                       <DropdownItem
-                                            tag={[Function]}
-                                            to="/usage/monthly"
-                                            toggle={true}
+                        tag={[Function]}
+                        to="/usage/monthly"
+                        toggle={true}
                       >
-                                            Monthly
+                        Monthly
                       </DropdownItem>
-</DropdownMenu>,
+                    </DropdownMenu>,
                   ],
                   "inNavbar": true,
                   "nav": true,
@@ -813,9 +813,9 @@ ShallowWrapper {
                         tag={[Function]}
                         to="/usage/monthly"
                         toggle={true}
->
+                      >
                         Monthly
-</DropdownItem>,
+                      </DropdownItem>,
                       "className": "navbar-light",
                       "flip": true,
                       "tag": "div",
@@ -848,9 +848,9 @@ ShallowWrapper {
                   "children": <NavLink
                     tag={[Function]}
                     to="/about"
->
+                  >
                     About
-</NavLink>,
+                  </NavLink>,
                   "tag": "li",
                 },
                 "ref": null,
@@ -887,138 +887,138 @@ ShallowWrapper {
       "props": Object {
         "children": <Container
           tag="div"
->
+        >
           <NavbarToggler
-                    onClick={[Function]}
-                    tag="button"
-                    type="button"
+            onClick={[Function]}
+            tag="button"
+            type="button"
           />
           <Collapse
-                    appear={false}
-                    enter={true}
-                    exit={true}
-                    in={false}
-                    isOpen={false}
-                    mountOnEnter={false}
-                    navbar={true}
-                    onEnter={[Function]}
-                    onEntered={[Function]}
-                    onEntering={[Function]}
-                    onExit={[Function]}
-                    onExited={[Function]}
-                    onExiting={[Function]}
-                    tag="div"
-                    timeout={350}
-                    unmountOnExit={false}
+            appear={false}
+            enter={true}
+            exit={true}
+            in={false}
+            isOpen={false}
+            mountOnEnter={false}
+            navbar={true}
+            onEnter={[Function]}
+            onEntered={[Function]}
+            onEntering={[Function]}
+            onExit={[Function]}
+            onExited={[Function]}
+            onExiting={[Function]}
+            tag="div"
+            timeout={350}
+            unmountOnExit={false}
           >
-                    <Nav
-                              className="md-auto"
-                              navbar={true}
-                              tag="ul"
-                              vertical={false}
-                    >
-                              <NavItem
-                                        tag="li"
-                              >
-                                        <NavLink
-                                                  tag={[Function]}
-                                                  to="/"
-                                        >
-                                                  Home
-                                        </NavLink>
-                              </NavItem>
-                              <NavItem
-                                        tag="li"
-                              >
-                                        <NavLink
-                                                  tag={[Function]}
-                                                  to="/live"
-                                        >
-                                                  Live
-                                        </NavLink>
-                              </NavItem>
-                              <NavItem
-                                        tag="li"
-                              >
-                                        <NavLink
-                                                  tag={[Function]}
-                                                  to="/recent"
-                                        >
-                                                  Recent
-                                        </NavLink>
-                              </NavItem>
-                              <UncontrolledDropdown
-                                        inNavbar={true}
-                                        nav={true}
-                              >
-                                        <DropdownToggle
-                                                  aria-haspopup={true}
-                                                  caret={true}
-                                                  color="secondary"
-                                                  nav={true}
-                                        >
-                                                  History
-                                        </DropdownToggle>
-                                        <DropdownMenu
-                                                  className="navbar-light"
-                                                  flip={true}
-                                                  tag="div"
-                                        >
-                                                  <DropdownItem
-                                                            tag={[Function]}
-                                                            to="/history/daily"
-                                                            toggle={true}
-                                                  >
-                                                            Daily
-                                                  </DropdownItem>
-                                                  <DropdownItem
-                                                            tag={[Function]}
-                                                            to="/history/monthly"
-                                                            toggle={true}
-                                                  >
-                                                            Monthly
-                                                  </DropdownItem>
-                                        </DropdownMenu>
-                              </UncontrolledDropdown>
-                              <UncontrolledDropdown
-                                        inNavbar={true}
-                                        nav={true}
-                              >
-                                        <DropdownToggle
-                                                  aria-haspopup={true}
-                                                  caret={true}
-                                                  color="secondary"
-                                                  nav={true}
-                                        >
-                                                  Usage
-                                        </DropdownToggle>
-                                        <DropdownMenu
-                                                  className="navbar-light"
-                                                  flip={true}
-                                                  tag="div"
-                                        >
-                                                  <DropdownItem
-                                                            tag={[Function]}
-                                                            to="/usage/monthly"
-                                                            toggle={true}
-                                                  >
-                                                            Monthly
-                                                  </DropdownItem>
-                                        </DropdownMenu>
-                              </UncontrolledDropdown>
-                              <NavItem
-                                        tag="li"
-                              >
-                                        <NavLink
-                                                  tag={[Function]}
-                                                  to="/about"
-                                        >
-                                                  About
-                                        </NavLink>
-                              </NavItem>
-                    </Nav>
+            <Nav
+              className="md-auto"
+              navbar={true}
+              tag="ul"
+              vertical={false}
+            >
+              <NavItem
+                tag="li"
+              >
+                <NavLink
+                  tag={[Function]}
+                  to="/"
+                >
+                  Home
+                </NavLink>
+              </NavItem>
+              <NavItem
+                tag="li"
+              >
+                <NavLink
+                  tag={[Function]}
+                  to="/live"
+                >
+                  Live
+                </NavLink>
+              </NavItem>
+              <NavItem
+                tag="li"
+              >
+                <NavLink
+                  tag={[Function]}
+                  to="/recent"
+                >
+                  Recent
+                </NavLink>
+              </NavItem>
+              <UncontrolledDropdown
+                inNavbar={true}
+                nav={true}
+              >
+                <DropdownToggle
+                  aria-haspopup={true}
+                  caret={true}
+                  color="secondary"
+                  nav={true}
+                >
+                  History
+                </DropdownToggle>
+                <DropdownMenu
+                  className="navbar-light"
+                  flip={true}
+                  tag="div"
+                >
+                  <DropdownItem
+                    tag={[Function]}
+                    to="/history/daily"
+                    toggle={true}
+                  >
+                    Daily
+                  </DropdownItem>
+                  <DropdownItem
+                    tag={[Function]}
+                    to="/history/monthly"
+                    toggle={true}
+                  >
+                    Monthly
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <UncontrolledDropdown
+                inNavbar={true}
+                nav={true}
+              >
+                <DropdownToggle
+                  aria-haspopup={true}
+                  caret={true}
+                  color="secondary"
+                  nav={true}
+                >
+                  Usage
+                </DropdownToggle>
+                <DropdownMenu
+                  className="navbar-light"
+                  flip={true}
+                  tag="div"
+                >
+                  <DropdownItem
+                    tag={[Function]}
+                    to="/usage/monthly"
+                    toggle={true}
+                  >
+                    Monthly
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <NavItem
+                tag="li"
+              >
+                <NavLink
+                  tag={[Function]}
+                  to="/about"
+                >
+                  About
+                </NavLink>
+              </NavItem>
+            </Nav>
           </Collapse>
-</Container>,
+        </Container>,
         "color": "primary",
         "dark": true,
         "expand": "md",
@@ -1035,7 +1035,7 @@ ShallowWrapper {
               onClick={[Function]}
               tag="button"
               type="button"
-/>,
+            />,
             <Collapse
               appear={false}
               enter={true}
@@ -1053,114 +1053,114 @@ ShallowWrapper {
               tag="div"
               timeout={350}
               unmountOnExit={false}
->
+            >
               <Nav
-                            className="md-auto"
-                            navbar={true}
-                            tag="ul"
-                            vertical={false}
+                className="md-auto"
+                navbar={true}
+                tag="ul"
+                vertical={false}
               >
-                            <NavItem
-                                          tag="li"
-                            >
-                                          <NavLink
-                                                        tag={[Function]}
-                                                        to="/"
-                                          >
-                                                        Home
-                                          </NavLink>
-                            </NavItem>
-                            <NavItem
-                                          tag="li"
-                            >
-                                          <NavLink
-                                                        tag={[Function]}
-                                                        to="/live"
-                                          >
-                                                        Live
-                                          </NavLink>
-                            </NavItem>
-                            <NavItem
-                                          tag="li"
-                            >
-                                          <NavLink
-                                                        tag={[Function]}
-                                                        to="/recent"
-                                          >
-                                                        Recent
-                                          </NavLink>
-                            </NavItem>
-                            <UncontrolledDropdown
-                                          inNavbar={true}
-                                          nav={true}
-                            >
-                                          <DropdownToggle
-                                                        aria-haspopup={true}
-                                                        caret={true}
-                                                        color="secondary"
-                                                        nav={true}
-                                          >
-                                                        History
-                                          </DropdownToggle>
-                                          <DropdownMenu
-                                                        className="navbar-light"
-                                                        flip={true}
-                                                        tag="div"
-                                          >
-                                                        <DropdownItem
-                                                                      tag={[Function]}
-                                                                      to="/history/daily"
-                                                                      toggle={true}
-                                                        >
-                                                                      Daily
-                                                        </DropdownItem>
-                                                        <DropdownItem
-                                                                      tag={[Function]}
-                                                                      to="/history/monthly"
-                                                                      toggle={true}
-                                                        >
-                                                                      Monthly
-                                                        </DropdownItem>
-                                          </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <UncontrolledDropdown
-                                          inNavbar={true}
-                                          nav={true}
-                            >
-                                          <DropdownToggle
-                                                        aria-haspopup={true}
-                                                        caret={true}
-                                                        color="secondary"
-                                                        nav={true}
-                                          >
-                                                        Usage
-                                          </DropdownToggle>
-                                          <DropdownMenu
-                                                        className="navbar-light"
-                                                        flip={true}
-                                                        tag="div"
-                                          >
-                                                        <DropdownItem
-                                                                      tag={[Function]}
-                                                                      to="/usage/monthly"
-                                                                      toggle={true}
-                                                        >
-                                                                      Monthly
-                                                        </DropdownItem>
-                                          </DropdownMenu>
-                            </UncontrolledDropdown>
-                            <NavItem
-                                          tag="li"
-                            >
-                                          <NavLink
-                                                        tag={[Function]}
-                                                        to="/about"
-                                          >
-                                                        About
-                                          </NavLink>
-                            </NavItem>
+                <NavItem
+                  tag="li"
+                >
+                  <NavLink
+                    tag={[Function]}
+                    to="/"
+                  >
+                    Home
+                  </NavLink>
+                </NavItem>
+                <NavItem
+                  tag="li"
+                >
+                  <NavLink
+                    tag={[Function]}
+                    to="/live"
+                  >
+                    Live
+                  </NavLink>
+                </NavItem>
+                <NavItem
+                  tag="li"
+                >
+                  <NavLink
+                    tag={[Function]}
+                    to="/recent"
+                  >
+                    Recent
+                  </NavLink>
+                </NavItem>
+                <UncontrolledDropdown
+                  inNavbar={true}
+                  nav={true}
+                >
+                  <DropdownToggle
+                    aria-haspopup={true}
+                    caret={true}
+                    color="secondary"
+                    nav={true}
+                  >
+                    History
+                  </DropdownToggle>
+                  <DropdownMenu
+                    className="navbar-light"
+                    flip={true}
+                    tag="div"
+                  >
+                    <DropdownItem
+                      tag={[Function]}
+                      to="/history/daily"
+                      toggle={true}
+                    >
+                      Daily
+                    </DropdownItem>
+                    <DropdownItem
+                      tag={[Function]}
+                      to="/history/monthly"
+                      toggle={true}
+                    >
+                      Monthly
+                    </DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+                <UncontrolledDropdown
+                  inNavbar={true}
+                  nav={true}
+                >
+                  <DropdownToggle
+                    aria-haspopup={true}
+                    caret={true}
+                    color="secondary"
+                    nav={true}
+                  >
+                    Usage
+                  </DropdownToggle>
+                  <DropdownMenu
+                    className="navbar-light"
+                    flip={true}
+                    tag="div"
+                  >
+                    <DropdownItem
+                      tag={[Function]}
+                      to="/usage/monthly"
+                      toggle={true}
+                    >
+                      Monthly
+                    </DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+                <NavItem
+                  tag="li"
+                >
+                  <NavLink
+                    tag={[Function]}
+                    to="/about"
+                  >
+                    About
+                  </NavLink>
+                </NavItem>
               </Nav>
-</Collapse>,
+            </Collapse>,
           ],
           "tag": "div",
         },
@@ -1190,107 +1190,107 @@ ShallowWrapper {
                 navbar={true}
                 tag="ul"
                 vertical={false}
->
+              >
                 <NavItem
-                                tag="li"
+                  tag="li"
                 >
-                                <NavLink
-                                                tag={[Function]}
-                                                to="/"
-                                >
-                                                Home
-                                </NavLink>
+                  <NavLink
+                    tag={[Function]}
+                    to="/"
+                  >
+                    Home
+                  </NavLink>
                 </NavItem>
                 <NavItem
-                                tag="li"
+                  tag="li"
                 >
-                                <NavLink
-                                                tag={[Function]}
-                                                to="/live"
-                                >
-                                                Live
-                                </NavLink>
+                  <NavLink
+                    tag={[Function]}
+                    to="/live"
+                  >
+                    Live
+                  </NavLink>
                 </NavItem>
                 <NavItem
-                                tag="li"
+                  tag="li"
                 >
-                                <NavLink
-                                                tag={[Function]}
-                                                to="/recent"
-                                >
-                                                Recent
-                                </NavLink>
+                  <NavLink
+                    tag={[Function]}
+                    to="/recent"
+                  >
+                    Recent
+                  </NavLink>
                 </NavItem>
                 <UncontrolledDropdown
-                                inNavbar={true}
-                                nav={true}
+                  inNavbar={true}
+                  nav={true}
                 >
-                                <DropdownToggle
-                                                aria-haspopup={true}
-                                                caret={true}
-                                                color="secondary"
-                                                nav={true}
-                                >
-                                                History
-                                </DropdownToggle>
-                                <DropdownMenu
-                                                className="navbar-light"
-                                                flip={true}
-                                                tag="div"
-                                >
-                                                <DropdownItem
-                                                                tag={[Function]}
-                                                                to="/history/daily"
-                                                                toggle={true}
-                                                >
-                                                                Daily
-                                                </DropdownItem>
-                                                <DropdownItem
-                                                                tag={[Function]}
-                                                                to="/history/monthly"
-                                                                toggle={true}
-                                                >
-                                                                Monthly
-                                                </DropdownItem>
-                                </DropdownMenu>
+                  <DropdownToggle
+                    aria-haspopup={true}
+                    caret={true}
+                    color="secondary"
+                    nav={true}
+                  >
+                    History
+                  </DropdownToggle>
+                  <DropdownMenu
+                    className="navbar-light"
+                    flip={true}
+                    tag="div"
+                  >
+                    <DropdownItem
+                      tag={[Function]}
+                      to="/history/daily"
+                      toggle={true}
+                    >
+                      Daily
+                    </DropdownItem>
+                    <DropdownItem
+                      tag={[Function]}
+                      to="/history/monthly"
+                      toggle={true}
+                    >
+                      Monthly
+                    </DropdownItem>
+                  </DropdownMenu>
                 </UncontrolledDropdown>
                 <UncontrolledDropdown
-                                inNavbar={true}
-                                nav={true}
+                  inNavbar={true}
+                  nav={true}
                 >
-                                <DropdownToggle
-                                                aria-haspopup={true}
-                                                caret={true}
-                                                color="secondary"
-                                                nav={true}
-                                >
-                                                Usage
-                                </DropdownToggle>
-                                <DropdownMenu
-                                                className="navbar-light"
-                                                flip={true}
-                                                tag="div"
-                                >
-                                                <DropdownItem
-                                                                tag={[Function]}
-                                                                to="/usage/monthly"
-                                                                toggle={true}
-                                                >
-                                                                Monthly
-                                                </DropdownItem>
-                                </DropdownMenu>
+                  <DropdownToggle
+                    aria-haspopup={true}
+                    caret={true}
+                    color="secondary"
+                    nav={true}
+                  >
+                    Usage
+                  </DropdownToggle>
+                  <DropdownMenu
+                    className="navbar-light"
+                    flip={true}
+                    tag="div"
+                  >
+                    <DropdownItem
+                      tag={[Function]}
+                      to="/usage/monthly"
+                      toggle={true}
+                    >
+                      Monthly
+                    </DropdownItem>
+                  </DropdownMenu>
                 </UncontrolledDropdown>
                 <NavItem
-                                tag="li"
+                  tag="li"
                 >
-                                <NavLink
-                                                tag={[Function]}
-                                                to="/about"
-                                >
-                                                About
-                                </NavLink>
+                  <NavLink
+                    tag={[Function]}
+                    to="/about"
+                  >
+                    About
+                  </NavLink>
                 </NavItem>
-</Nav>,
+              </Nav>,
               "enter": true,
               "exit": true,
               "in": false,
@@ -1316,103 +1316,103 @@ ShallowWrapper {
                 "children": Array [
                   <NavItem
                     tag="li"
->
+                  >
                     <NavLink
-                                        tag={[Function]}
-                                        to="/"
+                      tag={[Function]}
+                      to="/"
                     >
-                                        Home
+                      Home
                     </NavLink>
-</NavItem>,
+                  </NavItem>,
                   <NavItem
                     tag="li"
->
+                  >
                     <NavLink
-                                        tag={[Function]}
-                                        to="/live"
+                      tag={[Function]}
+                      to="/live"
                     >
-                                        Live
+                      Live
                     </NavLink>
-</NavItem>,
+                  </NavItem>,
                   <NavItem
                     tag="li"
->
+                  >
                     <NavLink
-                                        tag={[Function]}
-                                        to="/recent"
+                      tag={[Function]}
+                      to="/recent"
                     >
-                                        Recent
+                      Recent
                     </NavLink>
-</NavItem>,
+                  </NavItem>,
                   <UncontrolledDropdown
                     inNavbar={true}
                     nav={true}
->
+                  >
                     <DropdownToggle
-                                        aria-haspopup={true}
-                                        caret={true}
-                                        color="secondary"
-                                        nav={true}
+                      aria-haspopup={true}
+                      caret={true}
+                      color="secondary"
+                      nav={true}
                     >
-                                        History
+                      History
                     </DropdownToggle>
                     <DropdownMenu
-                                        className="navbar-light"
-                                        flip={true}
-                                        tag="div"
+                      className="navbar-light"
+                      flip={true}
+                      tag="div"
                     >
-                                        <DropdownItem
-                                                            tag={[Function]}
-                                                            to="/history/daily"
-                                                            toggle={true}
-                                        >
-                                                            Daily
-                                        </DropdownItem>
-                                        <DropdownItem
-                                                            tag={[Function]}
-                                                            to="/history/monthly"
-                                                            toggle={true}
-                                        >
-                                                            Monthly
-                                        </DropdownItem>
+                      <DropdownItem
+                        tag={[Function]}
+                        to="/history/daily"
+                        toggle={true}
+                      >
+                        Daily
+                      </DropdownItem>
+                      <DropdownItem
+                        tag={[Function]}
+                        to="/history/monthly"
+                        toggle={true}
+                      >
+                        Monthly
+                      </DropdownItem>
                     </DropdownMenu>
-</UncontrolledDropdown>,
+                  </UncontrolledDropdown>,
                   <UncontrolledDropdown
                     inNavbar={true}
                     nav={true}
->
+                  >
                     <DropdownToggle
-                                        aria-haspopup={true}
-                                        caret={true}
-                                        color="secondary"
-                                        nav={true}
+                      aria-haspopup={true}
+                      caret={true}
+                      color="secondary"
+                      nav={true}
                     >
-                                        Usage
+                      Usage
                     </DropdownToggle>
                     <DropdownMenu
-                                        className="navbar-light"
-                                        flip={true}
-                                        tag="div"
+                      className="navbar-light"
+                      flip={true}
+                      tag="div"
                     >
-                                        <DropdownItem
-                                                            tag={[Function]}
-                                                            to="/usage/monthly"
-                                                            toggle={true}
-                                        >
-                                                            Monthly
-                                        </DropdownItem>
+                      <DropdownItem
+                        tag={[Function]}
+                        to="/usage/monthly"
+                        toggle={true}
+                      >
+                        Monthly
+                      </DropdownItem>
                     </DropdownMenu>
-</UncontrolledDropdown>,
+                  </UncontrolledDropdown>,
                   <NavItem
                     tag="li"
->
+                  >
                     <NavLink
-                                        tag={[Function]}
-                                        to="/about"
+                      tag={[Function]}
+                      to="/about"
                     >
-                                        About
+                      About
                     </NavLink>
-</NavItem>,
+                  </NavItem>,
                 ],
                 "className": "md-auto",
                 "navbar": true,
@@ -1429,9 +1429,9 @@ ShallowWrapper {
                     "children": <NavLink
                       tag={[Function]}
                       to="/"
->
+                    >
                       Home
-</NavLink>,
+                    </NavLink>,
                     "tag": "li",
                   },
                   "ref": null,
@@ -1458,9 +1458,9 @@ ShallowWrapper {
                     "children": <NavLink
                       tag={[Function]}
                       to="/live"
->
+                    >
                       Live
-</NavLink>,
+                    </NavLink>,
                     "tag": "li",
                   },
                   "ref": null,
@@ -1487,9 +1487,9 @@ ShallowWrapper {
                     "children": <NavLink
                       tag={[Function]}
                       to="/recent"
->
+                    >
                       Recent
-</NavLink>,
+                    </NavLink>,
                     "tag": "li",
                   },
                   "ref": null,
@@ -1519,29 +1519,29 @@ ShallowWrapper {
                         caret={true}
                         color="secondary"
                         nav={true}
->
+                      >
                         History
-</DropdownToggle>,
+                      </DropdownToggle>,
                       <DropdownMenu
                         className="navbar-light"
                         flip={true}
                         tag="div"
->
+                      >
                         <DropdownItem
-                                                tag={[Function]}
-                                                to="/history/daily"
-                                                toggle={true}
+                          tag={[Function]}
+                          to="/history/daily"
+                          toggle={true}
                         >
-                                                Daily
+                          Daily
                         </DropdownItem>
                         <DropdownItem
-                                                tag={[Function]}
-                                                to="/history/monthly"
-                                                toggle={true}
+                          tag={[Function]}
+                          to="/history/monthly"
+                          toggle={true}
                         >
-                                                Monthly
+                          Monthly
                         </DropdownItem>
-</DropdownMenu>,
+                      </DropdownMenu>,
                     ],
                     "inNavbar": true,
                     "nav": true,
@@ -1573,16 +1573,16 @@ ShallowWrapper {
                             tag={[Function]}
                             to="/history/daily"
                             toggle={true}
->
+                          >
                             Daily
-</DropdownItem>,
+                          </DropdownItem>,
                           <DropdownItem
                             tag={[Function]}
                             to="/history/monthly"
                             toggle={true}
->
+                          >
                             Monthly
-</DropdownItem>,
+                          </DropdownItem>,
                         ],
                         "className": "navbar-light",
                         "flip": true,
@@ -1635,22 +1635,22 @@ ShallowWrapper {
                         caret={true}
                         color="secondary"
                         nav={true}
->
+                      >
                         Usage
-</DropdownToggle>,
+                      </DropdownToggle>,
                       <DropdownMenu
                         className="navbar-light"
                         flip={true}
                         tag="div"
->
+                      >
                         <DropdownItem
-                                                tag={[Function]}
-                                                to="/usage/monthly"
-                                                toggle={true}
+                          tag={[Function]}
+                          to="/usage/monthly"
+                          toggle={true}
                         >
-                                                Monthly
+                          Monthly
                         </DropdownItem>
-</DropdownMenu>,
+                      </DropdownMenu>,
                     ],
                     "inNavbar": true,
                     "nav": true,
@@ -1681,9 +1681,9 @@ ShallowWrapper {
                           tag={[Function]}
                           to="/usage/monthly"
                           toggle={true}
->
+                        >
                           Monthly
-</DropdownItem>,
+                        </DropdownItem>,
                         "className": "navbar-light",
                         "flip": true,
                         "tag": "div",
@@ -1716,9 +1716,9 @@ ShallowWrapper {
                     "children": <NavLink
                       tag={[Function]}
                       to="/about"
->
+                    >
                       About
-</NavLink>,
+                    </NavLink>,
                     "tag": "li",
                   },
                   "ref": null,

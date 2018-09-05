@@ -6,15 +6,15 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DailyReadingView
     data={
-        Object {
-            "elecCon": 0.265,
-            "electricityLow": 2150.714,
-            "electricityNormal": 2702.641,
-            "gas": 3781.676,
-            "recordDate": 2018-01-05T00:00:00.000Z,
-          }
+      Object {
+        "elecCon": 0.265,
+        "electricityLow": 2150.714,
+        "electricityNormal": 2702.641,
+        "gas": 3781.676,
+        "recordDate": 2018-01-05T00:00:00.000Z,
+      }
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -30,52 +30,52 @@ ShallowWrapper {
       "borderless": true,
       "children": <tbody>
         <tr>
-                <th
-                        scope="row"
-                >
-                        Date recorded
-                </th>
-                <td>
-                        Friday, January 5th 2018
-                </td>
+          <th
+            scope="row"
+          >
+            Date recorded
+          </th>
+          <td>
+            Friday, January 5th 2018
+          </td>
         </tr>
         <tr>
-                <th
-                        scope="row"
-                >
-                        Electricity (low)
-                </th>
-                <td>
-                        2150.714
-                         kWh
-                </td>
+          <th
+            scope="row"
+          >
+            Electricity (low)
+          </th>
+          <td>
+            2150.714
+             kWh
+          </td>
         </tr>
         <tr>
-                <th
-                        scope="row"
-                >
-                        Electricity (normal)
-                </th>
-                <td>
-                        2702.641
-                         kWh
-                </td>
+          <th
+            scope="row"
+          >
+            Electricity (normal)
+          </th>
+          <td>
+            2702.641
+             kWh
+          </td>
         </tr>
         <tr>
-                <th
-                        scope="row"
-                >
-                        Gas
-                </th>
-                <td>
-                        3781.676
-                         m
-                        <sup>
-                                3
-                        </sup>
-                </td>
+          <th
+            scope="row"
+          >
+            Gas
+          </th>
+          <td>
+            3781.676
+             m
+            <sup>
+              3
+            </sup>
+          </td>
         </tr>
-</tbody>,
+      </tbody>,
       "responsive": true,
       "responsiveTag": "div",
       "tag": "table",
@@ -89,50 +89,50 @@ ShallowWrapper {
         "children": Array [
           <tr>
             <th
-                        scope="row"
+              scope="row"
             >
-                        Date recorded
+              Date recorded
             </th>
             <td>
-                        Friday, January 5th 2018
+              Friday, January 5th 2018
             </td>
-</tr>,
+          </tr>,
           <tr>
             <th
-                        scope="row"
+              scope="row"
             >
-                        Electricity (low)
+              Electricity (low)
             </th>
             <td>
-                        2150.714
-                         kWh
+              2150.714
+               kWh
             </td>
-</tr>,
+          </tr>,
           <tr>
             <th
-                        scope="row"
+              scope="row"
             >
-                        Electricity (normal)
+              Electricity (normal)
             </th>
             <td>
-                        2702.641
-                         kWh
+              2702.641
+               kWh
             </td>
-</tr>,
+          </tr>,
           <tr>
             <th
-                        scope="row"
+              scope="row"
             >
-                        Gas
+              Gas
             </th>
             <td>
-                        3781.676
-                         m
-                        <sup>
-                                    3
-                        </sup>
+              3781.676
+               m
+              <sup>
+                3
+              </sup>
             </td>
-</tr>,
+          </tr>,
         ],
       },
       "ref": null,
@@ -145,12 +145,12 @@ ShallowWrapper {
             "children": Array [
               <th
                 scope="row"
->
+              >
                 Date recorded
-</th>,
+              </th>,
               <td>
                 Friday, January 5th 2018
-</td>,
+              </td>,
             ],
           },
           "ref": null,
@@ -189,13 +189,13 @@ ShallowWrapper {
             "children": Array [
               <th
                 scope="row"
->
+              >
                 Electricity (low)
-</th>,
+              </th>,
               <td>
                 2150.714
                  kWh
-</td>,
+              </td>,
             ],
           },
           "ref": null,
@@ -240,13 +240,13 @@ ShallowWrapper {
             "children": Array [
               <th
                 scope="row"
->
+              >
                 Electricity (normal)
-</th>,
+              </th>,
               <td>
                 2702.641
                  kWh
-</td>,
+              </td>,
             ],
           },
           "ref": null,
@@ -291,16 +291,16 @@ ShallowWrapper {
             "children": Array [
               <th
                 scope="row"
->
+              >
                 Gas
-</th>,
+              </th>,
               <td>
                 3781.676
                  m
                 <sup>
-                                3
+                  3
                 </sup>
-</td>,
+              </td>,
             ],
           },
           "ref": null,
@@ -327,7 +327,7 @@ ShallowWrapper {
                   " m",
                   <sup>
                     3
-</sup>,
+                  </sup>,
                 ],
               },
               "ref": null,
@@ -365,52 +365,52 @@ ShallowWrapper {
         "borderless": true,
         "children": <tbody>
           <tr>
-                    <th
-                              scope="row"
-                    >
-                              Date recorded
-                    </th>
-                    <td>
-                              Friday, January 5th 2018
-                    </td>
+            <th
+              scope="row"
+            >
+              Date recorded
+            </th>
+            <td>
+              Friday, January 5th 2018
+            </td>
           </tr>
           <tr>
-                    <th
-                              scope="row"
-                    >
-                              Electricity (low)
-                    </th>
-                    <td>
-                              2150.714
-                               kWh
-                    </td>
+            <th
+              scope="row"
+            >
+              Electricity (low)
+            </th>
+            <td>
+              2150.714
+               kWh
+            </td>
           </tr>
           <tr>
-                    <th
-                              scope="row"
-                    >
-                              Electricity (normal)
-                    </th>
-                    <td>
-                              2702.641
-                               kWh
-                    </td>
+            <th
+              scope="row"
+            >
+              Electricity (normal)
+            </th>
+            <td>
+              2702.641
+               kWh
+            </td>
           </tr>
           <tr>
-                    <th
-                              scope="row"
-                    >
-                              Gas
-                    </th>
-                    <td>
-                              3781.676
-                               m
-                              <sup>
-                                        3
-                              </sup>
-                    </td>
+            <th
+              scope="row"
+            >
+              Gas
+            </th>
+            <td>
+              3781.676
+               m
+              <sup>
+                3
+              </sup>
+            </td>
           </tr>
-</tbody>,
+        </tbody>,
         "responsive": true,
         "responsiveTag": "div",
         "tag": "table",
@@ -424,50 +424,50 @@ ShallowWrapper {
           "children": Array [
             <tr>
               <th
-                            scope="row"
+                scope="row"
               >
-                            Date recorded
+                Date recorded
               </th>
               <td>
-                            Friday, January 5th 2018
+                Friday, January 5th 2018
               </td>
-</tr>,
+            </tr>,
             <tr>
               <th
-                            scope="row"
+                scope="row"
               >
-                            Electricity (low)
+                Electricity (low)
               </th>
               <td>
-                            2150.714
-                             kWh
+                2150.714
+                 kWh
               </td>
-</tr>,
+            </tr>,
             <tr>
               <th
-                            scope="row"
+                scope="row"
               >
-                            Electricity (normal)
+                Electricity (normal)
               </th>
               <td>
-                            2702.641
-                             kWh
+                2702.641
+                 kWh
               </td>
-</tr>,
+            </tr>,
             <tr>
               <th
-                            scope="row"
+                scope="row"
               >
-                            Gas
+                Gas
               </th>
               <td>
-                            3781.676
-                             m
-                            <sup>
-                                          3
-                            </sup>
+                3781.676
+                 m
+                <sup>
+                  3
+                </sup>
               </td>
-</tr>,
+            </tr>,
           ],
         },
         "ref": null,
@@ -480,12 +480,12 @@ ShallowWrapper {
               "children": Array [
                 <th
                   scope="row"
->
+                >
                   Date recorded
-</th>,
+                </th>,
                 <td>
                   Friday, January 5th 2018
-</td>,
+                </td>,
               ],
             },
             "ref": null,
@@ -524,13 +524,13 @@ ShallowWrapper {
               "children": Array [
                 <th
                   scope="row"
->
+                >
                   Electricity (low)
-</th>,
+                </th>,
                 <td>
                   2150.714
                    kWh
-</td>,
+                </td>,
               ],
             },
             "ref": null,
@@ -575,13 +575,13 @@ ShallowWrapper {
               "children": Array [
                 <th
                   scope="row"
->
+                >
                   Electricity (normal)
-</th>,
+                </th>,
                 <td>
                   2702.641
                    kWh
-</td>,
+                </td>,
               ],
             },
             "ref": null,
@@ -626,16 +626,16 @@ ShallowWrapper {
               "children": Array [
                 <th
                   scope="row"
->
+                >
                   Gas
-</th>,
+                </th>,
                 <td>
                   3781.676
                    m
                   <sup>
-                                    3
+                    3
                   </sup>
-</td>,
+                </td>,
               ],
             },
             "ref": null,
@@ -662,7 +662,7 @@ ShallowWrapper {
                     " m",
                     <sup>
                       3
-</sup>,
+                    </sup>,
                   ],
                 },
                 "ref": null,
