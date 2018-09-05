@@ -2,6 +2,8 @@ import * as fetchMock from 'fetch-mock';
 
 import * as api from '../api';
 
+(fetchMock as any).config.overwriteRoutes = true;
+
 describe('Generic helper functions', () => {
     afterEach(() => {
         fetchMock.restore();
@@ -72,7 +74,7 @@ describe('retrieveApplicationInfo()', () => {
     it('should invoke /api/info', () => {
         // Arrange
         const body = JSON.stringify({ appVersion: 1 });
-        fetchMock.once('/api/info', { status: 200, body }, { method: 'GET' });
+        fetchMock.get('/api/info', { status: 200, body });
 
         // Act
         api.retrieveApplicationInfo().then((result) => {
@@ -86,7 +88,7 @@ describe('retrieveHistoricalReadingsForDate()', () => {
     it('should invoke /api/history with date parameter', () => {
         // Arrange
         const body = JSON.stringify({ electricityLow: 15 });
-        fetchMock.once('/api/history?date=2014-11-30', { status: 200, body }, { method: 'GET' });
+        fetchMock.get('/api/history?date=2014-11-30', { status: 200, body });
 
         // Act
         const searchDate = new Date(2014, 10, 30);
@@ -100,7 +102,7 @@ describe('retrieveHistoricalReadingsForDate()', () => {
         it('should show a message that there is no reading', () => {
             // Arrange
             const body = 'No record found for date 2014-11-30';
-            fetchMock.once('/api/history?date=2014-11-30', { status: 404, body });
+            fetchMock.get('/api/history?date=2014-11-30', { status: 404, body });
 
             // Assert
             const searchDate = new Date(2014, 10, 30);
@@ -116,7 +118,7 @@ describe('retrieveHistoricalReadingsForMonth()', () => {
     it('should invoke /api/history with month and year parameters', () => {
         // Arrange
         const body = JSON.stringify([{ electricityLow: 15 }]);
-        fetchMock.once('/api/history?month=11&year=2014', { status: 200, body }, { method: 'GET' });
+        fetchMock.get('/api/history?month=11&year=2014', { status: 200, body });
 
         // Act
         return api.retrieveHistoricalReadingsForMonth(11, 2014).then((result) => {
@@ -128,7 +130,7 @@ describe('retrieveHistoricalReadingsForMonth()', () => {
     describe('when there is no reading for a given month', () => {
         it('should show a message that there is no reading', () => {
             // Arrange
-            fetchMock.once('/api/history?month=11&year=2014', { status: 404 });
+            fetchMock.get('/api/history?month=11&year=2014', { status: 404 });
 
             // Assert
             return api.retrieveHistoricalReadingsForMonth(11, 2014).catch((error: Error) => {
@@ -143,7 +145,7 @@ describe('retrieveUsageRecordsForMonth()', () => {
     it('should invoke /api/usage with month and year parameters', () => {
         // Arrange
         const body = JSON.stringify([{ electricityLow: 15 }]);
-        fetchMock.once('/api/usage?month=11&year=2014', { status: 200, body }, { method: 'GET' });
+        fetchMock.get('/api/usage?month=11&year=2014', { status: 200, body });
 
         // Act
         return api.retrieveUsageRecordsForMonth(11, 2014).then((result) => {
@@ -155,7 +157,7 @@ describe('retrieveUsageRecordsForMonth()', () => {
     describe('when there is no reading for a given month', () => {
         it('should show a message that there is no reading', () => {
             // Arrange
-            fetchMock.once('/api/usage?month=11&year=2014', { status: 404 });
+            fetchMock.get('/api/usage?month=11&year=2014', { status: 404 });
 
             // Assert
             return api.retrieveUsageRecordsForMonth(11, 2014).catch((error: Error) => {
@@ -170,7 +172,7 @@ describe('retrieveRecentReadings()', () => {
     it('should invoke /api/recent', () => {
         // Arrange
         const body = JSON.stringify([{ tariff: '0001' }, { tariff: '0001' }]);
-        fetchMock.once('/api/recent', { status: 200, body }, { method: 'GET' });
+        fetchMock.get('/api/recent', { status: 200, body });
 
         // Act
         return api.retrieveRecentReadings().then((result) => {
