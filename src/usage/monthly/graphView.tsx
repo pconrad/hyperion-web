@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Bar, BarChart, CartesianGrid, Tooltip, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'recharts';
 
 import { formatDateMedium } from '../../dates';
 import { UsageRecord } from '../../model';
@@ -28,20 +28,24 @@ export const MonthlyUsageGraphView: React.StatelessComponent<ViewProps> = (props
         <h2>Electricity</h2>
         <BarChart data={ electricityData(props.data) } height={ 350 } width={ 900 }>
             <CartesianGrid />
+            <XAxis dataKey='date' />
+            <YAxis interval={ 0 } unit=' kWh' type='number' />
+            <Tooltip viewBox={{ x: 0, y: 0, width: 0, height: 0 }} />
+            <Legend />
+
             <Bar dataKey='electricityLow'    fill='#00bcd4' name='Electricity (low tariff)' />
             <Bar dataKey='electricityNormal' fill='#0097a7' name='Electricity (normal tariff)' />
-            <Tooltip viewBox={{ x: 0, y: 0, width: 0, height: 0 }} />
-            <XAxis dataKey='date' />
-            <YAxis name='Electricity' unit='kWh' type='number' dataKey='totalElectricity' />
         </BarChart>
 
         <h2>Gas</h2>
         <BarChart data={ gasData(props.data) } height={ 350 } width={ 900 }>
             <CartesianGrid />
-            <Bar dataKey='gas' name={ 'Gas' } fill='#00bcd4' />
-            <Tooltip viewBox={{ x: 0, y: 0, width: 0, height: 0 }} />
             <XAxis dataKey='date' />
-            <YAxis label='Gas' unit='m3'  type='number' dataKey='gas' />
+            <YAxis interval={ 0 } unit=' m3' type='number' />
+            <Tooltip viewBox={{ x: 0, y: 0, width: 0, height: 0 }} />
+            <Legend />
+
+            <Bar dataKey='gas' name='Gas' fill='#00bcd4' />
         </BarChart>
     </React.Fragment>
 );

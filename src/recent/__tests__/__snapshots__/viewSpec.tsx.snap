@@ -33,71 +33,24 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "barCategoryGap": "10%",
+      "barGap": 4,
       "children": Array [
         <CartesianGrid
           fill="none"
-          height={0}
           horizontal={true}
+          horizontalFill={Array []}
           horizontalPoints={Array []}
           stroke="#ccc"
           vertical={true}
+          verticalFill={Array []}
           verticalPoints={Array []}
-          width={0}
-          x={0}
-          y={0}
-        />,
-        <Line
-          activeDot={true}
-          animationBegin={0}
-          animationDuration={1500}
-          animationEasing="ease"
-          connectNulls={false}
-          dataKey="value"
-          dot={true}
-          fill="#fff"
-          isAnimationActive={true}
-          legendType="line"
-          onAnimationEnd={[Function]}
-          onAnimationStart={[Function]}
-          points={Array []}
-          stroke="#3182bd"
-          strokeWidth={1}
-          type="monotone"
-          xAxisId={0}
-          yAxisId={0}
-        />,
-        <Tooltip
-          active={false}
-          animationDuration={400}
-          animationEasing="ease"
-          coordinate={
-            Object {
-              "x": 0,
-              "y": 0,
-            }
-          }
-          cursor={true}
-          cursorStyle={Object {}}
-          isAnimationActive={true}
-          itemSorter={[Function]}
-          itemStyle={Object {}}
-          labelStyle={Object {}}
-          offset={10}
-          separator=" : "
-          viewBox={
-            Object {
-              "height": 0,
-              "width": 0,
-              "x": 0,
-              "y": 0,
-            }
-          }
-          wrapperStyle={Object {}}
         />,
         <XAxis
           allowDataOverflow={false}
           allowDecimals={true}
-          dataKey="name"
+          allowDuplicatedCategory={true}
+          dataKey="label"
           domain={
             Array [
               0,
@@ -124,7 +77,7 @@ ShallowWrapper {
         <YAxis
           allowDataOverflow={false}
           allowDecimals={true}
-          dataKey="value"
+          allowDuplicatedCategory={true}
           domain={
             Array [
               0,
@@ -133,7 +86,7 @@ ShallowWrapper {
           }
           height={0}
           hide={false}
-          label="Consumed Power"
+          interval={0}
           mirror={false}
           orientation="left"
           padding={
@@ -146,14 +99,72 @@ ShallowWrapper {
           scale="auto"
           tickCount={5}
           type="number"
-          unit="Watt"
+          unit=" W"
           width={60}
+          yAxisId={0}
+        />,
+        <Tooltip
+          active={false}
+          animationDuration={400}
+          animationEasing="ease"
+          coordinate={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          cursor={true}
+          cursorStyle={Object {}}
+          filterNull={true}
+          isAnimationActive={true}
+          itemSorter={[Function]}
+          itemStyle={Object {}}
+          labelStyle={Object {}}
+          offset={10}
+          separator=" : "
+          useTranslate3d={false}
+          viewBox={
+            Object {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0,
+            }
+          }
+          wrapperStyle={Object {}}
+        />,
+        <Legend
+          align="center"
+          iconSize={14}
+          layout="horizontal"
+          verticalAlign="bottom"
+        />,
+        <Line
+          activeDot={true}
+          animationBegin={0}
+          animationDuration={1500}
+          animationEasing="ease"
+          connectNulls={false}
+          dataKey="value"
+          dot={true}
+          fill="#fff"
+          hide={false}
+          isAnimationActive={true}
+          legendType="line"
+          name="Power consumption"
+          onAnimationEnd={[Function]}
+          onAnimationStart={[Function]}
+          points={Array []}
+          stroke="#3182bd"
+          strokeWidth={1}
+          type="monotone"
+          xAxisId={0}
           yAxisId={0}
         />,
       ],
       "data": Array [
         Object {
-          "name": "15:40:47",
+          "label": "15:40:47",
           "value": 265,
         },
       ],
@@ -165,6 +176,7 @@ ShallowWrapper {
         "right": 5,
         "top": 5,
       },
+      "reverseStackOrder": false,
       "stackOffset": "none",
       "width": 1200,
     },
@@ -176,75 +188,13 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "fill": "none",
-          "height": 0,
           "horizontal": true,
+          "horizontalFill": Array [],
           "horizontalPoints": Array [],
           "stroke": "#ccc",
           "vertical": true,
+          "verticalFill": Array [],
           "verticalPoints": Array [],
-          "width": 0,
-          "x": 0,
-          "y": 0,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "activeDot": true,
-          "animationBegin": 0,
-          "animationDuration": 1500,
-          "animationEasing": "ease",
-          "connectNulls": false,
-          "dataKey": "value",
-          "dot": true,
-          "fill": "#fff",
-          "isAnimationActive": true,
-          "legendType": "line",
-          "onAnimationEnd": [Function],
-          "onAnimationStart": [Function],
-          "points": Array [],
-          "stroke": "#3182bd",
-          "strokeWidth": 1,
-          "type": "monotone",
-          "xAxisId": 0,
-          "yAxisId": 0,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "active": false,
-          "animationDuration": 400,
-          "animationEasing": "ease",
-          "coordinate": Object {
-            "x": 0,
-            "y": 0,
-          },
-          "cursor": true,
-          "cursorStyle": Object {},
-          "isAnimationActive": true,
-          "itemSorter": [Function],
-          "itemStyle": Object {},
-          "labelStyle": Object {},
-          "offset": 10,
-          "separator": " : ",
-          "viewBox": Object {
-            "height": 0,
-            "width": 0,
-            "x": 0,
-            "y": 0,
-          },
-          "wrapperStyle": Object {},
         },
         "ref": null,
         "rendered": null,
@@ -257,7 +207,8 @@ ShallowWrapper {
         "props": Object {
           "allowDataOverflow": false,
           "allowDecimals": true,
-          "dataKey": "name",
+          "allowDuplicatedCategory": true,
+          "dataKey": "label",
           "domain": Array [
             0,
             "auto",
@@ -288,14 +239,14 @@ ShallowWrapper {
         "props": Object {
           "allowDataOverflow": false,
           "allowDecimals": true,
-          "dataKey": "value",
+          "allowDuplicatedCategory": true,
           "domain": Array [
             0,
             "auto",
           ],
           "height": 0,
           "hide": false,
-          "label": "Consumed Power",
+          "interval": 0,
           "mirror": false,
           "orientation": "left",
           "padding": Object {
@@ -306,8 +257,86 @@ ShallowWrapper {
           "scale": "auto",
           "tickCount": 5,
           "type": "number",
-          "unit": "Watt",
+          "unit": " W",
           "width": 60,
+          "yAxisId": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "active": false,
+          "animationDuration": 400,
+          "animationEasing": "ease",
+          "coordinate": Object {
+            "x": 0,
+            "y": 0,
+          },
+          "cursor": true,
+          "cursorStyle": Object {},
+          "filterNull": true,
+          "isAnimationActive": true,
+          "itemSorter": [Function],
+          "itemStyle": Object {},
+          "labelStyle": Object {},
+          "offset": 10,
+          "separator": " : ",
+          "useTranslate3d": false,
+          "viewBox": Object {
+            "height": 0,
+            "width": 0,
+            "x": 0,
+            "y": 0,
+          },
+          "wrapperStyle": Object {},
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "align": "center",
+          "iconSize": 14,
+          "layout": "horizontal",
+          "verticalAlign": "bottom",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "activeDot": true,
+          "animationBegin": 0,
+          "animationDuration": 1500,
+          "animationEasing": "ease",
+          "connectNulls": false,
+          "dataKey": "value",
+          "dot": true,
+          "fill": "#fff",
+          "hide": false,
+          "isAnimationActive": true,
+          "legendType": "line",
+          "name": "Power consumption",
+          "onAnimationEnd": [Function],
+          "onAnimationStart": [Function],
+          "points": Array [],
+          "stroke": "#3182bd",
+          "strokeWidth": 1,
+          "type": "monotone",
+          "xAxisId": 0,
           "yAxisId": 0,
         },
         "ref": null,
@@ -323,71 +352,24 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "barCategoryGap": "10%",
+        "barGap": 4,
         "children": Array [
           <CartesianGrid
             fill="none"
-            height={0}
             horizontal={true}
+            horizontalFill={Array []}
             horizontalPoints={Array []}
             stroke="#ccc"
             vertical={true}
+            verticalFill={Array []}
             verticalPoints={Array []}
-            width={0}
-            x={0}
-            y={0}
-          />,
-          <Line
-            activeDot={true}
-            animationBegin={0}
-            animationDuration={1500}
-            animationEasing="ease"
-            connectNulls={false}
-            dataKey="value"
-            dot={true}
-            fill="#fff"
-            isAnimationActive={true}
-            legendType="line"
-            onAnimationEnd={[Function]}
-            onAnimationStart={[Function]}
-            points={Array []}
-            stroke="#3182bd"
-            strokeWidth={1}
-            type="monotone"
-            xAxisId={0}
-            yAxisId={0}
-          />,
-          <Tooltip
-            active={false}
-            animationDuration={400}
-            animationEasing="ease"
-            coordinate={
-              Object {
-                "x": 0,
-                "y": 0,
-              }
-            }
-            cursor={true}
-            cursorStyle={Object {}}
-            isAnimationActive={true}
-            itemSorter={[Function]}
-            itemStyle={Object {}}
-            labelStyle={Object {}}
-            offset={10}
-            separator=" : "
-            viewBox={
-              Object {
-                "height": 0,
-                "width": 0,
-                "x": 0,
-                "y": 0,
-              }
-            }
-            wrapperStyle={Object {}}
           />,
           <XAxis
             allowDataOverflow={false}
             allowDecimals={true}
-            dataKey="name"
+            allowDuplicatedCategory={true}
+            dataKey="label"
             domain={
               Array [
                 0,
@@ -414,7 +396,7 @@ ShallowWrapper {
           <YAxis
             allowDataOverflow={false}
             allowDecimals={true}
-            dataKey="value"
+            allowDuplicatedCategory={true}
             domain={
               Array [
                 0,
@@ -423,7 +405,7 @@ ShallowWrapper {
             }
             height={0}
             hide={false}
-            label="Consumed Power"
+            interval={0}
             mirror={false}
             orientation="left"
             padding={
@@ -436,14 +418,72 @@ ShallowWrapper {
             scale="auto"
             tickCount={5}
             type="number"
-            unit="Watt"
+            unit=" W"
             width={60}
+            yAxisId={0}
+          />,
+          <Tooltip
+            active={false}
+            animationDuration={400}
+            animationEasing="ease"
+            coordinate={
+              Object {
+                "x": 0,
+                "y": 0,
+              }
+            }
+            cursor={true}
+            cursorStyle={Object {}}
+            filterNull={true}
+            isAnimationActive={true}
+            itemSorter={[Function]}
+            itemStyle={Object {}}
+            labelStyle={Object {}}
+            offset={10}
+            separator=" : "
+            useTranslate3d={false}
+            viewBox={
+              Object {
+                "height": 0,
+                "width": 0,
+                "x": 0,
+                "y": 0,
+              }
+            }
+            wrapperStyle={Object {}}
+          />,
+          <Legend
+            align="center"
+            iconSize={14}
+            layout="horizontal"
+            verticalAlign="bottom"
+          />,
+          <Line
+            activeDot={true}
+            animationBegin={0}
+            animationDuration={1500}
+            animationEasing="ease"
+            connectNulls={false}
+            dataKey="value"
+            dot={true}
+            fill="#fff"
+            hide={false}
+            isAnimationActive={true}
+            legendType="line"
+            name="Power consumption"
+            onAnimationEnd={[Function]}
+            onAnimationStart={[Function]}
+            points={Array []}
+            stroke="#3182bd"
+            strokeWidth={1}
+            type="monotone"
+            xAxisId={0}
             yAxisId={0}
           />,
         ],
         "data": Array [
           Object {
-            "name": "15:40:47",
+            "label": "15:40:47",
             "value": 265,
           },
         ],
@@ -455,6 +495,7 @@ ShallowWrapper {
           "right": 5,
           "top": 5,
         },
+        "reverseStackOrder": false,
         "stackOffset": "none",
         "width": 1200,
       },
@@ -466,75 +507,13 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "fill": "none",
-            "height": 0,
             "horizontal": true,
+            "horizontalFill": Array [],
             "horizontalPoints": Array [],
             "stroke": "#ccc",
             "vertical": true,
+            "verticalFill": Array [],
             "verticalPoints": Array [],
-            "width": 0,
-            "x": 0,
-            "y": 0,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "activeDot": true,
-            "animationBegin": 0,
-            "animationDuration": 1500,
-            "animationEasing": "ease",
-            "connectNulls": false,
-            "dataKey": "value",
-            "dot": true,
-            "fill": "#fff",
-            "isAnimationActive": true,
-            "legendType": "line",
-            "onAnimationEnd": [Function],
-            "onAnimationStart": [Function],
-            "points": Array [],
-            "stroke": "#3182bd",
-            "strokeWidth": 1,
-            "type": "monotone",
-            "xAxisId": 0,
-            "yAxisId": 0,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "active": false,
-            "animationDuration": 400,
-            "animationEasing": "ease",
-            "coordinate": Object {
-              "x": 0,
-              "y": 0,
-            },
-            "cursor": true,
-            "cursorStyle": Object {},
-            "isAnimationActive": true,
-            "itemSorter": [Function],
-            "itemStyle": Object {},
-            "labelStyle": Object {},
-            "offset": 10,
-            "separator": " : ",
-            "viewBox": Object {
-              "height": 0,
-              "width": 0,
-              "x": 0,
-              "y": 0,
-            },
-            "wrapperStyle": Object {},
           },
           "ref": null,
           "rendered": null,
@@ -547,7 +526,8 @@ ShallowWrapper {
           "props": Object {
             "allowDataOverflow": false,
             "allowDecimals": true,
-            "dataKey": "name",
+            "allowDuplicatedCategory": true,
+            "dataKey": "label",
             "domain": Array [
               0,
               "auto",
@@ -578,14 +558,14 @@ ShallowWrapper {
           "props": Object {
             "allowDataOverflow": false,
             "allowDecimals": true,
-            "dataKey": "value",
+            "allowDuplicatedCategory": true,
             "domain": Array [
               0,
               "auto",
             ],
             "height": 0,
             "hide": false,
-            "label": "Consumed Power",
+            "interval": 0,
             "mirror": false,
             "orientation": "left",
             "padding": Object {
@@ -596,8 +576,86 @@ ShallowWrapper {
             "scale": "auto",
             "tickCount": 5,
             "type": "number",
-            "unit": "Watt",
+            "unit": " W",
             "width": 60,
+            "yAxisId": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "active": false,
+            "animationDuration": 400,
+            "animationEasing": "ease",
+            "coordinate": Object {
+              "x": 0,
+              "y": 0,
+            },
+            "cursor": true,
+            "cursorStyle": Object {},
+            "filterNull": true,
+            "isAnimationActive": true,
+            "itemSorter": [Function],
+            "itemStyle": Object {},
+            "labelStyle": Object {},
+            "offset": 10,
+            "separator": " : ",
+            "useTranslate3d": false,
+            "viewBox": Object {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0,
+            },
+            "wrapperStyle": Object {},
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "align": "center",
+            "iconSize": 14,
+            "layout": "horizontal",
+            "verticalAlign": "bottom",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "activeDot": true,
+            "animationBegin": 0,
+            "animationDuration": 1500,
+            "animationEasing": "ease",
+            "connectNulls": false,
+            "dataKey": "value",
+            "dot": true,
+            "fill": "#fff",
+            "hide": false,
+            "isAnimationActive": true,
+            "legendType": "line",
+            "name": "Power consumption",
+            "onAnimationEnd": [Function],
+            "onAnimationStart": [Function],
+            "points": Array [],
+            "stroke": "#3182bd",
+            "strokeWidth": 1,
+            "type": "monotone",
+            "xAxisId": 0,
             "yAxisId": 0,
           },
           "ref": null,

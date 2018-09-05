@@ -7,7 +7,7 @@
     "react-dom": "16.2.0",
     "react-router-dom": "4.2.2",
     "reactstrap": "6.4.0",
-    "recharts": "0.22.4"
+    "recharts": "1.1.0"
   },
   "description": "Hyperion Web frontend",
   "devDependencies": {
@@ -23,7 +23,7 @@
     "@types/reactstrap": "6.0.2",
     "@types/react-router": "4.0.30",
     "@types/react-router-dom": "4.2.4",
-    "@types/recharts": "1.0.18",
+    "@types/recharts": "1.0.28",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "fetch-mock": "5.9.4",

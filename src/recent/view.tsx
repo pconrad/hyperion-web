@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
+import { CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
 
 import { formatTime } from '../dates';
 import { RecentReading } from '../model';
@@ -12,15 +12,17 @@ export interface ViewProps {
 const label = (reading: RecentReading) => formatTime(reading.ts);
 
 const RecentView: React.StatelessComponent<ViewProps> = (props) => {
-    const data = props.data.map((item) => ({ name: label(item), value: item.elecCon * 1000 }));
+    const data = props.data.map((item) => ({ label: label(item), value: item.elecCon * 1000 }));
 
     return (
         <LineChart data={ data } height={ 350 } width={ 1200 }>
             <CartesianGrid />
-            <Line type='monotone' dataKey='value' points={ [] } />
+            <XAxis dataKey='label' />
+            <YAxis interval={ 0 } type='number' unit=' W' />
             <Tooltip viewBox={{ x: 0, y: 0, width: 0, height: 0 }} />
-            <XAxis dataKey='name' />
-            <YAxis label='Consumed Power' unit='Watt' type='number' dataKey='value' />
+            <Legend />
+
+            <Line name='Power consumption' type='monotone' dataKey='value' />
         </LineChart>
     );
 };
