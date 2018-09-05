@@ -1,8 +1,5 @@
 import * as React from 'react';
 
-import { MuiTheme } from 'material-ui/styles';
-import muiThemeable from 'material-ui/styles/muiThemeable';
-
 import { Bar, BarChart, CartesianGrid, Tooltip, XAxis, YAxis } from 'recharts';
 
 import { formatDateMedium } from '../../dates';
@@ -10,7 +7,6 @@ import { UsageRecord } from '../../model';
 
 export interface ViewProps {
     data: UsageRecord[];
-    muiTheme?: MuiTheme;
 }
 
 const label = (reading: UsageRecord) => formatDateMedium(reading.date);
@@ -28,7 +24,7 @@ const gasData = (data: UsageRecord[]) => data.map((item) => ({
 }));
 
 export const MonthlyUsageGraphView: React.StatelessComponent<ViewProps> = (props) => (
-    <>
+    <React.Fragment>
         <h2>Electricity</h2>
         <BarChart data={ electricityData(props.data) } height={ 350 } width={ 900 }>
             <CartesianGrid />
@@ -47,7 +43,7 @@ export const MonthlyUsageGraphView: React.StatelessComponent<ViewProps> = (props
             <XAxis dataKey='date' />
             <YAxis label='Gas' unit='m3'  type='number' dataKey='gas' />
         </BarChart>
-    </>
+    </React.Fragment>
 );
 
-export default muiThemeable()(MonthlyUsageGraphView);
+export default MonthlyUsageGraphView;

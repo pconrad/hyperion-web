@@ -1,7 +1,9 @@
 import * as React from 'react';
 
-import LinearProgress from 'material-ui/LinearProgress';
-import Snackbar from 'material-ui/Snackbar';
+import {
+    Alert,
+    Progress,
+} from 'reactstrap';
 
 interface PromisedState {
     error?: Error;
@@ -33,9 +35,15 @@ const Promised = function<T, ChildProps = {}>(propName: string, Wrapped: React.C
         render() {
             const { error, loading, value } = this.state;
             if (error) {
-                return <Snackbar message={ error.message } open={ !!error } />;
+                return <Alert color='danger'>{ error.message }</Alert>;
             } else if (loading) {
-                return <LinearProgress />;
+                return (
+                    <React.Fragment>
+                        <div />
+                        <div className='text-center'>Loading, please wait...</div>
+                        <Progress animated={ true } max={ 100 } striped={ true } value={ 100 } />
+                    </React.Fragment>
+                );
             } else {
                 const childProps = { [propName]: value };
                 return <Wrapped { ...childProps } />;

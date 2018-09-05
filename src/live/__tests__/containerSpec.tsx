@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
 
-import LinearProgress from 'material-ui/LinearProgress';
+import { Progress } from 'reactstrap';
 
 import { LiveReading } from '../../model';
 import View from '../view';
@@ -28,7 +28,7 @@ describe('<LiveContainer />', () => {
             const container = shallow(<LiveContainer />);
 
             // Assert
-            expect(container.find(LinearProgress).length).toBe(1);
+            expect(container.find(Progress).exists()).toBe(true);
             expect(container.find(View).length).toBe(0);
         });
     });
@@ -44,7 +44,7 @@ describe('<LiveContainer />', () => {
             const container = shallow(<LiveContainer />);
 
             // Assert
-            expect(container.find(LinearProgress).length).toBe(0);
+            expect(container.find(Progress).exists()).toBe(false);
             expect(container.find(View).length).toBe(1);
         });
     });

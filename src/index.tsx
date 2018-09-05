@@ -1,8 +1,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import 'flexboxgrid/dist/flexboxgrid.min.css';
-import { MuiThemeProvider } from 'material-ui/styles';
+import 'bootstrap/dist/css/bootstrap.css';
+
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
+
 import { BrowserRouter } from 'react-router-dom';
 
 import { App } from './app';
@@ -13,7 +16,4 @@ const routes = (
     </BrowserRouter>
 );
 
-ReactDOM.render(
-    <MuiThemeProvider>{ routes }</MuiThemeProvider>,
-    document.getElementById('root') as HTMLElement,
-);
+ReactDOM.render(routes, document.getElementById('root') as HTMLElement);

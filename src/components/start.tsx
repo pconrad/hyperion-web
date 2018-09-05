@@ -1,8 +1,6 @@
 import * as React from 'react';
 
-import Divider from 'material-ui/Divider';
-
-export const Start = (props: {}) => (
+const Start = () => (
     <div>
         <h1>Welcome to Υπερίων</h1>
         <p>
@@ -11,13 +9,9 @@ export const Start = (props: {}) => (
         </p>
 
         <p>
-            Open the menu on the left to get started.
-        </p>
-        <Divider />
-
-        <p>
-            &copy; 2016 - 2018 Maarten Mulders.<br />
-            Source code is available at <a href='https://github.com/mthmulders/hyperion-web' target='_blank'>GitHub</a>.
+            Use the above menu to get started.
         </p>
     </div>
 );
+
+export default Start;

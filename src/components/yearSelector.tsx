@@ -1,6 +1,11 @@
 import * as React from 'react';
 
-import TextField from 'material-ui/TextField';
+import {
+    FormFeedback,
+    FormGroup,
+    Input,
+    Label,
+} from 'reactstrap';
 
 interface YearSelectorProps {
     selectedYear?: number;
@@ -19,43 +24,49 @@ class YearSelector extends React.Component<YearSelectorProps, YearSelectorState>
         this.state = { value };
     }
 
-    componentWillReceiveProps(props: YearSelectorProps) {
-        const value = props.selectedYear ? props.selectedYear.toString() : '';
-        this.setState({ value });
-    }
-
     render() {
         const { error, value } = this.state;
+        const invalid = value === undefined || error !== undefined;
+        const valid = value !== '' && error === undefined;
+        const state = { invalid, valid, value };
 
         return (
-            <React.Fragment>
-                <TextField
-                    errorText={ error }
-                    hintText='Year'
-                    onChange={ this.onChange }
-                    value={ value }
-                />
-            </React.Fragment>
+            <FormGroup row={ true }>
+                <Label for='year'>Year</Label>
+                <Input type='number' id='year' { ...state } onChange={ this.onChange } onBlur={ this.onBlur } />
+                <FormFeedback valid={ state.valid }>{ this.state.error }</FormFeedback>
+            </FormGroup>
         );
     }
 
-    private onChange = (e: React.FormEvent<{}>, value: string) => {
-        if (value.length === 0) {
-            this.setState({ value });
+    private onBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+        this.valueChanged(e.currentTarget.value);
+    }
+
+    private onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        this.valueChanged(e.currentTarget.value);
+    }
+
+    private valueChanged = (value: string) => {
+        const hasChanged = this.state.value !== value;
+        this.setState({ value });
+        const isValid = this.validateValue(value);
+
+        if (hasChanged && isValid) {
+            this.props.updateSelectedYear(Number(value));
+        } else if (!isValid) {
             this.props.updateSelectedYear(undefined);
-            return;
         }
+    }
 
-        const numeric = Number(value);
+    private validateValue = (input: string) => {
+        const numeric = Number(input);
         if (Number.isNaN(numeric)) {
-            return;
+            return false;
         }
-
         const error = this.determineErrorText(numeric);
-        this.setState({ error, value });
-        if (!error) {
-            this.props.updateSelectedYear(numeric);
-        }
+        this.setState({ error });
+        return !error;
     }
 
     private determineErrorText = (input: number) => {

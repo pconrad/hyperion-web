@@ -1,7 +1,10 @@
 import * as React from 'react';
 
-import MenuItem from 'material-ui/MenuItem';
-import SelectField from 'material-ui/SelectField';
+import {
+    FormGroup,
+    Input,
+    Label,
+} from 'reactstrap';
 
 const months = [
     'January',
@@ -26,35 +29,27 @@ interface MonthSelectorProps {
 class MonthSelector extends React.Component<MonthSelectorProps, {}> {
     constructor(props: MonthSelectorProps) {
         super(props);
-        this.state = {};
     }
 
     render() {
-        const { selectedMonth } = this.props;
-
         return (
-            <React.Fragment>
-                <SelectField
-                    floatingLabelText='Month'
-                    onChange={ this.callback }
-                    value={ selectedMonth }
-                >
+            <FormGroup row={ true }>
+                <Label for='month'>Month</Label>
+                <Input type='select' id='month' defaultValue='initial' onChange={ this.callback }>
+                    <option disabled={ true } value='initial'>---</option>
                     { months.map(this.createMonth) }
-                </SelectField>
-
-            </React.Fragment>
+                </Input>
+            </FormGroup>
         );
+    }
+
+    private callback = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.currentTarget.value;
+        this.props.updateSelectedMonth(Number(value));
     }
 
     private createMonth = (month: string, idx: number) => {
-        const selected = this.props.selectedMonth === idx + 1;
-        return (
-            <MenuItem key={ idx } primaryText={ month } checked={ selected } value={ idx + 1 } />
-        );
-    }
-
-    private callback = (e: React.SyntheticEvent<{}>, index: number, menuItemValue: any) => {
-        this.props.updateSelectedMonth(menuItemValue);
+        return <option key={ idx } value={ idx + 1 }>{ month }</option>;
     }
 }
 

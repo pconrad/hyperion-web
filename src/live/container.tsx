@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import LinearProgress from 'material-ui/LinearProgress';
+import { Progress } from 'reactstrap';
 
 import { LiveDataService } from '../api';
 import { LiveReading } from '../model';
@@ -33,11 +33,19 @@ class LiveContainer extends React.Component<{}, State> {
         return (
             <React.Fragment>
                 <h1>Live data</h1>
-                { loading && <LinearProgress /> }
+                { loading && this.loading() }
                 { lastReading && <View data={ lastReading } /> }
             </React.Fragment>
         );
     }
+
+    private loading = () => (
+        <React.Fragment>
+            <div />
+            <div className='text-center'>Loading, please wait...</div>
+            <Progress animated={ true } max={ 100 } striped={ true } value={ 100 } />
+        </React.Fragment>
+    )
 }
 
 export default LiveContainer;

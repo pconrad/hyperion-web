@@ -2,8 +2,7 @@ import * as React from 'react';
 
 import { shallow } from 'enzyme';
 
-import LinearProgress from 'material-ui/LinearProgress';
-import Snackbar from 'material-ui/Snackbar';
+import { Alert, Progress } from 'reactstrap';
 
 import Promised from '../promised';
 
@@ -39,8 +38,8 @@ describe('Promised(...)', () => {
 
             // Assert (immediately!)
             expect(result.find(Dummy).exists()).toBe(false);
-            expect(result.find(LinearProgress).exists()).toBe(true);
-            expect(result.find(Snackbar).exists()).toBe(false);
+            expect(result.find(Progress).exists()).toBe(true);
+            expect(result.find(Alert).exists()).toBe(false);
         });
     });
 
@@ -57,8 +56,8 @@ describe('Promised(...)', () => {
             delayed(() => {
                 result.update();
                 expect(result.find(Dummy).exists()).toBe(true);
-                expect(result.find(LinearProgress).exists()).toBe(false);
-                expect(result.find(Snackbar).exists()).toBe(false);
+                expect(result.find(Progress).exists()).toBe(false);
+                expect(result.find(Alert).exists()).toBe(false);
                 done();
             });
         });
@@ -97,9 +96,9 @@ describe('Promised(...)', () => {
             delayed(() => {
                 result.update();
                 expect(result.find(Dummy).exists()).toBe(false);
-                expect(result.find(LinearProgress).exists()).toBe(false);
-                expect(result.find(Snackbar).exists()).toBe(true);
-                expect(result.find(Snackbar).props().message).toBe(message);
+                expect(result.find(Progress).exists()).toBe(false);
+                expect(result.find(Alert).exists()).toBe(true);
+                expect(result.find(Alert).html()).toContain(message);
                 done();
             });
         });

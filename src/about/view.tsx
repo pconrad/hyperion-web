@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Table, { TableBody, TableRow, TableRowColumn } from 'material-ui/Table';
+import { Table } from 'reactstrap';
 
 import { ApplicationInfo } from '../model';
 
@@ -9,37 +9,37 @@ export interface ViewProps {
 }
 
 const View: React.StatelessComponent<ViewProps> = (props) => (
-    <Table>
-        <TableBody displayRowCheckbox={ false }>
-            <TableRow>
-                <TableRowColumn>Application version</TableRowColumn>
-                <TableRowColumn>{ props.data.appVersion }</TableRowColumn>
-            </TableRow>
-            <TableRow>
-                <TableRowColumn>Java runtime</TableRowColumn>
-                <TableRowColumn>{ props.data.javaVersion }</TableRowColumn>
-            </TableRow>
-            <TableRow>
-                <TableRowColumn>Scala version</TableRowColumn>
-                <TableRowColumn>{ props.data.scalaVersion }</TableRowColumn>
-            </TableRow>
-            <TableRow>
-                <TableRowColumn>Operating system</TableRowColumn>
-                <TableRowColumn>{ props.data.os }</TableRowColumn>
-            </TableRow>
-            <TableRow>
-                <TableRowColumn>Database</TableRowColumn>
-                <TableRowColumn>{ props.data.database }</TableRowColumn>
-            </TableRow>
-            <TableRow>
-                <TableRowColumn>Free memory</TableRowColumn>
-                <TableRowColumn>{ props.data.freeMem }</TableRowColumn>
-            </TableRow>
-            <TableRow>
-                <TableRowColumn>Total memory</TableRowColumn>
-                <TableRowColumn>{ props.data.totalMem }</TableRowColumn>
-            </TableRow>
-        </TableBody>
+    <Table borderless={ true } responsive={ true }>
+        <tbody>
+            <tr>
+                <th scope='row'>Application version</th>
+                <td>{ props.data.appVersion }</td>
+            </tr>
+            <tr>
+                <th scope='row'>Java runtime</th>
+                <td>{ props.data.javaVersion }</td>
+            </tr>
+            <tr>
+                <th scope='row'>Scala version</th>
+                <td>{ props.data.scalaVersion }</td>
+            </tr>
+            <tr>
+                <th scope='row'>Operating system</th>
+                <td>{ props.data.os }</td>
+            </tr>
+            <tr>
+                <th scope='row'>Database</th>
+                <td>{ props.data.database }</td>
+            </tr>
+            <tr>
+                <th scope='row'>Free memory</th>
+                <td>{ props.data.freeMem }</td>
+            </tr>
+            <tr>
+                <th scope='row'>Total memory</th>
+                <td>{ props.data.totalMem }</td>
+            </tr>
+        </tbody>
     </Table>
 );
 

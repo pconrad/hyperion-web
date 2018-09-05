@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table';
+import { Table } from 'reactstrap';
 
 import { formatDateShort } from '../../dates';
 import { Reading } from '../../model';
@@ -10,27 +10,27 @@ export interface ViewProps {
 }
 
 const createReadingRow = (reading: Reading, idx: number) => (
-    <TableRow key={ idx }>
-        <TableRowColumn>{ formatDateShort(reading.recordDate) }</TableRowColumn>
-        <TableRowColumn>{ reading.electricityLow } kWh</TableRowColumn>
-        <TableRowColumn>{ reading.electricityNormal } kWh</TableRowColumn>
-        <TableRowColumn>{ reading.gas } m<sup>3</sup></TableRowColumn>
-    </TableRow>
+    <tr key={ idx }>
+        <td>{ formatDateShort(reading.recordDate) }</td>
+        <td>{ reading.electricityLow } kWh</td>
+        <td>{ reading.electricityNormal } kWh</td>
+        <td>{ reading.gas } m<sup>3</sup></td>
+    </tr>
 );
 
 const MonthlyReadingView: React.StatelessComponent<ViewProps> = (props) => (
-    <Table selectable={ false }>
-        <TableHeader displaySelectAll={ false }>
-            <TableRow>
-                <TableHeaderColumn>Date</TableHeaderColumn>
-                <TableHeaderColumn>Electricity (low)</TableHeaderColumn>
-                <TableHeaderColumn>Electricity (normal)</TableHeaderColumn>
-                <TableHeaderColumn>Gas</TableHeaderColumn>
-            </TableRow>
-        </TableHeader>
-        <TableBody displayRowCheckbox={ false }>
+    <Table borderless={ true } responsive={ true }>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Electricity (low)</th>
+                <th>Electricity (normal)</th>
+                <th>Gas</th>
+            </tr>
+        </thead>
+        <tbody>
             { props.data.map(createReadingRow)}
-        </TableBody>
+        </tbody>
     </Table>
 );
 

@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { Form } from 'reactstrap';
+
 import MonthSelector from './monthSelector';
 import YearSelector from './yearSelector';
 
@@ -11,11 +13,10 @@ interface MonthYearSelectorProps {
 }
 
 const MonthYearSelector = (props: MonthYearSelectorProps) => (
-    <>
+    <Form>
         <MonthSelector selectedMonth={ props.selectedMonth } updateSelectedMonth={ props.updateSelectedMonth } />
-        <br />
         <YearSelector selectedYear={ props.selectedYear } updateSelectedYear={ props.updateSelectedYear } />
-    </>
+    </Form>
 );
 
 export default MonthYearSelector;

@@ -1,5 +1,10 @@
 import * as React from 'react';
 
+import {
+    Col,
+    Row,
+} from 'reactstrap';
+
 import { retrieveHistoricalReadingsForMonth as retrieveHistoricalReadings } from '../../api';
 import MonthYearSelector from '../../components/monthYearSelector';
 import { Reading } from '../../model';
@@ -25,24 +30,24 @@ class MonthlyHistoryContainer extends React.Component<{}, State> {
 
         return (
             <>
-                <div className='row'>
-                    <div className='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <Row>
+                    <Col>
                         <h1>Retrieve history by month</h1>
-                    </div>
-                </div>
-                <div className='row'>
-                    <div className='col-xs-3 col-sm-3 col-md-4 col-lg-4'>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={ 3 } sm={ 3 } md={ 4 } lg={ 4 }>
                         <MonthYearSelector
                             selectedMonth={ selectedMonth }
                             selectedYear={ selectedYear }
                             updateSelectedMonth={ this.updateSelectedMonth }
                             updateSelectedYear={ this.updateSelectedYear }
                         />
-                    </div>
-                    <div className='col-xs-9 col-sm-9 col-md-8 col-lg-8'>
+                    </Col>
+                    <Col xs={ 9 } sm={ 9 } md={ 8 } lg={ 8 }>
                         { promise && <PromisedMonthlyReadingView promise={ promise } /> }
-                    </div>
-                </div>
+                    </Col>
+                </Row>
             </>
         );
     }

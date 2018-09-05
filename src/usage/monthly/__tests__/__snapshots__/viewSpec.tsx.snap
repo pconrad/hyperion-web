@@ -34,409 +34,294 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "function",
     "props": Object {
-      "allRowsSelected": false,
+      "borderless": true,
       "children": Array [
-        <TableHeader
-          adjustForCheckbox={true}
-          displaySelectAll={false}
-          enableSelectAll={true}
-          selectAllSelected={false}
->
-          <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
-          >
-                    <TableHeaderColumn>
+        <thead>
+          <tr>
+                    <th>
                               Date
-                    </TableHeaderColumn>
-                    <TableHeaderColumn>
+                    </th>
+                    <th>
                               Electricity (low)
-                    </TableHeaderColumn>
-                    <TableHeaderColumn>
+                    </th>
+                    <th>
                               Electricity (normal)
-                    </TableHeaderColumn>
-                    <TableHeaderColumn>
+                    </th>
+                    <th>
                               Gas
-                    </TableHeaderColumn>
-          </TableRow>
-</TableHeader>,
-        <TableBody
-          allRowsSelected={false}
-          deselectOnClickaway={true}
-          displayRowCheckbox={false}
-          multiSelectable={false}
-          preScanRows={true}
-          selectable={true}
-          style={Object {}}
->
-          <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
-          >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
+                    </th>
+          </tr>
+</thead>,
+        <tbody>
+          <tr>
+                    <td>
                               05 Jan 2018
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
+                    </td>
+                    <td>
                               2150.714
                                kWh
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
+                    </td>
+                    <td>
                               2702.641
                                kWh
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
+                    </td>
+                    <td>
                               3781.676
                                m
                               <sup>
                                         3
                               </sup>
-                    </TableRowColumn>
-          </TableRow>
-          <TableRow
-                    displayBorder={true}
-                    hoverable={false}
-                    hovered={false}
-                    selectable={true}
-                    striped={false}
-          >
-                    <TableRowColumn
-                              hoverable={false}
-                    >
+                    </td>
+          </tr>
+          <tr>
+                    <td>
                               06 Jan 2018
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
+                    </td>
+                    <td>
                               2150.714
                                kWh
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
+                    </td>
+                    <td>
                               2702.641
                                kWh
-                    </TableRowColumn>
-                    <TableRowColumn
-                              hoverable={false}
-                    >
+                    </td>
+                    <td>
                               3781.676
                                m
                               <sup>
                                         3
                               </sup>
-                    </TableRowColumn>
-          </TableRow>
-</TableBody>,
+                    </td>
+          </tr>
+</tbody>,
       ],
-      "fixedFooter": true,
-      "fixedHeader": true,
-      "height": "inherit",
-      "multiSelectable": false,
-      "selectable": false,
+      "responsive": true,
+      "responsiveTag": "div",
+      "tag": "table",
     },
     "ref": null,
     "rendered": Array [
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "host",
         "props": Object {
-          "adjustForCheckbox": true,
-          "children": <TableRow
-            displayBorder={true}
-            hoverable={false}
-            hovered={false}
-            selectable={true}
-            striped={false}
->
-            <TableHeaderColumn>
+          "children": <tr>
+            <th>
                         Date
-            </TableHeaderColumn>
-            <TableHeaderColumn>
+            </th>
+            <th>
                         Electricity (low)
-            </TableHeaderColumn>
-            <TableHeaderColumn>
+            </th>
+            <th>
                         Electricity (normal)
-            </TableHeaderColumn>
-            <TableHeaderColumn>
+            </th>
+            <th>
                         Gas
-            </TableHeaderColumn>
-</TableRow>,
-          "displaySelectAll": false,
-          "enableSelectAll": true,
-          "selectAllSelected": false,
+            </th>
+</tr>,
         },
         "ref": null,
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "host",
           "props": Object {
             "children": Array [
-              <TableHeaderColumn>
+              <th>
                 Date
-</TableHeaderColumn>,
-              <TableHeaderColumn>
+</th>,
+              <th>
                 Electricity (low)
-</TableHeaderColumn>,
-              <TableHeaderColumn>
+</th>,
+              <th>
                 Electricity (normal)
-</TableHeaderColumn>,
-              <TableHeaderColumn>
+</th>,
+              <th>
                 Gas
-</TableHeaderColumn>,
+</th>,
             ],
-            "displayBorder": true,
-            "hoverable": false,
-            "hovered": false,
-            "selectable": true,
-            "striped": false,
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
                 "children": "Date",
               },
               "ref": null,
               "rendered": "Date",
-              "type": [Function],
+              "type": "th",
             },
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
                 "children": "Electricity (low)",
               },
               "ref": null,
               "rendered": "Electricity (low)",
-              "type": [Function],
+              "type": "th",
             },
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
                 "children": "Electricity (normal)",
               },
               "ref": null,
               "rendered": "Electricity (normal)",
-              "type": [Function],
+              "type": "th",
             },
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
                 "children": "Gas",
               },
               "ref": null,
               "rendered": "Gas",
-              "type": [Function],
+              "type": "th",
             },
           ],
-          "type": [Function],
+          "type": "tr",
         },
-        "type": [Function],
+        "type": "thead",
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "host",
         "props": Object {
-          "allRowsSelected": false,
           "children": Array [
-            <TableRow
-              displayBorder={true}
-              hoverable={false}
-              hovered={false}
-              selectable={true}
-              striped={false}
->
-              <TableRowColumn
-                            hoverable={false}
-              >
+            <tr>
+              <td>
                             05 Jan 2018
-              </TableRowColumn>
-              <TableRowColumn
-                            hoverable={false}
-              >
+              </td>
+              <td>
                             2150.714
                              kWh
-              </TableRowColumn>
-              <TableRowColumn
-                            hoverable={false}
-              >
+              </td>
+              <td>
                             2702.641
                              kWh
-              </TableRowColumn>
-              <TableRowColumn
-                            hoverable={false}
-              >
+              </td>
+              <td>
                             3781.676
                              m
                             <sup>
                                           3
                             </sup>
-              </TableRowColumn>
-</TableRow>,
-            <TableRow
-              displayBorder={true}
-              hoverable={false}
-              hovered={false}
-              selectable={true}
-              striped={false}
->
-              <TableRowColumn
-                            hoverable={false}
-              >
+              </td>
+</tr>,
+            <tr>
+              <td>
                             06 Jan 2018
-              </TableRowColumn>
-              <TableRowColumn
-                            hoverable={false}
-              >
+              </td>
+              <td>
                             2150.714
                              kWh
-              </TableRowColumn>
-              <TableRowColumn
-                            hoverable={false}
-              >
+              </td>
+              <td>
                             2702.641
                              kWh
-              </TableRowColumn>
-              <TableRowColumn
-                            hoverable={false}
-              >
+              </td>
+              <td>
                             3781.676
                              m
                             <sup>
                                           3
                             </sup>
-              </TableRowColumn>
-</TableRow>,
+              </td>
+</tr>,
           ],
-          "deselectOnClickaway": true,
-          "displayRowCheckbox": false,
-          "multiSelectable": false,
-          "preScanRows": true,
-          "selectable": true,
-          "style": Object {},
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
             "key": "0",
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
               "children": Array [
-                <TableRowColumn
-                  hoverable={false}
->
+                <td>
                   05 Jan 2018
-</TableRowColumn>,
-                <TableRowColumn
-                  hoverable={false}
->
+</td>,
+                <td>
                   2150.714
                    kWh
-</TableRowColumn>,
-                <TableRowColumn
-                  hoverable={false}
->
+</td>,
+                <td>
                   2702.641
                    kWh
-</TableRowColumn>,
-                <TableRowColumn
-                  hoverable={false}
->
+</td>,
+                <td>
                   3781.676
                    m
                   <sup>
                                     3
                   </sup>
-</TableRowColumn>,
+</td>,
               ],
-              "displayBorder": true,
-              "hoverable": false,
-              "hovered": false,
-              "selectable": true,
-              "striped": false,
             },
             "ref": null,
             "rendered": Array [
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
                   "children": "05 Jan 2018",
-                  "hoverable": false,
                 },
                 "ref": null,
                 "rendered": "05 Jan 2018",
-                "type": [Function],
+                "type": "td",
               },
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     2150.714,
                     " kWh",
                   ],
-                  "hoverable": false,
                 },
                 "ref": null,
                 "rendered": Array [
                   2150.714,
                   " kWh",
                 ],
-                "type": [Function],
+                "type": "td",
               },
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     2702.641,
                     " kWh",
                   ],
-                  "hoverable": false,
                 },
                 "ref": null,
                 "rendered": Array [
                   2702.641,
                   " kWh",
                 ],
-                "type": [Function],
+                "type": "td",
               },
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     3781.676,
@@ -445,7 +330,6 @@ ShallowWrapper {
                       3
 </sup>,
                   ],
-                  "hoverable": false,
                 },
                 "ref": null,
                 "rendered": Array [
@@ -463,104 +347,88 @@ ShallowWrapper {
                     "type": "sup",
                   },
                 ],
-                "type": [Function],
+                "type": "td",
               },
             ],
-            "type": [Function],
+            "type": "tr",
           },
           Object {
             "instance": null,
             "key": "1",
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
               "children": Array [
-                <TableRowColumn
-                  hoverable={false}
->
+                <td>
                   06 Jan 2018
-</TableRowColumn>,
-                <TableRowColumn
-                  hoverable={false}
->
+</td>,
+                <td>
                   2150.714
                    kWh
-</TableRowColumn>,
-                <TableRowColumn
-                  hoverable={false}
->
+</td>,
+                <td>
                   2702.641
                    kWh
-</TableRowColumn>,
-                <TableRowColumn
-                  hoverable={false}
->
+</td>,
+                <td>
                   3781.676
                    m
                   <sup>
                                     3
                   </sup>
-</TableRowColumn>,
+</td>,
               ],
-              "displayBorder": true,
-              "hoverable": false,
-              "hovered": false,
-              "selectable": true,
-              "striped": false,
             },
             "ref": null,
             "rendered": Array [
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
                   "children": "06 Jan 2018",
-                  "hoverable": false,
                 },
                 "ref": null,
                 "rendered": "06 Jan 2018",
-                "type": [Function],
+                "type": "td",
               },
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     2150.714,
                     " kWh",
                   ],
-                  "hoverable": false,
                 },
                 "ref": null,
                 "rendered": Array [
                   2150.714,
                   " kWh",
                 ],
-                "type": [Function],
+                "type": "td",
               },
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     2702.641,
                     " kWh",
                   ],
-                  "hoverable": false,
                 },
                 "ref": null,
                 "rendered": Array [
                   2702.641,
                   " kWh",
                 ],
-                "type": [Function],
+                "type": "td",
               },
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     3781.676,
@@ -569,7 +437,6 @@ ShallowWrapper {
                       3
 </sup>,
                   ],
-                  "hoverable": false,
                 },
                 "ref": null,
                 "rendered": Array [
@@ -587,13 +454,13 @@ ShallowWrapper {
                     "type": "sup",
                   },
                 ],
-                "type": [Function],
+                "type": "td",
               },
             ],
-            "type": [Function],
+            "type": "tr",
           },
         ],
-        "type": [Function],
+        "type": "tbody",
       },
     ],
     "type": [Function],
@@ -602,409 +469,294 @@ ShallowWrapper {
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "function",
       "props": Object {
-        "allRowsSelected": false,
+        "borderless": true,
         "children": Array [
-          <TableHeader
-            adjustForCheckbox={true}
-            displaySelectAll={false}
-            enableSelectAll={true}
-            selectAllSelected={false}
->
-            <TableRow
-                        displayBorder={true}
-                        hoverable={false}
-                        hovered={false}
-                        selectable={true}
-                        striped={false}
-            >
-                        <TableHeaderColumn>
+          <thead>
+            <tr>
+                        <th>
                                     Date
-                        </TableHeaderColumn>
-                        <TableHeaderColumn>
+                        </th>
+                        <th>
                                     Electricity (low)
-                        </TableHeaderColumn>
-                        <TableHeaderColumn>
+                        </th>
+                        <th>
                                     Electricity (normal)
-                        </TableHeaderColumn>
-                        <TableHeaderColumn>
+                        </th>
+                        <th>
                                     Gas
-                        </TableHeaderColumn>
-            </TableRow>
-</TableHeader>,
-          <TableBody
-            allRowsSelected={false}
-            deselectOnClickaway={true}
-            displayRowCheckbox={false}
-            multiSelectable={false}
-            preScanRows={true}
-            selectable={true}
-            style={Object {}}
->
-            <TableRow
-                        displayBorder={true}
-                        hoverable={false}
-                        hovered={false}
-                        selectable={true}
-                        striped={false}
-            >
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
+                        </th>
+            </tr>
+</thead>,
+          <tbody>
+            <tr>
+                        <td>
                                     05 Jan 2018
-                        </TableRowColumn>
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
+                        </td>
+                        <td>
                                     2150.714
                                      kWh
-                        </TableRowColumn>
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
+                        </td>
+                        <td>
                                     2702.641
                                      kWh
-                        </TableRowColumn>
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
+                        </td>
+                        <td>
                                     3781.676
                                      m
                                     <sup>
                                                 3
                                     </sup>
-                        </TableRowColumn>
-            </TableRow>
-            <TableRow
-                        displayBorder={true}
-                        hoverable={false}
-                        hovered={false}
-                        selectable={true}
-                        striped={false}
-            >
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
+                        </td>
+            </tr>
+            <tr>
+                        <td>
                                     06 Jan 2018
-                        </TableRowColumn>
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
+                        </td>
+                        <td>
                                     2150.714
                                      kWh
-                        </TableRowColumn>
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
+                        </td>
+                        <td>
                                     2702.641
                                      kWh
-                        </TableRowColumn>
-                        <TableRowColumn
-                                    hoverable={false}
-                        >
+                        </td>
+                        <td>
                                     3781.676
                                      m
                                     <sup>
                                                 3
                                     </sup>
-                        </TableRowColumn>
-            </TableRow>
-</TableBody>,
+                        </td>
+            </tr>
+</tbody>,
         ],
-        "fixedFooter": true,
-        "fixedHeader": true,
-        "height": "inherit",
-        "multiSelectable": false,
-        "selectable": false,
+        "responsive": true,
+        "responsiveTag": "div",
+        "tag": "table",
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "host",
           "props": Object {
-            "adjustForCheckbox": true,
-            "children": <TableRow
-              displayBorder={true}
-              hoverable={false}
-              hovered={false}
-              selectable={true}
-              striped={false}
->
-              <TableHeaderColumn>
+            "children": <tr>
+              <th>
                             Date
-              </TableHeaderColumn>
-              <TableHeaderColumn>
+              </th>
+              <th>
                             Electricity (low)
-              </TableHeaderColumn>
-              <TableHeaderColumn>
+              </th>
+              <th>
                             Electricity (normal)
-              </TableHeaderColumn>
-              <TableHeaderColumn>
+              </th>
+              <th>
                             Gas
-              </TableHeaderColumn>
-</TableRow>,
-            "displaySelectAll": false,
-            "enableSelectAll": true,
-            "selectAllSelected": false,
+              </th>
+</tr>,
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
               "children": Array [
-                <TableHeaderColumn>
+                <th>
                   Date
-</TableHeaderColumn>,
-                <TableHeaderColumn>
+</th>,
+                <th>
                   Electricity (low)
-</TableHeaderColumn>,
-                <TableHeaderColumn>
+</th>,
+                <th>
                   Electricity (normal)
-</TableHeaderColumn>,
-                <TableHeaderColumn>
+</th>,
+                <th>
                   Gas
-</TableHeaderColumn>,
+</th>,
               ],
-              "displayBorder": true,
-              "hoverable": false,
-              "hovered": false,
-              "selectable": true,
-              "striped": false,
             },
             "ref": null,
             "rendered": Array [
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
                   "children": "Date",
                 },
                 "ref": null,
                 "rendered": "Date",
-                "type": [Function],
+                "type": "th",
               },
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
                   "children": "Electricity (low)",
                 },
                 "ref": null,
                 "rendered": "Electricity (low)",
-                "type": [Function],
+                "type": "th",
               },
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
                   "children": "Electricity (normal)",
                 },
                 "ref": null,
                 "rendered": "Electricity (normal)",
-                "type": [Function],
+                "type": "th",
               },
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
                   "children": "Gas",
                 },
                 "ref": null,
                 "rendered": "Gas",
-                "type": [Function],
+                "type": "th",
               },
             ],
-            "type": [Function],
+            "type": "tr",
           },
-          "type": [Function],
+          "type": "thead",
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "host",
           "props": Object {
-            "allRowsSelected": false,
             "children": Array [
-              <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
->
-                <TableRowColumn
-                                hoverable={false}
-                >
+              <tr>
+                <td>
                                 05 Jan 2018
-                </TableRowColumn>
-                <TableRowColumn
-                                hoverable={false}
-                >
+                </td>
+                <td>
                                 2150.714
                                  kWh
-                </TableRowColumn>
-                <TableRowColumn
-                                hoverable={false}
-                >
+                </td>
+                <td>
                                 2702.641
                                  kWh
-                </TableRowColumn>
-                <TableRowColumn
-                                hoverable={false}
-                >
+                </td>
+                <td>
                                 3781.676
                                  m
                                 <sup>
                                                 3
                                 </sup>
-                </TableRowColumn>
-</TableRow>,
-              <TableRow
-                displayBorder={true}
-                hoverable={false}
-                hovered={false}
-                selectable={true}
-                striped={false}
->
-                <TableRowColumn
-                                hoverable={false}
-                >
+                </td>
+</tr>,
+              <tr>
+                <td>
                                 06 Jan 2018
-                </TableRowColumn>
-                <TableRowColumn
-                                hoverable={false}
-                >
+                </td>
+                <td>
                                 2150.714
                                  kWh
-                </TableRowColumn>
-                <TableRowColumn
-                                hoverable={false}
-                >
+                </td>
+                <td>
                                 2702.641
                                  kWh
-                </TableRowColumn>
-                <TableRowColumn
-                                hoverable={false}
-                >
+                </td>
+                <td>
                                 3781.676
                                  m
                                 <sup>
                                                 3
                                 </sup>
-                </TableRowColumn>
-</TableRow>,
+                </td>
+</tr>,
             ],
-            "deselectOnClickaway": true,
-            "displayRowCheckbox": false,
-            "multiSelectable": false,
-            "preScanRows": true,
-            "selectable": true,
-            "style": Object {},
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
               "key": "0",
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <TableRowColumn
-                    hoverable={false}
->
+                  <td>
                     05 Jan 2018
-</TableRowColumn>,
-                  <TableRowColumn
-                    hoverable={false}
->
+</td>,
+                  <td>
                     2150.714
                      kWh
-</TableRowColumn>,
-                  <TableRowColumn
-                    hoverable={false}
->
+</td>,
+                  <td>
                     2702.641
                      kWh
-</TableRowColumn>,
-                  <TableRowColumn
-                    hoverable={false}
->
+</td>,
+                  <td>
                     3781.676
                      m
                     <sup>
                                         3
                     </sup>
-</TableRowColumn>,
+</td>,
                 ],
-                "displayBorder": true,
-                "hoverable": false,
-                "hovered": false,
-                "selectable": true,
-                "striped": false,
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "host",
                   "props": Object {
                     "children": "05 Jan 2018",
-                    "hoverable": false,
                   },
                   "ref": null,
                   "rendered": "05 Jan 2018",
-                  "type": [Function],
+                  "type": "td",
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "host",
                   "props": Object {
                     "children": Array [
                       2150.714,
                       " kWh",
                     ],
-                    "hoverable": false,
                   },
                   "ref": null,
                   "rendered": Array [
                     2150.714,
                     " kWh",
                   ],
-                  "type": [Function],
+                  "type": "td",
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "host",
                   "props": Object {
                     "children": Array [
                       2702.641,
                       " kWh",
                     ],
-                    "hoverable": false,
                   },
                   "ref": null,
                   "rendered": Array [
                     2702.641,
                     " kWh",
                   ],
-                  "type": [Function],
+                  "type": "td",
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "host",
                   "props": Object {
                     "children": Array [
                       3781.676,
@@ -1013,7 +765,6 @@ ShallowWrapper {
                         3
 </sup>,
                     ],
-                    "hoverable": false,
                   },
                   "ref": null,
                   "rendered": Array [
@@ -1031,104 +782,88 @@ ShallowWrapper {
                       "type": "sup",
                     },
                   ],
-                  "type": [Function],
+                  "type": "td",
                 },
               ],
-              "type": [Function],
+              "type": "tr",
             },
             Object {
               "instance": null,
               "key": "1",
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <TableRowColumn
-                    hoverable={false}
->
+                  <td>
                     06 Jan 2018
-</TableRowColumn>,
-                  <TableRowColumn
-                    hoverable={false}
->
+</td>,
+                  <td>
                     2150.714
                      kWh
-</TableRowColumn>,
-                  <TableRowColumn
-                    hoverable={false}
->
+</td>,
+                  <td>
                     2702.641
                      kWh
-</TableRowColumn>,
-                  <TableRowColumn
-                    hoverable={false}
->
+</td>,
+                  <td>
                     3781.676
                      m
                     <sup>
                                         3
                     </sup>
-</TableRowColumn>,
+</td>,
                 ],
-                "displayBorder": true,
-                "hoverable": false,
-                "hovered": false,
-                "selectable": true,
-                "striped": false,
               },
               "ref": null,
               "rendered": Array [
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "host",
                   "props": Object {
                     "children": "06 Jan 2018",
-                    "hoverable": false,
                   },
                   "ref": null,
                   "rendered": "06 Jan 2018",
-                  "type": [Function],
+                  "type": "td",
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "host",
                   "props": Object {
                     "children": Array [
                       2150.714,
                       " kWh",
                     ],
-                    "hoverable": false,
                   },
                   "ref": null,
                   "rendered": Array [
                     2150.714,
                     " kWh",
                   ],
-                  "type": [Function],
+                  "type": "td",
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "host",
                   "props": Object {
                     "children": Array [
                       2702.641,
                       " kWh",
                     ],
-                    "hoverable": false,
                   },
                   "ref": null,
                   "rendered": Array [
                     2702.641,
                     " kWh",
                   ],
-                  "type": [Function],
+                  "type": "td",
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "host",
                   "props": Object {
                     "children": Array [
                       3781.676,
@@ -1137,7 +872,6 @@ ShallowWrapper {
                         3
 </sup>,
                     ],
-                    "hoverable": false,
                   },
                   "ref": null,
                   "rendered": Array [
@@ -1155,13 +889,13 @@ ShallowWrapper {
                       "type": "sup",
                     },
                   ],
-                  "type": [Function],
+                  "type": "td",
                 },
               ],
-              "type": [Function],
+              "type": "tr",
             },
           ],
-          "type": [Function],
+          "type": "tbody",
         },
       ],
       "type": [Function],

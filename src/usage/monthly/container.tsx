@@ -1,5 +1,10 @@
 import * as React from 'react';
 
+import {
+    Col,
+    Row,
+} from 'reactstrap';
+
 import { retrieveUsageRecordsForMonth } from '../../api';
 
 import MonthYearSelector from '../../components/monthYearSelector';
@@ -25,26 +30,24 @@ class MonthlyUsageContainer extends React.Component<{}, State> {
         const { promise, selectedMonth, selectedYear } = this.state;
 
         return (
-            <>
-                <div className='row'>
-                    <div className='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-                        <h1>Retrieve usage by month</h1>
-                    </div>
-                </div>
-                <div className='row'>
-                    <div className='col-xs-3 col-sm-3 col-md-4 col-lg-4'>
+            <React.Fragment>
+                <Row>
+                    <Col><h1>Retrieve usage by month</h1></Col>
+                </Row>
+                <Row>
+                    <Col xs={ 3 } sm={ 3 } md={ 3 } lg={ 3 }>
                         <MonthYearSelector
                             selectedMonth={ selectedMonth }
                             selectedYear={ selectedYear }
                             updateSelectedMonth={ this.updateSelectedMonth }
                             updateSelectedYear={ this.updateSelectedYear }
                         />
-                    </div>
-                    <div className='col-xs-9 col-sm-9 col-md-8 col-lg-8'>
+                    </Col>
+                    <Col xs={ 9 } sm={ 9 } md={ 9 } lg={ 9 }>
                         { promise && <PromisedMonthlyReadingView promise={ promise } /> }
-                    </div>
-                </div>
-            </>
+                    </Col>
+                </Row>
+            </React.Fragment>
         );
     }
 
