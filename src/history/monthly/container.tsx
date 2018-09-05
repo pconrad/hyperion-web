@@ -36,7 +36,7 @@ class MonthlyHistoryContainer extends React.Component<{}, State> {
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs={ 3 } sm={ 3 } md={ 4 } lg={ 4 }>
+                    <Col xs={ 3 } sm={ 3 } md={ 3 } lg={ 3 }>
                         <MonthYearSelector
                             selectedMonth={ selectedMonth }
                             selectedYear={ selectedYear }
@@ -44,7 +44,7 @@ class MonthlyHistoryContainer extends React.Component<{}, State> {
                             updateSelectedYear={ this.updateSelectedYear }
                         />
                     </Col>
-                    <Col xs={ 9 } sm={ 9 } md={ 8 } lg={ 8 }>
+                    <Col xs={ 9 } sm={ 9 } md={ 9 } lg={ 9 }>
                         { promise && <PromisedMonthlyReadingView promise={ promise } /> }
                     </Col>
                 </Row>
