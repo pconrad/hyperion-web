@@ -37,7 +37,7 @@
     "stryker-html-reporter": "0.16.1",
     "stryker-jest-runner": "1.2.0",
     "stryker-typescript": "0.13.2",
-    "typescript": "3.0.3"
+    "typescript": "3.2.2"
   },
   "license": "MIT",
   "name": "hyperion-web",
