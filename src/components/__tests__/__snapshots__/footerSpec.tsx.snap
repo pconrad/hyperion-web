@@ -23,7 +23,7 @@ ShallowWrapper {
         <span
           className="text-muted"
         >
-          © 2016 - 2018 Maarten Mulders. Source code is available at 
+          © 2016 - 2019 Maarten Mulders. Source code is available at 
           <a
             href="https://github.com/mthmulders/hyperion-web"
             target="_blank"
@@ -44,7 +44,7 @@ ShallowWrapper {
         "children": <span
           className="text-muted"
         >
-          © 2016 - 2018 Maarten Mulders. Source code is available at 
+          © 2016 - 2019 Maarten Mulders. Source code is available at 
           <a
             href="https://github.com/mthmulders/hyperion-web"
             target="_blank"
@@ -62,7 +62,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "© 2016 - 2018 Maarten Mulders. Source code is available at ",
+            "© 2016 - 2019 Maarten Mulders. Source code is available at ",
             <a
               href="https://github.com/mthmulders/hyperion-web"
               target="_blank"
@@ -75,7 +75,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          "© 2016 - 2018 Maarten Mulders. Source code is available at ",
+          "© 2016 - 2019 Maarten Mulders. Source code is available at ",
           Object {
             "instance": null,
             "key": undefined,
@@ -109,7 +109,7 @@ ShallowWrapper {
           <span
             className="text-muted"
           >
-            © 2016 - 2018 Maarten Mulders. Source code is available at 
+            © 2016 - 2019 Maarten Mulders. Source code is available at 
             <a
               href="https://github.com/mthmulders/hyperion-web"
               target="_blank"
@@ -130,7 +130,7 @@ ShallowWrapper {
           "children": <span
             className="text-muted"
           >
-            © 2016 - 2018 Maarten Mulders. Source code is available at 
+            © 2016 - 2019 Maarten Mulders. Source code is available at 
             <a
               href="https://github.com/mthmulders/hyperion-web"
               target="_blank"
@@ -148,7 +148,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "© 2016 - 2018 Maarten Mulders. Source code is available at ",
+              "© 2016 - 2019 Maarten Mulders. Source code is available at ",
               <a
                 href="https://github.com/mthmulders/hyperion-web"
                 target="_blank"
@@ -161,7 +161,7 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
-            "© 2016 - 2018 Maarten Mulders. Source code is available at ",
+            "© 2016 - 2019 Maarten Mulders. Source code is available at ",
             Object {
               "instance": null,
               "key": undefined,
