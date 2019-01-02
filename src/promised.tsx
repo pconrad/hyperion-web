@@ -45,7 +45,7 @@ const Promised = function<T, ChildProps = {}>(propName: string, Wrapped: React.C
                     </React.Fragment>
                 );
             } else {
-                const childProps = { [propName]: value };
+                const childProps: any = { [propName]: value };
                 return <Wrapped { ...childProps } />;
             }
         }
