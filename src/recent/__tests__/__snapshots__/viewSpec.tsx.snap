@@ -107,6 +107,7 @@ ShallowWrapper {
           active={false}
           animationDuration={400}
           animationEasing="ease"
+          contentStyle={Object {}}
           coordinate={
             Object {
               "x": 0,
@@ -141,6 +142,7 @@ ShallowWrapper {
         />,
         <Line
           activeDot={true}
+          animateNewValues={true}
           animationBegin={0}
           animationDuration={1500}
           animationEasing="ease"
@@ -273,6 +275,7 @@ ShallowWrapper {
           "active": false,
           "animationDuration": 400,
           "animationEasing": "ease",
+          "contentStyle": Object {},
           "coordinate": Object {
             "x": 0,
             "y": 0,
@@ -319,6 +322,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "activeDot": true,
+          "animateNewValues": true,
           "animationBegin": 0,
           "animationDuration": 1500,
           "animationEasing": "ease",
@@ -426,6 +430,7 @@ ShallowWrapper {
             active={false}
             animationDuration={400}
             animationEasing="ease"
+            contentStyle={Object {}}
             coordinate={
               Object {
                 "x": 0,
@@ -460,6 +465,7 @@ ShallowWrapper {
           />,
           <Line
             activeDot={true}
+            animateNewValues={true}
             animationBegin={0}
             animationDuration={1500}
             animationEasing="ease"
@@ -592,6 +598,7 @@ ShallowWrapper {
             "active": false,
             "animationDuration": 400,
             "animationEasing": "ease",
+            "contentStyle": Object {},
             "coordinate": Object {
               "x": 0,
               "y": 0,
@@ -638,6 +645,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "activeDot": true,
+            "animateNewValues": true,
             "animationBegin": 0,
             "animationDuration": 1500,
             "animationEasing": "ease",
