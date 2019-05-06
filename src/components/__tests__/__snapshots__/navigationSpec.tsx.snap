@@ -698,7 +698,7 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "class",
                     "props": Object {
                       "children": Array [
                         <DropdownItem
@@ -807,7 +807,7 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "class",
                     "props": Object {
                       "children": <DropdownItem
                         tag={[Function]}
@@ -1566,7 +1566,7 @@ ShallowWrapper {
                     Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "function",
+                      "nodeType": "class",
                       "props": Object {
                         "children": Array [
                           <DropdownItem
@@ -1675,7 +1675,7 @@ ShallowWrapper {
                     Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "function",
+                      "nodeType": "class",
                       "props": Object {
                         "children": <DropdownItem
                           tag={[Function]}
