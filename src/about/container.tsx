@@ -12,10 +12,6 @@ interface State {
 }
 
 export class AboutContainer extends React.Component<{}, State> {
-    constructor(props: {}) {
-        super(props);
-    }
-
     componentWillMount() {
         this.setState({ promise: retrieveApplicationInfo() });
     }
