@@ -1,24 +1,25 @@
+import React from 'react';
 import { shallow } from 'enzyme';
-import * as React from 'react';
 
-const mockRetrieveRecentReadings = jest.fn(() => Promise.resolve({}));
-jest.mock('../../api', () => ({ retrieveRecentReadings: mockRetrieveRecentReadings }));
+jest.mock('../../api');
+
+import { retrieveRecentReadings } from '../../api';
 
 import RecentContainer from '../container';
 
 describe('<RecentContainer />', () => {
     afterEach(() => {
-        mockRetrieveRecentReadings.mockReset();
+        (retrieveRecentReadings as jest.Mock).mockReset();
     });
 
     it('should retrieve recent readings', () => {
         // Arrange
-        mockRetrieveRecentReadings.mockImplementation(() => Promise.resolve([]));
+        (retrieveRecentReadings as jest.Mock).mockImplementation(() => Promise.resolve([]));
 
         // Act
         shallow(<RecentContainer />);
 
         // Assert
-        expect(mockRetrieveRecentReadings).toHaveBeenCalled();
+        expect((retrieveRecentReadings as jest.Mock)).toHaveBeenCalled();
     });
 });
