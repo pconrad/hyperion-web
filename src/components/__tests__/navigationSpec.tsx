@@ -1,15 +1,16 @@
 import * as React from 'react';
+import { MemoryRouter } from 'react-router'
 
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import Navigation from '../navigation';
 
 describe('<Navigation />', () => {
     it('should show menu bar', () => {
         // Act
-        const wrapper = shallow(<Navigation />);
+        const wrapper = renderer.create(<MemoryRouter><Navigation /></MemoryRouter>);
 
         // Assert
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 });

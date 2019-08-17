@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import TableView from '../tableView';
 
@@ -25,9 +25,9 @@ describe('<TableView />', () => {
         ];
 
         // Act
-        const wrapper = shallow(<TableView data={ data } />);
+        const wrapper = renderer.create(<TableView data={ data } />);
 
         // Assert
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 });

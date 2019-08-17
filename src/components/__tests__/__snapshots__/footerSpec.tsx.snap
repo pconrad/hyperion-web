@@ -1,215 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> should render 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Footer />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": <div
-        className="container"
+<footer
+  className="footer"
+>
+  <div
+    className="container"
+  >
+    <span
+      className="text-muted"
+    >
+      © 2016 - 2019 Maarten Mulders. Source code is available at 
+      <a
+        href="https://github.com/mthmulders/hyperion-web"
+        target="_blank"
       >
-        <span
-          className="text-muted"
-        >
-          © 2016 - 2019 Maarten Mulders. Source code is available at 
-          <a
-            href="https://github.com/mthmulders/hyperion-web"
-            target="_blank"
-          >
-            GitHub
-          </a>
-          .
-        </span>
-      </div>,
-      "className": "footer",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <span
-          className="text-muted"
-        >
-          © 2016 - 2019 Maarten Mulders. Source code is available at 
-          <a
-            href="https://github.com/mthmulders/hyperion-web"
-            target="_blank"
-          >
-            GitHub
-          </a>
-          .
-        </span>,
-        "className": "container",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "© 2016 - 2019 Maarten Mulders. Source code is available at ",
-            <a
-              href="https://github.com/mthmulders/hyperion-web"
-              target="_blank"
-            >
-              GitHub
-            </a>,
-            ".",
-          ],
-          "className": "text-muted",
-        },
-        "ref": null,
-        "rendered": Array [
-          "© 2016 - 2019 Maarten Mulders. Source code is available at ",
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "GitHub",
-              "href": "https://github.com/mthmulders/hyperion-web",
-              "target": "_blank",
-            },
-            "ref": null,
-            "rendered": "GitHub",
-            "type": "a",
-          },
-          ".",
-        ],
-        "type": "span",
-      },
-      "type": "div",
-    },
-    "type": "footer",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <div
-          className="container"
-        >
-          <span
-            className="text-muted"
-          >
-            © 2016 - 2019 Maarten Mulders. Source code is available at 
-            <a
-              href="https://github.com/mthmulders/hyperion-web"
-              target="_blank"
-            >
-              GitHub
-            </a>
-            .
-          </span>
-        </div>,
-        "className": "footer",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <span
-            className="text-muted"
-          >
-            © 2016 - 2019 Maarten Mulders. Source code is available at 
-            <a
-              href="https://github.com/mthmulders/hyperion-web"
-              target="_blank"
-            >
-              GitHub
-            </a>
-            .
-          </span>,
-          "className": "container",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "© 2016 - 2019 Maarten Mulders. Source code is available at ",
-              <a
-                href="https://github.com/mthmulders/hyperion-web"
-                target="_blank"
-              >
-                GitHub
-              </a>,
-              ".",
-            ],
-            "className": "text-muted",
-          },
-          "ref": null,
-          "rendered": Array [
-            "© 2016 - 2019 Maarten Mulders. Source code is available at ",
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "GitHub",
-                "href": "https://github.com/mthmulders/hyperion-web",
-                "target": "_blank",
-              },
-              "ref": null,
-              "rendered": "GitHub",
-              "type": "a",
-            },
-            ".",
-          ],
-          "type": "span",
-        },
-        "type": "div",
-      },
-      "type": "footer",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-}
+        GitHub
+      </a>
+      .
+    </span>
+  </div>
+</footer>
 `;

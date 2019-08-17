@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import View from '../view';
 
@@ -18,9 +18,9 @@ describe('<View />', () => {
         };
 
         // Act
-        const wrapper = shallow(<View data={ data } />);
+        const wrapper = renderer.create(<View data={ data } />);
 
         // Assert
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 });
