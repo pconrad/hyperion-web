@@ -1,5 +1,5 @@
-import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
+import { shallow, ShallowWrapper } from 'enzyme';
 
 jest.mock('../../../api');
 

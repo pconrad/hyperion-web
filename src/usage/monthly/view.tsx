@@ -43,7 +43,7 @@ class MonthlyUsageView extends React.Component<ViewProps, ViewState> {
 
     render() {
         return (
-            <React.Fragment>
+            <>
                 <Nav tabs={ true }>
                     { tabs.map(this.renderTab) }
                 </Nav>
@@ -55,7 +55,7 @@ class MonthlyUsageView extends React.Component<ViewProps, ViewState> {
                         <GraphView data={ this.props.data } />
                     </TabPane>
                 </TabContent>
-            </React.Fragment>
+            </>
         );
     }
 
