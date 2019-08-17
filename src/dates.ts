@@ -1,4 +1,4 @@
-import * as moment from 'moment';
+import moment from 'moment';
 
 export const formatDateBackend = (input: Date) => {
     return moment(input).format('YYYY-MM-DD');

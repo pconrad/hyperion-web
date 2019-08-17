@@ -1,15 +1,15 @@
 import { shallow, ShallowWrapper } from 'enzyme';
-import * as React from 'react';
+import React from 'react';
 
-const mockApi = jest.fn(() => Promise.resolve({}));
-jest.mock('../../../api', () => ({ retrieveHistoricalReadingsForMonth: mockApi }));
+jest.mock('../../../api');
+
+import { retrieveHistoricalReadingsForMonth } from '../../../api';
 import MonthYearSelector from '../../../components/monthYearSelector';
-
 import MonthlyHistoryContainer from '../container';
 
 describe('<MonthlyHistoryContainer />', () => {
     afterEach(() => {
-        mockApi.mockReset();
+        (retrieveHistoricalReadingsForMonth as jest.Mock).mockReset();
     });
 
     function selectMonth<P, S>(container: ShallowWrapper<P, S>, month: number) {
@@ -34,7 +34,7 @@ describe('<MonthlyHistoryContainer />', () => {
 
         // Assert
         expect(container.find(MonthYearSelector).exists()).toBe(true);
-        expect(mockApi).not.toHaveBeenCalled();
+        expect((retrieveHistoricalReadingsForMonth as jest.Mock)).not.toHaveBeenCalled();
     });
 
     it('should show a year selector', () => {
@@ -45,13 +45,13 @@ describe('<MonthlyHistoryContainer />', () => {
 
         // Assert
         expect(container.find(MonthYearSelector).exists()).toBe(true);
-        expect(mockApi).not.toHaveBeenCalled();
+        expect((retrieveHistoricalReadingsForMonth as jest.Mock)).not.toHaveBeenCalled();
     });
 
     it('should retrieve reading for selected month', (done) => {
         // Arrange
         const result = [{}, {}];
-        mockApi.mockImplementation(() => Promise.resolve(result));
+        (retrieveHistoricalReadingsForMonth as jest.Mock).mockImplementation(() => Promise.resolve(result));
 
         // Act
         const container = shallow(<MonthlyHistoryContainer />);
@@ -60,7 +60,7 @@ describe('<MonthlyHistoryContainer />', () => {
 
         // Assert
         setTimeout(() => {
-            expect(mockApi).toHaveBeenCalledWith(11, 2014);
+            expect((retrieveHistoricalReadingsForMonth as jest.Mock)).toHaveBeenCalledWith(11, 2014);
             done();
         }, 100);
     });

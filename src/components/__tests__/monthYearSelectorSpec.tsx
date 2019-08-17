@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import MonthYearSelector from '../monthYearSelector';
 
 describe('<MonthYearSelector />', () => {
     it('should look acceptable', () => {
         // Act
-        const wrapper = shallow(
+        const wrapper = renderer.create(
             <MonthYearSelector
                 selectedMonth={ 2018 }
                 selectedYear={ 1 }
@@ -17,6 +17,6 @@ describe('<MonthYearSelector />', () => {
         );
 
         // Assert
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 });

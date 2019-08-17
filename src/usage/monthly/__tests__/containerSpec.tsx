@@ -1,15 +1,15 @@
+import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import * as React from 'react';
 
-const mockApi = jest.fn(() => Promise.resolve({}));
-jest.mock('../../../api', () => ({ retrieveUsageRecordsForMonth: mockApi }));
+jest.mock('../../../api');
+
+import { retrieveUsageRecordsForMonth } from '../../../api';
 import MonthYearSelector from '../../../components/monthYearSelector';
-
 import MonthlyUsageContainer from '../container';
 
 describe('<MonthlyUsageContainer />', () => {
     afterEach(() => {
-        mockApi.mockReset();
+        (retrieveUsageRecordsForMonth as jest.Mock).mockReset();
     });
 
     function selectMonth<P, S>(container: ShallowWrapper<P, S>, month: number) {
@@ -34,7 +34,7 @@ describe('<MonthlyUsageContainer />', () => {
 
         // Assert
         expect(container.find(MonthYearSelector).exists()).toBe(true);
-        expect(mockApi).not.toHaveBeenCalled();
+        expect((retrieveUsageRecordsForMonth as jest.Mock)).not.toHaveBeenCalled();
     });
 
     it('should show a year selector', () => {
@@ -45,13 +45,13 @@ describe('<MonthlyUsageContainer />', () => {
 
         // Assert
         expect(container.find(MonthYearSelector).exists()).toBe(true);
-        expect(mockApi).not.toHaveBeenCalled();
+        expect((retrieveUsageRecordsForMonth as jest.Mock)).not.toHaveBeenCalled();
     });
 
     it('should retrieve reading for selected month', (done) => {
         // Arrange
         const result = [{}, {}];
-        mockApi.mockImplementation(() => Promise.resolve(result));
+        (retrieveUsageRecordsForMonth as jest.Mock).mockImplementation(() => Promise.resolve(result));
 
         // Act
         const container = shallow(<MonthlyUsageContainer />);
@@ -60,7 +60,7 @@ describe('<MonthlyUsageContainer />', () => {
 
         // Assert
         setTimeout(() => {
-            expect(mockApi).toHaveBeenCalledWith(11, 2014);
+            expect((retrieveUsageRecordsForMonth as jest.Mock)).toHaveBeenCalledWith(11, 2014);
             done();
         }, 100);
     });

@@ -1,142 +1,112 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MonthYearSelector /> should look acceptable 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <MonthYearSelector
-    selectedMonth={2018}
-    selectedYear={1}
-    updateSelectedMonth={[MockFunction]}
-    updateSelectedYear={[MockFunction]}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": Array [
-        <MonthSelector
-          selectedMonth={2018}
-          updateSelectedMonth={[MockFunction]}
-        />,
-        <YearSelector
-          selectedYear={1}
-          updateSelectedYear={[MockFunction]}
-        />,
-      ],
-      "tag": "form",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "selectedMonth": 2018,
-          "updateSelectedMonth": [MockFunction],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "selectedYear": 1,
-          "updateSelectedYear": [MockFunction],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          <MonthSelector
-            selectedMonth={2018}
-            updateSelectedMonth={[MockFunction]}
-          />,
-          <YearSelector
-            selectedYear={1}
-            updateSelectedYear={[MockFunction]}
-          />,
-        ],
-        "tag": "form",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "selectedMonth": 2018,
-            "updateSelectedMonth": [MockFunction],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "selectedYear": 1,
-            "updateSelectedYear": [MockFunction],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    Symbol(enzyme.__providerValues__): undefined,
-  },
-  Symbol(enzyme.__providerValues__): Map {},
-}
+<form
+  className=""
+>
+  <div
+    className="row form-group"
+  >
+    <label
+      className=""
+      htmlFor="month"
+    >
+      Month
+    </label>
+    <select
+      className="form-control"
+      defaultValue="initial"
+      id="month"
+      onChange={[Function]}
+    >
+      <option
+        disabled={true}
+        value="initial"
+      >
+        ---
+      </option>
+      <option
+        value={1}
+      >
+        January
+      </option>
+      <option
+        value={2}
+      >
+        February
+      </option>
+      <option
+        value={3}
+      >
+        March
+      </option>
+      <option
+        value={4}
+      >
+        April
+      </option>
+      <option
+        value={5}
+      >
+        May
+      </option>
+      <option
+        value={6}
+      >
+        June
+      </option>
+      <option
+        value={7}
+      >
+        July
+      </option>
+      <option
+        value={8}
+      >
+        August
+      </option>
+      <option
+        value={9}
+      >
+        September
+      </option>
+      <option
+        value={10}
+      >
+        October
+      </option>
+      <option
+        value={11}
+      >
+        November
+      </option>
+      <option
+        value={12}
+      >
+        December
+      </option>
+    </select>
+  </div>
+  <div
+    className="row form-group"
+  >
+    <label
+      className=""
+      htmlFor="year"
+    >
+      Year
+    </label>
+    <input
+      className="is-valid form-control"
+      id="year"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="number"
+      value="1"
+    />
+    <div
+      className="valid-feedback"
+    />
+  </div>
+</form>
 `;

@@ -27,10 +27,6 @@ interface MonthSelectorProps {
 }
 
 class MonthSelector extends React.Component<MonthSelectorProps, {}> {
-    constructor(props: MonthSelectorProps) {
-        super(props);
-    }
-
     render() {
         return (
             <FormGroup row={ true }>

@@ -1,18 +1,18 @@
+import React from 'react';
+import moment from 'moment';
 import { shallow } from 'enzyme';
-import * as moment from 'moment';
-import * as React from 'react';
+
+jest.mock('../../../api');
 
 import { SingleDatePicker } from 'react-dates';
 import { Progress } from 'reactstrap';
 
-const mockApi = jest.fn(() => Promise.resolve({}));
-jest.mock('../../../api', () => ({ retrieveHistoricalReadingForDate: mockApi }));
-
+import { retrieveHistoricalReadingForDate } from '../../../api';
 import DailyHistoryContainer from '../container';
 
 describe('<DailyHistoryContainer />', () => {
     afterEach(() => {
-        mockApi.mockReset();
+        (retrieveHistoricalReadingForDate as jest.Mock).mockReset();
     });
 
     it('should show a date selector', () => {
@@ -23,7 +23,7 @@ describe('<DailyHistoryContainer />', () => {
 
         // Assert
         expect(container.find(SingleDatePicker).exists()).toBe(true);
-        expect(mockApi).not.toHaveBeenCalled();
+        expect((retrieveHistoricalReadingForDate as jest.Mock)).not.toHaveBeenCalled();
         expect(container.find(Progress).exists()).toBe(false);
     });
 
@@ -31,7 +31,7 @@ describe('<DailyHistoryContainer />', () => {
         // Arrange
         const selectedDate = moment().subtract(1, 'days');
         const result = {};
-        mockApi.mockImplementation(() => Promise.resolve(result));
+        (retrieveHistoricalReadingForDate as jest.Mock).mockImplementation(() => Promise.resolve(result));
 
         // Act
         const container = shallow(<DailyHistoryContainer />);
@@ -39,7 +39,7 @@ describe('<DailyHistoryContainer />', () => {
 
         // Assert
         setTimeout(() => {
-            expect(mockApi).toHaveBeenCalledWith(selectedDate.toDate());
+            expect((retrieveHistoricalReadingForDate as jest.Mock)).toHaveBeenCalledWith(selectedDate.toDate());
             done();
         }, 100);
     });

@@ -9,7 +9,7 @@ module.exports = function(config) {
     ],
     mutator: 'typescript',
     jest: {
-      projectType: 'react-ts'
+      projectType: 'react'
     },
     reporters: ['html', 'clear-text', 'progress', 'dashboard'],
     testRunner: 'jest',

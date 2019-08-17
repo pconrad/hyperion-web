@@ -1,14 +1,18 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react",
+    "isolatedModules": true,
+    "jsx": "preserve",
     "lib": [
       "dom",
       "es2017"
     ],
     "module": "esnext",
     "moduleResolution": "node",
+    "noEmit": true,
     "noEmitOnError": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
@@ -16,13 +20,19 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "outDir": "build/dist",
+    "resolveJsonModule": true,
     "rootDir": "src",
+    "skipLibCheck": true,
     "sourceMap": true,
+    "strict": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "target": "es5"
   },
   "exclude": [
     "node_modules"
+  ],
+  "include": [
+    "src"
   ]
 }

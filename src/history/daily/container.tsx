@@ -70,19 +70,19 @@ class DailyHistoryContainer extends React.Component<{}, State> {
         );
     }
 
-    private onFocusChange = (arg: { focused: boolean }) => {
-        this.setState({ focused: arg.focused });
+    private onFocusChange = (arg: { focused?: boolean | null }) => {
+        this.setState({ focused: arg.focused ? arg.focused : false });
     }
 
-    private selectDate = (selectedDate: Moment) => {
-        const input = selectedDate.toDate();
+    private selectDate = (selectedDate: Moment | null) => {
+        const input = selectedDate ? selectedDate.toDate() : undefined;
         // First remove the old promise (forcing React to re-render container)...
         this.setState({ promise: undefined }, () => {
             // ... only then to create the new promise (forcing another re-render).
-            this.setState({
-                promise: retrieveHistoricalReadingForDate(input),
-                selectedDate,
-            });
+            if (input) {
+                const promise = retrieveHistoricalReadingForDate(input);
+                this.setState({ promise, selectedDate });
+            }
         });
     }
 }

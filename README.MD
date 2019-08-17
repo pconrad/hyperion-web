@@ -13,7 +13,7 @@ There are two ways to build the Hyperion frontend.
 Just run
 
     npm install
-    API_HOST=http://your-hyperion-instance npm run dev
+    API_HOST=http://your-hyperion-instance npm run start
 
 ### For production
 Just run

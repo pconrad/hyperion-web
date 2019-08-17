@@ -13,10 +13,6 @@ interface State {
 }
 
 class RecentContainer extends React.Component<{}, State> {
-    constructor(props: {}) {
-        super(props);
-    }
-
     componentWillMount() {
         this.setState({ promise: retrieveRecentReadings() });
     }

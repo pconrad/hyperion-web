@@ -1,15 +1,15 @@
 import * as React from 'react';
 
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import Start from '../start';
 
 describe('<Start />', () => {
     it('should render', () => {
         // Act
-        const wrapper = shallow(<Start />);
+        const wrapper = renderer.create(<Start />);
 
         // Assert
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 });

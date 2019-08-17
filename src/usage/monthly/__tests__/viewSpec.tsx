@@ -1,33 +1,46 @@
-import * as React from 'react';
+import React from 'react';
+import { shallow, ShallowWrapper } from 'enzyme';
+import {
+    Nav,
+    NavItem,
+    NavLink,
+    TabContent,
+    TabPane,
+} from 'reactstrap';
 
-import { shallow } from 'enzyme';
+import MonthlyUsageView from '../view';
+import { UsageRecord } from '../../../model';
 
-import TableView from '../tableView';
 
-describe('<TableView />', () => {
-    it('should present some data', () => {
+
+describe('<MonthlyUsageView />', () => {
+    it('should initially render as a table', () => {
         // Arrange
-        const data = [
-            {
-                date: new Date('2018-01-05'),
-                elecCon: 0.265,
-                electricityLow: 2150.714,
-                electricityNormal: 2702.641,
-                gas: 3781.676,
-            },
-            {
-                date: new Date('2018-01-06'),
-                elecCon: 0.265,
-                electricityLow: 2150.714,
-                electricityNormal: 2702.641,
-                gas: 3781.676,
-            },
-        ];
+        const data: UsageRecord[] = [];
 
         // Act
-        const wrapper = shallow(<TableView data={ data } />);
+        const view = shallow(<MonthlyUsageView data={ data } />);
 
         // Assert
-        expect(wrapper).toMatchSnapshot();
+        expect(view.find(TabContent).props().activeTab).toBe('table');
+    });
+
+    describe('with the navigation tab clicked', () => {
+        it('should render as a graph', (done) => {
+            // Arrange
+            const data: UsageRecord[] = [];
+    
+            // Act
+            const view = shallow(<MonthlyUsageView data={ data } />);
+            view.find(NavLink)
+                .findWhere(c => c.props().children === 'Graph')
+                .simulate('click');
+            
+            setTimeout(() => {
+                // Assert
+                expect(view.find(TabContent).props().activeTab).toBe('graph');
+                done();
+            }, 500);
+        });
     });
 });

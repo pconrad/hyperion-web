@@ -17,10 +17,6 @@ import MonthlyUsageContainer from './usage/monthly/container';
 const Main = (props: any) => <main { ...props }>{ props.children }</main>;
 
 export class App extends React.Component<{}, {}> {
-    constructor(props: {}) {
-        super(props);
-    }
-
     render() {
         return (
             <React.Fragment>

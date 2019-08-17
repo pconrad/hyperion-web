@@ -3,7 +3,7 @@ jobs:
   build:
 
     docker:
-    - image: circleci/node:8.4
+    - image: circleci/node:lts
   
     steps:
       - checkout
@@ -13,7 +13,7 @@ jobs:
 
       - run:
           name: Download Node modules
-          command: npm install
+          command: yarn install
 
 
       - save_cache:

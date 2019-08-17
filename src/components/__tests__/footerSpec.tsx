@@ -1,15 +1,15 @@
-import * as React from 'react';
+import React from 'react';
 
-import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import Footer from '../footer';
 
 describe('<Footer />', () => {
     it('should render', () => {
         // Act
-        const wrapper = shallow(<Footer />);
+        const wrapper = renderer.create(<Footer />);
 
         // Assert
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 });

@@ -1,24 +1,25 @@
+import React from 'react';
 import { shallow } from 'enzyme';
-import * as React from 'react';
 
-const mockRetrieveApplicationInfo = jest.fn(() => Promise.resolve());
-jest.mock('../../api', () => ({ retrieveApplicationInfo: mockRetrieveApplicationInfo }));
+jest.mock('../../api');
+
+import { retrieveApplicationInfo } from '../../api';
 
 import AboutContainer from '../container';
 
 describe('<AboutContainer />', () => {
     afterEach(() => {
-        mockRetrieveApplicationInfo.mockReset();
+        (retrieveApplicationInfo as jest.Mock).mockReset();
     });
 
     it('should retrieve application info', () => {
         // Arrange
-        mockRetrieveApplicationInfo.mockImplementation(() => Promise.resolve());
+        (retrieveApplicationInfo as jest.Mock).mockImplementation(() => Promise.resolve());
 
         // Act
         shallow(<AboutContainer />);
 
         // Assert
-        expect(mockRetrieveApplicationInfo).toHaveBeenCalled();
+        expect((retrieveApplicationInfo as jest.Mock)).toHaveBeenCalled();
     });
 });
