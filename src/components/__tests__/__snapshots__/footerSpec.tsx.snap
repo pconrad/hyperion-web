@@ -13,6 +13,7 @@ exports[`<Footer /> should render 1`] = `
       © 2016 - 2019 Maarten Mulders. Source code is available at 
       <a
         href="https://github.com/mthmulders/hyperion-web"
+        rel="noopener noreferrer"
         target="_blank"
       >
         GitHub
