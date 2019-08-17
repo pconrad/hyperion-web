@@ -67,7 +67,7 @@ class MonthlyHistoryContainer extends React.Component<{}, State> {
         });
     }
 
-    private updateSelectedYear = (selectedYear: number) => {
+    private updateSelectedYear = (selectedYear?: number) => {
         this.setState({ selectedYear }, this.retrieveDataIfNecessary);
     }
 
