@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {
     Collapse,
     Container,
+    DropdownItem,
     DropdownMenu,
     DropdownToggle,
     Nav,
@@ -13,7 +14,6 @@ import {
     UncontrolledDropdown,
 } from 'reactstrap';
 
-import DropdownItem from './dropdownitem';
 import NavLink from './navlink';
 
 interface NavigationState {
