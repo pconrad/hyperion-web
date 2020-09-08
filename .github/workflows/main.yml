@@ -1,0 +1,87 @@
+name: Main workflow
+
+on:
+  push:
+    branches: [ master, mutationtesting ]
+  pull_request:
+    branches: [ master ]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          # Disabling shallow clone is recommended for improving relevancy of reporting
+          fetch-depth: 0
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1.4.3
+        with:
+          node-version: 12.18.3
+
+      - name: Set up cache for node_modules
+        uses: actions/cache@v1
+        with:
+          path: "**/node_modules"
+          key: hyperion-web-${{ hashFiles('package.json') }}-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            hyperion-web
+      
+      - name: Download Node modules
+        run: yarn install
+
+      - name: Build and test code
+        run: npm run test:ci
+        env:
+          CI: true
+          JEST_JUNIT_OUTPUT_DIR: test-reports
+      
+      - name: Create production build
+        run: |
+          npm run build
+          pushd build
+          zip -9vr ./hyperion-web.zip .
+          popd
+      
+      - name: Upload application
+        uses: actions/upload-artifact@v2
+        if: github.ref == 'refs/heads/master'
+        with:
+          name: hyperion-web.zip
+          path: build/hyperion-web.zip
+
+  mutationtesting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          # Disabling shallow clone is recommended for improving relevancy of reporting
+          fetch-depth: 0
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1.4.3
+        with:
+          node-version: 12.18.3
+
+      - name: Set up cache for node_modules
+        uses: actions/cache@v1
+        with:
+          path: "**/node_modules"
+          key: hyperion-web-${{ hashFiles('package.json') }}-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            hyperion-web
+
+      - name: Download Node modules
+        run: yarn install
+
+      - name: Run Stryker
+        run: npm run stryker
+        env:
+          STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
+ 
