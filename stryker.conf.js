@@ -3,6 +3,7 @@
  */
 module.exports = {
   checkers: ['typescript'],
+  concurrency: 2,
   coverageAnalysis: 'off',
   files: [
     'package.json',
