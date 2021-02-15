@@ -2997,10 +2997,10 @@
     "@types/react-outside-click-handler" "*"
     moment "^2.26.0"
 
-"@types/react-dom@17.0.0":
-  version "17.0.0"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.0.tgz#b3b691eb956c4b3401777ee67b900cb28415d95a"
-  integrity sha512-lUqY7OlkF/RbNtD5nIq7ot8NquXrdFrjSOR6+w9a9RFQevGi1oZO1dcJbXMeONAPKtZ2UrZOEJ5UOCVsxbLk/g==
+"@types/react-dom@17.0.1":
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.1.tgz#d92d77d020bfb083e07cc8e0ac9f933599a4d56a"
+  integrity sha512-yIVyopxQb8IDZ7SOHeTovurFq+fXiPICa+GV3gp0Xedsl+MwQlMLKmvrnEjFbQxjliH5YVAEWFh975eVNmKj7Q==
   dependencies:
     "@types/react" "*"
 
@@ -3028,17 +3028,25 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react-test-renderer@17.0.0":
-  version "17.0.0"
-  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-17.0.0.tgz#9be47b375eeb906fced37049e67284a438d56620"
-  integrity sha512-nvw+F81OmyzpyIE1S0xWpLonLUZCMewslPuA8BtjSKc5XEbn8zEQBXS7KuOLHTNnSOEM2Pum50gHOoZ62tqTRg==
+"@types/react-test-renderer@17.0.1":
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-17.0.1.tgz#3120f7d1c157fba9df0118dae20cb0297ee0e06b"
+  integrity sha512-3Fi2O6Zzq/f3QR9dRnlnHso9bMl7weKCviFmfF6B4LS1Uat6Hkm15k0ZAQuDz+UBq6B3+g+NM6IT2nr5QgPzCw==
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@17.0.1":
+"@types/react@*":
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.1.tgz#eb1f1407dea8da3bc741879c1192aa703ab9975b"
   integrity sha512-w8t9f53B2ei4jeOqf/gxtc2Sswnc3LBK5s0DyJcg5xd10tMHXts2N31cKjWfH9IC/JvEPa/YF1U4YeP1t4R6HQ==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
+
+"@types/react@17.0.2":
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.2.tgz#3de24c4efef902dd9795a49c75f760cbe4f7a5a8"
+  integrity sha512-Xt40xQsrkdvjn1EyWe1Bc0dJLcil/9x2vAuW7ya+PuQip4UYUaXyhzWmAbwRsdMgwOFHpfp7/FFZebDU6Y8VHA==
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
